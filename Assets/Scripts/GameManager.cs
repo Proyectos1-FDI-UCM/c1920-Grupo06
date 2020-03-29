@@ -4,12 +4,19 @@ public class GameManager : MonoBehaviour
 {
     static public GameManager instance; //instancia del GM
     [SerializeField] int vidas = 3, tamañoColeccionables = 3; //vidas del jugador, coleccionables
+    int enemieselim = 0, nummuertes = 0, puntuacion = 0; //contador de veces que el jugador muere y enemigos que elimina y puntuacion
     GameObject jugador = null; //GO del jugador
     Vector3 posicionJugador = Vector3.zero; //posicion del jugador
     Vector3 checkpoint = Vector3.zero; //posicion de la camara
     RetrocederAlCheckPoint retrocederAlCheckPoint;
     UIManager theUIMan = null; //referencia a UIManager
     bool[] coleccionables; //arrays de "coleccionables"
+
+    SeguimientoJugador finalcam;
+    Estados est;
+    [SerializeField] int puntuacionPorMuerte = 0;
+    [SerializeField] int puntuacionPorEnemigo = 0;
+    [SerializeField] int puntuacionPorColeccionable = 0;
 
     [Header("Tiempo en segundos del contador")]
     [SerializeField] float timer = 5; //temporizador
@@ -32,6 +39,7 @@ public class GameManager : MonoBehaviour
 
     void Start()
     {
+        finalcam = Camera.main.GetComponent<SeguimientoJugador>();
         tiempo = timer;
         coleccionables = new bool[tamañoColeccionables]; //inicializamos el array con respecto al valor del editor
         if (theUIMan != null)
@@ -124,7 +132,9 @@ public class GameManager : MonoBehaviour
         Time.timeScale = 1;
         jugador.transform.position = checkpoint;
         vidas = 3;
+        theUIMan.ResetSpritesLife();
         retrocederAlCheckPoint.enabled = true;
+        nummuertes++;
     }
 
     public void ActivaSprite(int num)
@@ -171,5 +181,32 @@ public class GameManager : MonoBehaviour
     {
         Application.Quit();
     }
-
+    //metodo que proporciona la informacion de las vidas, enemigos eliminados y los coleccionables obtenidos
+    public void Puntuation()
+    {
+        est = jugador.GetComponent<Estados>();
+        est.CambioEstado(estado.Inactivo);
+        int coleccionablesObt = 0;
+        //bulce para contar cuantos coleccionables se han obtenido
+        for (int i = 0; i < coleccionables.Length; i++)
+        {
+            if (coleccionables[i]) coleccionablesObt++;
+        }
+        puntuacion = CalculaPuntuacion(nummuertes, enemieselim, coleccionablesObt);
+        theUIMan.MostrarPuntuacion(puntuacion, nummuertes, enemieselim, coleccionablesObt);
+        SeguimientoJugador cam;
+        cam = Camera.main.GetComponent<SeguimientoJugador>();
+        cam.Sube();
+    }
+    //cada vez que el jugador elimina a un enemigo, el contador suma 1
+    public void Contadorenemieselim()
+    {
+        enemieselim++;
+    }
+    private int CalculaPuntuacion(int muertes, int enemies, int coleccionables)
+    {
+        int punt = (muertes * puntuacionPorMuerte) + (enemies * puntuacionPorEnemigo) + (coleccionables * puntuacionPorColeccionable);
+        if (punt > 0) return punt;
+        else return 0;
+    }
 }

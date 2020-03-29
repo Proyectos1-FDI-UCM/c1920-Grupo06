@@ -8,6 +8,8 @@ public class EnemigoInven : MonoBehaviour
     Vector3 tr = Vector3.zero;
     Rigidbody2D rb = null;
     string estado;
+    bool soyvisible = true; //creo que hay otra forma mejor de hacerlo que dijisteis pero lo he apañado rapido para que no me moleste 
+    //probando la puntuacion
 
     void Awake()
     {
@@ -22,11 +24,16 @@ public class EnemigoInven : MonoBehaviour
     private void OnBecameVisible()
     {
         Invoke("Estado", maxTime);
+        soyvisible = true;
     }
-
+    private void OnBecameInvisible()
+    {
+        estado = "estoyFuera";
+        soyvisible = false;
+    }
     private void Update()
     {
-        if (estado == "estadoMovimiento")
+        if (estado == "estadoMovimiento" && soyvisible)
         {
             Vector3 distancia = tr - transform.position;
 
@@ -44,7 +51,7 @@ public class EnemigoInven : MonoBehaviour
                 Invoke("Estado", maxTime);
                 if (intentos == 0)
                 {
-                    this.gameObject.SetActive(false);
+                    gameObject.SetActive(false);
                 }
             }
         }

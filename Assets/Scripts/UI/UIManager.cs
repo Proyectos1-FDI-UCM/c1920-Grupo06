@@ -4,21 +4,28 @@ using UnityEngine.UI;
 public class UIManager : MonoBehaviour
 {
     public GameObject panel;
+    public GameObject puntuacion;
+    public GameObject barraProgreso;
 
     [SerializeField] Image[] vida = null;
     [SerializeField] Image[] powerups = null;
     [SerializeField] Text tiempo = null;
+    [SerializeField] Text muertesjugador = null, eliminaciones = null, coleccionablesRecog = null;
+    [SerializeField] Text puntos = null;
     [SerializeField] Slider progress = null;
 
     private void Awake()
     {
+        barraProgreso.SetActive(true);
         panel.SetActive(false);
+        puntuacion.SetActive(false);
     }
 
     void Start()
     {
+        tiempo.enabled = true;
         GameManager.instance.SetUIManager(this);
-        SetMaxHigh(500);
+        SetMaxHigh(368);//la posicion en y del ultimo gameobject del nivel
         progress.minValue = Camera.main.transform.position.y;
         DesactivaPowerUpSprites();
     }
@@ -53,6 +60,13 @@ public class UIManager : MonoBehaviour
         for (int i = 0; i < vida.Length; i++)
         {
             vida[i].enabled = true;
+        }
+    }
+    public void DesactivaSpriteLifes()
+    {
+        for (int i = 0; i < vida.Length; i++)
+        {
+            vida[i].enabled = false;
         }
     }
     //APARTADO DE LOS POWER-UPS
@@ -92,5 +106,20 @@ public class UIManager : MonoBehaviour
     public void QuitarPausa()
     {
         panel.SetActive(false);
+    }
+    public void MostrarPuntuacion(int punt, int muertes, int enemigoselim, int coleccionables)
+    {
+        //muestra el marco con la puntuacion
+        puntuacion.SetActive(true);
+        muertesjugador.text = "X" + muertes.ToString();
+        eliminaciones.text = "X" + enemigoselim.ToString();
+        coleccionablesRecog.text = "X" + coleccionables.ToString();
+        puntos.text = "PUNTUACIÓN: " + punt.ToString();
+
+        //oculta la barra de progreso, la vidas, el tiempo y los sprites de los power-ups
+        barraProgreso.SetActive(false);
+        DesactivaSpriteLifes();
+        tiempo.enabled = false;
+        DesactivaPowerUpSprites();
     }
 }

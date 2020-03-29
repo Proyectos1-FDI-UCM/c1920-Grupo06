@@ -13,6 +13,7 @@ public class Estados : MonoBehaviour
     //Referencias de los componentes que van a ser modificados según el estado
     
     Rigidbody2D rb;
+    BoxCollider2D deathzone;
     CrearGancho creaGancho;
     Movimiento movimiento;
     MovimientoGancho movimientoGancho;
@@ -37,11 +38,9 @@ public class Estados : MonoBehaviour
         crearDash = GetComponent<CrearDash>();
         dash = GetComponent<Dash>();
         animator = GetComponent<AnimacionesJugador>();
+        deathzone = Camera.main.GetComponentInChildren<BoxCollider2D>();
 
         ActualizaComponentes();//Inicializamos los scripts para estar preparados para el juego
-    }
-    private void Start()
-    {
     }
     public estado Estado() //Permite a otros métodos conocer el estado actual del jugador
     {
@@ -60,6 +59,7 @@ public class Estados : MonoBehaviour
         {
             
             case estado.Defecto:
+                deathzone.enabled = true;
                 rb.gravityScale = gravedad;
                 creaGancho.enabled = true;
                 movimiento.enabled = true;
@@ -69,6 +69,7 @@ public class Estados : MonoBehaviour
 
                 break;
             case estado.SlowMotion:
+                deathzone.enabled = true;
                 creaGancho.enabled = true;
                 movimiento.enabled = false;
                 movimientoGancho.enabled = false;
@@ -77,6 +78,7 @@ public class Estados : MonoBehaviour
                 break;
 
             case estado.LanzamientoGancho:
+                deathzone.enabled = true;
                 rb.velocity = Vector2.zero;
                 rb.gravityScale = 0;
                 creaGancho.enabled = false;
@@ -87,6 +89,7 @@ public class Estados : MonoBehaviour
                 break;
 
             case estado.MovimientoGancho:
+                deathzone.enabled = true;
                 creaGancho.enabled = false;
                 movimiento.enabled = false;
                 movimientoGancho.enabled = true;
@@ -94,6 +97,7 @@ public class Estados : MonoBehaviour
                 crearDash.enabled = false;
                 break;
             case estado.Dash:
+                deathzone.enabled = true;
                 rb.gravityScale = 0;
                 creaGancho.enabled = false;
                 movimiento.enabled = false;
@@ -103,6 +107,7 @@ public class Estados : MonoBehaviour
                 crearDash.enabled = false;
                 break;
             case estado.Muerte:
+                deathzone.enabled = true;
                 rb.velocity = Vector2.zero;
                 rb.gravityScale = 0;
                 creaGancho.enabled = false;
@@ -112,6 +117,7 @@ public class Estados : MonoBehaviour
                 crearDash.enabled = false;
                 break;
             case estado.Inactivo:
+                deathzone.enabled = false;
                 creaGancho.enabled = false;
                 movimiento.enabled = false;
                 movimientoGancho.enabled = false;

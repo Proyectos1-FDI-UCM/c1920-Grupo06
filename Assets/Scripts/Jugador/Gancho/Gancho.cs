@@ -12,7 +12,6 @@ public class Gancho : MonoBehaviour
     GameObject jugador = null;
     LineRenderer linea = null;
     Estados estadoJugador = null;
-    bool antigancho = false;
 
     private void Start()
     {

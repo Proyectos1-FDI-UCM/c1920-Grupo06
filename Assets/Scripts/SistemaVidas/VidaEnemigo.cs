@@ -8,6 +8,7 @@ public class VidaEnemigo : MonoBehaviour
         if (other != null && (other.GetComponent<Estados>().Estado() == estado.MovimientoGancho || other.GetComponent<Estados>().Estado() == estado.Dash))
         {
             gameObject.SetActive(false);
+            GameManager.instance.Contadorenemieselim();
         }
     }
 }
