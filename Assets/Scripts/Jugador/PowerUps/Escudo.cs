@@ -3,9 +3,10 @@
 public class Escudo : MonoBehaviour
 {
     LayerMask colision = 0;
-    [SerializeField] float tiempo = 10f, radioEscudo = 2f;
+    [SerializeField] float tiempo = 10f, radioEscudo = 1.3f;
     VidaJugador vidaJugador = null;
     GameObject escudo = null;
+    bool activable = true;
 
     void Awake()
     {
@@ -16,19 +17,22 @@ public class Escudo : MonoBehaviour
         enabled = false; //desactivamos el powerup
     }
 
-
-    void OnEnable()
+    void Update()
     {
-        escudo.SetActive(true); //activamos el sprtie del escudo
-        vidaJugador.HacerInvulnerable(); //hacemos al jugador invulnerable
-        Invoke("Desactivar", tiempo); //invocamos un método de desactivación para dentro de x segundos
+        if (activable && Input.GetKeyDown("w"))
+        {
+            escudo.SetActive(true); //activamos el sprtie del escudo
+            vidaJugador.HacerInvulnerable(); //hacemos al jugador invulnerable
+            Invoke("Desactivar", tiempo); //invocamos un método de desactivación para dentro de x segundos
+            activable = false;
+        }
     }
 
     void FixedUpdate()
     {
         Collider2D choque = Physics2D.OverlapCircle(transform.position, radioEscudo, colision); //guardamos con que ha chocado
 
-        if (choque != null) //si ha chocado con una bala, la destruimos
+        if (choque != null && !activable) //si ha chocado con una bala, la destruimos
         {
             if (choque.gameObject.layer == 16) //ESTE IF IF ES POR EL ENABLED
             {

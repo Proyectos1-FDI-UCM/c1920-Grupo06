@@ -8,6 +8,7 @@ public class AnimacionesJugador : MonoBehaviour
     Rigidbody2D rb;
     Suelo suelo;
     Estados estadoJugador;
+    [SerializeField] float delta = 0.05f;
     bool enSuelo = false;
     bool enSueloAux = false;
 
@@ -32,8 +33,8 @@ public class AnimacionesJugador : MonoBehaviour
         if (enSuelo)
         {
             float velocidad = rb.velocity.x;
-            if (velocidad < 0) velx = 0;
-            else if (velocidad > 0) velx = 2;
+            if (velocidad < -delta) velx = 0;
+            else if (velocidad > delta) velx = 2;
             else velx = 1;
             if(velx != velxaux)
             {
@@ -50,12 +51,11 @@ public class AnimacionesJugador : MonoBehaviour
                 float velocidad = rb.velocity.x;
                 if (!enSuelo)
                     animador.Play("Caida");
-                else if (velocidad == 0)
-                    animador.Play("Iddle");
-                else if (velocidad < 0)
+                else if (velocidad < -delta)
                     animador.Play("MovimientoInvertido");
-                else
+                else if (velocidad > delta)
                     animador.Play("Movimiento");
+                else animador.Play("Iddle");
                 break;
             default:
                 animador.Play("Caida");

@@ -5,30 +5,25 @@
  * Un enum guarda los distintos powerups que pueden conseguirse
  */
 
-public enum powerUp { Ninguno, GanchoAlargado, Nube, SaltoPotenciado, Escudo}
+public enum powerUp { Ninguno, GanchoAlargado, Nube, SaltoPotenciado, Escudo }
 public class PowerUpManager : MonoBehaviour
 {
-    [SerializeField] float nueva_longitud_gancho = 3;//La nueva longitud del gancho
-    [SerializeField] float nueva_fuerza_salto = 3; //La nueva fuerza del salto
-
-
-    Salto salto;
-    Gancho gancho;
-
+    PlataformaNube nube = null;
+    AlargaGancho alargaGancho = null;
+    SaltoPotenciado saltoPotenciado = null;
+    Escudo escudo = null;
     powerUp powerUpActual = powerUp.Ninguno; //Control del powerUp en el que me encuentro
 
-    float valor_inicial_gancho = 0; //Valor inicial para poder resetearlo
-    float valor_inicial_salto = 0; 
     private void Awake()
     {
-        gancho = GetComponent<Gancho>();
-        salto = GetComponent<Salto>(); 
-
-        valor_inicial_gancho = gancho.ValorInicial();
-        valor_inicial_salto = salto.GetFuerzaSalto();
+        nube = GetComponent<PlataformaNube>();
+        alargaGancho = GetComponent<AlargaGancho>();
+        saltoPotenciado = GetComponent<SaltoPotenciado>();
+        escudo = GetComponent<Escudo>();
 
         Manager(powerUp.Ninguno);
     }
+
     public powerUp PowerUpActual()//Devuelve el powerUp actual
     {
         return powerUpActual;
@@ -40,32 +35,32 @@ public class PowerUpManager : MonoBehaviour
         switch (nuevo)
         {
             case powerUp.Ninguno:
-                gancho.PowerUpGancho(valor_inicial_gancho);
-                salto.PowerUpSalto(valor_inicial_salto);
+                nube.enabled = false;
+                alargaGancho.enabled = false;
+                saltoPotenciado.enabled = false;
+                escudo.enabled = false;
                 break;
 
 
             case powerUp.GanchoAlargado:
-                gancho.PowerUpGancho(nueva_longitud_gancho);
-                salto.PowerUpSalto(valor_inicial_salto);
+                alargaGancho.enabled = true;
+                saltoPotenciado.enabled = false;
                 break;
 
 
             case powerUp.Nube:
-                gancho.PowerUpGancho(valor_inicial_gancho);
-                salto.PowerUpSalto(valor_inicial_salto);
+                nube.enabled = true;
                 break;
 
 
             case powerUp.SaltoPotenciado:
-                gancho.PowerUpGancho(valor_inicial_gancho);
-                salto.PowerUpSalto(nueva_fuerza_salto);
+                alargaGancho.enabled = false;
+                saltoPotenciado.enabled = true;
                 break;
 
 
             case powerUp.Escudo:
-                gancho.PowerUpGancho(valor_inicial_gancho);
-                salto.PowerUpSalto(valor_inicial_salto);
+                escudo.enabled = true;
                 break;
         }
     }

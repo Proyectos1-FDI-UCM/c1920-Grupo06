@@ -70,7 +70,7 @@ public class Gancho : MonoBehaviour
         }
     }
     //PowerUP gancho alargado
-    public float ValorInicial() //devuelve el valor inicial de la longitud gancho
+    public float GetLongitudGancho() //devuelve el valor inicial de la longitud gancho
     {
         return rango_gancho;
     }

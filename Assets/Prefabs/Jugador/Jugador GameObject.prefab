@@ -158,8 +158,11 @@ GameObject:
   - component: {fileID: 2925466069578243485}
   - component: {fileID: 2925466069578243487}
   - component: {fileID: 2925466069578243486}
+  - component: {fileID: 3729100871943920558}
   - component: {fileID: 1081373165606241108}
   - component: {fileID: 4573318503927390626}
+  - component: {fileID: 57063743340851835}
+  - component: {fileID: 3531830091465909760}
   - component: {fileID: 8070331601717115495}
   - component: {fileID: 2344167096655965351}
   m_Layer: 9
@@ -564,6 +567,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0a1eff31ce2b374389cdcfad70596ec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &3729100871943920558
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2925466069578243472}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fa58c8f2d286ef94aaa172e5cb8cb010, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &1081373165606241108
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -577,7 +592,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tiempo: 10
-  radioEscudo: 2
+  radioEscudo: 1.3
 --- !u!114 &4573318503927390626
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -593,6 +608,37 @@ MonoBehaviour:
   multiplicadorSalto: 1.5
   multiplicadorDash: 1.5
   tiempo: 10
+--- !u!114 &57063743340851835
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2925466069578243472}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 15011c6e4a1c3b8429fc95af3b7f6de4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  multiplicador: 1.5
+  tiempo: 10
+  ganchoGO: {fileID: 2519654555265378003, guid: cf34ae1ae9796634aa54d72cdac728f8,
+    type: 3}
+--- !u!114 &3531830091465909760
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2925466069578243472}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7d394496c95320242b47d22d49ca9605, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  plataforma: {fileID: 4489940025756265462, guid: 3c95f9acb2f107a4d816a256fa1d18e3,
+    type: 3}
+  distanciaPlataforma: 1
 --- !u!114 &8070331601717115495
 MonoBehaviour:
   m_ObjectHideFlags: 0
