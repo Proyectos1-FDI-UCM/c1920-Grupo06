@@ -17,6 +17,11 @@ public class Escudo : MonoBehaviour
         enabled = false; //desactivamos el powerup
     }
 
+    private void OnEnable()
+    {
+        GameManager.instance.ActivaSprite(1);
+    }
+
     void Update()
     {
         if (activable && Input.GetKeyDown("w"))
@@ -61,6 +66,7 @@ public class Escudo : MonoBehaviour
     void OnDisable() //al desactivarse
     {
         escudo.SetActive(false); //desactivamos el escudo
+        GameManager.instance.DesactivaSprite(1);
         vidaJugador.HacerVulnerable(); //volvemos a hacerlo vulnerable
     }
 }

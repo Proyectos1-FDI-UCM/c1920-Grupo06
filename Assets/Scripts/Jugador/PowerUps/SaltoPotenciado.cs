@@ -17,6 +17,7 @@ public class SaltoPotenciado : MonoBehaviour
 
     void OnEnable() //cuando se active
     {
+        GameManager.instance.ActivaSprite(2);
         salto.PowerUpSalto(salto.GetFuerzaSalto() * multiplicadorSalto); //aumentamos el salto
         dash.PowerUpDash(dash.GetLongitudDash() * multiplicadorDash); //aumentamos el gancho
         Invoke("Desactivar", tiempo); //comenzamos el temporizador que desactiva el powerup
@@ -31,6 +32,7 @@ public class SaltoPotenciado : MonoBehaviour
     {
         if (activado) //si no ha sido por editor
         {
+            GameManager.instance.DesactivaSprite(2);
             salto.PowerUpSalto(salto.GetFuerzaSalto() * 1 / multiplicadorSalto); //devolvemos el salto a su valor estándar
             dash.PowerUpDash(dash.GetLongitudDash() * 1 / multiplicadorDash); //devolvemos el dash a su valor estándar
         }

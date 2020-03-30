@@ -10,6 +10,11 @@ public class PlataformaNube : MonoBehaviour
         enabled = false;
     }
 
+    void OnEnable()
+    {
+        GameManager.instance.ActivaSprite(0);
+    }
+
     void Update()
     {
         if (Input.GetKeyDown("q"))
@@ -17,5 +22,10 @@ public class PlataformaNube : MonoBehaviour
             Instantiate(plataforma, new Vector3(transform.position.x, transform.position.y - distanciaPlataforma, 0), Quaternion.identity);
             enabled = false;
         }
+    }
+
+    void OnDisable()
+    {
+        GameManager.instance.DesactivaSprite(0);
     }
 }

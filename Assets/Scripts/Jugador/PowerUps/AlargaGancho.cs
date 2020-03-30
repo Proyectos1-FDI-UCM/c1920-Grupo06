@@ -16,6 +16,7 @@ public class AlargaGancho : MonoBehaviour
 
     void OnEnable()
     {
+        GameManager.instance.ActivaSprite(3);
         gancho.PowerUpGancho(gancho.GetLongitudGancho() * multiplicador);
         Invoke("Desactivar", tiempo); //comenzamos el temporizador que desactiva el powerup
     }
@@ -29,6 +30,7 @@ public class AlargaGancho : MonoBehaviour
     {
         if (control) //si no ha sido por editor
         {
+            GameManager.instance.DesactivaSprite(3);
             gancho.PowerUpGancho(gancho.GetLongitudGancho() * 1 / multiplicador); //devolvemos el gancho a su valor inicial
         }
     }
