@@ -1,5 +1,7 @@
 ﻿using UnityEngine;
 
+// Comportamiento de los "tokens" que activan los PowerUps del jugador
+
 public class ActivatePowerUp : MonoBehaviour
 {
     [SerializeField] powerUp powerUp = powerUp.Ninguno; //powerUp asignado
@@ -11,7 +13,7 @@ public class ActivatePowerUp : MonoBehaviour
         if (powerUpMan != null)
         {
             powerUpMan.Manager(powerUp);
-            gameObject.SetActive(false);
+            gameObject.SetActive(false); //se desactiva el activador (token)
         }
     }
 }

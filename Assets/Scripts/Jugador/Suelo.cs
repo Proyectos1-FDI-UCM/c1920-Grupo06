@@ -1,32 +1,36 @@
 ﻿using UnityEngine;
 
+//Comprobación de si el jugador se encuentra sobre una plataforma (trigger "PiesJugador")
+
+
 public class Suelo : MonoBehaviour
 {
-    //Este script lo tienen los pies del jugador para comprobar que el jugador colisiona con una plataforma
-
+    bool enSuelo = false; //booleano que controla si el jugador está o no en el suelo
     Jugador jugador;
 
-    bool enSuelo = false;
+
     void Start()
     {
+        //obtenemos la referencia al script "Jugador"
         jugador = gameObject.GetComponentInParent<Jugador>();
     }
 
-    private void OnTriggerStay2D(Collider2D collision)
+    private void OnTriggerStay2D(Collider2D collision) //si está sobre añguna entidad
     {
-        enSuelo = true;
+        enSuelo = true; //actualizamos el booleano, pues está sobre alguna entidad
 
-        if (collision.gameObject.layer == 8) //Layer 8 es la capa de las plataformas y del escenario
+        if (collision.gameObject.layer == 8) //si esa entidad es una plataforma (Layer 8 => plataformas7escenario)
         {
-            jugador.RecargaSuelo(); //Llama a recarga suelo del jugador
+            jugador.RecargaSuelo(); //recargamos el dash y gancho (llamamos a RecargaSuelo de "Jugador")
         }
     }
 
-    private void OnTriggerExit2D(Collider2D collision)
+    private void OnTriggerExit2D(Collider2D collision) //cuando deja de estar sobre la plataforma
     {
-        enSuelo = false;
+        enSuelo = false; //lo señalamos con el booleano
     }
-    public bool EnSuelo()
+
+    public bool EnSuelo() //método que devuelve si el jugador estña sobre una plataforma o no
     {
         return enSuelo;
     }

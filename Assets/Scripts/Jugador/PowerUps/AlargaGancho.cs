@@ -1,11 +1,14 @@
 ﻿using UnityEngine;
 
+//Comportamiento del PowerUp "AlargaGancho"
+
 public class AlargaGancho : MonoBehaviour
 {
-    [SerializeField] float multiplicador = 1.5f, tiempo = 10f;
-    [SerializeField] GameObject ganchoGO = null;
+    //aumento de la longitud del gancho, tiempo para que se desactive
+    [SerializeField] float aumentoLongGancho = 1.5f, tiempo = 10f;
+    [SerializeField] GameObject ganchoGO = null; //GO del gancho
     Gancho gancho;
-    bool control = false;
+    bool control = false; //booleano de control
 
     void Awake()
     {
@@ -14,10 +17,10 @@ public class AlargaGancho : MonoBehaviour
         control = true; //ponemos a true el booleano que se encarga de comprobar si se ha desactivado por estar activado de editor
     }
 
-    void OnEnable()
+    void OnEnable() //al activarse el PowerUp
     {
-        GameManager.instance.ActivaSprite(3);
-        gancho.PowerUpGancho(gancho.GetLongitudGancho() * multiplicador);
+        GameManager.instance.ActivaSprite(3); //activamos su referencia en la interfaz
+        gancho.PowerUpGancho(gancho.GetLongitudGancho() * aumentoLongGancho); //alargamos el gancho con respecto al aumento establecido
         Invoke("Desactivar", tiempo); //comenzamos el temporizador que desactiva el powerup
     }
 
@@ -26,12 +29,12 @@ public class AlargaGancho : MonoBehaviour
         enabled = false;
     }
 
-    void OnDisable() //cuando se desactive
+    void OnDisable() //cuando se desactive el PowerUp
     {
         if (control) //si no ha sido por editor
         {
-            GameManager.instance.DesactivaSprite(3);
-            gancho.PowerUpGancho(gancho.GetLongitudGancho() * 1 / multiplicador); //devolvemos el gancho a su valor inicial
+            GameManager.instance.DesactivaSprite(3); //desactivamos su referencia en la interfaz
+            gancho.PowerUpGancho(gancho.GetLongitudGancho() * 1 / aumentoLongGancho); //devolvemos la longitud del gancho a su valor inicial
         }
     }
 }

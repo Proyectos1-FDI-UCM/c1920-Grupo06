@@ -1,11 +1,14 @@
 ﻿using UnityEngine;
 
+//Comportamiento del PowerUp "SaltoPotenciado"
+
 public class SaltoPotenciado : MonoBehaviour
 {
-    [SerializeField] float multiplicadorSalto = 1.5f, multiplicadorDash = 1.5f, tiempo = 10f;
+    //multiplicador de longitud de salto y distancia recorrida por el dash; tiempo de desactivación
+    [SerializeField] float aumentoAltSalto = 1.5f, aumentoLongDash = 1.5f, tiempo = 10f;
     Salto salto;
     Dash dash;
-    bool activado = false;
+    bool activado = false; //booleano de control
 
     void Awake()
     {
@@ -15,11 +18,11 @@ public class SaltoPotenciado : MonoBehaviour
         activado = true; //ponemos a true el booleano que se encarga de comprobar si se ha desactivado por estar activado de editor
     }
 
-    void OnEnable() //cuando se active
+    void OnEnable() //cuando se active el PowerUp
     {
-        GameManager.instance.ActivaSprite(2);
-        salto.PowerUpSalto(salto.GetFuerzaSalto() * multiplicadorSalto); //aumentamos el salto
-        dash.PowerUpDash(dash.GetLongitudDash() * multiplicadorDash); //aumentamos el gancho
+        GameManager.instance.ActivaSprite(2); //activamos su referencia en la interfaz
+        salto.PowerUpSalto(salto.GetFuerzaSalto() * aumentoAltSalto); //aumentamos el salto
+        dash.PowerUpDash(dash.GetLongitudDash() * aumentoLongDash); //aumentamos el gancho
         Invoke("Desactivar", tiempo); //comenzamos el temporizador que desactiva el powerup
     }
 
@@ -28,13 +31,13 @@ public class SaltoPotenciado : MonoBehaviour
         enabled = false;
     }
 
-    void OnDisable() //cuando se desactive
+    void OnDisable() //cuando se desactive e PowerUp
     {
         if (activado) //si no ha sido por editor
         {
-            GameManager.instance.DesactivaSprite(2);
-            salto.PowerUpSalto(salto.GetFuerzaSalto() * 1 / multiplicadorSalto); //devolvemos el salto a su valor estándar
-            dash.PowerUpDash(dash.GetLongitudDash() * 1 / multiplicadorDash); //devolvemos el dash a su valor estándar
+            GameManager.instance.DesactivaSprite(2); //desactivamos su referencia en la interfaz
+            salto.PowerUpSalto(salto.GetFuerzaSalto() * 1 / aumentoAltSalto); //devolvemos el salto a su valor estándar
+            dash.PowerUpDash(dash.GetLongitudDash() * 1 / aumentoLongDash); //devolvemos el dash a su valor estándar
         }
     }
 }
