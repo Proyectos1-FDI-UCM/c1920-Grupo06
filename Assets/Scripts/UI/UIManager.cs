@@ -83,7 +83,10 @@ public class UIManager : MonoBehaviour
     }
     public void DesActivaPowerUpSprite(int num)
     {
-        powerups[num].enabled = false;
+        if (powerups[num] != null)
+        {
+            powerups[num].enabled = false;
+        }
     }
     public void Tiempo(int contador)
     {
@@ -91,7 +94,7 @@ public class UIManager : MonoBehaviour
         {
             if (contador <= 7)
                 if (contador <= 3)
-                    tiempo.color = new Color32(255,0,0,255);
+                    tiempo.color = new Color32(255, 0, 0, 255);
                 else tiempo.color = new Color32(255, 100, 100, 255);
             else tiempo.color = Color.yellow;
         }
