@@ -15,7 +15,7 @@ public class Suelo : MonoBehaviour
         jugador = gameObject.GetComponentInParent<Jugador>();
     }
 
-    private void OnTriggerStay2D(Collider2D collision) //si está sobre añguna entidad
+    void OnTriggerStay2D(Collider2D collision) //si está sobre añguna entidad
     {
         enSuelo = true; //actualizamos el booleano, pues está sobre alguna entidad
 
@@ -25,7 +25,7 @@ public class Suelo : MonoBehaviour
         }
     }
 
-    private void OnTriggerExit2D(Collider2D collision) //cuando deja de estar sobre la plataforma
+    void OnTriggerExit2D(Collider2D collision) //cuando deja de estar sobre la plataforma
     {
         enSuelo = false; //lo señalamos con el booleano
     }

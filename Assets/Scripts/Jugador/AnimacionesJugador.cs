@@ -12,7 +12,7 @@ public class AnimacionesJugador : MonoBehaviour
     bool enSuelo = false, enSueloAux = false;
     int velx = 0, velxaux = 0;
 
-    private void Start()
+    void Start()
     {
         //inicializamos los componentes
         animador = GetComponent<Animator>();
@@ -21,7 +21,7 @@ public class AnimacionesJugador : MonoBehaviour
         estadoJugador = GetComponent<Estados>();
     }
 
-    private void Update()
+    void Update()
     {
         //comprobamos si está en el suelo
         enSuelo = suelo.EnSuelo();

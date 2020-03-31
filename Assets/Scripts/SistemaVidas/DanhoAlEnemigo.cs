@@ -1,10 +1,12 @@
 ﻿using UnityEngine;
 
+//Comportamiento del daño que hace el jugador
+
 public class DanhoAlEnemigo : MonoBehaviour
 {
-    private void OnTriggerEnter2D(Collider2D other) //enemigo "trigger" porque si no, alteramos su velocidad
+    void OnTriggerEnter2D(Collider2D other)
     {
-        VidaEnemigo aux = other.gameObject.GetComponent<VidaEnemigo>();
+        VidaEnemigo aux = other.gameObject.GetComponent<VidaEnemigo>(); //comprobamos si ha chocado con un enemigo
 
         if (aux != null) //si detecta al enemigo
         {

@@ -1,42 +1,45 @@
 ﻿using UnityEngine;
 
+//Seguimiento del jugador por parte de la cámara
+
 public class SeguimientoJugador : MonoBehaviour
 {
-    //Script que se encarga de que la cámara siga al jugador
-    [SerializeField]
-    Transform jugador = null;
-    [SerializeField]
-    [Range(0, 20)]
-    float velocidad_seguimiento = 10; //Velocidad a la que la cámara sigue al jugador
+    [SerializeField] Transform jugador = null; //referencia al Transform del jugador
+    [SerializeField] [Range(0, 20)] float velocidad_seguimiento = 10; //velocidad a la que la cámara sigue al jugador
     bool finalnivel = false;
 
-    private void Start()
+    void Start()
     {
-        GameManager.instance.SetRetrocederAlCheckPoint(GetComponentInChildren<RetrocederAlCheckPoint>());
+        //pasamos al GM una referencia al componente de retroceso al checkpoint
+        GameManager.instance.SetRetrocederAlCheckPoint(GetComponent<RetrocederAlCheckPoint>());
     }
+
     void LateUpdate()
     {
-        if (!finalnivel)
+        if (!finalnivel) //si no se encuentra en el final del nivel
         {
-            if (jugador.position.y > transform.position.y + 8) //Si el jugador está muy arriba la cámara sube más rápido
+            if (jugador.position.y > transform.position.y + 8) //si el jugador está muy arriba, la cámara sube el doble de rápido
             {
-                Vector3 pos = transform.position; pos.y += velocidad_seguimiento * Time.deltaTime * 2;
+                Vector3 pos = transform.position;
+                pos.y += velocidad_seguimiento * Time.deltaTime * 2;
                 transform.position = pos;
             }
-            else if (jugador.position.y > transform.position.y + 3)//Si el jugador está por encima del punto medio de la cámara ésta sube
+            else if (jugador.position.y > transform.position.y + 3)//si el jugador está por encima del punto medio, la cámara
             {
-                Vector3 pos = transform.position; pos.y += velocidad_seguimiento * Time.deltaTime;
+                Vector3 pos = transform.position;
+                pos.y += velocidad_seguimiento * Time.deltaTime;
                 transform.position = pos;
             }
         }
-        else
+        else //en caso de llegar al final del nivel, la cámara subirá lentamente hasta la pantalla de puntuación
         {
             Vector3 pos = transform.position;
             pos.y += velocidad_seguimiento * Time.deltaTime / 2;
             transform.position = pos;
         }
     }
-    public void Sube()
+
+    public void Sube() //método que permite establecer si se ha llegado o no al final del nivel
     {
         finalnivel = true;
     }

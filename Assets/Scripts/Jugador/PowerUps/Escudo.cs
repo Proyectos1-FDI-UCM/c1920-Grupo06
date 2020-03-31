@@ -19,7 +19,7 @@ public class Escudo : MonoBehaviour
         enabled = false; //desactivamos el powerup
     }
 
-    private void OnEnable() //cuando se activa el PowerUp
+    void OnEnable() //cuando se activa el PowerUp
     {
         GameManager.instance.ActivaSprite(1); //activamos su referencia en la interfaz
     }

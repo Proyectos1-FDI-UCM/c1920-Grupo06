@@ -1,20 +1,16 @@
 ﻿using UnityEngine;
 
-//Hay que configurar el obstáculo eléctrico como layer NoEnganchable
+//Comportamiento de "ObstáculoElectrico"
+
 public class ObstaculoElectrico : MonoBehaviour
 {
-    [SerializeField] GameObject jugador = null;
-    VidaJugador vidaJugador;
+    [SerializeField] GameObject jugador = null; //referencia al jugador
 
-    private void Start()
+    void OnTriggerEnter2D(Collider2D other) //cuando algo colisione con él
     {
-        vidaJugador = jugador.GetComponent<VidaJugador>();
-    }
-    private void OnTriggerEnter2D(Collider2D other)
-    {
-        if (other.gameObject.GetComponent<Gancho>() != null)
+        if (other.gameObject.GetComponent<Gancho>() != null) //si es el gancho
         {
-            vidaJugador.EliminaVidaJugador();
+            jugador.GetComponent<VidaJugador>().EliminaVidaJugador(); //quitamos una vida al jugador
         }
     }
 }

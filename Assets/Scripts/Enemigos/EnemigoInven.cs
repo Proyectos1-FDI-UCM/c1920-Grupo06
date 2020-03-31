@@ -1,64 +1,73 @@
 ﻿using UnityEngine;
 
+//COmportamiento de "EnemigoInvencible"
+
 public class EnemigoInven : MonoBehaviour
 {
-    [SerializeField] Transform player = null;
-    [SerializeField] float maxTime = 0f, speed = 0f;
-    int intentos = 3;
-    Vector3 tr = Vector3.zero;
+    [SerializeField] Transform player = null; //referncia al transform del jugador
+    [SerializeField] float maxTime = 0f, speed = 0f; //tiempo de búsqueda, velocidad de movimiento
+    int intentos = 3; //numero de intentos del enemigo para intentar alcanzar al jugador
+    Vector3 posJugador = Vector3.zero; //posición del jugador
     Rigidbody2D rb = null;
-    string estado;
-    bool soyvisible = true; //creo que hay otra forma mejor de hacerlo que dijisteis pero lo he apañado rapido para que no me moleste 
+    string estado; //estado del enemigo invencible
+    bool visible = true; //creo que hay otra forma mejor de hacerlo que dijisteis pero lo he apañado rapido para que no me moleste 
     //probando la puntuacion
 
     void Awake()
     {
+        //guardamos su RB
         rb = GetComponent<Rigidbody2D>();
-        estado = "estoyFuera";
+        estado = "estoyFuera"; //establecemos su estado como que se encuentra fuera
     }
-    private void OnEnable()
+
+    void OnEnable() //al activarse (reaparición)
     {
+        //reestablecemos el número de intentos
         intentos = 3;
     }
 
-    private void OnBecameVisible()
+    void OnBecameVisible() //cuando es visible
     {
+        //cambiamos su estado a movimiento en el tiempo establecido
         Invoke("Estado", maxTime);
-        soyvisible = true;
+        visible = true; //establecemos que se encuentra en la pantalla
     }
-    private void OnBecameInvisible()
-    {
-        estado = "estoyFuera";
-        soyvisible = false;
-    }
-    private void Update()
-    {
-        if (estado == "estadoMovimiento" && soyvisible)
-        {
-            Vector3 distancia = tr - transform.position;
 
-            if (distancia.magnitude > 0.1f)
+    void Update()
+    {
+        if (estado == "estadoMovimiento" && visible) //si está en estado movimiento
+        {
+            Vector3 distancia = posJugador - transform.position; //comprobamos su distancia con respecto al punto a alcanzar
+
+            if (distancia.magnitude > 0.1f) //si aun no ha alcanzado dicho punto
             {
-                // Moverme hacia el destino
+                //hacemos que se mueva al destino
                 rb.velocity = distancia.normalized * speed;
-            } 
-            else
+            }
+            else //en caso de haber alcanzado el destino
             {
-                // Ya he llegado al destino
-                rb.velocity = Vector2.zero;
-                intentos--;
-                estado = "estadoPensando";
-                Invoke("Estado", maxTime);
-                if (intentos == 0)
+                rb.velocity = Vector2.zero; //el enemigo para
+                intentos--; //resatmos 1 a sus intentos
+                estado = "estadoPensando"; //Establecemos su estado a "estoyPensando"
+                Invoke("Estado", maxTime); //cambiamos su estado a "estadoMovimiento" tras un tiempo determinado
+                if (intentos == 0) //si ha gastado todos sus intentos
                 {
-                    gameObject.SetActive(false);
+                    gameObject.SetActive(false); //desaparece
                 }
             }
         }
     }
-    void Estado()
+
+    void OnBecameInvisible() //cuando deja de ser visible
+    {
+        //cambiamos su estado correspondientemente
+        estado = "estoyFuera";
+        visible = false;
+    }
+
+    void Estado() //método que se encarga de establecer el estado a "estadoMovimiento"
     {
         estado = "estadoMovimiento";
-        tr = player.position;
+        posJugador = player.position; //establece la nueva posición del jugador detectada por el enemigo
     }
 }

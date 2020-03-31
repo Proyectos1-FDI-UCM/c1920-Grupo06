@@ -1,26 +1,31 @@
 ﻿using UnityEngine;
+
+//Control de la reaparición de aquellos elementos que 
+
 public class Reaparicion : MonoBehaviour
 {
-    Vector2 posicion;
-    float tiempoReactivacion = 3f;
+    [SerializeField] bool puedoReaparecer = true; //booleano que decide si la entidad reaparece o no
+    [SerializeField] float tiempoReactivacion = 3f; //tiempo que tarda en reaparecer
+    Vector2 posicion; //posicion de la entidad
 
-    public bool puedoReaparecer = true;
-    private void Awake()
+    void Awake()
     {
+        //guardamos la posición de la entidad
         posicion = transform.position;
     }
 
-    private void OnDisable()
+    void OnDisable() //al desactivarse
     {
-        //si puedo reaparecer, lo hago
+        //si puedo reaparecer
         if (puedoReaparecer)
         {
+            //lo hago tras cierto tiempo
             Invoke("Reactivacion", tiempoReactivacion);
             transform.position = posicion;
         }
     }
 
-    void Reactivacion()
+    void Reactivacion() //método para la reactivación de la entidad
     {
         gameObject.SetActive(true);
     }

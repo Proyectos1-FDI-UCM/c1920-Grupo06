@@ -1,5 +1,7 @@
 ﻿using UnityEngine;
 
+//Comportamiento de los coleccionables
+
 public class Coleccionables : MonoBehaviour
 {
     [SerializeField] int numeroColeccionable = 0; //numero del coleccionable

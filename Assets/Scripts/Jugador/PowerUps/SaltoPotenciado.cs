@@ -31,7 +31,7 @@ public class SaltoPotenciado : MonoBehaviour
         enabled = false;
     }
 
-    void OnDisable() //cuando se desactive e PowerUp
+    void OnDisable() //cuando se desactive el PowerUp
     {
         if (activado) //si no ha sido por editor
         {

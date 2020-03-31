@@ -1,32 +1,25 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
+
+//Comportamiento de la plataforma Jumpthrough
 
 public class PlataformaJumpthrough : MonoBehaviour
 {
-    //Collider2D col;
-    Collider2D colTrigger;
+    Collider2D colTrigger; //referencia al collider de la plataforma
+
     void Start()
     {
-        //col = GetComponents<Collider2D>()[0];
-        //col.isTrigger = false;
-        //col.enabled = false;
+        //guardamos el collider
         colTrigger = GetComponent<Collider2D>();
-        //colTrigger.isTrigger = true;
-        //colTrigger.enabled = true;
     }
 
-    //void Update()
-    //{
-    //    Debug.Log(colTrigger.bounds.extents.y);
-    //}
-    private void OnTriggerExit2D(Collider2D collision)
+    private void OnTriggerExit2D(Collider2D collision) //cuando el jugador atraviese la plataforma
     {
-        Bounds borde = colTrigger.bounds;
+        Bounds borde = colTrigger.bounds; //guardamos el borde del trigger
+
+        //si el jugador atraviesa la plataforma por encima
         if (collision.gameObject.transform.position.y > transform.position.y + borde.extents.y)
         {
-            //col.enabled = true;
-            colTrigger.isTrigger = false;
+            colTrigger.isTrigger = false; //hacemos que la plataforma deje de ser un "trigger"
         }
     }
 }

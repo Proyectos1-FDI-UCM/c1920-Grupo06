@@ -1,8 +1,10 @@
 ﻿using UnityEngine;
 
+//Comportamiento de la DeathZone (hija de la cámara)
+
 public class MuertePorCaida : MonoBehaviour
 {
-    private void OnTriggerEnter2D(Collider2D collision)
+    void OnTriggerEnter2D(Collider2D collision) //cuando alguna entidad entre al "trigger"
     {
         Estados jugador = collision.gameObject.GetComponent<Estados>(); //comprobamos si es el jugador
 

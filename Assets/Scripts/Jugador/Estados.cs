@@ -1,17 +1,15 @@
 ﻿using UnityEngine;
 
-
-/*Máquina de estados del jugador 
- * De los scripts más importantes de éste pues maneja la lógica y como se comportan todos los scripts
+/* Máquina de estados del jugador 
+ * Maneja la lógica y como se comportan todos los scripts
  * Los activa y desactiva según sea necesario
  */
 
-//enum público que marca los estados posibles del jugador
+//enum que marca los estados posibles del jugador
 public enum estado { Defecto, SlowMotion, LanzamientoGancho, MovimientoGancho, Dash, Muerte, Inactivo }
 public class Estados : MonoBehaviour
 {
-    //Referencias de los componentes que van a ser modificados según el estado
-    
+    //referencias de los componentes que van a ser modificados según el estado
     Rigidbody2D rb;
     BoxCollider2D deathzone;
     CrearGancho creaGancho;
@@ -21,14 +19,12 @@ public class Estados : MonoBehaviour
     CrearDash crearDash;
     Dash dash;
     AnimacionesJugador animator;
-    //enum que controla el estado
-    estado estado_actual = estado.Defecto;
-
-    
+    estado estado_actual = estado.Defecto; //enum que controla el estado
     float gravedad; //valor para saber cual es la gravedad original y no perder el valor
-    private void Awake()
+    
+    void Awake()
     {
-        //Inicializar componentes
+        //inicialización de componentes
         rb = GetComponent<Rigidbody2D>();
         gravedad = rb.gravityScale;
         creaGancho = GetComponent<CrearGancho>();
@@ -40,25 +36,26 @@ public class Estados : MonoBehaviour
         animator = GetComponent<AnimacionesJugador>();
         deathzone = Camera.main.GetComponentInChildren<BoxCollider2D>();
 
-        ActualizaComponentes();//Inicializamos los scripts para estar preparados para el juego
+        ActualizaComponentes(); //inicializamos los scripts para estar preparados para el juego
     }
+
     public estado Estado() //Permite a otros métodos conocer el estado actual del jugador
     {
         return estado_actual;
     }
 
-    public void CambioEstado(estado NuevoEstado) //Permite a otros métodos cambiar el estado del jugador
+    public void CambioEstado(estado NuevoEstado) //método que permite cambiar el estado del jugador
     {
         estado_actual = NuevoEstado;
-        ActualizaComponentes();
-        animator.CambioAnimacion(estado_actual);
+        ActualizaComponentes(); //actualizamos los componentes con respecto al nuevo estado
+        animator.CambioAnimacion(estado_actual); //cambiamos la animación con respecto al nuevo estado
     }
-    private void ActualizaComponentes()
+
+    void ActualizaComponentes() //método que lleva la lógica de cada estado
     {
         switch (estado_actual)
         {
-            
-            case estado.Defecto:
+            case estado.Defecto: //estado por defecto 
                 deathzone.enabled = true;
                 rb.gravityScale = gravedad;
                 creaGancho.enabled = true;
@@ -66,9 +63,9 @@ public class Estados : MonoBehaviour
                 movimientoGancho.enabled = false;
                 salto.enabled = true;
                 crearDash.enabled = true;
-
                 break;
-            case estado.SlowMotion:
+
+            case estado.SlowMotion: //estado slowMotion (cuando se está apuntando para lanzar el gancho)
                 deathzone.enabled = true;
                 creaGancho.enabled = true;
                 movimiento.enabled = false;
@@ -77,7 +74,7 @@ public class Estados : MonoBehaviour
                 crearDash.enabled = false;
                 break;
 
-            case estado.LanzamientoGancho:
+            case estado.LanzamientoGancho: //estado del propio lanzamiento de dicho gancho
                 deathzone.enabled = true;
                 rb.velocity = Vector2.zero;
                 rb.gravityScale = 0;
@@ -88,7 +85,7 @@ public class Estados : MonoBehaviour
                 crearDash.enabled = false;
                 break;
 
-            case estado.MovimientoGancho:
+            case estado.MovimientoGancho: //estdo del movimiento derivado de lanzar el gancho
                 deathzone.enabled = true;
                 creaGancho.enabled = false;
                 movimiento.enabled = false;
@@ -96,7 +93,8 @@ public class Estados : MonoBehaviour
                 salto.enabled = false;
                 crearDash.enabled = false;
                 break;
-            case estado.Dash:
+
+            case estado.Dash: //estado de movimiento del dash
                 deathzone.enabled = true;
                 rb.gravityScale = 0;
                 creaGancho.enabled = false;
@@ -106,7 +104,8 @@ public class Estados : MonoBehaviour
                 dash.enabled = true;
                 crearDash.enabled = false;
                 break;
-            case estado.Muerte:
+
+            case estado.Muerte: //Estado de muerte
                 deathzone.enabled = true;
                 rb.velocity = Vector2.zero;
                 rb.gravityScale = 0;
@@ -116,7 +115,8 @@ public class Estados : MonoBehaviour
                 salto.enabled = false;
                 crearDash.enabled = false;
                 break;
-            case estado.Inactivo:
+
+            case estado.Inactivo: //Estado inactivo
                 deathzone.enabled = false;
                 creaGancho.enabled = false;
                 movimiento.enabled = false;

@@ -16,7 +16,7 @@ public class PowerUpManager : MonoBehaviour
     Escudo escudo = null;
     powerUp powerUpActual = powerUp.Ninguno; //powerUp en el que me encuentro
 
-    private void Awake()
+    void Awake()
     {
         //obtenemos referencia a todos los PowerUps
         nube = GetComponent<PlataformaNube>();
