@@ -27,5 +27,10 @@ public class MovLineal : MonoBehaviour
         {
             rb.velocity = -rb.velocity; //cambiamos la dirección de su movimiento
         }
+        else
+        {
+            Rigidbody2D player = other.transform.parent.GetComponent<Rigidbody2D>();
+            player.gravityScale = 10;
+        }
     }
 }

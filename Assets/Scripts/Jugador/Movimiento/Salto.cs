@@ -3,7 +3,7 @@
 public class Salto : MonoBehaviour
 {
     //Script que controla el salto que hace el jugador
-    [SerializeField] [Range(5,10)] float fuerza_salto = 2; //Fuerza con la que se salta
+    [SerializeField] [Range(5, 10)] float fuerza_salto = 2; //Fuerza con la que se salta
     Rigidbody2D rb;
     Suelo suelo;
     bool salto_disponible = true; //Dice si se puede saltar o no, como no hay doble salto es un booleano
@@ -17,6 +17,8 @@ public class Salto : MonoBehaviour
     {
         if (Input.GetButtonDown("Jump") && salto_disponible && suelo.EnSuelo()) //Si se pulsa la tecla de salto y se puede saltar se ejecuta
         {
+
+            rb.gravityScale = 1.5f;
             rb.AddForce(Vector2.up * fuerza_salto, ForceMode2D.Impulse); //Se añade la fuerza
             salto_disponible = false; //Se cambia la disponibilidad a false
         }
