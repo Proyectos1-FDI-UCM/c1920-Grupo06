@@ -1,40 +1,43 @@
 ﻿using UnityEngine;
 
+//Control del salto que hace el jugador
+
 public class Salto : MonoBehaviour
 {
-    //Script que controla el salto que hace el jugador
-    [SerializeField] [Range(5, 10)] float fuerza_salto = 2; //Fuerza con la que se salta
+    [SerializeField] [Range(5, 10)] float fuerza_salto = 2; //Fuerza del salto
     Rigidbody2D rb;
     Suelo suelo;
-    bool salto_disponible = true; //Dice si se puede saltar o no, como no hay doble salto es un booleano
-    private void Start()
+    bool salto_disponible = true; //booleano que controla si se puede saltar o no
+
+    void Start()
     {
+        //inicializamos las referencias
         suelo = GetComponentInChildren<Suelo>();
         rb = GetComponent<Rigidbody2D>();
     }
 
-    private void Update()
+    void Update()
     {
-        if (Input.GetButtonDown("Jump") && salto_disponible && suelo.EnSuelo()) //Si se pulsa la tecla de salto y se puede saltar se ejecuta
+        if (Input.GetButtonDown("Jump") && salto_disponible && suelo.EnSuelo()) //si se pulsa la tecla de salto cuando el salto este disponible
         {
-
-            rb.gravityScale = 1.5f;
-            rb.AddForce(Vector2.up * fuerza_salto, ForceMode2D.Impulse); //Se añade la fuerza
-            salto_disponible = false; //Se cambia la disponibilidad a false
+            rb.gravityScale = 1.5f; //reestablecemos la gravedad
+            rb.AddForce(Vector2.up * fuerza_salto, ForceMode2D.Impulse); //se aplica la fuerza del salto
+            salto_disponible = false; //se cambia la disponibilidad del salto a false
         }
     }
-    public void RecargaSalto() //El jugador llama a este método cuando "Suelo" se activa, es decir se toca una plataforma
+
+    public void RecargaSalto() //método para recargar los saltos al llegar a una superficie
     {
         salto_disponible = true;
     }
 
-    //PowerUP salto agrandado
-    public float GetFuerzaSalto() //Devuelve el valor del salto
+    //métodos utilizados para el PowerUp "SaltoPotenciado"
+    public float GetFuerzaSalto() //método que devuelve la fuerza del salto
     {
         return fuerza_salto;
     }
 
-    public void PowerUpSalto(float nueva_fuerza) //Cambia la fuerza del salto
+    public void PowerUpSalto(float nueva_fuerza) //método que actualiza la fuerza del salto
     {
         fuerza_salto = nueva_fuerza;
     }

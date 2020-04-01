@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class MenuManager : MonoBehaviour
 {
@@ -26,5 +24,4 @@ public class MenuManager : MonoBehaviour
         lerpArribaScript.enabled = false;
         lerpIzquierdaScript.enabled = false;
     }
-
 }

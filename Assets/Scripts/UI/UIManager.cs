@@ -1,115 +1,131 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
 
+//Comportamiento de la interfaz
+
 public class UIManager : MonoBehaviour
 {
-    public GameObject panel;
-    public GameObject puntuacion;
-    public GameObject barraProgreso;
-
-    [SerializeField] Image[] vida = null;
-    [SerializeField] Image[] powerups = null;
-    [SerializeField] Text tiempo = null;
-    [SerializeField] Text muertesjugador = null, eliminaciones = null, coleccionablesRecog = null;
-    [SerializeField] Text puntos = null;
+    //GO de menú, puntuación y barra de progres
+    [SerializeField] GameObject panel, puntuacion, barraProgreso;
+    //ia¡magenes de la vida y los PowerUps
+    [SerializeField] Image[] vida = null, powerups = null;
+    //texto de tiempo en pantalla, muertes del jugador, eliminaciones, coleccionables y puntos
+    [SerializeField]
+    Text tiempo = null, muertesjugador = null, eliminaciones = null,
+        coleccionablesRecog = null, puntos = null;
+    //slider del progreso en el nivel
     [SerializeField] Slider progress = null;
 
-    private void Awake()
+    void Awake()
     {
+        //activamos la barra de progreso
         barraProgreso.SetActive(true);
+        //desactivamos pantalla de puntuación y pausa
         panel.SetActive(false);
         puntuacion.SetActive(false);
     }
 
     void Start()
     {
-        tiempo.enabled = true;
-        GameManager.instance.SetUIManager(this);
-        SetMaxHigh(368);//la posicion en y del ultimo gameobject del nivel
-        progress.minValue = Camera.main.transform.position.y;
-        DesactivaPowerUpSprites();
+        GameManager.instance.SetUIManager(this); //establecemos a este UIManager en el GM
+        tiempo.enabled = true; //activamos el tiempo
+        SetAlturaMaxima(368); //la posicion en 'y' del ultimo GO del nivel
+        progress.minValue = Camera.main.transform.position.y; //establecemos el punto mínimo de la barra de progreso
+        DesactivaPowerUpSprites(); //desactivamos los sprites de los powerUps
     }
 
-    private void Update()
+    void Update()
     {
-        setProgress(Camera.main.transform.position.y);
-        //la w y la q para usar los power-ups de plataforma en el aire y el de botas de salto
-        if (powerups[1].enabled && Input.GetKeyDown(KeyCode.W)) GameManager.instance.DesactivaSprite(1);
-        if (powerups[0].enabled && Input.GetKeyDown(KeyCode.Q)) GameManager.instance.DesactivaSprite(0);
+        setProgreso(Camera.main.transform.position.y); //establecemos el avance de la cámara
     }
+
     //APARTADO DE LA BARRA DE PROGRESO
-    //método para darle un valor máximo a la barra de vida
-    public void SetMaxHigh(int maxHigh)
+    public void SetAlturaMaxima(int maxHigh) //método para darle un valor máximo a la barra de progreso
     {
         progress.maxValue = maxHigh;
     }
-    //método para pasar la altura de la cámara y se modifique la barra de progreso en función
-    public void setProgress(float high)
+
+    public void setProgreso(float high) //método para pasar la altura de la cámara (comienzo de la barra)
     {
         progress.value = high;
     }
+
     //APARTADO DE LA VIDA
-    //desactiva el componente del array vida correspondiente al parametro
-    public void SetSpriteLife(int vidas)
+    public void SetSpriteVida(int vidas) //desactiva el componente del array vida correspondiente al parametro
     {
         vida[vidas].enabled = false;
     }
-    //vuelve a activar todos los sprites
-    public void ResetSpritesLife()
+    
+    public void ResetSpritesVida() //vuelve a activar todos los sprites
     {
         for (int i = 0; i < vida.Length; i++)
         {
             vida[i].enabled = true;
         }
     }
-    public void DesactivaSpriteLifes()
+
+    public void DesactivaSpriteVidas() //desactiva el array vidas
     {
         for (int i = 0; i < vida.Length; i++)
         {
             vida[i].enabled = false;
         }
     }
+
     //APARTADO DE LOS POWER-UPS
-    public void DesactivaPowerUpSprites()
+    public void DesactivaPowerUpSprites() //método que desactiva todos los sprites de powerUps
     {
         for (int i = 0; i < powerups.Length; i++)
         {
             powerups[i].enabled = false;
         }
     }
-    public void ActivaPowerUpSprite(int num)
+
+    public void ActivaPowerUpSprite(int num) //método que activa un sprite de powerUp
     {
         powerups[num].enabled = true;
     }
-    public void DesActivaPowerUpSprite(int num)
+
+    public void DesactivaPowerUpSprite(int num) //método que desactiva un sprite de powerUp
     {
         if (powerups[num] != null)
         {
             powerups[num].enabled = false;
         }
     }
-    public void Tiempo(int contador)
+
+    //APARTADO DEL TIEMPO
+    public void Tiempo(int contador) //método para establecer el tiempo en pantalla
     {
+        //cambiamos el color del texto con respecto al tiempo que quede
         if (contador < 10)
         {
             if (contador <= 7)
-                if (contador <= 3)
-                    tiempo.color = new Color32(255, 0, 0, 255);
+            {
+                if (contador <= 3) tiempo.color = new Color32(255, 0, 0, 255);
                 else tiempo.color = new Color32(255, 100, 100, 255);
+            }
             else tiempo.color = Color.yellow;
         }
         else tiempo.color = Color.white;
+
+        //escribimos el tiempo
         tiempo.text = contador.ToString();
     }
 
-    public void MostrarPausa()
+    //APARTADO DE LA PAUSA
+    public void MostrarPausa() //método que activa el menú de pausa
     {
         panel.SetActive(true);
     }
-    public void QuitarPausa()
+
+    public void QuitarPausa() //método que deactiva el menú de pausa
     {
         panel.SetActive(false);
     }
+
+    //APARTADO DE LA PUNTUACIÓN
+    //método para enseñar ka puntuación en la pantalla
     public void MostrarPuntuacion(int punt, int muertes, int enemigoselim, int coleccionables)
     {
         //muestra el marco con la puntuacion
@@ -121,7 +137,7 @@ public class UIManager : MonoBehaviour
 
         //oculta la barra de progreso, la vidas, el tiempo y los sprites de los power-ups
         barraProgreso.SetActive(false);
-        DesactivaSpriteLifes();
+        DesactivaSpriteVidas();
         tiempo.enabled = false;
         DesactivaPowerUpSprites();
     }

@@ -1,80 +1,91 @@
 ﻿using UnityEngine;
 
+//Control del comportamiento del gancho a lo largo de su recorrido
+
 public class Gancho : MonoBehaviour
 {
-    //Script que tendrá el gancho y controla como se comporta en su recorrido
-
-    [SerializeField] [Range (1,30)]  float rango_gancho = 1; //Longitud máxima del gancho
-    [SerializeField] [Range(1, 100)] float velocidad_gancho = 1; //Velocidad a la que se desplaza el gancho
-    [SerializeField] [Range(0, 3)] float tiempo_desaparicion = 1; //Tiempo que tarda el gancho en desaparecer
-
+    [SerializeField] [Range(1, 30)] float rango_gancho = 1; //longitud máxima del gancho
+    [SerializeField] [Range(1, 100)] float velocidad_gancho = 1; //velocidad a la que se desplaza el gancho
+    [SerializeField] [Range(0, 3)] float tiempo_desaparicion = 1; //tiempo que tarda el gancho en desaparecer
     Rigidbody2D rb_gancho = null;
     GameObject jugador = null;
     LineRenderer linea = null;
     Estados estadoJugador = null;
 
-    private void Start()
+    void Start()
     {
+        //guadamos el LineRenderer y RB del gancho
         linea = GetComponent<LineRenderer>();
         rb_gancho = GetComponent<Rigidbody2D>();
-        rb_gancho.AddForce(transform.right * velocidad_gancho, ForceMode2D.Impulse); //velocidad a la que se mueve el gancho
+        //establecemos la velocidad a la que se mueve el gancho
+        rb_gancho.AddForce(transform.right * velocidad_gancho, ForceMode2D.Impulse);
+        //anulamos la gravedad y drag para que no afecten a la direccion y velocidad del gancho
         rb_gancho.gravityScale = 0;
-        rb_gancho.drag = 0; //Anulamos la gravedad y drag para que no afecten a la direccion y velocidad del gancho
+        rb_gancho.drag = 0; 
     }
-    private void Update()
-    {
-        linea.SetPosition(0, Posicion(jugador.transform.position));
-        linea.SetPosition(1,Posicion(transform.position)); //Dibujamos la linea del gancho al jugador
 
-        if((linea.GetPosition(1) - linea.GetPosition(0)).magnitude > rango_gancho) //Si la longitud de la linea supera al rango máximo se destruye el gancho
+    void Update()
+    {
+        //dibujamos la linea del gancho al jugador
+        linea.SetPosition(0, Posicion(jugador.transform.position));
+        linea.SetPosition(1, Posicion(transform.position));
+
+        //si la longitud de la linea supera al rango máximo (falla)
+        if ((linea.GetPosition(1) - linea.GetPosition(0)).magnitude > rango_gancho)
         {
-            DestruirGancho();
+            DestruirGancho(); //se destruye el gancho
         }
     }
-    Vector3 Posicion(Vector3 vector) //Debido a la naturaleza 3d del LineRendered hay que dibujarlo en la posición -1 de z para que se vea encima de los sprites
+
+    void OnTriggerEnter2D(Collider2D collision) //si el gancho entra en contacto con algo distinto del jugador, se activa el gancho
     {
-        return new Vector3(vector.x, vector.y, -1); 
+        GameObject colision = collision.gameObject;
+        if (colision.GetComponent<Jugador>() == null && colision.GetComponent<Suelo>() == null) //si no ha colisionado con el jugador
+        {
+            if (colision.layer != 13 && colision.layer != 16) //La capa 13 es en la que estarán los objetos no enganchables
+            {
+                Destroy(rb_gancho); //ddetenemos el movimiento del gancho
+                jugador.GetComponent<Jugador>().Gancho(gameObject); //guardamos una referencia del gancho
+                estadoJugador.CambioEstado(estado.MovimientoGancho); //cambiamos el estado a "MovimientoGancho"
+            }
+            else if (colision.layer == 13)
+            {
+                DestruirGancho(); //si colisiona con algo con lo que no puede engancharse, se comporta como si hubiese
+            }
+        }
     }
-    void DestruirGancho() //Se detruye el rigid body para detener el movimiento y el box collider para evitar que se active el gancho al llegar al final
+
+    Vector3 Posicion(Vector3 vector) //método para la conversion a Vector3, porque la naturaleza 3D del LineRenderer requiere que la 'z' sea -1
+    {
+        return new Vector3(vector.x, vector.y, -1);
+    }
+
+    void DestruirGancho() //método de destrucción del RB y el collider, para detener el movimiento y evitar que se active el gancho
     {
         Destroy(rb_gancho);
         Destroy(GetComponent<BoxCollider2D>());
-        Invoke("Destruir", tiempo_desaparicion); //Una vez pasado el tiempo de desaparición se destruye definitivamente el objeto
+        Invoke("Destruir", tiempo_desaparicion); //tras pasar cierto tiempo, se destruye definitivamente el objeto
     }
-    void Destruir()
+
+    void Destruir() //método que destruye todo el objeto
     {
         Destroy(gameObject);
-        estadoJugador.CambioEstado(estado.Defecto); //El estado cambia al por defeco
+        estadoJugador.CambioEstado(estado.Defecto); //cambiamos el estado a por defecto
     }
-    public void CreacionGancho(GameObject referenciaJugador) //Es el método que usa "CreaGancho" para asignar la referencia del jugador y los estados
+
+    public void CreacionGancho(GameObject referenciaJugador) //método que asigna referencias al jugador y estados desde "CreaGancho"
     {
         jugador = referenciaJugador;
         estadoJugador = jugador.GetComponent<Estados>();
     }
 
-    private void OnTriggerEnter2D(Collider2D collision) //Si el gancho entra en contacto con algo distinto del jugador se activa el gancho
-    {
-        GameObject colision = collision.gameObject;
-        if (colision.GetComponent<Jugador>() == null && colision.GetComponent<Suelo>() == null) //Suelo es el componente que tienen los pies del jugador
-        {
-            if (colision.layer != 13 && colision.layer != 16) //La capa 13 es en la que estarán los objetos no enganchables
-            {
-                Destroy(rb_gancho); //Detenemos el movimiento del gancho
-                jugador.GetComponent<Jugador>().Gancho(gameObject); //Asginamos una referencia del gancho al script Jugador
-                estadoJugador.CambioEstado(estado.MovimientoGancho); //Cambiamos el estado a movimiento gancho
-            }
-            else if(colision.layer == 13)
-            {
-                DestruirGancho(); //Si colisiona con algo con lo que no puede engancharse pasa lo mismo que si se hubiera fallado
-            }
-        }
-    }
-    //PowerUP gancho alargado
-    public float GetLongitudGancho() //devuelve el valor inicial de la longitud gancho
+    //métodos utilizados para el PowerUp "AlargaGancho"
+    public float GetLongitudGancho() //método que devuelve la longitud recorrida por el gancho
     {
         return rango_gancho;
     }
-    public void PowerUpGancho(float nueva_longitud_gancho) //Cambia el valor de la longitud del gancho
+
+    public void PowerUpGancho(float nueva_longitud_gancho) //método que actualiza la longitud del gancho
     {
         rango_gancho = nueva_longitud_gancho;
     }
