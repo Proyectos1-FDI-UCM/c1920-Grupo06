@@ -1,11 +1,12 @@
 ﻿using UnityEngine;
 
+//Clase estática para métodos que puedan ser usados en varios scripts
+
 public static class Metodos
 {
-    //Clase estática para métodos que puedan ser usados en varios scripts y que no haya necesidad de copiar el código varias veces
 
     /// <summary>
-    /// Convierte un vector de vector 3 a vector 2 ignorando la z
+    /// Convierte un vector de Vector3 a Vector2 ignorando la 'z'
     /// </summary>
     /// <param name="vectorOriginal"></param>
     /// <returns></returns>
@@ -13,6 +14,7 @@ public static class Metodos
     {
         return new Vector2(vectorOriginal.x, vectorOriginal.y);
     }
+
     /// <summary>
     /// Angulo en grados entre dos puntos
     /// </summary>
@@ -22,22 +24,25 @@ public static class Metodos
     public static float AnguloPuntos(Vector2 inicio, Vector2 fin)
     {
         Vector2 direccion = fin - inicio;
+        //calculamos el ángulo en base a la dirección del vector
         float angulo = Mathf.Atan(direccion.y / direccion.x) / Mathf.PI * 180;
-        if (fin.x - inicio.x < 0)
+        if (fin.x - inicio.x < 0) //si el ángulo es mayor de 180º, lo añadimos
             angulo += 180;
         return angulo;
     }
+
     /// <summary>
     /// Angulo en grados entre un punto y el cursor
     /// </summary>
     /// <param name="posicion"></param>
     /// <returns></returns>
-    public static float Angulo_Posicion_Mouse(Vector2 posicion)
+    public static float AnguloPosicionRaton(Vector2 posicion)
     {
-        Vector3 mouse = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        Vector2 direccion = Vector3toVector2(mouse) - posicion;
+        Vector3 raton = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        //calculamos la direccion con respecto al jugador y el punto presionado
+        Vector2 direccion = Vector3toVector2(raton) - posicion;
         float angulo = Mathf.Atan(direccion.y / direccion.x) / Mathf.PI * 180;
-        if (mouse.x - posicion.x < 0)
+        if (raton.x - posicion.x < 0) //si el ángulo es mayor de 180º, lo añadimos
             angulo += 180;
         return angulo;
     }
@@ -47,13 +52,15 @@ public static class Metodos
     /// </summary>
     /// <param name="posicion"></param>
     /// <returns></returns>
-    public static Vector3 Direccion_Punto_Mouse(Vector3 posicion)
+    public static Vector3 DireccionPuntoRaton(Vector3 posicion)
     {
-        Vector3 mouse = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        Vector3 direccion = mouse - posicion;
+        Vector3 raton = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        Vector3 direccion = raton - posicion;
         return direccion;
     }
-    public static float anguloConMando(out bool cambio)
+
+    //calculo del ángulo al utilizar el mando
+    public static float AnguloConMando(out bool cambio)
     {
         cambio = true;
         float angulo = 0;
@@ -66,11 +73,12 @@ public static class Metodos
         if (horizontal < 0) angulo += 180;
         return angulo;
     }
+
+    //vector dirección de apuntado del mando
     public static Vector3 DireccionMando()
     {
         float vertical = Input.GetAxis("Vertical");
         float horizontal = Input.GetAxis("Horizontal");
-        return new Vector3(horizontal, vertical); ;
+        return new Vector3(horizontal, vertical);
     }
-
 }

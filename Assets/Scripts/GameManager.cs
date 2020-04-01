@@ -1,30 +1,33 @@
 ﻿using UnityEngine;
 using UnityEngine.SceneManagement;
+
+//Comportamiento del GameManager
+
 public class GameManager : MonoBehaviour
 {
     static public GameManager instance; //instancia del GM
     [SerializeField] int vidas = 3, tamañoColeccionables = 3; //vidas del jugador, coleccionables
-    int enemieselim = 0, nummuertes = 0, puntuacion = 0; //contador de veces que el jugador muere y enemigos que elimina y puntuacion
     GameObject jugador = null; //GO del jugador
-    Vector3 posicionJugador = Vector3.zero; //posicion del jugador
-    Vector3 checkpoint = Vector3.zero; //posicion de la camara
     RetrocederAlCheckPoint retrocederAlCheckPoint;
     UIManager theUIMan = null; //referencia a UIManager
+    Vector3 posicionJugador = Vector3.zero; //posicion del jugador
+    Vector3 checkpoint = Vector3.zero; //posicion de la camara
+    int enemigosElim = 0, numMuertes = 0, puntuacion = 0; //contador de veces que el jugador muere y enemigos que elimina y puntuacion
     bool[] coleccionables; //arrays de "coleccionables"
 
+    //variables de puntuacion
+    [SerializeField] int puntuacionPorMuerte = 0, puntuacionPorEnemigo = 0, puntuacionPorColeccionable = 0;
     SeguimientoJugador finalcam;
-    Estados est;
-    [SerializeField] int puntuacionPorMuerte = 0;
-    [SerializeField] int puntuacionPorEnemigo = 0;
-    [SerializeField] int puntuacionPorColeccionable = 0;
+    Estados estados;
 
+    //variables de tiempo
     [Header("Tiempo en segundos del contador")]
     [SerializeField] float timer = 5; //temporizador
+    [SerializeField] bool sumarTiempoCheckPoint = false; //booleano para si añadimos el añadir tiempo al llegar al checkpoint
     float tiempo; //tiempo original
     int tiempoRedondeado = 0; //tiempo representado en UI
-    [SerializeField] bool sumarTiempoCheckPoint = false; //booleano para si añadimos el añadir tiempo al llegar al checkpoint
 
-    private void Awake() //Singleton
+    private void Awake() //singleton
     {
         if (instance == null) //si no hay instancia
         {
@@ -39,37 +42,39 @@ public class GameManager : MonoBehaviour
 
     void Start()
     {
-        finalcam = Camera.main.GetComponent<SeguimientoJugador>();
-        tiempo = timer;
-        coleccionables = new bool[tamañoColeccionables]; //inicializamos el array con respecto al valor del editor
-        if (theUIMan != null)
+        if (theUIMan != null) //si hay UIManager
         {
-            theUIMan.SetSpriteLife(vidas);
-            retrocederAlCheckPoint = Camera.main.GetComponent<RetrocederAlCheckPoint>();
+            theUIMan.SetSpriteVida(vidas); //establecemos las vidas
         }
+        //guardamos referencias a los componentes de la cámara
+        retrocederAlCheckPoint = Camera.main.GetComponent<RetrocederAlCheckPoint>();
+        finalcam = Camera.main.GetComponent<SeguimientoJugador>();
+        tiempo = timer; //guardamos el tiempo
+        coleccionables = new bool[tamañoColeccionables]; //inicializamos el array con respecto al valor del editor
     }
 
-    private void FixedUpdate() //En fixed update para que el tiempo vaya a un ritmo constante
+    void FixedUpdate() //hacemos que el tiempo se reduzca a un ritmo constante
     {
-        if (SceneManager.GetActiveScene().name != "Menu")
+        if (SceneManager.GetActiveScene().name != "Menu") //siempre que no nos encontremos en el menú
         {
             timer -= Time.fixedDeltaTime;
         }
     }
 
-    private void Update()
+    void Update()
     {
-        if (theUIMan != null)
+        if (theUIMan != null) //si no estamos en la pantalla de inicio
         {
-            tiempoRedondeado = (int)timer;
-            theUIMan.Tiempo(tiempoRedondeado);
-            if (tiempoRedondeado <= 0)
+            tiempoRedondeado = (int)timer; //guardamos el tiempo redondeado
+            theUIMan.Tiempo(tiempoRedondeado); //lo enviamos a la interfaz
+            if (tiempoRedondeado <= 0) //si se ha agotado el tiempo
             {
-                ResetNivel();
+                ResetNivel(); //Reseteamos el ivel (volvemos al primer checkpoint)
             }
         }
     }
 
+    //TIEMPO
     void ResetNivel()
     {
         timer = tiempo;
@@ -79,42 +84,13 @@ public class GameManager : MonoBehaviour
         checkpoint = Vector3.zero;
     }
 
-    public void SetUIManager(UIManager uim)
-    {
-        theUIMan = uim;
-    }
-
-    public void SetPlayer(GameObject player)
-    {
-        jugador = player;
-    }
-
-    public void SetRetrocederAlCheckPoint(RetrocederAlCheckPoint RaC)
-    {
-        retrocederAlCheckPoint = RaC;
-    }
-
-    public void EliminaVidaJugador() //método para eliminar vidas del jugador por contacto
-    {
-        if (vidas > 0)
-        {
-            theUIMan.SetSpriteLife(vidas);
-            vidas--;
-        }
-
-        if (vidas <= 0) //si está muerto, volvemos al checkpoint
-        {
-            Muerte();
-            theUIMan.ResetSpritesLife();
-        }
-    }
-
-    public void PosicionJugador(Vector3 jugadorpos)
+    //CHECKPOINTS
+    public void PosicionJugador(Vector3 jugadorpos) //método para guardar la nueva posición del jugador
     {
         posicionJugador = jugadorpos;
     }
 
-    public void CheckPoint(Vector3 posicion, float tiempoAdicional)
+    public void CheckPoint(Vector3 posicion, float tiempoAdicional) //método para establecer el nuevo checkpoint
     {
         checkpoint = posicion;
         if (sumarTiempoCheckPoint)
@@ -122,41 +98,112 @@ public class GameManager : MonoBehaviour
 
     }
 
-    public Vector3 CheckPoint()
+    public Vector3 CheckPoint() //método para obtener el checkpoint actual
     {
         return checkpoint;
     }
 
-    public void Muerte() //método de reaparición
+
+    //SISTEMA DE VIDAS
+    public void EliminaVidaJugador() //método para eliminar vidas del jugador por contacto
     {
-        Time.timeScale = 1;
-        jugador.transform.position = checkpoint;
-        vidas = 3;
-        theUIMan.ResetSpritesLife();
-        retrocederAlCheckPoint.enabled = true;
-        nummuertes++;
+        if (vidas > 0) //si las vidas son mayores que 0
+        {
+            //quitamos una vida (reflejado en la interfaz)
+            theUIMan.SetSpriteVida(vidas);
+            vidas--;
+        }
+
+        if (vidas <= 0) //si está muerto, volvemos al checkpoint
+        {
+            Muerte();
+            theUIMan.ResetSpritesVida();
+        }
     }
 
-    public void ActivaSprite(int num)
+    public void Muerte() //método de reaparición
+    {
+        theUIMan.ResetSpritesVida(); //reseteamos las vidas
+        vidas = 3;
+        retrocederAlCheckPoint.enabled = true; //retrocedemos al checkpoint
+        Time.timeScale = 1; //activamos el tiempo a 1 (en caso de reiniciar desde menu)
+        numMuertes++; //aumentamos el número de muertes
+        jugador.transform.position = checkpoint; //hacemos que el jugador se transporte al checkpoint
+    }
+
+    //POWERUPS (INTERFAZ)
+    public void ActivaSprite(int num) //método hace activar un sprite del PowerUp a la interfaz
     {
         theUIMan.ActivaPowerUpSprite(num);
     }
 
-    public void DesactivaSprite(int num)
+    public void DesactivaSprite(int num) //método hace desactivar un sprite del PowerUp a la interfaz
     {
-        theUIMan.DesActivaPowerUpSprite(num);
+        theUIMan.DesactivaPowerUpSprite(num);
     }
 
-    public void Pausa()
+    //PAUSA
+    public void Pausa() //método para mostrar el menu de pausa
     {
         Time.timeScale = 0;
         theUIMan.MostrarPausa();
     }
 
-    public void QuitarPausa()
+    public void QuitarPausa() //método para quitar el menú de pausa
     {
         Time.timeScale = 1;
         theUIMan.QuitarPausa();
+    }
+
+    public void ChangeScene(string escena) //método de cambio de escena
+    {
+        SceneManager.LoadScene(escena);
+        Time.timeScale = 1;
+        timer = 10;
+    }
+
+    public void ChangeScene(int indice) //método de cambio de escena
+    {
+        SceneManager.LoadScene(indice);
+        Time.timeScale = 1;
+        timer = 10;
+    }
+
+    public void SalirDelJuego() //método para salir del juego
+    {
+        Application.Quit();
+    }
+    
+    //PUNTUACION
+    public void Puntuacion() //metodo que proporciona la informacion de las vidas, enemigos eliminados y los coleccionables obtenidos
+    {
+        //bucle para contar cuantos coleccionables se han obtenido
+        int coleccionablesObt = 0;
+        for (int i = 0; i < coleccionables.Length; i++)
+        {
+            if (coleccionables[i]) coleccionablesObt++;
+        }
+        //calculamos la puntuación y la enviamos a la interfaz
+        puntuacion = CalculaPuntuacion(numMuertes, enemigosElim, coleccionablesObt);
+        theUIMan.MostrarPuntuacion(puntuacion, numMuertes, enemigosElim, coleccionablesObt);
+        //cambiamos el estado a inactivo
+        estados = jugador.GetComponent<Estados>();
+        estados.CambioEstado(estado.Inactivo);
+        //hacemos que la cámara suba
+        SeguimientoJugador cam = Camera.main.GetComponent<SeguimientoJugador>();
+        cam.Sube();
+    }
+    
+    public void ContadorEnemigosElim() //método que aumenta el contador en 1 al eliminar a un enemigo
+    {
+        enemigosElim++;
+    }
+
+    int CalculaPuntuacion(int muertes, int enemies, int coleccionables) //método para calcular la puntuación
+    {
+        int punt = (muertes * puntuacionPorMuerte) + (enemies * puntuacionPorEnemigo) + (coleccionables * puntuacionPorColeccionable);
+        if (punt > 0) return punt;
+        else return 0; //si la puntuación es negativa, devolvemos 0
     }
 
     public void Coleccionable(int numero) //método de activación del coleccionable obtenido
@@ -165,48 +212,19 @@ public class GameManager : MonoBehaviour
         Debug.Log("Obtenido el coleccionable número " + numero);
     }
 
-    public void ChangeScene(string escena)
+    //SETTERS
+    public void SetUIManager(UIManager uim) //establece el UIManager
     {
-        SceneManager.LoadScene(escena);
-        Time.timeScale = 1;
-        timer = 10;
+        theUIMan = uim;
     }
-    public void ChangeScene(int indice)
+
+    public void SetJugador(GameObject player) //establece el jugador
     {
-        SceneManager.LoadScene(indice);
-        Time.timeScale = 1;
-        timer = 10; 
+        jugador = player;
     }
-    public void SalirDelJuego()
+
+    public void SetRetrocederAlCheckPoint(RetrocederAlCheckPoint RaC) //estblece el componente retroceder de la cámara
     {
-        Application.Quit();
-    }
-    //metodo que proporciona la informacion de las vidas, enemigos eliminados y los coleccionables obtenidos
-    public void Puntuation()
-    {
-        est = jugador.GetComponent<Estados>();
-        est.CambioEstado(estado.Inactivo);
-        int coleccionablesObt = 0;
-        //bulce para contar cuantos coleccionables se han obtenido
-        for (int i = 0; i < coleccionables.Length; i++)
-        {
-            if (coleccionables[i]) coleccionablesObt++;
-        }
-        puntuacion = CalculaPuntuacion(nummuertes, enemieselim, coleccionablesObt);
-        theUIMan.MostrarPuntuacion(puntuacion, nummuertes, enemieselim, coleccionablesObt);
-        SeguimientoJugador cam;
-        cam = Camera.main.GetComponent<SeguimientoJugador>();
-        cam.Sube();
-    }
-    //cada vez que el jugador elimina a un enemigo, el contador suma 1
-    public void Contadorenemieselim()
-    {
-        enemieselim++;
-    }
-    private int CalculaPuntuacion(int muertes, int enemies, int coleccionables)
-    {
-        int punt = (muertes * puntuacionPorMuerte) + (enemies * puntuacionPorEnemigo) + (coleccionables * puntuacionPorColeccionable);
-        if (punt > 0) return punt;
-        else return 0;
+        retrocederAlCheckPoint = RaC;
     }
 }

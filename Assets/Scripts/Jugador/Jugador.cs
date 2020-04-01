@@ -19,7 +19,7 @@ public class Jugador : MonoBehaviour
     void Start()
     {
         //inicialización de los componentes
-        GameManager.instance.SetPlayer(gameObject);
+        GameManager.instance.SetJugador(gameObject);
         crearGancho = GetComponent<CrearGancho>();
         salto = GetComponent<Salto>();
         estadoJugador = GetComponent<Estados>();

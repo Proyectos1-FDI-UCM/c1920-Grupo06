@@ -1,17 +1,15 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class TransparenciaLuz : MonoBehaviour
 {
     CanvasGroup luz;
 
-
-    private void Start()
+    void Start()
     {
         luz = GetComponent<CanvasGroup>();
     }
-    private void Update()
+
+    void Update()
     {
         luz.alpha = Mathf.PingPong(Time.time * 2 / 3, 1);
     }

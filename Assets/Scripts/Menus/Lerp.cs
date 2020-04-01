@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class Lerp : MonoBehaviour
 {
@@ -20,7 +18,7 @@ public class Lerp : MonoBehaviour
 
     private void Awake()
     {
-        this.enabled = false;
+        enabled = false;
     }
 
     void Start()

@@ -1,5 +1,7 @@
 ﻿using UnityEngine;
 
+//Comportamiento del deslizamiento del jugador en las paredes
+
 public class DeslizamientoPared : MonoBehaviour
 {
     [SerializeField] float distancia_Recorrida_Raycast = 0.5f;
@@ -78,8 +80,7 @@ public class DeslizamientoPared : MonoBehaviour
         else deslizando = "";
     }
 
-
-    public string Deslizando()
+    public string Deslizando() //metodo que devuelve si el jugador se está deslizando o no
     {
         return deslizando;
     }

@@ -12,13 +12,13 @@ public class FinalDelNivel : MonoBehaviour
         if (collision.gameObject.GetComponent<VidaJugador>() != null) //si el jugador llega al final
         {
             //lo establecemos como "player"
-            GameManager.instance.SetPlayer(collision.gameObject);
+            GameManager.instance.SetJugador(collision.gameObject);
             Invoke("LlamaAlMetodoPuntuacion", tiempo); //llamamos al metodo de aparición de la pantalla de puntuación
         }
     }
     void LlamaAlMetodoPuntuacion() //método que muestra la información de la puntuación en pantalla
     {
-        GameManager.instance.Puntuation(); //llamamos al método del GM que se encarga de mostrar la información
+        GameManager.instance.Puntuacion(); //llamamos al método del GM que se encarga de mostrar la información
         gameObject.SetActive(false); //desactivamos el trigger
     }
 }

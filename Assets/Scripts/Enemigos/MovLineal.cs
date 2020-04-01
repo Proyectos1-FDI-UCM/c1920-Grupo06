@@ -27,10 +27,10 @@ public class MovLineal : MonoBehaviour
         {
             rb.velocity = -rb.velocity; //cambiamos la dirección de su movimiento
         }
-        else
+        else if (pies != null && !GetComponent<BoxCollider2D>().isTrigger) //si la entrada es del jugador sobre la plataforma movible
         {
-            Rigidbody2D player = other.transform.parent.GetComponent<Rigidbody2D>();
-            player.gravityScale = 10;
+            Rigidbody2D jugadorRB = other.transform.parent.GetComponent<Rigidbody2D>(); //obtenemos su RB
+            jugadorRB.gravityScale = 10; //aumentamos su gravedad
         }
     }
 }
