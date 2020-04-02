@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class UIManager : MonoBehaviour
 {
     //GO de menú, puntuación y barra de progres
-    [SerializeField] GameObject panel, puntuacion, barraProgreso;
+    [SerializeField] GameObject panel = null, puntuacion = null, barraProgreso = null;
     //ia¡magenes de la vida y los PowerUps
     [SerializeField] Image[] vida = null, powerups = null;
     //texto de tiempo en pantalla, muertes del jugador, eliminaciones, coleccionables y puntos
