@@ -454,6 +454,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   vidas: 3
   "tama\xF1oColeccionables": 3
+  puntuacionPorMuerte: 0
+  puntuacionPorEnemigo: 0
+  puntuacionPorColeccionable: 0
   timer: 5
   sumarTiempoCheckPoint: 0
 --- !u!4 &96844771
@@ -5111,7 +5114,7 @@ GameObject:
   - component: {fileID: 1820720554}
   - component: {fileID: 1820720553}
   m_Layer: 5
-  m_Name: Cosas del Canvas
+  m_Name: ElementosCanvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
