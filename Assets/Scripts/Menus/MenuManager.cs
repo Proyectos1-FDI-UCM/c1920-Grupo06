@@ -1,27 +1,44 @@
 ﻿using UnityEngine;
 
+//Script que regula la activación de cada movimiento Lerp
 public class MenuManager : MonoBehaviour
 {
-    [SerializeField] Lerp lerpIzquierdaScript;
-    [SerializeField] Lerp lerpArribaScript;
-    [SerializeField] Lerp lerpOrigenScript;
+    [SerializeField] Lerp lerpDerecha;
+    [SerializeField] Lerp lerpOrigen;
+    [SerializeField] Lerp lerpArriba;
 
-    public void LerpIzquierda()
+
+    public void LerpDerecha()
     {
-        lerpOrigenScript.enabled = false;
-        lerpArribaScript.enabled = false;
-        lerpIzquierdaScript.enabled = true;
+        //Si no se esta produciendo ningún movimiento Lerp
+        if(lerpArriba.enabled == false && lerpOrigen.enabled == false && lerpDerecha.enabled == false)
+        {
+        lerpDerecha.enabled = true;
+        lerpOrigen.enabled = false;
+        lerpArriba.enabled = false;
+        }
+
+    }
+
+    public void LerpOrigen()
+    {
+        if (lerpArriba.enabled == false && lerpOrigen.enabled == false && lerpDerecha.enabled == false)
+        {
+        lerpDerecha.enabled = false;
+        lerpOrigen.enabled = true;
+        lerpArriba.enabled = false;
+        }
+
     }
     public void LerpArriba()
     {
-        lerpOrigenScript.enabled = false;
-        lerpArribaScript.enabled = true;
-        lerpIzquierdaScript.enabled = false;
-    }
-    public void LerpOrigen()
-    {
-        lerpOrigenScript.enabled = true;
-        lerpArribaScript.enabled = false;
-        lerpIzquierdaScript.enabled = false;
+        if (lerpArriba.enabled == false && lerpOrigen.enabled == false && lerpDerecha.enabled == false)
+        {
+        lerpDerecha.enabled = false;
+        lerpOrigen.enabled = false;
+        lerpArriba.enabled = true;
+        }
+
+
     }
 }

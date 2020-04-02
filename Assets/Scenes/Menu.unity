@@ -454,6 +454,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   vidas: 3
   "tama\xF1oColeccionables": 3
+  puntuacionPorMuerte: 0
+  puntuacionPorEnemigo: 0
+  puntuacionPorColeccionable: 0
   timer: 5
   sumarTiempoCheckPoint: 0
 --- !u!4 &96844771
@@ -2995,7 +2998,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1820720553}
-        m_MethodName: LerpOrigen
+        m_MethodName: Lerp
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -5107,8 +5110,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1820720552}
   - component: {fileID: 1820720556}
-  - component: {fileID: 1820720555}
-  - component: {fileID: 1820720554}
   - component: {fileID: 1820720553}
   m_Layer: 5
   m_Name: Cosas del Canvas
@@ -5155,39 +5156,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 80b3a465f16c59f43b09ead0592679de, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lerpIzquierdaScript: {fileID: 1820720556}
-  lerpArribaScript: {fileID: 1820720555}
-  lerpOrigenScript: {fileID: 1820720554}
---- !u!114 &1820720554
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1820720551}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 708d7800c99aa8b4e861e9c1e378716d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  startMarker: {fileID: 1820720552}
-  endMarker: {fileID: 550624372}
-  speed: 200
---- !u!114 &1820720555
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1820720551}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 708d7800c99aa8b4e861e9c1e378716d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  startMarker: {fileID: 550624372}
-  endMarker: {fileID: 150742201}
-  speed: 200
 --- !u!114 &1820720556
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5200,8 +5168,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 708d7800c99aa8b4e861e9c1e378716d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startMarker: {fileID: 550624372}
-  endMarker: {fileID: 12940656}
+  rectTransform: {fileID: 656916047}
   speed: 200
 --- !u!1 &1896098913
 GameObject:
@@ -5511,7 +5478,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1820720553}
-        m_MethodName: LerpIzquierda
+        m_MethodName: Lerp
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
