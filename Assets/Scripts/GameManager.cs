@@ -21,12 +21,8 @@ public class GameManager : MonoBehaviour
     Estados estados;
 
     //variables de tiempo
-    [Header("Tiempo en segundos del contador")]
-    [SerializeField] float timer = 5; //temporizador
     [SerializeField] bool sumarTiempoCheckPoint = false; //booleano para si añadimos el añadir tiempo al llegar al checkpoint
-    float tiempo; //tiempo original
-    int tiempoRedondeado = 0; //tiempo representado en UI
-
+    [SerializeField] Timer timer;
     private void Awake() //singleton
     {
         if (instance == null) //si no hay instancia
@@ -49,52 +45,16 @@ public class GameManager : MonoBehaviour
         //guardamos referencias a los componentes de la cámara
         retrocederAlCheckPoint = Camera.main.GetComponent<RetrocederAlCheckPoint>();
         finalcam = Camera.main.GetComponent<SeguimientoJugador>();
-        tiempo = timer; //guardamos el tiempo
         coleccionables = new bool[tamañoColeccionables]; //inicializamos el array con respecto al valor del editor
     }
 
-    void FixedUpdate() //hacemos que el tiempo se reduzca a un ritmo constante
-    {
-        if (SceneManager.GetActiveScene().name != "Menu") //siempre que no nos encontremos en el menú
-        {
-            timer -= Time.fixedDeltaTime;
-        }
-    }
-
-    void Update()
-    {
-        if (theUIMan != null) //si no estamos en la pantalla de inicio
-        {
-            tiempoRedondeado = (int)timer; //guardamos el tiempo redondeado
-            theUIMan.Tiempo(tiempoRedondeado); //lo enviamos a la interfaz
-            if (tiempoRedondeado <= 0) //si se ha agotado el tiempo
-            {
-                ResetNivel(); //Reseteamos el ivel (volvemos al primer checkpoint)
-            }
-        }
-    }
-
-    //TIEMPO
-    void ResetNivel()
-    {
-        timer = tiempo;
-        tiempoRedondeado = (int)timer;
-        Scene escena = SceneManager.GetActiveScene();
-        SceneManager.LoadScene(escena.buildIndex);
-        checkpoint = Vector3.zero;
-    }
-
     //CHECKPOINTS
-    public void PosicionJugador(Vector3 jugadorpos) //método para guardar la nueva posición del jugador
-    {
-        posicionJugador = jugadorpos;
-    }
 
     public void CheckPoint(Vector3 posicion, float tiempoAdicional) //método para establecer el nuevo checkpoint
     {
         checkpoint = posicion;
         if (sumarTiempoCheckPoint)
-            timer += tiempoAdicional;
+            timer.SumarTiempo(tiempoAdicional);
 
     }
 
@@ -102,7 +62,6 @@ public class GameManager : MonoBehaviour
     {
         return checkpoint;
     }
-
 
     //SISTEMA DE VIDAS
     public void EliminaVidaJugador() //método para eliminar vidas del jugador por contacto
@@ -159,14 +118,12 @@ public class GameManager : MonoBehaviour
     {
         SceneManager.LoadScene(escena);
         Time.timeScale = 1;
-        timer = 10;
     }
 
     public void ChangeScene(int indice) //método de cambio de escena
     {
         SceneManager.LoadScene(indice);
         Time.timeScale = 1;
-        timer = 10;
     }
 
     public void SalirDelJuego() //método para salir del juego
