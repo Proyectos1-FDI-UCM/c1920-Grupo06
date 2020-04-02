@@ -3,27 +3,21 @@
 //Script que da movimiento al canvas del Menu
 public class Lerp : MonoBehaviour
 {
-    //Transforms de puntos hacia los que se hacen los Lerp
-    Vector2 startMarker;
-    Vector2 endMarker;
-    Vector2 origen;
-
     //Referencias para saber como hacer el movimiento
     [SerializeField] RectTransform rectTransform;
     [SerializeField] string direccion;
-
-   
-
     //Velocidad de movimiento en unidades por segundo
-    public float speed = 200.0F;
-
+    [SerializeField] float velocidad = 200.0F;
+    //Transforms de puntos hacia los que se hacen los Lerp
+    Vector2 puntoInicio;
+    Vector2 puntoFinal;
+    Vector2 origen;
     //Tiempo en el que comienza el movimiento
-    private float startTime;
-
+    float tiempoInicio;
     //Distancia total entre los puntos de inicio y final del movimiento
-    private float journeyLength;
+    float distanciaViaje;
 
-    private void Awake()
+    void Awake()
     {
         //Comienza desactivado
         this.enabled = false;
@@ -33,69 +27,75 @@ public class Lerp : MonoBehaviour
 
     void Start()
     {
-        startTime = Time.time;
+        tiempoInicio = Time.time;
 
         //Se busca la dirección hacia donde hacer el movimiento y se asignan los valroes
         if(direccion == "derecha")
         {
             //Calculo el punto inicial
-            startMarker = new Vector2(rectTransform.transform.position.x, rectTransform.position.y);
+            puntoInicio = origen;
 
             //Calculo el punto final
-            endMarker = new Vector2(-0.4f * (rectTransform.transform.position.x), rectTransform.position.y);
+            puntoFinal = new Vector2(-0.4f * (origen.x), origen.y);
         }
         else if(direccion == "arriba")
         {
-            startMarker = new Vector2(rectTransform.transform.position.x, rectTransform.position.y);
+            puntoInicio = origen;
 
-            endMarker = new Vector2(rectTransform.transform.position.x, 0.4f * rectTransform.position.y);
+            puntoFinal = new Vector2(origen.x, 0.4f * origen.y);
         }
 
-        journeyLength = Vector2.Distance(startMarker, endMarker);
+        distanciaViaje = Vector2.Distance(puntoInicio, puntoFinal);
     }
 
     //Ocurre lo mismo cuando se reactiva el script
-    private void OnEnable()
+    void OnEnable()
     {
-        startTime = Time.time;
+        tiempoInicio = Time.time;
 
 
         if (direccion == "derecha")
         {
             //Calculo el punto inicial
-            startMarker = new Vector2(rectTransform.transform.position.x, rectTransform.position.y);
+            puntoInicio = new Vector2(origen.x, origen.y);
 
             //Calculo el punto final
-            endMarker = new Vector2(-0.4f * (rectTransform.transform.position.x), rectTransform.position.y);
+            puntoFinal = new Vector2(-0.4f * (origen.x), origen.y);
         }
         else if (direccion == "origen")
         {
-            startMarker = new Vector2(rectTransform.transform.position.x, rectTransform.position.y);
+            puntoInicio = new Vector2(rectTransform.transform.position.x, rectTransform.transform.position.y);
 
-            endMarker = origen;
+            puntoFinal = origen;
         }
         else if (direccion == "arriba")
         {
-            startMarker = new Vector2(rectTransform.transform.position.x, rectTransform.position.y);
+            puntoInicio = new Vector2(origen.x, origen.y);
 
-            endMarker = new Vector2(rectTransform.transform.position.x, 0.4f * rectTransform.position.y);
+            puntoFinal = new Vector2(origen.x, 0.4f * origen.y);
         }
-        journeyLength = Vector2.Distance(startMarker, endMarker);
+        distanciaViaje = Vector2.Distance(puntoInicio, puntoFinal);
+
+        //Si el puntoFinal es el mismo que la posición actual, no hago el movimiento
+        if (Mathf.Abs(rectTransform.position.x - puntoFinal.x) < 1 && Mathf.Abs(rectTransform.position.y - puntoFinal.y) < 1)
+        {
+            enabled = false;
+        }
     }
 
     // Se realiza el movimiento
     void Update()
     {
         //La distancia recorrida es igual al tiempo transcurrido multiplicado por la velocidad.
-        float distCovered = (Time.time - startTime) * speed;
+        float distanciaRecorrida = (Time.time - tiempoInicio) * velocidad;
 
         //La fracción del viaje completado es igual a la distancia actual dividida por la distancia total.
-        float fractionOfJourney = distCovered / journeyLength;
+        float fraccionDeViaje = distanciaRecorrida / distanciaViaje;
 
         //Se establce la posición como una fracción de la distancia entre los marcadores.
-        transform.position = Vector2.Lerp(startMarker, endMarker, fractionOfJourney);
+        transform.position = Vector2.Lerp(puntoInicio, puntoFinal, fraccionDeViaje);
 
         //Si ya se ha superado la distancia de movimiento, se desactiva este script
-        if (distCovered > journeyLength) enabled = false;
+        if (distanciaRecorrida > distanciaViaje) enabled = false;
     }
 }
