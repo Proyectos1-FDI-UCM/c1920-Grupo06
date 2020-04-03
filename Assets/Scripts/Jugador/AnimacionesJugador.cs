@@ -67,6 +67,9 @@ public class AnimacionesJugador : MonoBehaviour
                     animador.Play("Movimiento");
                 else animador.Play("Iddle");
                 break;
+            case estado.Dash:
+                animador.Play("Dash");
+                break;
             default: //en caso contrario, ponemos la animación "Caída" por defecto
                 animador.Play("Caida");
                 break;
