@@ -11623,6 +11623,11 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7292258580623807576, guid: 8733d96370d667b438b0a1d50270b180,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 6850789548491145113, guid: 8733d96370d667b438b0a1d50270b180, type: 3}
     - {fileID: 3640962977658233719, guid: 8733d96370d667b438b0a1d50270b180, type: 3}
@@ -14050,6 +14055,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2600931320193750098, guid: 1484b714045adf84fba8f95ff25981ec,
+        type: 3}
+      propertyPath: m_Name
+      value: GameManager
+      objectReference: {fileID: 0}
     - target: {fileID: 2600931320193750099, guid: 1484b714045adf84fba8f95ff25981ec,
         type: 3}
       propertyPath: timer
@@ -14074,11 +14084,6 @@ PrefabInstance:
         type: 3}
       propertyPath: puntuacionPorColeccionable
       value: 200
-      objectReference: {fileID: 0}
-    - target: {fileID: 2600931320193750098, guid: 1484b714045adf84fba8f95ff25981ec,
-        type: 3}
-      propertyPath: m_Name
-      value: GameManager
       objectReference: {fileID: 0}
     - target: {fileID: 2600931320193750100, guid: 1484b714045adf84fba8f95ff25981ec,
         type: 3}
