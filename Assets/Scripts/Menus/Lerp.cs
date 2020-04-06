@@ -42,7 +42,7 @@ public class Lerp : MonoBehaviour
         {
             puntoInicio = origen;
 
-            puntoFinal = new Vector2(origen.x, 0.4f * origen.y);
+            puntoFinal = new Vector2(origen.x, 0.325f * origen.y);
         }
 
         distanciaViaje = Vector2.Distance(puntoInicio, puntoFinal);

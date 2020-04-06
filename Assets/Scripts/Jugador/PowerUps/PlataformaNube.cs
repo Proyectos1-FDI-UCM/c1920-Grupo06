@@ -19,7 +19,7 @@ public class PlataformaNube : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown("q")) //cuando se presione su botón asignado
+        if (Input.GetButtonDown("PowerUp1")) //cuando se presione su botón asignado
         {
             //instanciamos la nube
             Instantiate(plataforma, new Vector3(transform.position.x, transform.position.y - distanciaPlataforma, 0), Quaternion.identity);

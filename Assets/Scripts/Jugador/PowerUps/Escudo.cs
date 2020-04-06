@@ -26,7 +26,7 @@ public class Escudo : MonoBehaviour
 
     void Update()
     {
-        if (activable && Input.GetKeyDown("w")) //cuando se aprete el botón de acción
+        if (activable && Input.GetButtonDown("PowerUp2")) //cuando se aprete el botón de acción
         {
             escudo.SetActive(true); //activamos el sprite del escudo
             vidaJugador.HacerInvulnerable(); //hacemos al jugador invulnerable
@@ -64,6 +64,7 @@ public class Escudo : MonoBehaviour
 
     void OnDisable() //al desactivarse el PowerUp
     {
+        activable = true;
         escudo.SetActive(false); //desactivamos el escudo
         GameManager.instance.DesactivaSprite(1); //desactivamos su referencia en la interfaz
         vidaJugador.HacerVulnerable(); //volvemos a hacerlo vulnerable
