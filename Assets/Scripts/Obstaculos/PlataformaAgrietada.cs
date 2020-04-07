@@ -11,8 +11,6 @@ public class PlataformaAgrietada : MonoBehaviour
         //si ha entrado el jugador, y está usando el dash o el gancho
         if (estadoAct != null && (estadoAct.Estado() == estado.MovimientoGancho || estadoAct.Estado() == estado.Dash))
         {
-            //recargamos salto/dash/gancho
-            collision.gameObject.GetComponent<Jugador>().RecargaSuelo();
             //destruimos la plataforma
             transform.parent.gameObject.SetActive(false);
         }

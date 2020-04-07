@@ -2,12 +2,10 @@
 
 //Comprobación de si el jugador se encuentra sobre una plataforma (trigger "PiesJugador")
 
-
 public class Suelo : MonoBehaviour
 {
     bool enSuelo = false; //booleano que controla si el jugador está o no en el suelo
     Jugador jugador;
-
 
     void Start()
     {
@@ -17,10 +15,9 @@ public class Suelo : MonoBehaviour
 
     void OnTriggerStay2D(Collider2D collision) //si está sobre añguna entidad
     {
-        enSuelo = true; //actualizamos el booleano, pues está sobre alguna entidad
-
         if (collision.gameObject.layer == 8) //si esa entidad es una plataforma (Layer 8 => plataformas7escenario)
         {
+            enSuelo = true; //actualizamos el booleano, pues está sobre alguna entidad
             jugador.RecargaSuelo(); //recargamos el dash y gancho (llamamos a RecargaSuelo de "Jugador")
         }
     }

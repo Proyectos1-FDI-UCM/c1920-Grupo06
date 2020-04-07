@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 9058557570483623024}
   - component: {fileID: 9058557570483623031}
   - component: {fileID: 4897962252944360499}
-  - component: {fileID: 1622233089798984266}
+  - component: {fileID: 2349796296898226802}
   m_Layer: 8
   m_Name: PlataformaMovil
   m_TagString: Untagged
@@ -130,7 +130,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!114 &1622233089798984266
+--- !u!114 &2349796296898226802
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -139,7 +139,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 9058557570483623030}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e9bb1a655987e0e41a844466d1f9587e, type: 3}
+  m_Script: {fileID: 11500000, guid: 7f2b6545dd236444aa868d53a77f7444, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  initialSpeed: {x: 5, y: 0}
+  initialSpeed: {x: 0, y: 5}
+  distancia: 16
+  horizontal: 0

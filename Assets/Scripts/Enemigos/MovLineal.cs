@@ -6,6 +6,7 @@ public class MovLineal : MonoBehaviour
 {
     [Header("Velocidad desplazamiento: ")]
     [SerializeField] Vector2 initialSpeed = Vector2.zero; //velocidad inicial de la entidad (establece dirección)
+    [SerializeField] GameObject puntoA, puntoB; //limites inferior (izquierda, abajo) y superior (derecha, arriba)
     Rigidbody2D rb; //RigidBody de la identidad
 
     void Awake()
@@ -18,19 +19,22 @@ public class MovLineal : MonoBehaviour
         rb.velocity = initialSpeed; //establecemos su velocidad y dirección
     }
 
-    void OnTriggerEnter2D(Collider2D other) //cada vez que entre en un 'trigger'
+    void Update()
     {
-        Estados jugador = other.gameObject.GetComponent<Estados>(); //comprobamos si ha entrado en el jugador
-        Suelo pies = other.gameObject.GetComponent<Suelo>(); //comprobamos si ha detectdo a los pies
+        Limites(); //comprobamos si se ha salido de los límites
+    }
 
-        if (jugador == null && pies == null) //si no es el jugador
+    void Limites()
+    {
+        //si se ha salido de los límites superiores (derecha/arriba)
+        if (transform.position.x > puntoB.transform.position.x || transform.position.y > puntoB.transform.position.y)
         {
-            rb.velocity = -rb.velocity; //cambiamos la dirección de su movimiento
+            rb.velocity = -initialSpeed;
         }
-        else if (pies != null && !GetComponent<BoxCollider2D>().isTrigger) //si la entrada es del jugador sobre la plataforma movible
+        //si se ha salido de los límites inferiores (izquierda, abajo)
+        else if (transform.position.x < puntoA.transform.position.x || transform.position.y < puntoA.transform.position.y)
         {
-            Rigidbody2D jugadorRB = other.transform.parent.GetComponent<Rigidbody2D>(); //obtenemos su RB
-            jugadorRB.gravityScale = 10; //aumentamos su gravedad
+            rb.velocity = initialSpeed;
         }
     }
 }
