@@ -43,25 +43,4 @@ public class PlataformaMovible : MonoBehaviour
             rb.velocity = initialSpeed;
         }
     }
-
-    //void OnTriggerEnter2D(Collider2D other) 
-    //{
-    //    Suelo pies = other.gameObject.GetComponent<Suelo>(); //comprobamos si ha detectado a los pies
-
-    //    if (pies != null) //si es el jugador
-    //    {
-    //        padre = other.transform.parent.parent; //guardamos su padre
-    //        other.transform.parent.parent = gameObject.transform; //cambiamos su padre a la plataforma movible
-    //    }
-    //}
-
-    //void OnTriggerExit2D(Collider2D other)
-    //{
-    //    Suelo pies = other.gameObject.GetComponent<Suelo>(); //comprobamos si ha detectado a los pies
-
-    //    if (pies != null) //si es el jugador
-    //    {
-    //        other.transform.parent.parent = padre; //hacemos que vualva a ser hijo de su padre anterior
-    //    }
-    //}
 }
