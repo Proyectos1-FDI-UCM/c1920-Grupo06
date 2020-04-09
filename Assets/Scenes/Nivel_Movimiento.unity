@@ -11473,6 +11473,11 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: -13.2
       objectReference: {fileID: 0}
+    - target: {fileID: 2925466069578243484, guid: 8733d96370d667b438b0a1d50270b180,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -10.67
+      objectReference: {fileID: 0}
     - target: {fileID: 2540557822082580119, guid: 8733d96370d667b438b0a1d50270b180,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -11616,12 +11621,12 @@ PrefabInstance:
     - target: {fileID: 2925466069334632123, guid: 8733d96370d667b438b0a1d50270b180,
         type: 3}
       propertyPath: m_Offset.x
-      value: 0.044717252
+      value: 0.14732265
       objectReference: {fileID: 0}
     - target: {fileID: 2925466069334632123, guid: 8733d96370d667b438b0a1d50270b180,
         type: 3}
       propertyPath: m_Size.x
-      value: 0.19604063
+      value: 2.025093
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 6850789548491145113, guid: 8733d96370d667b438b0a1d50270b180, type: 3}
@@ -14050,6 +14055,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2600931320193750098, guid: 1484b714045adf84fba8f95ff25981ec,
+        type: 3}
+      propertyPath: m_Name
+      value: GameManager
+      objectReference: {fileID: 0}
     - target: {fileID: 2600931320193750099, guid: 1484b714045adf84fba8f95ff25981ec,
         type: 3}
       propertyPath: timer
@@ -14074,11 +14084,6 @@ PrefabInstance:
         type: 3}
       propertyPath: puntuacionPorColeccionable
       value: 200
-      objectReference: {fileID: 0}
-    - target: {fileID: 2600931320193750098, guid: 1484b714045adf84fba8f95ff25981ec,
-        type: 3}
-      propertyPath: m_Name
-      value: GameManager
       objectReference: {fileID: 0}
     - target: {fileID: 2600931320193750100, guid: 1484b714045adf84fba8f95ff25981ec,
         type: 3}

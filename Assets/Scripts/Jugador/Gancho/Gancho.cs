@@ -11,6 +11,7 @@ public class Gancho : MonoBehaviour
     GameObject jugador = null;
     LineRenderer linea = null;
     Estados estadoJugador = null;
+    Suelo suelo;
 
     void Start()
     {
@@ -21,7 +22,10 @@ public class Gancho : MonoBehaviour
         rb_gancho.AddForce(transform.right * velocidad_gancho, ForceMode2D.Impulse);
         //anulamos la gravedad y drag para que no afecten a la direccion y velocidad del gancho
         rb_gancho.gravityScale = 0;
-        rb_gancho.drag = 0; 
+        rb_gancho.drag = 0;
+        rb_gancho.collisionDetectionMode = CollisionDetectionMode2D.Continuous;
+
+        suelo = transform.GetChild(0).GetComponent<Suelo>();
     }
 
     void Update()
@@ -53,6 +57,7 @@ public class Gancho : MonoBehaviour
                 DestruirGancho(); //si colisiona con algo con lo que no puede engancharse, se comporta como si hubiese
             }
         }
+
     }
 
     Vector3 Posicion(Vector3 vector) //método para la conversion a Vector3, porque la naturaleza 3D del LineRenderer requiere que la 'z' sea -1
