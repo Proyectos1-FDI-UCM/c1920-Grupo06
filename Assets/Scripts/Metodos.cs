@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+﻿ using UnityEngine;
 
 //Clase estática para métodos que puedan ser usados en varios scripts
 
