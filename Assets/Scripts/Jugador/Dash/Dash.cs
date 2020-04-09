@@ -12,6 +12,7 @@ public class Dash : MonoBehaviour
     Rigidbody2D rb;
     Vector3 posicion_inicial = Vector3.zero; //vector posicion inicial del jugador
     Vector3 direccion = Vector3.up; //vector direccion del dash
+    Suelo suelo;
 
     void Awake()
     {
@@ -21,6 +22,8 @@ public class Dash : MonoBehaviour
         jugador = GetComponent<Jugador>();
         //desactivamos el script en caso de estar activado
         enabled = false;
+
+        suelo = transform.GetChild(0).GetComponent<Suelo>();
     }
 
     void OnEnable() //cuando se active el Dash
@@ -32,7 +35,13 @@ public class Dash : MonoBehaviour
         //actualizamos la direccion del Dash
         if (direccionAux != Vector3.zero)
             direccion = direccionAux;
-        rb.AddForce(direccion.normalized * velocidadDash, ForceMode2D.Impulse); //establecemos una fuerza en esa dirección
+        if (!(direccion.y < 0 && suelo.EnSuelo()))
+            rb.AddForce(direccion.normalized * velocidadDash, ForceMode2D.Impulse); //establecemos una fuerza en esa dirección
+        else
+        {
+            enabled = false; //Desactivamos el Dash
+            Invoke("CambiaEstadoRetardado", 0.1f);
+        }
     }
 
     void Update()
@@ -64,5 +73,9 @@ public class Dash : MonoBehaviour
     public void PowerUpDash(float nueva_longitud) //método que actualiza la longitud del Dash
     {
         longitudDash = nueva_longitud;
+    }
+    void CambiaEstadoRetardado()
+    {
+        estadoJugador.CambioEstado(estado.Defecto); //establecemos el estado a defecto ; 
     }
 }
