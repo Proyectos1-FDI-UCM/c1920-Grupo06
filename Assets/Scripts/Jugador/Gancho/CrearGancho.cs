@@ -18,6 +18,7 @@ public class CrearGancho : MonoBehaviour
     int cargasMaxima = 2; //cargas máximas que se pueden tener en cada momento
     float angulo = 0;
 
+
     void Start()
     {
         //inicializamos las referencias
@@ -61,10 +62,10 @@ public class CrearGancho : MonoBehaviour
                     angulo = Metodos.AnguloPosicionRaton(posicion); //hallamos el angulo entre jugador y raton
 
                 //instanciamos el gancho
-                GameObject gancho_nuevo = Instantiate(gancho, posicion, Quaternion.Euler(new Vector3(0, 0, angulo)), padreGancho); 
+                GameObject gancho_nuevo = Instantiate(gancho, posicion, Quaternion.Euler(new Vector3(0, 0, angulo)), padreGancho);
                 gancho_nuevo.GetComponent<Gancho>().CreacionGancho(gameObject); //damos una referencia del jugador al gancho
                 estadoJugador.CambioEstado(estado.LanzamientoGancho); //pasamos al estado "LanzamientoGancho"
-                cargasGancho--; //restamos un gancho a los disponibles
+                cargasGancho--; //restamos un gancho a los disponibles               
             }
         }
     }

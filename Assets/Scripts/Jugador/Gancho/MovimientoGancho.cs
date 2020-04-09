@@ -12,8 +12,9 @@ public class MovimientoGancho : MonoBehaviour
     Jugador jugador = null;
     Impulso impulso = null;
     Vector3 direccion = Vector3.zero; //direccion del movimiento
+    Suelo suelo;
 
-    void Awake() 
+    void Awake()
     {
         //inicializamos las referencias
         rb = GetComponent<Rigidbody2D>();
@@ -21,6 +22,7 @@ public class MovimientoGancho : MonoBehaviour
         estadoJugador = GetComponent<Estados>();
         impulso = GetComponent<Impulso>();
         enabled = false; //lo desactivamos si estuviese activo
+        suelo = transform.GetChild(0).GetComponent<Suelo>(); //Los pies deben ser el primer hijo del jugador
     }
 
     void OnEnable() //al activarse
@@ -29,7 +31,13 @@ public class MovimientoGancho : MonoBehaviour
         gancho = jugador.Gancho();
         direccion = gancho.transform.position - transform.position;
         jugador.DireccionImpulso(direccion); //se guarda la dirección para ser usada por el impulso
-        rb.velocity = direccion.normalized * velocidad_movimientoGancho; //asignamos la velocidad
+        if (!(direccion.y < 0 && suelo.EnSuelo()))
+            rb.velocity = direccion.normalized * velocidad_movimientoGancho; //asignamos la velocidad
+        else
+        {
+            Destroy(gancho); //destruimos el gancho          
+            Invoke("CambiaEstadoRetardado", 0.1f);
+        }
     }
 
     void Update()
@@ -45,8 +53,8 @@ public class MovimientoGancho : MonoBehaviour
             Impulso(); //activamos el impulso
         }
     }
-    
-    void OnTriggerEnter2D(Collider2D collision) 
+
+    void OnTriggerEnter2D(Collider2D collision)
     {
         if (enabled) //si está activo
         {
@@ -65,5 +73,10 @@ public class MovimientoGancho : MonoBehaviour
         Destroy(gancho); //destruimos el gancho
         estadoJugador.CambioEstado(estado.Defecto); //se cambia el estado a defecto
         impulso.ImpulsoGancho(); //activamos el impulso
+    }
+
+    void CambiaEstadoRetardado()
+    {
+        estadoJugador.CambioEstado(estado.Defecto); //establecemos el estado a defecto ; 
     }
 }

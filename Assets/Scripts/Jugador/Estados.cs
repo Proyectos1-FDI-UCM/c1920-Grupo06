@@ -21,7 +21,7 @@ public class Estados : MonoBehaviour
     AnimacionesJugador animator;
     estado estado_actual = estado.Defecto; //enum que controla el estado
     float gravedad; //valor para saber cual es la gravedad original y no perder el valor
-    
+
     void Awake()
     {
         //inicialización de componentes
