@@ -4,7 +4,7 @@
 
 public class Impulso : MonoBehaviour
 {
-    [SerializeField][Range(0,2)] float fuerza_impulso = 5; //fuerza en la que se impulsará el jugador
+    [SerializeField] [Range(0, 2)] float fuerza_impulso = 5; //fuerza en la que se impulsará el jugador
     Rigidbody2D rb;
     Estados estadoJugador;
     Jugador jugador;
