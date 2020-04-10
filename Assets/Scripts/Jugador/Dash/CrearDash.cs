@@ -6,7 +6,7 @@ public class CrearDash : MonoBehaviour
 {
     //número de cargas establecido por editor
     [SerializeField] int numeroMaximoCargas = 1;
-    [SerializeField] Estadísticas estadisticas = null; //Referencia de las estadísticsa
+    Estadísticas estadisticas = null; //Referencia de las estadísticsa
     Jugador jugador;
     Estados estadoJugador;
     int numeroCargas; //número de cargas
@@ -18,6 +18,8 @@ public class CrearDash : MonoBehaviour
         //guardamos referencias al jugador y a los estados
         jugador = GetComponent<Jugador>();
         estadoJugador = GetComponent<Estados>();
+
+        estadisticas = GetComponent<Jugador>().estadisticas;
     }
 
     void Update()

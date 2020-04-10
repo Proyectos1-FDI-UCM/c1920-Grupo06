@@ -5,7 +5,7 @@
 public class Salto : MonoBehaviour
 {
     [SerializeField] [Range(5, 10)] float fuerza_salto = 2; //Fuerza del salto
-    [SerializeField] Estadísticas estadisticas = null; //Referencia de las estadísticas
+    Estadísticas estadisticas = null; //Referencia de las estadísticas
     Rigidbody2D rb;
     Suelo suelo;
     bool salto_disponible = true; //booleano que controla si se puede saltar o no
@@ -15,6 +15,7 @@ public class Salto : MonoBehaviour
         //inicializamos las referencias
         suelo = GetComponentInChildren<Suelo>();
         rb = GetComponent<Rigidbody2D>();
+        estadisticas = GetComponent<Jugador>().estadisticas;
     }
 
     void Update()

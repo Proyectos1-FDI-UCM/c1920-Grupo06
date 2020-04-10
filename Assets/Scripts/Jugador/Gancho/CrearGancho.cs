@@ -12,7 +12,7 @@ public class CrearGancho : MonoBehaviour
     [SerializeField] GameObject gancho = null; //prefab del gancho
     [SerializeField] Transform padreGancho = null; //padre de los ganchos, para facilitar llevar la cuenta de estos
     [SerializeField] [Range(0, 10)] float longitudLinea = 4; //longitud del gancho
-    [SerializeField] Estadísticas estadisticas = null; //Referencia de las estadisticas
+    Estadísticas estadisticas = null; //Referencia de las estadisticas
     Estados estadoJugador;
     LineRenderer lineaGancho;
     int cargasGancho; //cargas del jugador en cada momento
@@ -28,6 +28,7 @@ public class CrearGancho : MonoBehaviour
         lineaGancho.positionCount = 2;
         lineaGancho.enabled = false; //lo desactivamos
         cargasGancho = cargasMaxima; //establecemos las cargas actuales
+        estadisticas = GetComponent<Jugador>().estadisticas;
     }
 
     void Update()
