@@ -7,7 +7,7 @@ public class GameManager : MonoBehaviour
 {
     static public GameManager instance; //instancia del GM
     [SerializeField] int vidas = 3, tamañoColeccionables = 3; //vidas del jugador, coleccionables
-    [SerializeField] Estadísticas estadisticas = null;
+    Estadísticas estadisticas = null;
     GameObject jugador = null; //GO del jugador
     RetrocederAlCheckPoint retrocederAlCheckPoint;
     UIManager theUIMan = null; //referencia a UIManager
@@ -47,6 +47,7 @@ public class GameManager : MonoBehaviour
         retrocederAlCheckPoint = Camera.main.GetComponent<RetrocederAlCheckPoint>();
         finalcam = Camera.main.GetComponent<SeguimientoJugador>();
         coleccionables = new bool[tamañoColeccionables]; //inicializamos el array con respecto al valor del editor
+        estadisticas = jugador.GetComponent<Jugador>().estadisticas;
     }
 
     //CHECKPOINTS
