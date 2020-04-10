@@ -18,7 +18,7 @@ public class CrearGancho : MonoBehaviour
     int cargasGancho; //cargas del jugador en cada momento
     int cargasMaxima = 2; //cargas máximas que se pueden tener en cada momento
     float angulo = 0;
-
+    Suelo suelo;
 
     void Start()
     {
@@ -28,7 +28,8 @@ public class CrearGancho : MonoBehaviour
         lineaGancho.positionCount = 2;
         lineaGancho.enabled = false; //lo desactivamos
         cargasGancho = cargasMaxima; //establecemos las cargas actuales
-        estadisticas = GetComponent<Jugador>().estadisticas;
+		estadisticas = GetComponent<Jugador>().estadisticas;
+		suelo = transform.GetChild(0).GetComponent<Suelo>(); //Los pies deben ser el primer hijo del jugador
     }
 
     void Update()
@@ -65,11 +66,19 @@ public class CrearGancho : MonoBehaviour
                 if (Input.GetButtonUp("Gancho")) //si se ha activado el gancho por ratón
                     angulo = Metodos.AnguloPosicionRaton(posicion); //hallamos el angulo entre jugador y raton
 
-                //instanciamos el gancho
-                GameObject gancho_nuevo = Instantiate(gancho, posicion, Quaternion.Euler(new Vector3(0, 0, angulo)), padreGancho);
-                gancho_nuevo.GetComponent<Gancho>().CreacionGancho(gameObject); //damos una referencia del jugador al gancho
-                estadoJugador.CambioEstado(estado.LanzamientoGancho); //pasamos al estado "LanzamientoGancho"
-                cargasGancho--; //restamos un gancho a los disponibles               
+				//Si se está apuntando al suelo desde el suelo no se crea un gancho
+                if ((angulo > 240 || angulo < -60) && suelo.EnSuelo())
+                {
+                    estadoJugador.CambioEstado(estado.Defecto);
+                }
+                else
+                {
+                    //instanciamos el gancho
+                    GameObject gancho_nuevo = Instantiate(gancho, posicion, Quaternion.Euler(new Vector3(0, 0, angulo)), padreGancho);
+                    gancho_nuevo.GetComponent<Gancho>().CreacionGancho(gameObject); //damos una referencia del jugador al gancho
+                    estadoJugador.CambioEstado(estado.LanzamientoGancho); //pasamos al estado "LanzamientoGancho"
+                    cargasGancho--; //restamos un gancho a los disponibles
+                }
             }
         }
     }
