@@ -52,7 +52,7 @@ public class Estadísticas : MonoBehaviour
     public Text saltos;
     private void Update()
     {
-        saltos.text = ""+ numSaltos;
+        //saltos.text = ""+ numSaltos;
     }
     public void Guardar()
     {

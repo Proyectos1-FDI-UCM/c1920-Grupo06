@@ -47,7 +47,6 @@ public class GameManager : MonoBehaviour
         retrocederAlCheckPoint = Camera.main.GetComponent<RetrocederAlCheckPoint>();
         finalcam = Camera.main.GetComponent<SeguimientoJugador>();
         coleccionables = new bool[tamañoColeccionables]; //inicializamos el array con respecto al valor del editor
-        estadisticas = jugador.GetComponent<Jugador>().estadisticas;
     }
 
     //CHECKPOINTS
@@ -182,6 +181,7 @@ public class GameManager : MonoBehaviour
     public void SetJugador(GameObject player) //establece el jugador
     {
         jugador = player;
+        estadisticas = jugador.GetComponent<Jugador>().estadisticas;
     }
 
     public void SetRetrocederAlCheckPoint(RetrocederAlCheckPoint RaC) //estblece el componente retroceder de la cámara

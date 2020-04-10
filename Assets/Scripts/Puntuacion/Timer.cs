@@ -31,7 +31,6 @@ public class Timer : MonoBehaviour
     {
         timer = Time.time - tiempoInicio; //Tiempo actual - tiempo en el que empezó
 
-        print(tiempoMaximo);
         tiempoRedondeado = (int)timer; //guardamos el tiempo redondeado
         theUIManager.Tiempo((int)tiempoMaximo - tiempoRedondeado); //lo enviamos a la interfaz
 
