@@ -11,7 +11,6 @@ public class Gancho : MonoBehaviour
     GameObject jugador = null;
     LineRenderer linea = null;
     Estados estadoJugador = null;
-    Suelo suelo;
 
     void Start()
     {
@@ -24,8 +23,6 @@ public class Gancho : MonoBehaviour
         rb_gancho.gravityScale = 0;
         rb_gancho.drag = 0;
         rb_gancho.collisionDetectionMode = CollisionDetectionMode2D.Continuous;
-
-        suelo = transform.GetChild(0).GetComponent<Suelo>();
     }
 
     void Update()

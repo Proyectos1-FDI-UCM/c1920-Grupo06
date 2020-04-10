@@ -12,7 +12,7 @@ public class CrearGancho : MonoBehaviour
     [SerializeField] GameObject gancho = null; //prefab del gancho
     [SerializeField] Transform padreGancho = null; //padre de los ganchos, para facilitar llevar la cuenta de estos
     [SerializeField] [Range(0, 10)] float longitudLinea = 4; //longitud del gancho
-    Estadísticas estadisticas = null; //Referencia de las estadisticas
+    Estadisticas estadisticas = null; //Referencia de las estadisticas
     Estados estadoJugador;
     LineRenderer lineaGancho;
     int cargasGancho; //cargas del jugador en cada momento

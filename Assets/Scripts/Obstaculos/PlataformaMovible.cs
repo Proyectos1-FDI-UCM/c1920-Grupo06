@@ -43,4 +43,15 @@ public class PlataformaMovible : MonoBehaviour
             rb.velocity = initialSpeed;
         }
     }
+
+    //void OnTriggerStay2D(Collider2D collision)
+    //{
+    //    Suelo pies = collision.gameObject.GetComponent<Suelo>();
+
+    //    if(pies != null)
+    //    {
+    //        Rigidbody2D rbJugador = collision.GetComponentInParent<Rigidbody2D>();
+    //        rbJugador.velocity = new Vector2(rbJugador.velocity.x, rb.velocity.y);
+    //    }
+    //}
 }
