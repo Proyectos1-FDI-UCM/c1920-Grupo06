@@ -98,7 +98,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   velocidad_Deslizamiento: -2.5
-  esteCollider: 0
 --- !u!1 &2540557822082580116
 GameObject:
   m_ObjectHideFlags: 0
@@ -532,6 +531,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f704222c37521f42a173a7d27d3b16e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _estadisticas: {fileID: 0}
 --- !u!114 &2925466069578243481
 MonoBehaviour:
   m_ObjectHideFlags: 0
