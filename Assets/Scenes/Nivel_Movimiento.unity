@@ -1422,6 +1422,51 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 211889791}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &223983883
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 223983885}
+  - component: {fileID: 223983884}
+  m_Layer: 0
+  m_Name: Estadisticas
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &223983884
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 223983883}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0b4eeb02854d5b14ea37a8b3cbc0873f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tiempoJugado: 0
+  saltos: {fileID: 0}
+--- !u!4 &223983885
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 223983883}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 14
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &238211209
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11628,6 +11673,11 @@ PrefabInstance:
       propertyPath: m_Size.x
       value: 2.025093
       objectReference: {fileID: 0}
+    - target: {fileID: 2925466069578243480, guid: 8733d96370d667b438b0a1d50270b180,
+        type: 3}
+      propertyPath: _estadisticas
+      value: 
+      objectReference: {fileID: 223983884}
     m_RemovedComponents:
     - {fileID: 6850789548491145113, guid: 8733d96370d667b438b0a1d50270b180, type: 3}
     - {fileID: 3640962977658233719, guid: 8733d96370d667b438b0a1d50270b180, type: 3}
