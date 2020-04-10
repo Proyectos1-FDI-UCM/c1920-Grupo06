@@ -31,19 +31,14 @@ public class MovimientoGancho : MonoBehaviour
         gancho = jugador.Gancho();
         direccion = gancho.transform.position - transform.position;
         jugador.DireccionImpulso(direccion); //se guarda la dirección para ser usada por el impulso
-        if (!(direccion.y < 0 && suelo.EnSuelo()))
-            rb.velocity = direccion.normalized * velocidad_movimientoGancho; //asignamos la velocidad
-        else
-        {
-            Destroy(gancho); //destruimos el gancho          
-            Invoke("CambiaEstadoRetardado", 0.1f);
-        }
+        rb.velocity = direccion.normalized * velocidad_movimientoGancho; //asignamos la velocidad
     }
 
     void Update()
     {
         if (Input.GetButtonDown("Jump")) //si se pulsa la tecla de salto, se llama a impulso
             Impulso();
+        if ((gancho.transform.position - transform.position).magnitude > direccion.magnitude) Impulso();
     }
 
     void OnCollisionEnter2D(Collision2D collision)
