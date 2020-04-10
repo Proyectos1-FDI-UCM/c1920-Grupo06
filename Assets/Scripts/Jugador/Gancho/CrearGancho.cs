@@ -12,6 +12,7 @@ public class CrearGancho : MonoBehaviour
     [SerializeField] GameObject gancho = null; //prefab del gancho
     [SerializeField] Transform padreGancho = null; //padre de los ganchos, para facilitar llevar la cuenta de estos
     [SerializeField] [Range(0, 10)] float longitudLinea = 4; //longitud del gancho
+    [SerializeField] Estadísticas estadisticas = null; //Referencia de las estadisticas
     Estados estadoJugador;
     LineRenderer lineaGancho;
     int cargasGancho; //cargas del jugador en cada momento
@@ -53,6 +54,8 @@ public class CrearGancho : MonoBehaviour
 
             if ((Input.GetButtonUp("Gancho") || Input.GetButtonUp("GanchoMando")) && cargasGancho > 0) //cuando se deje de presionar el botón
             {
+                estadisticas.Gancho();//Sumamos un gancho a las estadísticas
+
                 lineaGancho.enabled = false; //se desactiva la linea de apuntado
                 Time.timeScale = 1; //devolvemos el tiempo a la normalidad
                 //se establece la posición de la aparición del gancho levemente mñas arriba de la del jugador

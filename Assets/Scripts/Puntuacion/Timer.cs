@@ -38,7 +38,7 @@ public class Timer : MonoBehaviour
 
         if (tiempoRedondeado > tiempoMaximo - 1) //Si el tiempo que llevamos supera al máximo entonces se resetea el nivel
         {
-            ResetNivel(); //Reseteamos el ivel (volvemos al primer checkpoint)
+            ResetNivel(); //Reseteamos el nivel (volvemos al primer checkpoint)
         }
     }
 
