@@ -5,7 +5,7 @@
 public class Salto : MonoBehaviour
 {
     [SerializeField] [Range(5, 10)] float fuerza_salto = 2; //Fuerza del salto
-    Estadísticas estadisticas = null; //Referencia de las estadísticas
+    Estadisticas estadisticas = null; //Referencia de las estadísticas
     Rigidbody2D rb;
     Suelo suelo;
     bool salto_disponible = true; //booleano que controla si se puede saltar o no

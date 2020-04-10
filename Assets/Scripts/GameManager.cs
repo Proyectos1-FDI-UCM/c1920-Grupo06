@@ -7,7 +7,7 @@ public class GameManager : MonoBehaviour
 {
     static public GameManager instance; //instancia del GM
     [SerializeField] int vidas = 3, tamañoColeccionables = 3; //vidas del jugador, coleccionables
-    Estadísticas estadisticas = null;
+    Estadisticas estadisticas = null;
     GameObject jugador = null; //GO del jugador
     RetrocederAlCheckPoint retrocederAlCheckPoint;
     UIManager theUIMan = null; //referencia a UIManager

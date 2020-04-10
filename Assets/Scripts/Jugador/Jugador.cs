@@ -6,7 +6,7 @@
 
 public class Jugador : MonoBehaviour
 {
-    [SerializeField] Estadísticas _estadisticas = null; //Referenia estadísticas
+    [SerializeField] Estadisticas _estadisticas = null; //Referenia estadísticas
     GameObject gancho; //gancho actual
     Vector2 direccionImpulso; //direccion del impulso
     Vector2 direccionDash; //direccion del Dash
@@ -17,7 +17,7 @@ public class Jugador : MonoBehaviour
     Salto salto; //script de salto
     CrearDash crearDash; //script de dash
 
-    public Estadísticas estadisticas
+    public Estadisticas estadisticas
     {
         get
         {
