@@ -31,14 +31,13 @@ public class Timer : MonoBehaviour
     {
         timer = Time.time - tiempoInicio; //Tiempo actual - tiempo en el que empezó
 
-        print(tiempoMaximo);
         tiempoRedondeado = (int)timer; //guardamos el tiempo redondeado
         theUIManager.Tiempo((int)tiempoMaximo - tiempoRedondeado); //lo enviamos a la interfaz
 
 
         if (tiempoRedondeado > tiempoMaximo - 1) //Si el tiempo que llevamos supera al máximo entonces se resetea el nivel
         {
-            ResetNivel(); //Reseteamos el ivel (volvemos al primer checkpoint)
+            ResetNivel(); //Reseteamos el nivel (volvemos al primer checkpoint)
         }
     }
 

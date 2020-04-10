@@ -12,6 +12,7 @@ public class CrearGancho : MonoBehaviour
     [SerializeField] GameObject gancho = null; //prefab del gancho
     [SerializeField] Transform padreGancho = null; //padre de los ganchos, para facilitar llevar la cuenta de estos
     [SerializeField] [Range(0, 10)] float longitudLinea = 4; //longitud del gancho
+    Estadísticas estadisticas = null; //Referencia de las estadisticas
     Estados estadoJugador;
     LineRenderer lineaGancho;
     int cargasGancho; //cargas del jugador en cada momento
@@ -27,8 +28,8 @@ public class CrearGancho : MonoBehaviour
         lineaGancho.positionCount = 2;
         lineaGancho.enabled = false; //lo desactivamos
         cargasGancho = cargasMaxima; //establecemos las cargas actuales
-        suelo = transform.GetChild(0).GetComponent<Suelo>(); //Los pies deben ser el primer hijo del jugador
-
+		estadisticas = GetComponent<Jugador>().estadisticas;
+		suelo = transform.GetChild(0).GetComponent<Suelo>(); //Los pies deben ser el primer hijo del jugador
     }
 
     void Update()
@@ -55,6 +56,8 @@ public class CrearGancho : MonoBehaviour
 
             if ((Input.GetButtonUp("Gancho") || Input.GetButtonUp("GanchoMando")) && cargasGancho > 0) //cuando se deje de presionar el botón
             {
+                estadisticas.Gancho();//Sumamos un gancho a las estadísticas
+
                 lineaGancho.enabled = false; //se desactiva la linea de apuntado
                 Time.timeScale = 1; //devolvemos el tiempo a la normalidad
                 //se establece la posición de la aparición del gancho levemente mñas arriba de la del jugador
@@ -63,6 +66,7 @@ public class CrearGancho : MonoBehaviour
                 if (Input.GetButtonUp("Gancho")) //si se ha activado el gancho por ratón
                     angulo = Metodos.AnguloPosicionRaton(posicion); //hallamos el angulo entre jugador y raton
 
+				//Si se está apuntando al suelo desde el suelo no se crea un gancho
                 if ((angulo > 240 || angulo < -60) && suelo.EnSuelo())
                 {
                     estadoJugador.CambioEstado(estado.Defecto);
