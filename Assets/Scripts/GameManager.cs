@@ -7,6 +7,7 @@ public class GameManager : MonoBehaviour
 {
     static public GameManager instance; //instancia del GM
     [SerializeField] int vidas = 3, tamañoColeccionables = 3; //vidas del jugador, coleccionables
+    [SerializeField] Estadísticas estadisticas = null;
     GameObject jugador = null; //GO del jugador
     RetrocederAlCheckPoint retrocederAlCheckPoint;
     UIManager theUIMan = null; //referencia a UIManager
@@ -82,6 +83,8 @@ public class GameManager : MonoBehaviour
 
     public void Muerte() //método de reaparición
     {
+        estadisticas.Muerte();//Sumamos uno a las muertes
+
         theUIMan.ResetSpritesVida(); //reseteamos las vidas
         vidas = 3;
         retrocederAlCheckPoint.enabled = true; //retrocedemos al checkpoint

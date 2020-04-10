@@ -1,7 +1,5 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-
+﻿using UnityEngine;
+using UnityEngine.UI;
 public class Estadísticas : MonoBehaviour
 {
     private int numSaltos = 0;
@@ -51,8 +49,12 @@ public class Estadísticas : MonoBehaviour
     {
         numEnemigosDerrotados++;
     }
-
-    private void OnApplicationQuit()
+    public Text saltos;
+    private void Update()
+    {
+        saltos.text = ""+ numSaltos;
+    }
+    public void Guardar()
     {
         PlayerPrefs.SetInt("saltos", numSaltos);
         PlayerPrefs.SetInt("dash", numDash);
@@ -62,5 +64,9 @@ public class Estadísticas : MonoBehaviour
         PlayerPrefs.SetFloat("tiempo", tiempoJugado);
 
         PlayerPrefs.Save();
+    }
+    private void OnApplicationQuit()
+    {
+        Guardar();
     }
 }
