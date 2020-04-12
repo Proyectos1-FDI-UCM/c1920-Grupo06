@@ -122,6 +122,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   puedoReaparecer: 1
+  tiempoReactivacion: 3
 --- !u!114 &2015113069
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -134,4 +135,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 76b2aff58e7256f409a4bc84cf6258e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TiempoDesaparicion: 0
+  TiempoDesaparicion: 2
