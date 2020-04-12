@@ -84,8 +84,10 @@ public class GameManager : MonoBehaviour
     public void Muerte() //método de reaparición
     {
         estadisticas.Muerte();//Sumamos uno a las muertes
-
-        theUIMan.ResetSpritesVida(); //reseteamos las vidas
+        if (theUIMan != null)
+        {
+            theUIMan.ResetSpritesVida(); //reseteamos las vidas
+        }
         vidas = 3;
         retrocederAlCheckPoint.enabled = true; //retrocedemos al checkpoint
         Time.timeScale = 1; //activamos el tiempo a 1 (en caso de reiniciar desde menu)
@@ -133,7 +135,7 @@ public class GameManager : MonoBehaviour
     {
         Application.Quit();
     }
-    
+
     //PUNTUACION
     public void Puntuacion() //metodo que proporciona la informacion de las vidas, enemigos eliminados y los coleccionables obtenidos
     {
@@ -153,7 +155,7 @@ public class GameManager : MonoBehaviour
         SeguimientoJugador cam = Camera.main.GetComponent<SeguimientoJugador>();
         cam.Sube();
     }
-    
+
     public void ContadorEnemigosElim() //método que aumenta el contador en 1 al eliminar a un enemigo
     {
         enemigosElim++;
