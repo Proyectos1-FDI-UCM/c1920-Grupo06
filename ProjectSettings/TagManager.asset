@@ -47,3 +47,6 @@ TagManager:
   - name: Gancho
     uniqueID: 3947307947
     locked: 0
+  - name: Jugador
+    uniqueID: 4105144623
+    locked: 0

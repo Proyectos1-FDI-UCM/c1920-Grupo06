@@ -7,7 +7,7 @@ public class PlataformaMovible : MonoBehaviour
     [Header("Velocidad desplazamiento: ")]
     [SerializeField] Vector2 initialSpeed = Vector2.zero; //velocidad inicial de la entidad (establece dirección)
     [SerializeField] GameObject puntoA = null, puntoB = null; //limites inferior (izquierda, abajo) y superior (derecha, arriba)
-    [SerializeField] bool horizontal; //booleano que indica si la plataforma se mueve de manera horizontal o vertical
+    [SerializeField] bool horizontal = false; //booleano que indica si la plataforma se mueve de manera horizontal o vertical
     Rigidbody2D rb; //RigidBody de la identidad
     Transform padre;
 
@@ -32,15 +32,31 @@ public class PlataformaMovible : MonoBehaviour
 
     void Limites()
     {
-        //si se ha salido de los límites superiores (derecha/arriba)
-        if (transform.position.x > puntoB.transform.position.x || transform.position.y > puntoB.transform.position.y)
+        if (horizontal)
         {
-            rb.velocity = -initialSpeed;
+            //si se ha salido de los límites superiores (derecha)
+            if (transform.position.x > puntoB.transform.position.x)
+            {
+                rb.velocity = -initialSpeed;
+            }
+            //si se ha salido de los límites inferiores (izquierda)
+            else if (transform.position.x < puntoA.transform.position.x)
+            {
+                rb.velocity = initialSpeed;
+            }
         }
-        //si se ha salido de los límites inferiores (izquierda, abajo)
-        else if (transform.position.x < puntoA.transform.position.x || transform.position.y < puntoA.transform.position.y)
+        else
         {
-            rb.velocity = initialSpeed;
+            //si se ha salido de los límites superiores (arriba)
+            if (transform.position.x > puntoB.transform.position.x || transform.position.y > puntoB.transform.position.y)
+            {
+                rb.velocity = -initialSpeed;
+            }
+            //si se ha salido de los límites inferiores (abajo)
+            else if (transform.position.x < puntoA.transform.position.x || transform.position.y < puntoA.transform.position.y)
+            {
+                rb.velocity = initialSpeed;
+            }
         }
     }
 

@@ -15,7 +15,7 @@ public class Suelo : MonoBehaviour
 
     void OnTriggerStay2D(Collider2D collision) //si está sobre añguna entidad
     {
-        if (collision.gameObject.layer == 8) //si esa entidad es una plataforma (Layer 8 => plataformas7escenario)
+        if (collision.gameObject.layer == 13 || collision.gameObject.layer == 8) //si esa entidad es una plataforma (Layer 8 => plataformas7escenario)
         {
             enSuelo = true; //actualizamos el booleano, pues está sobre alguna entidad
             jugador.RecargaSuelo(); //recargamos el dash y gancho (llamamos a RecargaSuelo de "Jugador")

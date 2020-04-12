@@ -42,10 +42,6 @@ public class Gancho : MonoBehaviour
     {
         GameObject colision = collision.gameObject;
 
-         
-
-
-
         if (colision.GetComponent<Jugador>() == null && colision.GetComponent<Suelo>() == null) //si no ha colisionado con el jugador
         {
             if (colision.layer != 13 && colision.layer != 16) //La capa 13 es en la que estarán los objetos no enganchables
