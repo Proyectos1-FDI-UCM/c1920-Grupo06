@@ -103,7 +103,10 @@ public class GameManager : MonoBehaviour
 
     public void DesactivaSprite(int num) //método hace desactivar un sprite del PowerUp a la interfaz
     {
-        theUIMan.DesactivaPowerUpSprite(num);
+        if (theUIMan != null)
+        {
+            theUIMan.DesactivaPowerUpSprite(num);
+        }
     }
 
     //PAUSA
