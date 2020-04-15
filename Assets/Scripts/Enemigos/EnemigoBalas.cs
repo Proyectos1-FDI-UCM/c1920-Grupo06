@@ -11,11 +11,16 @@ public class EnemigoBalas : MonoBehaviour
     bool visible = false, control = false; //booleanos de control
     Vector3 dirBalas, posEnemigo; //dirección de las balas y posición del enemigo
     float tiempo;
+    SpriteRenderer sr;
+    Sprite ori;
+    [SerializeField] Sprite disparo;
 
     void Start()
     {
         //guardamos la posición del enemigo
         posEnemigo = transform.position;
+        sr = GetComponent<SpriteRenderer>();
+        ori = sr.sprite;
     }
 
     void OnEnable() //cuando se active (reaparición)
@@ -38,9 +43,11 @@ public class EnemigoBalas : MonoBehaviour
         {
             if (!control) //si se puede disparar
             {
+                sr.sprite = disparo;
+                Invoke("FinAnimacion", 0.5f);
                 tiempo = Time.time; //actualizamos el tiempo
                 //instanciamos la bala
-                bala = Instantiate(prefabBalas, posEnemigo, transform.rotation, transform);
+                bala = Instantiate(prefabBalas, transform.GetChild(0).position, transform.rotation, transform);
                 //establecemos la velocidad de la bala
                 bala.GetComponent<Rigidbody2D>().velocity = dirBalas.normalized * velocidad;
                 //establecemos el control de la cadencia a true
@@ -57,5 +64,10 @@ public class EnemigoBalas : MonoBehaviour
     void OnBecameInvisible() //cuando no sea visible, desactivamos el booleano de control
     {
         visible = false;
+    }
+
+    public void FinAnimacion()
+    {
+        sr.sprite = ori;
     }
 }
