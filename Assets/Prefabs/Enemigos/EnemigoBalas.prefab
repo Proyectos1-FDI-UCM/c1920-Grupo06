@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1639329917}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: SpawnPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -46,7 +46,7 @@ GameObject:
   - component: {fileID: 1172478678848107694}
   - component: {fileID: 1172478678848107693}
   - component: {fileID: -6550742277935198208}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: EnemigoBalas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
