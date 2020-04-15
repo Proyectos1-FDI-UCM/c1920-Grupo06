@@ -22,8 +22,6 @@ public class PantallaPuntuacion : MonoBehaviour
 
     void SetEstadisticas()
     {
-        //muertes.text = Puntuacion.GetMuertes().ToString();
-        //enemigos.text = Puntuacion.GetEnemEliminados().ToString();
         puntuacionNivel1.text = Puntuacion.GetPuntuacionNivel1().ToString();
         puntuacionNivel2.text = Puntuacion.GetPuntuacionNivel2().ToString();
     }
