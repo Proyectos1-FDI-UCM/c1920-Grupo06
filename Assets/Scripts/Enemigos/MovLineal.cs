@@ -33,11 +33,13 @@ public class MovLineal : MonoBehaviour
             if (transform.position.x > puntoB.transform.position.x)
             {
                 rb.velocity = -initialSpeed;
+                transform.Rotate(Vector3.up * 180);
             }
             //si se ha salido de los límites inferiores (izquierda)
             else if (transform.position.x < puntoA.transform.position.x)
             {
                 rb.velocity = initialSpeed;
+                transform.Rotate(Vector3.up * 180);
             }
         }
         else
