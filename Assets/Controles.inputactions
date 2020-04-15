@@ -12,6 +12,54 @@
                     "expectedControlType": "",
                     "processors": "",
                     "interactions": ""
+                },
+                {
+                    "name": "Gancho",
+                    "type": "Button",
+                    "id": "6087f9c6-fe30-4738-885a-7838659b7a2c",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
+                    "name": "ApuntarGancho",
+                    "type": "Button",
+                    "id": "70d4029f-3778-4f29-afe0-7172243f7253",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
+                    "name": "Movimiento Horizontal",
+                    "type": "Button",
+                    "id": "3fe9fc07-9df2-4fc3-8505-8848444f5840",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
+                    "name": "Salto",
+                    "type": "Button",
+                    "id": "75ab45d1-c645-4908-961e-67fe67312b4b",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
+                    "name": "Apuntar Dash/Gancho",
+                    "type": "Button",
+                    "id": "bffb5ae8-ae93-41f7-98e9-9797b605941e",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
+                    "name": "Pausa",
+                    "type": "Button",
+                    "id": "c2e357d2-1452-4c36-8427-080742a3b6ec",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": ""
                 }
             ],
             "bindings": [
@@ -34,6 +82,94 @@
                     "processors": "",
                     "groups": "Teclado Y Raton",
                     "action": "Dash",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "8150b380-10e8-460f-b285-f36b3d4eb554",
+                    "path": "<Gamepad>/rightTrigger",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Teclado Y Raton",
+                    "action": "Gancho",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "6c8f75ff-6de7-47bf-b440-703b057e17ec",
+                    "path": "<Mouse>/leftButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Teclado Y Raton",
+                    "action": "Gancho",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "d22caad3-dbed-495c-b071-2b50d577b315",
+                    "path": "<Gamepad>/leftStick",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Teclado Y Raton",
+                    "action": "Movimiento Horizontal",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "6f7593f5-0c92-4f84-9e4d-81901d3b1e0b",
+                    "path": "<Gamepad>/buttonSouth",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Teclado Y Raton",
+                    "action": "Salto",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "f5c7f450-025f-4939-8351-5e6514af5691",
+                    "path": "<Keyboard>/space",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Teclado Y Raton",
+                    "action": "Salto",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "cfaa0c24-e295-4d79-8620-be25a15fa804",
+                    "path": "",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Apuntar Dash/Gancho",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "041ae5e7-a786-4631-b21f-f0870fdcf6f1",
+                    "path": "",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Pausa",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "fbf62d86-00d7-441c-a894-5a4d5282e9d8",
+                    "path": "<Gamepad>/rightStick",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Teclado Y Raton",
+                    "action": "ApuntarGancho",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

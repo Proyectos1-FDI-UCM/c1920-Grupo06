@@ -9,6 +9,23 @@ public class Salto : MonoBehaviour
     Rigidbody2D rb;
     Suelo suelo;
     bool salto_disponible = true; //booleano que controla si se puede saltar o no
+    Controles controles;
+
+    private void Awake()
+    {
+        controles = new Controles();
+        controles.Jugador.Salto.performed += ctx => Saltar();
+    }
+
+    private void OnEnable()
+    {
+        controles.Jugador.Enable();
+    }
+
+    private void OnDisable()
+    {
+        controles.Jugador.Disable();
+    }
 
     void Start()
     {
@@ -18,9 +35,9 @@ public class Salto : MonoBehaviour
         estadisticas = GetComponent<Jugador>().estadisticas;
     }
 
-    void Update()
+    void Saltar()
     {
-        if (Input.GetButtonDown("Jump") && salto_disponible && suelo.EnSuelo()) //si se pulsa la tecla de salto cuando el salto este disponible
+        if (salto_disponible && suelo.EnSuelo()) //si se pulsa la tecla de salto cuando el salto este disponible
         {
             estadisticas.Salto(); //Sumamos un salto a las estadísticas
             

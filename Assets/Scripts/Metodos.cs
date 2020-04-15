@@ -60,7 +60,7 @@ public static class Metodos
     }
 
     //calculo del ángulo al utilizar el mando
-    public static float AnguloConMando(out bool cambio)
+    public static float AnguloConMando(out bool cambio, Vector2 joystick)
     {
         cambio = true;
         float angulo = 0;

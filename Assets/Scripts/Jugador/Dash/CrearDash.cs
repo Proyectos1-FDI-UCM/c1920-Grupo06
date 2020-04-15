@@ -21,7 +21,12 @@ public class CrearDash : MonoBehaviour
 
     private void OnEnable()
     {
-        controles.Enable();
+        controles.Jugador.Enable();
+    }
+
+    private void OnDisable()
+    {
+        controles.Jugador.Disable();
     }
 
     void Start()
