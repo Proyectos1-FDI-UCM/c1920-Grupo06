@@ -10,6 +10,19 @@ public class CrearDash : MonoBehaviour
     Jugador jugador;
     Estados estadoJugador;
     int numeroCargas; //número de cargas
+    Controles controles;
+
+
+    private void Awake()
+    {
+        controles = new Controles();
+        controles.Jugador.Dash.performed += ctx => Dash();
+    }
+
+    private void OnEnable()
+    {
+        controles.Enable();
+    }
 
     void Start()
     {
@@ -22,10 +35,10 @@ public class CrearDash : MonoBehaviour
         estadisticas = GetComponent<Jugador>().estadisticas;
     }
 
-    void Update()
+    void Dash()
     {
         //si se presiona el botón asignado para el Dash, y hay suficientes cargas
-        if ((Input.GetButtonDown("Dash") || Input.GetButtonDown("DashMando")) && numeroCargas > 0)
+        if (numeroCargas > 0)
         {
             estadisticas.Dash(); //Sumamos un dash a las estadísticas
 

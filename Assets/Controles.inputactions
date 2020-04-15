@@ -1,0 +1,66 @@
+{
+    "name": "Controles",
+    "maps": [
+        {
+            "name": "Jugador",
+            "id": "4bd3f03f-08e6-4f35-bfd6-c0966330fa1d",
+            "actions": [
+                {
+                    "name": "Dash",
+                    "type": "Button",
+                    "id": "bc4c2453-459b-44a4-b681-f49cd135c9e7",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": ""
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "e859bd55-2cad-4e06-a240-2a6d0f6511fe",
+                    "path": "<Mouse>/rightButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Teclado Y Raton",
+                    "action": "Dash",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "a08b96ac-6e9e-4829-9bdd-a02f8b4d69a3",
+                    "path": "<Gamepad>/buttonEast",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Teclado Y Raton",
+                    "action": "Dash",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": [
+        {
+            "name": "Teclado Y Raton",
+            "bindingGroup": "Teclado Y Raton",
+            "devices": [
+                {
+                    "devicePath": "<Keyboard>",
+                    "isOptional": false,
+                    "isOR": false
+                },
+                {
+                    "devicePath": "<Mouse>",
+                    "isOptional": false,
+                    "isOR": false
+                },
+                {
+                    "devicePath": "<Gamepad>",
+                    "isOptional": true,
+                    "isOR": false
+                }
+            ]
+        }
+    ]
+}
