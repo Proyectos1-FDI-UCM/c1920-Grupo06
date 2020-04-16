@@ -71,10 +71,8 @@ public static class Metodos
     }
 
     //vector dirección de apuntado del mando
-    public static Vector3 DireccionMando()
-    {
-        float vertical = Input.GetAxis("Vertical");
-        float horizontal = Input.GetAxis("Horizontal");
-        return new Vector3(horizontal, vertical);
-    }
+    //public static Vector3 DireccionMando(Vector2 joystick)
+    //{
+    //    return new Vector3(horizontal, vertical);
+    //}
 }

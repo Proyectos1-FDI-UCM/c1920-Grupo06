@@ -43,17 +43,17 @@ public class @Controles : IInputActionCollection, IDisposable
                     ""interactions"": """"
                 },
                 {
-                    ""name"": ""Salto"",
+                    ""name"": ""ApuntarDashConMando"",
                     ""type"": ""Button"",
-                    ""id"": ""75ab45d1-c645-4908-961e-67fe67312b4b"",
+                    ""id"": ""3d3c033e-766b-460c-9410-f3522c14def8"",
                     ""expectedControlType"": """",
                     ""processors"": """",
                     ""interactions"": """"
                 },
                 {
-                    ""name"": ""Apuntar Dash"",
+                    ""name"": ""Salto"",
                     ""type"": ""Button"",
-                    ""id"": ""bffb5ae8-ae93-41f7-98e9-9797b605941e"",
+                    ""id"": ""75ab45d1-c645-4908-961e-67fe67312b4b"",
                     ""expectedControlType"": """",
                     ""processors"": """",
                     ""interactions"": """"
@@ -136,19 +136,19 @@ public class @Controles : IInputActionCollection, IDisposable
                 },
                 {
                     ""name"": """",
-                    ""id"": ""cfaa0c24-e295-4d79-8620-be25a15fa804"",
-                    ""path"": """",
+                    ""id"": ""041ae5e7-a786-4631-b21f-f0870fdcf6f1"",
+                    ""path"": ""<Keyboard>/escape"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""Apuntar Dash"",
+                    ""groups"": ""Teclado Y Raton"",
+                    ""action"": ""Pausa"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 },
                 {
                     ""name"": """",
-                    ""id"": ""041ae5e7-a786-4631-b21f-f0870fdcf6f1"",
-                    ""path"": ""<Keyboard>/escape"",
+                    ""id"": ""f7267e42-8bec-4369-813f-19d0fa195403"",
+                    ""path"": ""<Gamepad>/start"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": ""Teclado Y Raton"",
@@ -164,6 +164,17 @@ public class @Controles : IInputActionCollection, IDisposable
                     ""processors"": """",
                     ""groups"": ""Teclado Y Raton"",
                     ""action"": ""ApuntarGancho"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""a3153f5a-4c7f-4465-8a2c-75dbf047bb45"",
+                    ""path"": ""<Gamepad>/leftStick"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Teclado Y Raton"",
+                    ""action"": ""ApuntarDashConMando"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -199,8 +210,8 @@ public class @Controles : IInputActionCollection, IDisposable
         m_Jugador_Dash = m_Jugador.FindAction("Dash", throwIfNotFound: true);
         m_Jugador_Gancho = m_Jugador.FindAction("Gancho", throwIfNotFound: true);
         m_Jugador_ApuntarGancho = m_Jugador.FindAction("ApuntarGancho", throwIfNotFound: true);
+        m_Jugador_ApuntarDashConMando = m_Jugador.FindAction("ApuntarDashConMando", throwIfNotFound: true);
         m_Jugador_Salto = m_Jugador.FindAction("Salto", throwIfNotFound: true);
-        m_Jugador_ApuntarDash = m_Jugador.FindAction("Apuntar Dash", throwIfNotFound: true);
         m_Jugador_Pausa = m_Jugador.FindAction("Pausa", throwIfNotFound: true);
     }
 
@@ -254,8 +265,8 @@ public class @Controles : IInputActionCollection, IDisposable
     private readonly InputAction m_Jugador_Dash;
     private readonly InputAction m_Jugador_Gancho;
     private readonly InputAction m_Jugador_ApuntarGancho;
+    private readonly InputAction m_Jugador_ApuntarDashConMando;
     private readonly InputAction m_Jugador_Salto;
-    private readonly InputAction m_Jugador_ApuntarDash;
     private readonly InputAction m_Jugador_Pausa;
     public struct JugadorActions
     {
@@ -264,8 +275,8 @@ public class @Controles : IInputActionCollection, IDisposable
         public InputAction @Dash => m_Wrapper.m_Jugador_Dash;
         public InputAction @Gancho => m_Wrapper.m_Jugador_Gancho;
         public InputAction @ApuntarGancho => m_Wrapper.m_Jugador_ApuntarGancho;
+        public InputAction @ApuntarDashConMando => m_Wrapper.m_Jugador_ApuntarDashConMando;
         public InputAction @Salto => m_Wrapper.m_Jugador_Salto;
-        public InputAction @ApuntarDash => m_Wrapper.m_Jugador_ApuntarDash;
         public InputAction @Pausa => m_Wrapper.m_Jugador_Pausa;
         public InputActionMap Get() { return m_Wrapper.m_Jugador; }
         public void Enable() { Get().Enable(); }
@@ -285,12 +296,12 @@ public class @Controles : IInputActionCollection, IDisposable
                 @ApuntarGancho.started -= m_Wrapper.m_JugadorActionsCallbackInterface.OnApuntarGancho;
                 @ApuntarGancho.performed -= m_Wrapper.m_JugadorActionsCallbackInterface.OnApuntarGancho;
                 @ApuntarGancho.canceled -= m_Wrapper.m_JugadorActionsCallbackInterface.OnApuntarGancho;
+                @ApuntarDashConMando.started -= m_Wrapper.m_JugadorActionsCallbackInterface.OnApuntarDashConMando;
+                @ApuntarDashConMando.performed -= m_Wrapper.m_JugadorActionsCallbackInterface.OnApuntarDashConMando;
+                @ApuntarDashConMando.canceled -= m_Wrapper.m_JugadorActionsCallbackInterface.OnApuntarDashConMando;
                 @Salto.started -= m_Wrapper.m_JugadorActionsCallbackInterface.OnSalto;
                 @Salto.performed -= m_Wrapper.m_JugadorActionsCallbackInterface.OnSalto;
                 @Salto.canceled -= m_Wrapper.m_JugadorActionsCallbackInterface.OnSalto;
-                @ApuntarDash.started -= m_Wrapper.m_JugadorActionsCallbackInterface.OnApuntarDash;
-                @ApuntarDash.performed -= m_Wrapper.m_JugadorActionsCallbackInterface.OnApuntarDash;
-                @ApuntarDash.canceled -= m_Wrapper.m_JugadorActionsCallbackInterface.OnApuntarDash;
                 @Pausa.started -= m_Wrapper.m_JugadorActionsCallbackInterface.OnPausa;
                 @Pausa.performed -= m_Wrapper.m_JugadorActionsCallbackInterface.OnPausa;
                 @Pausa.canceled -= m_Wrapper.m_JugadorActionsCallbackInterface.OnPausa;
@@ -307,12 +318,12 @@ public class @Controles : IInputActionCollection, IDisposable
                 @ApuntarGancho.started += instance.OnApuntarGancho;
                 @ApuntarGancho.performed += instance.OnApuntarGancho;
                 @ApuntarGancho.canceled += instance.OnApuntarGancho;
+                @ApuntarDashConMando.started += instance.OnApuntarDashConMando;
+                @ApuntarDashConMando.performed += instance.OnApuntarDashConMando;
+                @ApuntarDashConMando.canceled += instance.OnApuntarDashConMando;
                 @Salto.started += instance.OnSalto;
                 @Salto.performed += instance.OnSalto;
                 @Salto.canceled += instance.OnSalto;
-                @ApuntarDash.started += instance.OnApuntarDash;
-                @ApuntarDash.performed += instance.OnApuntarDash;
-                @ApuntarDash.canceled += instance.OnApuntarDash;
                 @Pausa.started += instance.OnPausa;
                 @Pausa.performed += instance.OnPausa;
                 @Pausa.canceled += instance.OnPausa;
@@ -334,8 +345,8 @@ public class @Controles : IInputActionCollection, IDisposable
         void OnDash(InputAction.CallbackContext context);
         void OnGancho(InputAction.CallbackContext context);
         void OnApuntarGancho(InputAction.CallbackContext context);
+        void OnApuntarDashConMando(InputAction.CallbackContext context);
         void OnSalto(InputAction.CallbackContext context);
-        void OnApuntarDash(InputAction.CallbackContext context);
         void OnPausa(InputAction.CallbackContext context);
     }
 }

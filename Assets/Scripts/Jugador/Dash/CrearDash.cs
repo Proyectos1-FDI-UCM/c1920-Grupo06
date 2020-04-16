@@ -37,7 +37,6 @@ public class CrearDash : MonoBehaviour
         //guardamos referencias al jugador y a los estados
         jugador = GetComponent<Jugador>();
         estadoJugador = GetComponent<Estados>();
-
         estadisticas = GetComponent<Jugador>().estadisticas;
     }
 
@@ -50,8 +49,17 @@ public class CrearDash : MonoBehaviour
 
             if (Mouse.current.rightButton.wasPressedThisFrame) //si presiona con el ratón
                 jugador.DireccionDash(Metodos.DireccionPuntoRaton(transform.position));
-            else //si presiona con el mando
-                jugador.DireccionDash(Metodos.DireccionMando());
+            else
+            { //si presiona con el mando
+                Vector2 joystick = controles.Jugador.ApuntarDashConMando.ReadValue<Vector2>();
+                //controles.Jugador.ApuntarDashConMando.performed += ctx => Metodos.DireccionMando(joystick);
+                if (joystick != Vector2.zero)
+                {
+                    jugador.DireccionDash(joystick);
+                }
+            }
+                //jugador.DireccionDash(Metodos.DireccionMando(ctx => ReadValue<Vector2>()));
+                
             estadoJugador.CambioEstado(estado.Dash); //cambiamos el estado a Dash
 
             numeroCargas--; //reducimos el número de cargas
