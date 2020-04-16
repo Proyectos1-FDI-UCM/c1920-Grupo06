@@ -21,13 +21,6 @@ public class Movimiento : MonoBehaviour
         //guardamos el valor del input
         float input = Input.GetAxis("Horizontal");
 
-        //miramos en caso de que el jugador se esté desplazando hacia la posición de una pared, para que no se atasque
-        //(solucinado con un material físico)
-        //if (deslizamiento.Deslizando() == "derecha" && input > 0)
-        //    input = 0;
-        //else if (deslizamiento.Deslizando() == "izquierda" && input < 0)
-        //    input = 0;
-
         //Establecemos la velocidad
         rb.velocity = new Vector2(input * velocidad_movimiento, rb.velocity.y);
 

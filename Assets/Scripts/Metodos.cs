@@ -60,16 +60,12 @@ public static class Metodos
     }
 
     //calculo del ángulo al utilizar el mando
-    public static float AnguloConMando(out bool cambio, Vector2 joystick)
+    public static float AnguloConMando(Vector2 joystick)
     {
-        cambio = true;
-        float angulo = 0;
-        float vertical = Input.GetAxis("VerticalMando");
-        float horizontal = Input.GetAxis("HorizontalMando");
+        float vertical = joystick.y;
+        float horizontal = joystick.x;
 
-        if (horizontal != 0 || vertical != 0)
-            angulo = Mathf.Atan(vertical / horizontal) * 180 / Mathf.PI;
-        else cambio = false;
+        float angulo = Mathf.Atan(vertical / horizontal) * 180 / Mathf.PI;
         if (horizontal < 0) angulo += 180;
         return angulo;
     }

@@ -30,14 +30,6 @@
                     "interactions": ""
                 },
                 {
-                    "name": "Movimiento Horizontal",
-                    "type": "Button",
-                    "id": "3fe9fc07-9df2-4fc3-8505-8848444f5840",
-                    "expectedControlType": "",
-                    "processors": "",
-                    "interactions": ""
-                },
-                {
                     "name": "Salto",
                     "type": "Button",
                     "id": "75ab45d1-c645-4908-961e-67fe67312b4b",
@@ -46,7 +38,7 @@
                     "interactions": ""
                 },
                 {
-                    "name": "Apuntar Dash/Gancho",
+                    "name": "Apuntar Dash",
                     "type": "Button",
                     "id": "bffb5ae8-ae93-41f7-98e9-9797b605941e",
                     "expectedControlType": "",
@@ -109,17 +101,6 @@
                 },
                 {
                     "name": "",
-                    "id": "d22caad3-dbed-495c-b071-2b50d577b315",
-                    "path": "<Gamepad>/leftStick",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "Teclado Y Raton",
-                    "action": "Movimiento Horizontal",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
                     "id": "6f7593f5-0c92-4f84-9e4d-81901d3b1e0b",
                     "path": "<Gamepad>/buttonSouth",
                     "interactions": "",
@@ -147,17 +128,17 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "Apuntar Dash/Gancho",
+                    "action": "Apuntar Dash",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
                 {
                     "name": "",
                     "id": "041ae5e7-a786-4631-b21f-f0870fdcf6f1",
-                    "path": "",
+                    "path": "<Keyboard>/escape",
                     "interactions": "",
                     "processors": "",
-                    "groups": "",
+                    "groups": "Teclado Y Raton",
                     "action": "Pausa",
                     "isComposite": false,
                     "isPartOfComposite": false

@@ -43,14 +43,6 @@ public class @Controles : IInputActionCollection, IDisposable
                     ""interactions"": """"
                 },
                 {
-                    ""name"": ""Movimiento Horizontal"",
-                    ""type"": ""Button"",
-                    ""id"": ""3fe9fc07-9df2-4fc3-8505-8848444f5840"",
-                    ""expectedControlType"": """",
-                    ""processors"": """",
-                    ""interactions"": """"
-                },
-                {
                     ""name"": ""Salto"",
                     ""type"": ""Button"",
                     ""id"": ""75ab45d1-c645-4908-961e-67fe67312b4b"",
@@ -59,7 +51,7 @@ public class @Controles : IInputActionCollection, IDisposable
                     ""interactions"": """"
                 },
                 {
-                    ""name"": ""Apuntar Dash/Gancho"",
+                    ""name"": ""Apuntar Dash"",
                     ""type"": ""Button"",
                     ""id"": ""bffb5ae8-ae93-41f7-98e9-9797b605941e"",
                     ""expectedControlType"": """",
@@ -122,17 +114,6 @@ public class @Controles : IInputActionCollection, IDisposable
                 },
                 {
                     ""name"": """",
-                    ""id"": ""d22caad3-dbed-495c-b071-2b50d577b315"",
-                    ""path"": ""<Gamepad>/leftStick"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": ""Teclado Y Raton"",
-                    ""action"": ""Movimiento Horizontal"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
                     ""id"": ""6f7593f5-0c92-4f84-9e4d-81901d3b1e0b"",
                     ""path"": ""<Gamepad>/buttonSouth"",
                     ""interactions"": """",
@@ -160,17 +141,17 @@ public class @Controles : IInputActionCollection, IDisposable
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""Apuntar Dash/Gancho"",
+                    ""action"": ""Apuntar Dash"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 },
                 {
                     ""name"": """",
                     ""id"": ""041ae5e7-a786-4631-b21f-f0870fdcf6f1"",
-                    ""path"": """",
+                    ""path"": ""<Keyboard>/escape"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": """",
+                    ""groups"": ""Teclado Y Raton"",
                     ""action"": ""Pausa"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
@@ -218,9 +199,8 @@ public class @Controles : IInputActionCollection, IDisposable
         m_Jugador_Dash = m_Jugador.FindAction("Dash", throwIfNotFound: true);
         m_Jugador_Gancho = m_Jugador.FindAction("Gancho", throwIfNotFound: true);
         m_Jugador_ApuntarGancho = m_Jugador.FindAction("ApuntarGancho", throwIfNotFound: true);
-        m_Jugador_MovimientoHorizontal = m_Jugador.FindAction("Movimiento Horizontal", throwIfNotFound: true);
         m_Jugador_Salto = m_Jugador.FindAction("Salto", throwIfNotFound: true);
-        m_Jugador_ApuntarDashGancho = m_Jugador.FindAction("Apuntar Dash/Gancho", throwIfNotFound: true);
+        m_Jugador_ApuntarDash = m_Jugador.FindAction("Apuntar Dash", throwIfNotFound: true);
         m_Jugador_Pausa = m_Jugador.FindAction("Pausa", throwIfNotFound: true);
     }
 
@@ -274,9 +254,8 @@ public class @Controles : IInputActionCollection, IDisposable
     private readonly InputAction m_Jugador_Dash;
     private readonly InputAction m_Jugador_Gancho;
     private readonly InputAction m_Jugador_ApuntarGancho;
-    private readonly InputAction m_Jugador_MovimientoHorizontal;
     private readonly InputAction m_Jugador_Salto;
-    private readonly InputAction m_Jugador_ApuntarDashGancho;
+    private readonly InputAction m_Jugador_ApuntarDash;
     private readonly InputAction m_Jugador_Pausa;
     public struct JugadorActions
     {
@@ -285,9 +264,8 @@ public class @Controles : IInputActionCollection, IDisposable
         public InputAction @Dash => m_Wrapper.m_Jugador_Dash;
         public InputAction @Gancho => m_Wrapper.m_Jugador_Gancho;
         public InputAction @ApuntarGancho => m_Wrapper.m_Jugador_ApuntarGancho;
-        public InputAction @MovimientoHorizontal => m_Wrapper.m_Jugador_MovimientoHorizontal;
         public InputAction @Salto => m_Wrapper.m_Jugador_Salto;
-        public InputAction @ApuntarDashGancho => m_Wrapper.m_Jugador_ApuntarDashGancho;
+        public InputAction @ApuntarDash => m_Wrapper.m_Jugador_ApuntarDash;
         public InputAction @Pausa => m_Wrapper.m_Jugador_Pausa;
         public InputActionMap Get() { return m_Wrapper.m_Jugador; }
         public void Enable() { Get().Enable(); }
@@ -307,15 +285,12 @@ public class @Controles : IInputActionCollection, IDisposable
                 @ApuntarGancho.started -= m_Wrapper.m_JugadorActionsCallbackInterface.OnApuntarGancho;
                 @ApuntarGancho.performed -= m_Wrapper.m_JugadorActionsCallbackInterface.OnApuntarGancho;
                 @ApuntarGancho.canceled -= m_Wrapper.m_JugadorActionsCallbackInterface.OnApuntarGancho;
-                @MovimientoHorizontal.started -= m_Wrapper.m_JugadorActionsCallbackInterface.OnMovimientoHorizontal;
-                @MovimientoHorizontal.performed -= m_Wrapper.m_JugadorActionsCallbackInterface.OnMovimientoHorizontal;
-                @MovimientoHorizontal.canceled -= m_Wrapper.m_JugadorActionsCallbackInterface.OnMovimientoHorizontal;
                 @Salto.started -= m_Wrapper.m_JugadorActionsCallbackInterface.OnSalto;
                 @Salto.performed -= m_Wrapper.m_JugadorActionsCallbackInterface.OnSalto;
                 @Salto.canceled -= m_Wrapper.m_JugadorActionsCallbackInterface.OnSalto;
-                @ApuntarDashGancho.started -= m_Wrapper.m_JugadorActionsCallbackInterface.OnApuntarDashGancho;
-                @ApuntarDashGancho.performed -= m_Wrapper.m_JugadorActionsCallbackInterface.OnApuntarDashGancho;
-                @ApuntarDashGancho.canceled -= m_Wrapper.m_JugadorActionsCallbackInterface.OnApuntarDashGancho;
+                @ApuntarDash.started -= m_Wrapper.m_JugadorActionsCallbackInterface.OnApuntarDash;
+                @ApuntarDash.performed -= m_Wrapper.m_JugadorActionsCallbackInterface.OnApuntarDash;
+                @ApuntarDash.canceled -= m_Wrapper.m_JugadorActionsCallbackInterface.OnApuntarDash;
                 @Pausa.started -= m_Wrapper.m_JugadorActionsCallbackInterface.OnPausa;
                 @Pausa.performed -= m_Wrapper.m_JugadorActionsCallbackInterface.OnPausa;
                 @Pausa.canceled -= m_Wrapper.m_JugadorActionsCallbackInterface.OnPausa;
@@ -332,15 +307,12 @@ public class @Controles : IInputActionCollection, IDisposable
                 @ApuntarGancho.started += instance.OnApuntarGancho;
                 @ApuntarGancho.performed += instance.OnApuntarGancho;
                 @ApuntarGancho.canceled += instance.OnApuntarGancho;
-                @MovimientoHorizontal.started += instance.OnMovimientoHorizontal;
-                @MovimientoHorizontal.performed += instance.OnMovimientoHorizontal;
-                @MovimientoHorizontal.canceled += instance.OnMovimientoHorizontal;
                 @Salto.started += instance.OnSalto;
                 @Salto.performed += instance.OnSalto;
                 @Salto.canceled += instance.OnSalto;
-                @ApuntarDashGancho.started += instance.OnApuntarDashGancho;
-                @ApuntarDashGancho.performed += instance.OnApuntarDashGancho;
-                @ApuntarDashGancho.canceled += instance.OnApuntarDashGancho;
+                @ApuntarDash.started += instance.OnApuntarDash;
+                @ApuntarDash.performed += instance.OnApuntarDash;
+                @ApuntarDash.canceled += instance.OnApuntarDash;
                 @Pausa.started += instance.OnPausa;
                 @Pausa.performed += instance.OnPausa;
                 @Pausa.canceled += instance.OnPausa;
@@ -362,9 +334,8 @@ public class @Controles : IInputActionCollection, IDisposable
         void OnDash(InputAction.CallbackContext context);
         void OnGancho(InputAction.CallbackContext context);
         void OnApuntarGancho(InputAction.CallbackContext context);
-        void OnMovimientoHorizontal(InputAction.CallbackContext context);
         void OnSalto(InputAction.CallbackContext context);
-        void OnApuntarDashGancho(InputAction.CallbackContext context);
+        void OnApuntarDash(InputAction.CallbackContext context);
         void OnPausa(InputAction.CallbackContext context);
     }
 }

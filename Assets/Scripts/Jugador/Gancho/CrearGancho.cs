@@ -51,19 +51,22 @@ public class CrearGancho : MonoBehaviour
     //Método llamado mientras se pulse la tecla de lanzar gancho
     void PulsarGancho()
     {
-        if (padreGancho.childCount < 1) //si no hay ganchos creados, se ejecuta
+        if (enabled)
         {
-            if (cargasGancho > 0)
+            if (padreGancho.childCount < 1) //si no hay ganchos creados, se ejecuta
             {
-                Time.timeScale = 0.1f; //ralentiza el tiempo mientras se pulsa el click
-                estadoJugador.CambioEstado(estado.SlowMotion); //el jugador pasa al estado SlowMotion
-                lineaGancho.enabled = true; //activamos la linea
-            }
-            if (Gamepad.current.rightTrigger.wasPressedThisFrame) //si ha sido activado por mando
-            {
-                //establecemos la linea de disparo, para facilitar que el jugador apunte bien
-                lineaGancho.SetPosition(0, new Vector3(transform.position.x, transform.position.y, -1));
-                lineaGancho.SetPosition(1, PuntoLinea(angulo));
+                if (cargasGancho > 0)
+                {
+                    Time.timeScale = 0.1f; //ralentiza el tiempo mientras se pulsa el click
+                    estadoJugador.CambioEstado(estado.SlowMotion); //el jugador pasa al estado SlowMotion
+                    lineaGancho.enabled = true; //activamos la linea
+                }
+                if (Gamepad.current.rightTrigger.wasPressedThisFrame) //si ha sido activado por mando
+                {
+                    //establecemos la linea de disparo, para facilitar que el jugador apunte bien
+                    lineaGancho.SetPosition(0, new Vector3(transform.position.x, transform.position.y, -1));
+                    lineaGancho.SetPosition(1, PuntoLinea(angulo));
+                }
             }
         }
     }
@@ -71,38 +74,42 @@ public class CrearGancho : MonoBehaviour
     //Método llamado cuando se ha soltado la tecla y se va a crear el gancho
     void SoltarGancho()
     {
-        Vector2 joystick = Vector2.zero;
-        controles.Jugador.ApuntarGancho.performed += ctx => joystick = ctx.ReadValue<Vector2>();
-        //comprobamos el ángulo, y lo guardamos en caso de haber variado
-        float anguloaux = Metodos.AnguloConMando(out bool cambio, joystick);
-        if (cambio) angulo = anguloaux;
-
-        if (cargasGancho > 0) //cuando se deje de presionar el botón
+        if (enabled)
         {
-            estadisticas.Gancho();//Sumamos un gancho a las estadísticas
-
-            lineaGancho.enabled = false; //se desactiva la linea de apuntado
-            Time.timeScale = 1; //devolvemos el tiempo a la normalidad
-                                //se establece la posición de la aparición del gancho levemente mñas arriba de la del jugador
-            Vector2 posicion = transform.position; posicion.y += .5f;
-
-            if (Input.GetButtonUp("Gancho")) //si se ha activado el gancho por ratón
-                angulo = Metodos.AnguloPosicionRaton(posicion); //hallamos el angulo entre jugador y raton
-
-            //Si se está apuntando al suelo desde el suelo no se crea un gancho
-            if ((angulo > 240 || angulo < -60) && suelo.EnSuelo())
+            Vector2 joystick = Gamepad.current.rightStick.ReadValue();
+            if (joystick != Vector2.zero)
             {
-                estadoJugador.CambioEstado(estado.Defecto);
+                angulo = Metodos.AnguloConMando(joystick);
             }
-            else
-            {
-                //instanciamos el gancho
-                GameObject gancho_nuevo = Instantiate(gancho, posicion, Quaternion.Euler(new Vector3(0, 0, angulo)), padreGancho);
-                gancho_nuevo.GetComponent<Gancho>().CreacionGancho(gameObject); //damos una referencia del jugador al gancho
-                estadoJugador.CambioEstado(estado.LanzamientoGancho); //pasamos al estado "LanzamientoGancho"
-                cargasGancho--; //restamos un gancho a los disponibles
-            }
+            //comprobamos el ángulo, y lo guardamos en caso de haber variado
 
+            if (cargasGancho > 0) //cuando se deje de presionar el botón
+            {
+                estadisticas.Gancho();//Sumamos un gancho a las estadísticas
+
+                lineaGancho.enabled = false; //se desactiva la linea de apuntado
+                Time.timeScale = 1; //devolvemos el tiempo a la normalidad
+                                    //se establece la posición de la aparición del gancho levemente mñas arriba de la del jugador
+                Vector2 posicion = transform.position; posicion.y += .5f;
+
+                if (Mouse.current.leftButton.wasReleasedThisFrame) //si se ha activado el gancho por ratón
+                    angulo = Metodos.AnguloPosicionRaton(posicion); //hallamos el angulo entre jugador y raton
+
+                //Si se está apuntando al suelo desde el suelo no se crea un gancho
+                if ((angulo > 240 || angulo < -60) && suelo.EnSuelo())
+                {
+                    estadoJugador.CambioEstado(estado.Defecto);
+                }
+                else
+                {
+                    //instanciamos el gancho
+                    GameObject gancho_nuevo = Instantiate(gancho, posicion, Quaternion.Euler(new Vector3(0, 0, angulo)), padreGancho);
+                    gancho_nuevo.GetComponent<Gancho>().CreacionGancho(gameObject); //damos una referencia del jugador al gancho
+                    estadoJugador.CambioEstado(estado.LanzamientoGancho); //pasamos al estado "LanzamientoGancho"
+                    cargasGancho--; //restamos un gancho a los disponibles
+                }
+
+            }
         }
     }
 

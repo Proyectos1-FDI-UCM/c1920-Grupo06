@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.InputSystem;
 
 //Control de la activación del Dash
 
@@ -47,7 +48,7 @@ public class CrearDash : MonoBehaviour
         {
             estadisticas.Dash(); //Sumamos un dash a las estadísticas
 
-            if (Input.GetButtonDown("Dash")) //si presiona con el ratón
+            if (Mouse.current.rightButton.wasPressedThisFrame) //si presiona con el ratón
                 jugador.DireccionDash(Metodos.DireccionPuntoRaton(transform.position));
             else //si presiona con el mando
                 jugador.DireccionDash(Metodos.DireccionMando());
