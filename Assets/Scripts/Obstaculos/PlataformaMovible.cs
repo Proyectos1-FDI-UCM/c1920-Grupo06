@@ -9,6 +9,7 @@ public class PlataformaMovible : MonoBehaviour
     [SerializeField] GameObject puntoA = null, puntoB = null; //limites inferior (izquierda, abajo) y superior (derecha, arriba)
     [SerializeField] bool horizontal = false; //booleano que indica si la plataforma se mueve de manera horizontal o vertical
     [SerializeField] Transform padre;
+    [SerializeField] Estados estados;
     GameObject jugador;
     Rigidbody2D rbJugador;
     Rigidbody2D rb;
@@ -63,35 +64,26 @@ public class PlataformaMovible : MonoBehaviour
         }
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        Suelo pies = collision.gameObject.GetComponent<Suelo>();
-        Debug.Log(collision.gameObject);
-        if (pies != null)
-        {
-            jugador = collision.gameObject.transform.parent.gameObject;
-            rbJugador = jugador.GetComponent<Rigidbody2D>();
-            //rbJugador.mass = rb;
-            //rbJugador.velocity = new Vector2(rb.velocity.x, rbJugador.velocity.y);
-        }
-    }
     private void OnTriggerStay2D(Collider2D collision)
     {
-        Suelo pies = collision.gameObject.GetComponent<Suelo>();
-        Debug.Log(collision.gameObject);
-        if (pies != null)
+        if (horizontal)
         {
-            if (!Input.anyKey)
+            Suelo pies = collision.gameObject.GetComponent<Suelo>();
+            if (pies != null)
             {
-                rbJugador.isKinematic = true;
-                jugador.transform.parent = transform;
-            }
-            else
-            {
-                rbJugador.isKinematic = false;
-                jugador.transform.parent = padre;
+                jugador = collision.gameObject.transform.parent.gameObject;
+                rbJugador = jugador.GetComponent<Rigidbody2D>();
+                if (!Input.anyKey && estados.Estado() == estado.Defecto && rbJugador.velocity.y <= 0)
+                {
+                    rbJugador.isKinematic = true;
+                    jugador.transform.parent = transform;
+                }
+                else
+                {
+                    rbJugador.isKinematic = false;
+                    jugador.transform.parent = padre;
+                }
             }
         }
-
     }
 }
