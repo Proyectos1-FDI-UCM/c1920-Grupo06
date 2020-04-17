@@ -237,6 +237,10 @@ MonoBehaviour:
   player: {fileID: 0}
   anchura_inicial: 0.2
   anchura_final: 1
+  s1: {fileID: 9082429109045791810, guid: 57af4e987bca4534ba8c92582a0f448b, type: 3}
+  s2: {fileID: -8599512977041186160, guid: 57af4e987bca4534ba8c92582a0f448b, type: 3}
+  s3: {fileID: -4876627861783150909, guid: 57af4e987bca4534ba8c92582a0f448b, type: 3}
+  s4: {fileID: 7394846351055212603, guid: 57af4e987bca4534ba8c92582a0f448b, type: 3}
 --- !u!212 &1838720681
 SpriteRenderer:
   m_ObjectHideFlags: 0
