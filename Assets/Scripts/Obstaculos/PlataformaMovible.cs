@@ -64,26 +64,41 @@ public class PlataformaMovible : MonoBehaviour
         }
     }
 
-    private void OnTriggerStay2D(Collider2D collision)
+    //En caso de que el jugador esté encima de la plataforma
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (horizontal)
+        if (horizontal) //Si es la horizontal
         {
+            //Se comprueba si verdaderamente se ha subido el jugador
             Suelo pies = collision.gameObject.GetComponent<Suelo>();
             if (pies != null)
             {
                 jugador = collision.gameObject.transform.parent.gameObject;
+                estados = jugador.GetComponent<Estados>();
                 rbJugador = jugador.GetComponent<Rigidbody2D>();
-                if (!Input.anyKey && estados.Estado() == estado.Defecto && rbJugador.velocity.y <= 0)
-                {
-                    rbJugador.isKinematic = true;
-                    jugador.transform.parent = transform;
-                }
-                else
-                {
-                    rbJugador.isKinematic = false;
-                    jugador.transform.parent = padre;
-                }
+            }
+        }
+    }
+
+    //En caso de que el jugador siga encima de la plataforma
+    private void OnTriggerStay2D(Collider2D collision)
+    {
+        if (horizontal) //Si es la horizontal
+        {
+            //Mientras el jugador no esté en medio de otra acción
+            if (!Input.anyKey && estados.Estado() == estado.Defecto && rbJugador.velocity.y <= 0)
+            {
+                //Se hace hijo de la plataforma
+                rbJugador.isKinematic = true;
+                jugador.transform.parent = transform;
+            }
+            else
+            {
+                //Deja de ser hijo de la plataforma
+                rbJugador.isKinematic = false;
+                jugador.transform.parent = padre;
             }
         }
     }
 }
+
