@@ -32,7 +32,18 @@ public class MovimientoGancho : MonoBehaviour
         direccion = gancho.transform.position - transform.position;
         jugador.DireccionImpulso(direccion); //se guarda la dirección para ser usada por el impulso
         rb.velocity = direccion.normalized * velocidad_movimientoGancho; //asignamos la velocidad
+        //Physics2D.IgnoreLayerCollision(9, 8, true);
     }
+
+    //private void OnDisable()
+    //{
+    //    Physics2D.IgnoreLayerCollision(9, 8, false);
+    //}
+
+    //private void FixedUpdate()
+    //{
+    //    if (!suelo.EnSuelo()) Physics2D.IgnoreLayerCollision(9, 8, true);
+    //}
 
     void Update()
     {
