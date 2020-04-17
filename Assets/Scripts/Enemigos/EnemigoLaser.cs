@@ -8,6 +8,8 @@ public class EnemigoLaser : MonoBehaviour
     [SerializeField] float cadencia = 5f, tiempoApunt = 2f, tiempoescape = 1f;
     [SerializeField] Transform player = null; //referencia al jugador
     [SerializeField] float anchura_inicial = 0, anchura_final = 0; //anchos del laser
+    [SerializeField] Sprite s1, s2, s3, s4;
+    SpriteRenderer sr;
     LineRenderer laser;
     LayerMask mask, mask1;
     RaycastHit2D ray;
@@ -18,6 +20,7 @@ public class EnemigoLaser : MonoBehaviour
 
     void Start()
     {
+        sr = GetComponent<SpriteRenderer>();
         estado = "Siguiendo";
         laser = GetComponent<LineRenderer>();
 
@@ -50,6 +53,8 @@ public class EnemigoLaser : MonoBehaviour
 
             if (estado == "Siguiendo") //si está siguiendo al jugador
             {
+                sr.sprite = s2;
+
                 //establecemos la anchura del láser
                 laser.startWidth = anchura_inicial;
                 laser.endWidth = anchura_inicial;
@@ -69,6 +74,7 @@ public class EnemigoLaser : MonoBehaviour
 
                 if (Time.time >= tiempo + cadencia) //si ha pasado el tiempo de seguimiento
                 {
+
                     CambiaEstado(); //cambiamos de estado
                     if (ray.collider != null) //fijamos la linea de apuntado
                         apuntado = ray.point;
@@ -76,6 +82,8 @@ public class EnemigoLaser : MonoBehaviour
             }
             else if (estado == "Apuntando") //si está apuntando al punto fijo
             {
+                sr.sprite = s3;
+
                 laser.material.color = Color.red; //cambiamos el color del laser a rojo
                 laser.SetPosition(1, CambioZ(apuntado)); //fijamos su dirección
 
@@ -86,6 +94,8 @@ public class EnemigoLaser : MonoBehaviour
             }
             else if (estado == "Disparando") //si esta disparando
             {
+                sr.sprite = s4;
+
                 //establecemos su nuevo ancho
                 laser.startWidth = anchura_final;
                 laser.endWidth = anchura_final;
@@ -100,7 +110,7 @@ public class EnemigoLaser : MonoBehaviour
 
                 if (Time.time >= tiempo + tiempoescape) //si ha pasado el tiempo de disparo
                 {
-                    CambiaEstado(); //cambiamos de estado
+                    CambiaEstado(); //cambiamos de estado                
                 }
             }
         }
@@ -117,6 +127,7 @@ public class EnemigoLaser : MonoBehaviour
 
     void OnDisable() //cuando se desactiva, dejamos el estado por defecto
     {
+        sr.sprite = s1;
         estado = "Siguiendo";
         //hacemos al laser "invisible" con el color de seguimiento
         laser.startWidth = anchura_inicial;
