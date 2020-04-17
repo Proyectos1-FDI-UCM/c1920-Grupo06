@@ -12148,6 +12148,12 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2925466069578243480, guid: 8733d96370d667b438b0a1d50270b180,
+        type: 3}
+      propertyPath: _estadisticas
+      value: 
+      objectReference: {fileID: 4767548257722236570, guid: e79883e46c370fe438841fdef05b43a9,
+        type: 3}
     m_RemovedComponents:
     - {fileID: 6850789548491145113, guid: 8733d96370d667b438b0a1d50270b180, type: 3}
     - {fileID: 3640962977658233719, guid: 8733d96370d667b438b0a1d50270b180, type: 3}
