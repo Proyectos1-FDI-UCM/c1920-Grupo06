@@ -8,8 +8,11 @@ public class PlataformaMovible : MonoBehaviour
     [SerializeField] Vector2 initialSpeed = Vector2.zero; //velocidad inicial de la entidad (establece dirección)
     [SerializeField] GameObject puntoA = null, puntoB = null; //limites inferior (izquierda, abajo) y superior (derecha, arriba)
     [SerializeField] bool horizontal = false; //booleano que indica si la plataforma se mueve de manera horizontal o vertical
-    Rigidbody2D rb; //RigidBody de la identidad
-    Transform padre;
+    [SerializeField] Transform padre;
+    GameObject jugador;
+    Rigidbody2D rbJugador;
+    Rigidbody2D rb;
+
 
     void Awake()
     {
@@ -60,14 +63,35 @@ public class PlataformaMovible : MonoBehaviour
         }
     }
 
-    //void OnTriggerStay2D(Collider2D collision)
-    //{
-    //    Suelo pies = collision.gameObject.GetComponent<Suelo>();
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        Suelo pies = collision.gameObject.GetComponent<Suelo>();
+        Debug.Log(collision.gameObject);
+        if (pies != null)
+        {
+            jugador = collision.gameObject.transform.parent.gameObject;
+            rbJugador = jugador.GetComponent<Rigidbody2D>();
+            //rbJugador.mass = rb;
+            //rbJugador.velocity = new Vector2(rb.velocity.x, rbJugador.velocity.y);
+        }
+    }
+    private void OnTriggerStay2D(Collider2D collision)
+    {
+        Suelo pies = collision.gameObject.GetComponent<Suelo>();
+        Debug.Log(collision.gameObject);
+        if (pies != null)
+        {
+            if (!Input.anyKey)
+            {
+                rbJugador.isKinematic = true;
+                jugador.transform.parent = transform;
+            }
+            else
+            {
+                rbJugador.isKinematic = false;
+                jugador.transform.parent = padre;
+            }
+        }
 
-    //    if(pies != null)
-    //    {
-    //        Rigidbody2D rbJugador = collision.GetComponentInParent<Rigidbody2D>();
-    //        rbJugador.velocity = new Vector2(rbJugador.velocity.x, rb.velocity.y);
-    //    }
-    //}
+    }
 }
