@@ -14,6 +14,8 @@ public class Dash : MonoBehaviour
     Vector3 direccion = Vector3.up; //vector direccion del dash
     Suelo suelo;
 
+    AudioSource aud;
+
     void Awake()
     {
         //inicializamos las referencias 
@@ -24,6 +26,7 @@ public class Dash : MonoBehaviour
         enabled = false;
 
         suelo = transform.GetChild(0).GetComponent<Suelo>();
+        aud = GetComponent<AudioSource>();
     }
 
     void OnEnable() //cuando se active el Dash
@@ -36,9 +39,13 @@ public class Dash : MonoBehaviour
         if (direccionAux != Vector3.zero)
             direccion = direccionAux;
         if (!(direccion.y < 0 && suelo.EnSuelo()))
+        {
+            aud.Play();
             rb.AddForce(direccion.normalized * velocidadDash, ForceMode2D.Impulse); //establecemos una fuerza en esa dirección
+        }
         else
         {
+            aud.Stop();
             enabled = false; //Desactivamos el Dash
             Invoke("CambiaEstadoRetardado", 0.1f);
         }
