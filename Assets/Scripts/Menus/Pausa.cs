@@ -6,7 +6,6 @@ public class Pausa : MonoBehaviour
 {
     Estados estado;
     public Suelo suelo;
-    bool pausa;
 
     void Start()
     {
