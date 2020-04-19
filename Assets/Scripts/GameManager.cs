@@ -122,12 +122,6 @@ public class GameManager : MonoBehaviour
         theUIMan.QuitarPausa();
     }
 
-    public void ChangeScene(string escena) //método de cambio de escena
-    {
-        SceneManager.LoadScene(escena);
-        Time.timeScale = 1;
-    }
-
     public void ChangeScene(int indice) //método de cambio de escena
     {
         SceneManager.LoadScene(indice);
