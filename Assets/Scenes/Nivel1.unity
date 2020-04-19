@@ -3671,12 +3671,12 @@ PrefabInstance:
     - target: {fileID: 2540557822082580119, guid: 8733d96370d667b438b0a1d50270b180,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 2540557822082580119, guid: 8733d96370d667b438b0a1d50270b180,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -5
+      value: 500
       objectReference: {fileID: 0}
     - target: {fileID: 2540557822082580119, guid: 8733d96370d667b438b0a1d50270b180,
         type: 3}
@@ -3732,6 +3732,10 @@ PrefabInstance:
       propertyPath: m_audioClip
       value: 
       objectReference: {fileID: 8300000, guid: b7fe2a6f02f28e14b950c969a6fd71c5, type: 3}
+    - target: {fileID: 898946494, guid: 8733d96370d667b438b0a1d50270b180, type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8733d96370d667b438b0a1d50270b180, type: 3}
 --- !u!1001 &387997645
@@ -9564,6 +9568,14 @@ PrefabInstance:
         type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1590347204, guid: c7e6f3b6d543adb40b30cad79a41a90a, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_IntArgument
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 794725483, guid: c7e6f3b6d543adb40b30cad79a41a90a, type: 3}
+      propertyPath: m_Text
+      value: NIVEL 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c7e6f3b6d543adb40b30cad79a41a90a, type: 3}
@@ -46251,7 +46263,7 @@ PrefabInstance:
     - target: {fileID: 7664563314598844579, guid: d878bb50faefc644aa38feaf6f11a1ff,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 1
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 7664563314598844579, guid: d878bb50faefc644aa38feaf6f11a1ff,
         type: 3}
@@ -46272,6 +46284,11 @@ PrefabInstance:
         type: 3}
       propertyPath: horizontal
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3998946128451166159, guid: d878bb50faefc644aa38feaf6f11a1ff,
+        type: 3}
+      propertyPath: initialSpeed
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 3848061066057903017, guid: d878bb50faefc644aa38feaf6f11a1ff,
         type: 3}

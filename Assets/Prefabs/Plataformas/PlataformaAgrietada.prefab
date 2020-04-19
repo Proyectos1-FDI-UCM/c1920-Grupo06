@@ -192,3 +192,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   puedoReaparecer: 1
+  tiempoReactivacion: 3
