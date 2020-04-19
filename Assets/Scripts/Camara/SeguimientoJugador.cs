@@ -6,7 +6,7 @@ public class SeguimientoJugador : MonoBehaviour
 {
     [SerializeField] Transform jugador = null; //referencia al Transform del jugador
     [SerializeField] [Range(0, 20)] float velocidad_seguimiento = 10; //velocidad a la que la cámara sigue al jugador
-    bool finalnivel = false;
+    bool finalnivel = false, pararCamara = false;
 
     void Start()
     {
@@ -33,14 +33,22 @@ public class SeguimientoJugador : MonoBehaviour
         }
         else //en caso de llegar al final del nivel, la cámara subirá lentamente hasta la pantalla de puntuación
         {
-            Vector3 pos = transform.position;
-            pos.y += velocidad_seguimiento * Time.deltaTime / 2;
-            transform.position = pos;
+            if (!pararCamara) //si no se ha llamado a Parar
+            {
+                Vector3 pos = transform.position;
+                pos.y += velocidad_seguimiento * Time.deltaTime / 2;
+                transform.position = pos;
+            }
         }
     }
 
     public void Sube() //método que permite establecer si se ha llegado o no al final del nivel
     {
         finalnivel = true;
+    }
+
+    public void Parar() //metodo para parar la camara tras x tiempo
+    {
+        pararCamara = true;
     }
 }

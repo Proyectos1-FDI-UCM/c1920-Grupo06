@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-//Comportamiento de movimiento de "EnemigoBásico", "EnemigoVolador" y "PlataformaMovible"
+//Comportamiento de movimiento de "EnemigoBásico" y "EnemigoVolador"
 
 public class MovLineal : MonoBehaviour
 {
@@ -30,7 +30,7 @@ public class MovLineal : MonoBehaviour
         if (horizontal)
         {
             //si se ha salido de los límites superiores (derecha)
-            if (transform.position.x > puntoB.transform.position.x)
+            if (transform.position.x >= puntoB.transform.position.x)
             {
                 rb.velocity = -initialSpeed;
                 transform.Rotate(Vector3.up * 180);

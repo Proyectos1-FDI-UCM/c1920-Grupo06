@@ -151,6 +151,12 @@ public class GameManager : MonoBehaviour
         //hacemos que la cámara suba
         SeguimientoJugador cam = Camera.main.GetComponent<SeguimientoJugador>();
         cam.Sube();
+        Invoke("PararCamara", 3f);
+    }
+
+    void PararCamara() //metodo para parar la camara tras aparecer la puntuacion
+    {
+        Camera.main.GetComponent<SeguimientoJugador>().Parar();
     }
 
     public void ContadorEnemigosElim() //método que aumenta el contador en 1 al eliminar a un enemigo

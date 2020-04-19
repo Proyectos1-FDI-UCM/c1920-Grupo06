@@ -16,6 +16,7 @@ public class FinalDelNivel : MonoBehaviour
             Invoke("LlamaAlMetodoPuntuacion", tiempo); //llamamos al metodo de aparición de la pantalla de puntuación
         }
     }
+
     void LlamaAlMetodoPuntuacion() //método que muestra la información de la puntuación en pantalla
     {
         GameManager.instance.Puntuacion(); //llamamos al método del GM que se encarga de mostrar la información
