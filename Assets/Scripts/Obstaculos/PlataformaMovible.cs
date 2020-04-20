@@ -4,62 +4,99 @@
 
 public class PlataformaMovible : MonoBehaviour
 {
+    //variables de movimiento
     [Header("Velocidad desplazamiento: ")]
-    [SerializeField] Vector2 initialSpeed = Vector2.zero; //velocidad inicial de la entidad (establece dirección)
-    [SerializeField] GameObject puntoA = null, puntoB = null; //limites inferior (izquierda, abajo) y superior (derecha, arriba)
-    [SerializeField] bool horizontal = false; //booleano que indica si la plataforma se mueve de manera horizontal o vertical
-    [SerializeField] Transform padre;
-    [SerializeField] Estados estados;
+    [SerializeField] float initialSpeed = 5f; //velocidad inicial de la entidad (establece dirección)
+    [SerializeField] Transform puntoA = null, puntoB = null; //limites inferior (izquierda, abajo) y superior (derecha, arriba)
+    [SerializeField] bool diagonal = false; //booleano que indica si la plataforma se mueve de manera horizontal o vertical
+    bool horizontal = false, diagonalInversa = false;
+    Transform nextPos;
+
+    //variables de mantener al jugador en la plataforma
     GameObject jugador;
+    Transform padre;
+    Estados estados;
     Rigidbody2D rbJugador;
-    Rigidbody2D rb;
-
-
-    void Awake()
-    {
-        rb = gameObject.GetComponent<Rigidbody2D>(); //obtenemos el RB de la entidad
-        //si es horizontal, congelamos ejes Y y Z
-        if (horizontal) rb.constraints = RigidbodyConstraints2D.FreezePositionY | RigidbodyConstraints2D.FreezeRotation;
-        //si es vertical, congelamos ejes X y Z
-        else rb.constraints = RigidbodyConstraints2D.FreezePositionX | RigidbodyConstraints2D.FreezeRotation;
-    }
+    bool sobrePlataforma = false;
 
     void OnEnable() //cuando se active (reaparición)
     {
-        rb.velocity = initialSpeed; //establecemos su velocidad y dirección
+        nextPos = puntoB; //el siguiente punto siempre es B
+        if (!diagonal) horizontal = puntoB.position.x != puntoA.position.x; //si no es diagonal, comprobamos si es horizontal o vertical
+        else diagonalInversa = puntoB.position.x < puntoA.position.x; //si es diagonal, comprobamos la direccion de dicha diagonal
     }
 
     void Update()
     {
         Limites(); //comprobamos si se ha salido de los límites
+
+        //movemos a la plataforma al siguiente punto
+        transform.position = Vector3.MoveTowards(transform.position, nextPos.position, initialSpeed * Time.deltaTime);
     }
 
     void Limites()
     {
-        if (horizontal)
+        if (diagonal)
+        {
+            if (diagonalInversa)
+            {
+                //si se ha salido de los límites superiores (esquina arriba)
+                if (transform.position.x <= puntoB.transform.position.x && transform.position.y >= puntoB.transform.position.y)
+                {
+                    transform.position = puntoB.position;
+                    nextPos = puntoA;
+                }
+                //si se ha salido de los límites inferiores (esquina abajo)
+                else if (transform.position.x >= puntoA.transform.position.x && transform.position.y <= puntoA.transform.position.y)
+                {
+                    transform.position = puntoA.position;
+                    nextPos = puntoB;
+                }
+            }
+            else
+            {
+                //si se ha salido de los límites superiores (esquina arriba)
+                if (transform.position.x >= puntoB.transform.position.x && transform.position.y >= puntoB.transform.position.y)
+                {
+                    transform.position = puntoB.position;
+                    nextPos = puntoA;
+                }
+                //si se ha salido de los límites inferiores (esquina abajo)
+                else if (transform.position.x <= puntoA.transform.position.x && transform.position.y <= puntoA.transform.position.y)
+                {
+                    transform.position = puntoA.position;
+                    nextPos = puntoB;
+                }
+            }
+        }
+        else if (horizontal)
         {
             //si se ha salido de los límites superiores (derecha)
-            if (transform.position.x > puntoB.transform.position.x)
+            if (transform.position.x >= puntoB.transform.position.x)
             {
-                rb.velocity = -initialSpeed;
+                transform.position = puntoB.position;
+                nextPos = puntoA;
             }
             //si se ha salido de los límites inferiores (izquierda)
-            else if (transform.position.x < puntoA.transform.position.x)
+            else if (transform.position.x <= puntoA.transform.position.x)
             {
-                rb.velocity = initialSpeed;
+                transform.position = puntoA.position;
+                nextPos = puntoB;
             }
         }
         else
         {
             //si se ha salido de los límites superiores (arriba)
-            if (transform.position.x > puntoB.transform.position.x || transform.position.y > puntoB.transform.position.y)
+            if (transform.position.y >= puntoB.transform.position.y)
             {
-                rb.velocity = -initialSpeed;
+                transform.position = puntoB.position;
+                nextPos = puntoA;
             }
             //si se ha salido de los límites inferiores (abajo)
-            else if (transform.position.x < puntoA.transform.position.x || transform.position.y < puntoA.transform.position.y)
+            else if (transform.position.y <= puntoA.transform.position.y)
             {
-                rb.velocity = initialSpeed;
+                transform.position = puntoA.position;
+                nextPos = puntoB;
             }
         }
     }
@@ -67,26 +104,26 @@ public class PlataformaMovible : MonoBehaviour
     //En caso de que el jugador esté encima de la plataforma
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (horizontal) //Si es la horizontal
+        //Se comprueba si verdaderamente se ha subido el jugador
+        Suelo pies = collision.gameObject.GetComponent<Suelo>();
+
+        if (pies != null)
         {
-            //Se comprueba si verdaderamente se ha subido el jugador
-            Suelo pies = collision.gameObject.GetComponent<Suelo>();
-            if (pies != null)
-            {
-                jugador = collision.gameObject.transform.parent.gameObject;
-                estados = jugador.GetComponent<Estados>();
-                rbJugador = jugador.GetComponent<Rigidbody2D>();
-            }
+            sobrePlataforma = true;
+            jugador = collision.gameObject.transform.parent.gameObject;
+            estados = jugador.GetComponent<Estados>();
+            rbJugador = jugador.GetComponent<Rigidbody2D>();
+            padre = jugador.transform.parent;
         }
     }
 
     //En caso de que el jugador siga encima de la plataforma
     private void OnTriggerStay2D(Collider2D collision)
     {
-        if (horizontal) //Si es la horizontal
+        if (sobrePlataforma)
         {
             //Mientras el jugador no esté en medio de otra acción
-            if (!Input.anyKey && estados.Estado() == estado.Defecto && rbJugador.velocity.y <= 0)
+            if (!Input.anyKey && estados.Estado() == estado.Defecto)
             {
                 //Se hace hijo de la plataforma
                 rbJugador.isKinematic = true;
@@ -98,6 +135,20 @@ public class PlataformaMovible : MonoBehaviour
                 rbJugador.isKinematic = false;
                 jugador.transform.parent = padre;
             }
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        Suelo pies = collision.gameObject.GetComponent<Suelo>();
+
+        if (pies != null)
+        {
+            rbJugador = null;
+            jugador = null;
+            sobrePlataforma = false;
+            estados = null;
+            padre = null;
         }
     }
 }
