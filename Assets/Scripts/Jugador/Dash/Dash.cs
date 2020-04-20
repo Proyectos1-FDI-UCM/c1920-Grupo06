@@ -13,7 +13,7 @@ public class Dash : MonoBehaviour
     Vector3 posicion_inicial = Vector3.zero; //vector posicion inicial del jugador
     Vector3 direccion = Vector3.up; //vector direccion del dash
     Suelo suelo;
-
+    bool pegadoAPared;
     AudioSource aud;
 
     void Awake()

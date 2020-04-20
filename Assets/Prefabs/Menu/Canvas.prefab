@@ -1221,6 +1221,7 @@ MonoBehaviour:
   panel: {fileID: 0}
   puntuacion: {fileID: 3538773065972377774}
   barraProgreso: {fileID: 3538773065649681351}
+  avance: {fileID: 1590347202}
   vida:
   - {fileID: 3538773065638955364}
   - {fileID: 3538773067186727950}

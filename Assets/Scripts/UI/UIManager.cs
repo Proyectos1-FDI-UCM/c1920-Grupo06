@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class UIManager : MonoBehaviour
 {
     //GO de menú, puntuación y barra de progres
-    [SerializeField] GameObject panel = null, puntuacion = null, barraProgreso = null;
+    [SerializeField] GameObject panel = null, puntuacion = null, barraProgreso = null, avance = null;
     //ia¡magenes de la vida y los PowerUps
     [SerializeField] Image[] vida = null, powerups = null;
     //texto de tiempo en pantalla, muertes del jugador, eliminaciones, coleccionables y puntos
@@ -23,6 +23,7 @@ public class UIManager : MonoBehaviour
         //desactivamos pantalla de puntuación y pausa
         panel.SetActive(false);
         puntuacion.SetActive(false);
+        avance.SetActive(false);
     }
 
     void Start()
@@ -140,5 +141,11 @@ public class UIManager : MonoBehaviour
         DesactivaSpriteVidas();
         tiempo.enabled = false;
         DesactivaPowerUpSprites();
+    }
+
+    //metodo para activar el boton de avance de nivel
+    public void ActivarBotonAvance()
+    {
+        avance.SetActive(true);
     }
 }

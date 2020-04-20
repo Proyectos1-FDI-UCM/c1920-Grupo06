@@ -56,7 +56,6 @@ public class GameManager : MonoBehaviour
         checkpoint = posicion;
         if (sumarTiempoCheckPoint)
             timer.SumarTiempo(tiempoAdicional);
-
     }
 
     public Vector3 CheckPoint() //método para obtener el checkpoint actual
@@ -157,6 +156,7 @@ public class GameManager : MonoBehaviour
     void PararCamara() //metodo para parar la camara tras aparecer la puntuacion
     {
         Camera.main.GetComponent<SeguimientoJugador>().Parar();
+        theUIMan.ActivarBotonAvance(); 
     }
 
     public void ContadorEnemigosElim() //método que aumenta el contador en 1 al eliminar a un enemigo
