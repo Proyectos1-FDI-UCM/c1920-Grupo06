@@ -9610,6 +9610,26 @@ PrefabInstance:
       propertyPath: m_Text
       value: NIVEL 2
       objectReference: {fileID: 0}
+    - target: {fileID: 3538773067078942271, guid: c7e6f3b6d543adb40b30cad79a41a90a,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -376.23
+      objectReference: {fileID: 0}
+    - target: {fileID: 3538773067078942271, guid: c7e6f3b6d543adb40b30cad79a41a90a,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 73.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 3538773066293166782, guid: c7e6f3b6d543adb40b30cad79a41a90a,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 372.93
+      objectReference: {fileID: 0}
+    - target: {fileID: 3538773066293166782, guid: c7e6f3b6d543adb40b30cad79a41a90a,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 67.07
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c7e6f3b6d543adb40b30cad79a41a90a, type: 3}
 --- !u!1001 &988222893
@@ -9704,15 +9724,15 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 2600931320193750098, guid: 1484b714045adf84fba8f95ff25981ec,
-        type: 3}
-      propertyPath: m_Name
-      value: GameManager
-      objectReference: {fileID: 0}
     - target: {fileID: 2600931320193750099, guid: 1484b714045adf84fba8f95ff25981ec,
         type: 3}
       propertyPath: "tama\xF1oColeccionables"
       value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2600931320193750098, guid: 1484b714045adf84fba8f95ff25981ec,
+        type: 3}
+      propertyPath: m_Name
+      value: GameManager
       objectReference: {fileID: 0}
     - target: {fileID: 2600931320193750100, guid: 1484b714045adf84fba8f95ff25981ec,
         type: 3}

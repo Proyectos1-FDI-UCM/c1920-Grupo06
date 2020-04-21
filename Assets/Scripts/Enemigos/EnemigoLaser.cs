@@ -5,7 +5,7 @@
 public class EnemigoLaser : MonoBehaviour
 {
     //cadencia de disparo, tiempo de apuntado, tiempo de disparo (laser)
-    [SerializeField] float cadencia = 5f, tiempoApunt = 2f, tiempoescape = 1f;
+    [SerializeField] float cadencia = 5f, tiempoApunt = 2f, tiempoDisparo = 1f;
     [SerializeField] Transform player = null; //referencia al jugador
     [SerializeField] float anchura_inicial = 0, anchura_final = 0; //anchos del laser
     [SerializeField] Sprite s1, s2, s3, s4;
@@ -13,11 +13,11 @@ public class EnemigoLaser : MonoBehaviour
     LineRenderer laser;
     LayerMask mask, mask1;
     RaycastHit2D ray;
-    Vector3 apuntado, dirLaser; //vectores de apuntado, y de seguimiento
+    Vector3 apuntado, dirLaser, spriteRotation; //vectores de apuntado, y de seguimiento, y rotacion del sprite
     string estado; //estado del laser
     bool visible; //booleano de control
     float tiempo; //tiempo (actual)
-
+    float angulo; //rotacion del sprite
     void Start()
     {
         sr = GetComponent<SpriteRenderer>();
@@ -25,7 +25,7 @@ public class EnemigoLaser : MonoBehaviour
         laser = GetComponent<LineRenderer>();
 
         //establecemos los LayerMask
-        mask = LayerMask.GetMask("Escenario");
+        mask = LayerMask.GetMask("NoEnganchable");
         mask1 = LayerMask.GetMask("Jugador", "Escenario");
 
         //asigna un origen al LineRenderer y el numero de vértices que tiene
@@ -44,7 +44,6 @@ public class EnemigoLaser : MonoBehaviour
         visible = true;
     }
 
-
     void Update()
     {
         if (visible) //si está visible
@@ -62,19 +61,21 @@ public class EnemigoLaser : MonoBehaviour
                 //establecemos su color a magenta, y su dirección en relazión a la posición del jugador
                 laser.material.color = Color.magenta;
                 dirLaser = player.position - transform.position;
+                spriteRotation = transform.position - player.position; //vector en el otro sentido para que funcione la rotacion del sprite
 
                 //el raycast calcula el primer objeto con el que colisiona en direccion al jugador sin colisionar con el jugador
                 ray = Physics2D.Raycast(transform.position, dirLaser, 200f, mask);
 
                 if (ray.collider != null) //si ha chocado con algún elemento del escenario
                 {
-                    laser.SetPosition(1, CambioZ(ray.point)); //ponemos el laser donde haya llegado  
+                    laser.SetPosition(1, CambioZ(ray.point)); //ponemos el laser donde haya llegado
+                    angulo = Mathf.Atan2(spriteRotation.y, spriteRotation.x)*Mathf.Rad2Deg;
+                    transform.eulerAngles = new Vector3(transform.eulerAngles.x,transform.eulerAngles.y,angulo);
                 }
                 else laser.SetPosition(1, CambioZ(transform.position)); //si no, lo ponemos con respecto a la posición del enemigo
 
                 if (Time.time >= tiempo + cadencia) //si ha pasado el tiempo de seguimiento
                 {
-
                     CambiaEstado(); //cambiamos de estado
                     if (ray.collider != null) //fijamos la linea de apuntado
                         apuntado = ray.point;
@@ -108,7 +109,7 @@ public class EnemigoLaser : MonoBehaviour
                     ray.collider.GetComponent<VidaJugador>().EliminaVidaJugador(); //le quitamos una vida si es posible
                 }
 
-                if (Time.time >= tiempo + tiempoescape) //si ha pasado el tiempo de disparo
+                if (Time.time >= tiempo + tiempoDisparo) //si ha pasado el tiempo de disparo
                 {
                     CambiaEstado(); //cambiamos de estado                
                 }
