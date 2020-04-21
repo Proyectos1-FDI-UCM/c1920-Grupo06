@@ -15,6 +15,7 @@ public class UIManager : MonoBehaviour
         coleccionablesRecog = null, puntos = null;
     //slider del progreso en el nivel
     [SerializeField] Slider progress = null;
+    [SerializeField] Transform finalNivel;
 
     void Awake()
     {
@@ -30,7 +31,7 @@ public class UIManager : MonoBehaviour
     {
         GameManager.instance.SetUIManager(this); //establecemos a este UIManager en el GM
         tiempo.enabled = true; //activamos el tiempo
-        SetAlturaMaxima(368); //la posicion en 'y' del ultimo GO del nivel
+        SetAlturaMaxima((int)finalNivel.position.y); //la posicion en 'y' del ultimo GO del nivel
         progress.minValue = Camera.main.transform.position.y; //establecemos el punto mínimo de la barra de progreso
         DesactivaPowerUpSprites(); //desactivamos los sprites de los powerUps
     }
