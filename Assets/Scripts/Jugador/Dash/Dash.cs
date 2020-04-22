@@ -62,6 +62,14 @@ public class Dash : MonoBehaviour
         enabled = false; //lo desactivamos
     }
 
+    void OnCollisionStay2D(Collision2D collision) //en caso de colisionar con alguna entidad (plataformas)
+    {
+        if (!suelo.EnSuelo())
+        {
+            enabled = false; //lo desactivamos
+        }
+    }
+
     void OnDisable() //cuando se desactive el Dash
     {
         rb.velocity = Vector2.zero; //establecemos la velocidad a 0
