@@ -2393,10 +2393,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 0}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 1735417918687692620, guid: 3958d1455ed2ad84aa3eb0e4325508a3,
         type: 3}
       propertyPath: m_Name
@@ -2477,7 +2473,12 @@ PrefabInstance:
       propertyPath: m_IsTrigger
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 77386980, guid: 3958d1455ed2ad84aa3eb0e4325508a3, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 77386980, guid: 3958d1455ed2ad84aa3eb0e4325508a3, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 3958d1455ed2ad84aa3eb0e4325508a3, type: 3}
 --- !u!1 &493159584
 GameObject:
@@ -6148,6 +6149,31 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1175636468}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &1179982059 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1735417918687692620, guid: 3958d1455ed2ad84aa3eb0e4325508a3,
+    type: 3}
+  m_PrefabInstance: {fileID: 484244664}
+  m_PrefabAsset: {fileID: 0}
+--- !u!251 &1179982060
+PlatformEffector2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1179982059}
+  m_Enabled: 1
+  m_UseColliderMask: 1
+  m_ColliderMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_RotationalOffset: 0
+  m_UseOneWay: 1
+  m_UseOneWayGrouping: 0
+  m_SurfaceArc: 180
+  m_UseSideFriction: 0
+  m_UseSideBounce: 0
+  m_SideArc: 1
 --- !u!4 &1192693419 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8640107194889816687, guid: 256a51c96375e16438ed5c888ff95079,
