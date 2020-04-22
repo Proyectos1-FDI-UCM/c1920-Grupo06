@@ -44,7 +44,7 @@ public class Gancho : MonoBehaviour
 
         if (colision.GetComponent<Jugador>() == null && colision.GetComponent<Suelo>() == null) //si no ha colisionado con el jugador
         {
-            if (colision.layer != 13 && colision.layer != 16) //La capa 13 es en la que estarán los objetos no enganchables
+            if (colision.layer != 13 && colision.layer != 16 && colision.layer != 11) //La capa 13 es en la que estarán los objetos no enganchables, la 11 la de los enemigos
             {
                 //Se calcula la dirección con la que se va a mover el gancho
                 Vector3 direccion = transform.position - jugador.transform.position;
@@ -52,14 +52,14 @@ public class Gancho : MonoBehaviour
                 //(Así se evitan errores de que la dirección se calcule mal por estar muy cerca o que nunca se pueda alcanzar el final del gancho por ser inaccesible)
                 while (collision.bounds.Contains(transform.position))
                 {
-                    transform.position = transform.position - direccion.normalized/2;
+                    transform.position = transform.position - direccion.normalized / 2;
                 }
 
 
                 Destroy(rb_gancho); //detenemos el movimiento del gancho
                 jugador.GetComponent<Jugador>().Gancho(gameObject); //guardamos una referencia del gancho
                 estadoJugador.CambioEstado(estado.MovimientoGancho); //cambiamos el estado a "MovimientoGancho"
-                
+
             }
             else if (colision.layer == 13)
             {
