@@ -6070,12 +6070,12 @@ PrefabInstance:
     - target: {fileID: 3884677566483886054, guid: c33b0923cc4789a4e9f5fff1abaa9332,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 9
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3884677566483886054, guid: c33b0923cc4789a4e9f5fff1abaa9332,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 5
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3884677566483886054, guid: c33b0923cc4789a4e9f5fff1abaa9332,
         type: 3}
@@ -8513,7 +8513,7 @@ GameObject:
   - component: {fileID: 1556550362}
   - component: {fileID: 1556550361}
   - component: {fileID: 1556550360}
-  m_Layer: 8
+  m_Layer: 13
   m_Name: Plataforma
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9752,7 +9752,7 @@ PrefabInstance:
     - target: {fileID: 2925466069578243487, guid: 8733d96370d667b438b0a1d50270b180,
         type: 3}
       propertyPath: tiempoInvulnerable
-      value: 0.5
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 1081373165606241108, guid: 8733d96370d667b438b0a1d50270b180,
         type: 3}
@@ -12648,6 +12648,11 @@ PrefabInstance:
       propertyPath: panel
       value: 
       objectReference: {fileID: 241324191}
+    - target: {fileID: 3538773066243538523, guid: c7e6f3b6d543adb40b30cad79a41a90a,
+        type: 3}
+      propertyPath: finalNivel
+      value: 
+      objectReference: {fileID: 322397117}
     - target: {fileID: 3538773066243538527, guid: c7e6f3b6d543adb40b30cad79a41a90a,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -12970,10 +12975,15 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 14
       objectReference: {fileID: 0}
+    - target: {fileID: 8640107194889816683, guid: 256a51c96375e16438ed5c888ff95079,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8640107194889816687, guid: 256a51c96375e16438ed5c888ff95079,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 19.08879
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8640107194889816687, guid: 256a51c96375e16438ed5c888ff95079,
         type: 3}

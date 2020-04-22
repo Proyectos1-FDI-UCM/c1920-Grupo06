@@ -5632,7 +5632,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rectTransform: {fileID: 1820720552}
   direccion: origen
-  velocidad: 200
+  velocidad: 450
 --- !u!114 &1820720555
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5647,7 +5647,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rectTransform: {fileID: 1820720552}
   direccion: derecha
-  velocidad: 200
+  velocidad: 450
 --- !u!114 &1820720556
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5662,7 +5662,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rectTransform: {fileID: 1820720552}
   direccion: arriba
-  velocidad: 200
+  velocidad: 450
 --- !u!1 &1896098913
 GameObject:
   m_ObjectHideFlags: 0
