@@ -13,7 +13,7 @@ public class Dash : MonoBehaviour
     Vector3 posicion_inicial = Vector3.zero; //vector posicion inicial del jugador
     Vector3 direccion = Vector3.up; //vector direccion del dash
     Suelo suelo;
-    bool pegadoAPared;
+    PlatformEffector2D jumpthrough;
     AudioSource aud;
 
     void Awake()
@@ -59,12 +59,16 @@ public class Dash : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D collision) //en caso de colisionar con alguna entidad (plataformas)
     {
-        enabled = false; //lo desactivamos
+        jumpthrough = collision.gameObject.GetComponent<PlatformEffector2D>();
+        if (jumpthrough == null)
+        {
+            enabled = false; //lo desactivamos
+        }
     }
 
     void OnCollisionStay2D(Collision2D collision) //en caso de colisionar con alguna entidad (plataformas)
     {
-        if (!suelo.EnSuelo())
+        if (!suelo.EnSuelo() && jumpthrough == null)
         {
             enabled = false; //lo desactivamos
         }
@@ -72,6 +76,7 @@ public class Dash : MonoBehaviour
 
     void OnDisable() //cuando se desactive el Dash
     {
+        jumpthrough = null;
         rb.velocity = Vector2.zero; //establecemos la velocidad a 0
         if (estadoJugador.Estado() != estado.Defecto) //en caso de ejecutarse el Awake antes
         {
