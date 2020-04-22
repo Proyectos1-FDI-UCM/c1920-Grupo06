@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<< HEAD
 guid: a9b3e7b5138db4c45b91121946a0d212
+=======
+guid: f480402f6cf2ebb41a93e22dd3c94b0d
+>>>>>>> refs/rewritten/Solucionado-conflicto-con-el-archivo-png-de-la-plataforma-enganchable
 folderAsset: yes
 DefaultImporter:
   externalObjects: {}

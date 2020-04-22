@@ -146,5 +146,3 @@ MonoBehaviour:
   puntoA: {fileID: 0}
   puntoB: {fileID: 0}
   diagonal: 0
-  padre: {fileID: 0}
-  estados: {fileID: 0}

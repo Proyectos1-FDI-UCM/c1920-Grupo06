@@ -25,7 +25,7 @@ public class EnemigoLaser : MonoBehaviour
         laser = GetComponent<LineRenderer>();
 
         //establecemos los LayerMask
-        mask = LayerMask.GetMask("NoEnganchable");
+        mask = LayerMask.GetMask("NoEnganchable", "Escenario");
         mask1 = LayerMask.GetMask("Jugador", "Escenario");
 
         //asigna un origen al LineRenderer y el numero de vértices que tiene
