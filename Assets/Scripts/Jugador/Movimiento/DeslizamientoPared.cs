@@ -14,6 +14,9 @@ public class DeslizamientoPared : MonoBehaviour
     BoxCollider2D [] colliders;
     Rigidbody2D rb;
     Estados estadoJugador;
+    BoxCollider2D boxCollider2D;
+    PlataformaJumpthrough jumpthrough;
+    CompositeCollider2D compositeCollider2D;
 
     void Start()
     {
@@ -22,10 +25,19 @@ public class DeslizamientoPared : MonoBehaviour
         colliders = gameObject.GetComponents<BoxCollider2D>();
     }
 
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        GameObject objeto = collision.gameObject;
+        boxCollider2D = objeto.GetComponent<BoxCollider2D>();
+        jumpthrough = objeto.GetComponent<PlataformaJumpthrough>();
+        compositeCollider2D = objeto.GetComponent<CompositeCollider2D>();
+    }
+
     void OnTriggerStay2D(Collider2D other)
     {
+ 
         //Si el gameObject con el que se choca tiene el componente PlataformaJumpthrough, no se produce deslizamiento para evitar errores
-        if (other.gameObject.GetComponent<PlataformaJumpthrough>() == null && !other.gameObject.GetComponent<BoxCollider2D>().isTrigger)
+        if (jumpthrough == null || (boxCollider2D != null && boxCollider2D.isTrigger) || compositeCollider2D != null)
         {
             //Si el jugador no esta en otro estado que sea propio de otro movimiento, se produce el deslizamiento
             if (rb.velocity.y <= 0 && (estadoJugador.Estado() == estado.SlowMotion || estadoJugador.Estado() == estado.Defecto))
