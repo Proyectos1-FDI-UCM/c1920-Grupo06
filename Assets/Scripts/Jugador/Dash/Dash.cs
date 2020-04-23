@@ -32,6 +32,7 @@ public class Dash : MonoBehaviour
     void OnEnable() //cuando se active el Dash
     {
         //creamos un vector direccion del Dash con respecto al jugador y la direccion seleccionada
+        rb.isKinematic = false;
         posicion_inicial = transform.position;
         rb.velocity = Vector2.zero;
         Vector3 direccionAux = jugador.DireccionDash();
