@@ -5,7 +5,7 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Nivel_Movimiento.unity
     guid: d411032f565ada8468aab625ed4cb896
   - enabled: 1
@@ -17,4 +17,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Nivel2.unity
     guid: 634bb7a39e92dcc44a7caf37d6a3ca30
+  - enabled: 1
+    path: Assets/Scenes/Prueba/Puntuaciones.unity
+    guid: 18b522a5482bbcb429d7215aed26c26e
   m_configObjects: {}
