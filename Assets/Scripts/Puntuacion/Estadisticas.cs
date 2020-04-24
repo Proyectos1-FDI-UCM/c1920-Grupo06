@@ -13,22 +13,22 @@ public class Estadisticas : MonoBehaviour
 
     private void Awake()
     {
-        if (PlayerPrefs.HasKey("saltos")) PlayerPrefs.SetInt("saltos", 0);
+        if (!PlayerPrefs.HasKey("saltos")) PlayerPrefs.SetInt("saltos", 0);
         else PlayerPrefs.GetInt("saltos", numSaltos);
 
-        if (PlayerPrefs.HasKey("dash")) PlayerPrefs.SetInt("dash", 0);
+        if (!PlayerPrefs.HasKey("dash")) PlayerPrefs.SetInt("dash", 0);
         else PlayerPrefs.GetInt("dash", numDash);
 
-        if (PlayerPrefs.HasKey("ganchos")) PlayerPrefs.SetInt("ganchos", 0);
+        if (!PlayerPrefs.HasKey("ganchos")) PlayerPrefs.SetInt("ganchos", 0);
         else PlayerPrefs.GetInt("ganchos", numGanchos);
 
-        if (PlayerPrefs.HasKey("enemigos")) PlayerPrefs.SetInt("enemigos", 0);
+        if (!PlayerPrefs.HasKey("enemigos")) PlayerPrefs.SetInt("enemigos", 0);
         else PlayerPrefs.GetInt("enemigos", numEnemigosDerrotados);
 
-        if (PlayerPrefs.HasKey("muertes")) PlayerPrefs.SetInt("muertes", 0);
+        if (!PlayerPrefs.HasKey("muertes")) PlayerPrefs.SetInt("muertes", 0);
         else PlayerPrefs.GetInt("muertes", numMuertes);
 
-        if (PlayerPrefs.HasKey("tiempo")) PlayerPrefs.SetFloat("tiempo", 0);
+        if (!PlayerPrefs.HasKey("tiempo")) PlayerPrefs.SetFloat("tiempo", 0);
         else PlayerPrefs.GetFloat("tiempo", tiempoJugado);
     }
 

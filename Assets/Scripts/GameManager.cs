@@ -124,6 +124,7 @@ public class GameManager : MonoBehaviour
     public void ChangeScene(int indice) //método de cambio de escena
     {
         SceneManager.LoadScene(indice);
+        print("Escena cambiada a:"+ indice);
         Time.timeScale = 1;
     }
 
@@ -131,7 +132,7 @@ public class GameManager : MonoBehaviour
     {
         Application.Quit();
     }
-
+    
     //PUNTUACION
     public void Puntuacion() //metodo que proporciona la informacion de las vidas, enemigos eliminados y los coleccionables obtenidos
     {
