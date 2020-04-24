@@ -61,10 +61,10 @@ public class Dash : MonoBehaviour
     void OnCollisionEnter2D(Collision2D collision) //en caso de colisionar con alguna entidad (plataformas)
     {
         jumpthrough = collision.gameObject.GetComponent<PlatformEffector2D>();
-        if (jumpthrough == null)
-        {
-            enabled = false; //lo desactivamos
-        }
+        //if (jumpthrough == null)
+        //{
+        //    enabled = false; //lo desactivamos
+        //}
     }
 
     void OnCollisionStay2D(Collision2D collision) //en caso de colisionar con alguna entidad (plataformas)
