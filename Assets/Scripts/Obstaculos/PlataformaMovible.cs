@@ -144,6 +144,8 @@ public class PlataformaMovible : MonoBehaviour
 
         if (pies != null)
         {
+            rbJugador.isKinematic = false;
+            jugador.transform.parent = padre;
             rbJugador = null;
             jugador = null;
             sobrePlataforma = false;
