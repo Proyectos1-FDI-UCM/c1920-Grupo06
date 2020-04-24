@@ -2595,7 +2595,7 @@ PrefabInstance:
     - target: {fileID: 511063307627476887, guid: 2d109fa60d25f1145814442782e250d9,
         type: 3}
       propertyPath: m_RootOrder
-      value: 7
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 511063307627476887, guid: 2d109fa60d25f1145814442782e250d9,
         type: 3}
@@ -3964,7 +3964,7 @@ PrefabInstance:
     - target: {fileID: 8123230228992143195, guid: 957d1bc05faa5ce43a85f4198d9581e3,
         type: 3}
       propertyPath: m_RootOrder
-      value: 7
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 8123230228992143195, guid: 957d1bc05faa5ce43a85f4198d9581e3,
         type: 3}
@@ -4510,6 +4510,9 @@ Transform:
   - {fileID: 736089325}
   - {fileID: 552349400}
   - {fileID: 357753019}
+  - {fileID: 1723657321}
+  - {fileID: 1727884926}
+  - {fileID: 1580232572}
   - {fileID: 387997646}
   - {fileID: 259901275}
   m_Father: {fileID: 213231421}
@@ -9763,7 +9766,7 @@ PrefabInstance:
     - target: {fileID: 3538773066243538522, guid: c7e6f3b6d543adb40b30cad79a41a90a,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3538773066243538523, guid: c7e6f3b6d543adb40b30cad79a41a90a,
         type: 3}
@@ -9883,12 +9886,12 @@ PrefabInstance:
     - target: {fileID: 3538773066121618678, guid: c7e6f3b6d543adb40b30cad79a41a90a,
         type: 3}
       propertyPath: m_AnchorMax.x
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3538773066121618678, guid: c7e6f3b6d543adb40b30cad79a41a90a,
         type: 3}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3538773066374701400, guid: c7e6f3b6d543adb40b30cad79a41a90a,
         type: 3}
@@ -41944,12 +41947,12 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 0}
+    m_TransformParent: {fileID: 433381141}
     m_Modifications:
     - target: {fileID: 511063307627476889, guid: 2d109fa60d25f1145814442782e250d9,
         type: 3}
       propertyPath: m_Name
-      value: ObstaculoElectrico (2)
+      value: ObstaculoElectrico2
       objectReference: {fileID: 0}
     - target: {fileID: 511063307627476887, guid: 2d109fa60d25f1145814442782e250d9,
         type: 3}
@@ -41969,17 +41972,17 @@ PrefabInstance:
     - target: {fileID: 511063307627476887, guid: 2d109fa60d25f1145814442782e250d9,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 511063307627476887, guid: 2d109fa60d25f1145814442782e250d9,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 511063307627476887, guid: 2d109fa60d25f1145814442782e250d9,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 511063307627476887, guid: 2d109fa60d25f1145814442782e250d9,
         type: 3}
@@ -41989,7 +41992,7 @@ PrefabInstance:
     - target: {fileID: 511063307627476887, guid: 2d109fa60d25f1145814442782e250d9,
         type: 3}
       propertyPath: m_RootOrder
-      value: 19
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 511063307627476887, guid: 2d109fa60d25f1145814442782e250d9,
         type: 3}
@@ -42018,6 +42021,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2d109fa60d25f1145814442782e250d9, type: 3}
+--- !u!4 &1580232572 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 511063307627476887, guid: 2d109fa60d25f1145814442782e250d9,
+    type: 3}
+  m_PrefabInstance: {fileID: 1580232571}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1581914959
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -43656,12 +43665,12 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 0}
+    m_TransformParent: {fileID: 433381141}
     m_Modifications:
     - target: {fileID: 511063307627476889, guid: 2d109fa60d25f1145814442782e250d9,
         type: 3}
       propertyPath: m_Name
-      value: ObstaculoElectrico
+      value: ObstaculoElectrico3
       objectReference: {fileID: 0}
     - target: {fileID: 511063307627476887, guid: 2d109fa60d25f1145814442782e250d9,
         type: 3}
@@ -43681,17 +43690,17 @@ PrefabInstance:
     - target: {fileID: 511063307627476887, guid: 2d109fa60d25f1145814442782e250d9,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 511063307627476887, guid: 2d109fa60d25f1145814442782e250d9,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 511063307627476887, guid: 2d109fa60d25f1145814442782e250d9,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 511063307627476887, guid: 2d109fa60d25f1145814442782e250d9,
         type: 3}
@@ -43701,7 +43710,7 @@ PrefabInstance:
     - target: {fileID: 511063307627476887, guid: 2d109fa60d25f1145814442782e250d9,
         type: 3}
       propertyPath: m_RootOrder
-      value: 17
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 511063307627476887, guid: 2d109fa60d25f1145814442782e250d9,
         type: 3}
@@ -43730,17 +43739,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2d109fa60d25f1145814442782e250d9, type: 3}
+--- !u!4 &1723657321 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 511063307627476887, guid: 2d109fa60d25f1145814442782e250d9,
+    type: 3}
+  m_PrefabInstance: {fileID: 1723657320}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1727884925
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 0}
+    m_TransformParent: {fileID: 433381141}
     m_Modifications:
     - target: {fileID: 511063307627476889, guid: 2d109fa60d25f1145814442782e250d9,
         type: 3}
       propertyPath: m_Name
-      value: ObstaculoElectrico (1)
+      value: ObstaculoElectrico1
       objectReference: {fileID: 0}
     - target: {fileID: 511063307627476887, guid: 2d109fa60d25f1145814442782e250d9,
         type: 3}
@@ -43760,17 +43775,17 @@ PrefabInstance:
     - target: {fileID: 511063307627476887, guid: 2d109fa60d25f1145814442782e250d9,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 511063307627476887, guid: 2d109fa60d25f1145814442782e250d9,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 511063307627476887, guid: 2d109fa60d25f1145814442782e250d9,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 511063307627476887, guid: 2d109fa60d25f1145814442782e250d9,
         type: 3}
@@ -43780,7 +43795,7 @@ PrefabInstance:
     - target: {fileID: 511063307627476887, guid: 2d109fa60d25f1145814442782e250d9,
         type: 3}
       propertyPath: m_RootOrder
-      value: 18
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 511063307627476887, guid: 2d109fa60d25f1145814442782e250d9,
         type: 3}
@@ -43809,6 +43824,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2d109fa60d25f1145814442782e250d9, type: 3}
+--- !u!4 &1727884926 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 511063307627476887, guid: 2d109fa60d25f1145814442782e250d9,
+    type: 3}
+  m_PrefabInstance: {fileID: 1727884925}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1733195753 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7421828776865592249, guid: fb5d61f47bbfc504693935b7f3c1eb62,
