@@ -207,6 +207,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1471787441}
     m_Modifications:
+    - target: {fileID: 6825163318899845801, guid: 256a51c96375e16438ed5c888ff95079,
+        type: 3}
+      propertyPath: platGanchoIzq
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8640107194889816683, guid: 256a51c96375e16438ed5c888ff95079,
         type: 3}
       propertyPath: m_Name
@@ -559,6 +564,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1471787441}
     m_Modifications:
+    - target: {fileID: 6825163318899845801, guid: 256a51c96375e16438ed5c888ff95079,
+        type: 3}
+      propertyPath: platGanchoIzq
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8640107194889816683, guid: 256a51c96375e16438ed5c888ff95079,
         type: 3}
       propertyPath: m_Name
@@ -5324,7 +5334,7 @@ PrefabInstance:
     - target: {fileID: 8640107194889816683, guid: 256a51c96375e16438ed5c888ff95079,
         type: 3}
       propertyPath: m_Name
-      value: PlataformaGancho (30)
+      value: Enganche1
       objectReference: {fileID: 0}
     - target: {fileID: 8640107194889816687, guid: 256a51c96375e16438ed5c888ff95079,
         type: 3}
@@ -5558,7 +5568,7 @@ PrefabInstance:
     - target: {fileID: 8640107194889816683, guid: 256a51c96375e16438ed5c888ff95079,
         type: 3}
       propertyPath: m_Name
-      value: PlataformaGancho (10)
+      value: Enganche
       objectReference: {fileID: 0}
     - target: {fileID: 8640107194889816687, guid: 256a51c96375e16438ed5c888ff95079,
         type: 3}
@@ -5638,7 +5648,7 @@ PrefabInstance:
     - target: {fileID: 8640107194889816683, guid: 256a51c96375e16438ed5c888ff95079,
         type: 3}
       propertyPath: m_Name
-      value: PlataformaGancho (9)
+      value: Enganche1
       objectReference: {fileID: 0}
     - target: {fileID: 8640107194889816687, guid: 256a51c96375e16438ed5c888ff95079,
         type: 3}
@@ -6700,7 +6710,7 @@ PrefabInstance:
     - target: {fileID: 8640107194889816683, guid: 256a51c96375e16438ed5c888ff95079,
         type: 3}
       propertyPath: m_Name
-      value: PlataformaGancho (24)
+      value: Enganche1
       objectReference: {fileID: 0}
     - target: {fileID: 8640107194889816687, guid: 256a51c96375e16438ed5c888ff95079,
         type: 3}
@@ -7123,7 +7133,7 @@ PrefabInstance:
     - target: {fileID: 8640107194889816683, guid: 256a51c96375e16438ed5c888ff95079,
         type: 3}
       propertyPath: m_Name
-      value: PlataformaGancho (14)
+      value: Enganche4
       objectReference: {fileID: 0}
     - target: {fileID: 8640107194889816687, guid: 256a51c96375e16438ed5c888ff95079,
         type: 3}
@@ -7332,6 +7342,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 596562874}
     m_Modifications:
+    - target: {fileID: 6825163318899845801, guid: 256a51c96375e16438ed5c888ff95079,
+        type: 3}
+      propertyPath: platGanchoIzq
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8640107194889816683, guid: 256a51c96375e16438ed5c888ff95079,
         type: 3}
       propertyPath: m_Name
@@ -7419,7 +7434,7 @@ PrefabInstance:
     - target: {fileID: 8640107194889816683, guid: 256a51c96375e16438ed5c888ff95079,
         type: 3}
       propertyPath: m_Name
-      value: PlataformaGancho (13)
+      value: Enganche3
       objectReference: {fileID: 0}
     - target: {fileID: 8640107194889816687, guid: 256a51c96375e16438ed5c888ff95079,
         type: 3}
@@ -8754,7 +8769,7 @@ PrefabInstance:
     - target: {fileID: 8640107194889816683, guid: 256a51c96375e16438ed5c888ff95079,
         type: 3}
       propertyPath: m_Name
-      value: PlataformaGancho
+      value: Enganche
       objectReference: {fileID: 0}
     - target: {fileID: 8640107194889816687, guid: 256a51c96375e16438ed5c888ff95079,
         type: 3}
@@ -8834,7 +8849,7 @@ PrefabInstance:
     - target: {fileID: 8640107194889816683, guid: 256a51c96375e16438ed5c888ff95079,
         type: 3}
       propertyPath: m_Name
-      value: PlataformaGancho (11)
+      value: Enganche1
       objectReference: {fileID: 0}
     - target: {fileID: 8640107194889816687, guid: 256a51c96375e16438ed5c888ff95079,
         type: 3}
@@ -10170,7 +10185,7 @@ PrefabInstance:
     - target: {fileID: 8640107194889816683, guid: 256a51c96375e16438ed5c888ff95079,
         type: 3}
       propertyPath: m_Name
-      value: PlataformaGancho (20)
+      value: Enganche3
       objectReference: {fileID: 0}
     - target: {fileID: 8640107194889816687, guid: 256a51c96375e16438ed5c888ff95079,
         type: 3}
@@ -11186,7 +11201,7 @@ PrefabInstance:
     - target: {fileID: 8640107194889816683, guid: 256a51c96375e16438ed5c888ff95079,
         type: 3}
       propertyPath: m_Name
-      value: PlataformaGancho (2)
+      value: Enganche2
       objectReference: {fileID: 0}
     - target: {fileID: 8640107194889816687, guid: 256a51c96375e16438ed5c888ff95079,
         type: 3}
@@ -11846,7 +11861,7 @@ PrefabInstance:
     - target: {fileID: 8640107194889816683, guid: 256a51c96375e16438ed5c888ff95079,
         type: 3}
       propertyPath: m_Name
-      value: PlataformaGancho (1)
+      value: Enganche1
       objectReference: {fileID: 0}
     - target: {fileID: 8640107194889816687, guid: 256a51c96375e16438ed5c888ff95079,
         type: 3}
@@ -11926,7 +11941,7 @@ PrefabInstance:
     - target: {fileID: 8640107194889816683, guid: 256a51c96375e16438ed5c888ff95079,
         type: 3}
       propertyPath: m_Name
-      value: PlataformaGancho (28)
+      value: Enganche
       objectReference: {fileID: 0}
     - target: {fileID: 8640107194889816687, guid: 256a51c96375e16438ed5c888ff95079,
         type: 3}
@@ -12006,7 +12021,7 @@ PrefabInstance:
     - target: {fileID: 8640107194889816683, guid: 256a51c96375e16438ed5c888ff95079,
         type: 3}
       propertyPath: m_Name
-      value: PlataformaGancho (12)
+      value: Enganche2
       objectReference: {fileID: 0}
     - target: {fileID: 8640107194889816687, guid: 256a51c96375e16438ed5c888ff95079,
         type: 3}
@@ -12279,7 +12294,7 @@ PrefabInstance:
     - target: {fileID: 3538773066243538522, guid: c7e6f3b6d543adb40b30cad79a41a90a,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3538773066243538523, guid: c7e6f3b6d543adb40b30cad79a41a90a,
         type: 3}
@@ -12399,12 +12414,12 @@ PrefabInstance:
     - target: {fileID: 3538773066121618678, guid: c7e6f3b6d543adb40b30cad79a41a90a,
         type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3538773066121618678, guid: c7e6f3b6d543adb40b30cad79a41a90a,
         type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3538773067078942271, guid: c7e6f3b6d543adb40b30cad79a41a90a,
         type: 3}
@@ -12489,15 +12504,15 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 2600931320193750099, guid: 1484b714045adf84fba8f95ff25981ec,
-        type: 3}
-      propertyPath: "tama\xF1oColeccionables"
-      value: 5
-      objectReference: {fileID: 0}
     - target: {fileID: 2600931320193750098, guid: 1484b714045adf84fba8f95ff25981ec,
         type: 3}
       propertyPath: m_Name
       value: GameManager
+      objectReference: {fileID: 0}
+    - target: {fileID: 2600931320193750099, guid: 1484b714045adf84fba8f95ff25981ec,
+        type: 3}
+      propertyPath: "tama\xF1oColeccionables"
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 2600931320193750100, guid: 1484b714045adf84fba8f95ff25981ec,
         type: 3}
@@ -12732,7 +12747,7 @@ PrefabInstance:
     - target: {fileID: 8640107194889816683, guid: 256a51c96375e16438ed5c888ff95079,
         type: 3}
       propertyPath: m_Name
-      value: PlataformaGancho (19)
+      value: Enganche2
       objectReference: {fileID: 0}
     - target: {fileID: 8640107194889816687, guid: 256a51c96375e16438ed5c888ff95079,
         type: 3}
@@ -13618,6 +13633,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 596562874}
     m_Modifications:
+    - target: {fileID: 6825163318899845801, guid: 256a51c96375e16438ed5c888ff95079,
+        type: 3}
+      propertyPath: platGanchoIzq
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8640107194889816683, guid: 256a51c96375e16438ed5c888ff95079,
         type: 3}
       propertyPath: m_Name
@@ -14929,6 +14949,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1093420941}
     m_Modifications:
+    - target: {fileID: 6825163318899845801, guid: 256a51c96375e16438ed5c888ff95079,
+        type: 3}
+      propertyPath: platGanchoIzq
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8640107194889816683, guid: 256a51c96375e16438ed5c888ff95079,
         type: 3}
       propertyPath: m_Name
@@ -15217,6 +15242,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 383256601}
     m_Modifications:
+    - target: {fileID: 6825163318899845801, guid: 256a51c96375e16438ed5c888ff95079,
+        type: 3}
+      propertyPath: platGanchoIzq
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8640107194889816683, guid: 256a51c96375e16438ed5c888ff95079,
         type: 3}
       propertyPath: m_Name
@@ -15492,7 +15522,7 @@ PrefabInstance:
     - target: {fileID: 8640107194889816683, guid: 256a51c96375e16438ed5c888ff95079,
         type: 3}
       propertyPath: m_Name
-      value: PlataformaGancho (12)
+      value: Enganche2
       objectReference: {fileID: 0}
     - target: {fileID: 8640107194889816687, guid: 256a51c96375e16438ed5c888ff95079,
         type: 3}
@@ -32949,6 +32979,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 596562874}
     m_Modifications:
+    - target: {fileID: 6825163318899845801, guid: 256a51c96375e16438ed5c888ff95079,
+        type: 3}
+      propertyPath: platGanchoIzq
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8640107194889816683, guid: 256a51c96375e16438ed5c888ff95079,
         type: 3}
       propertyPath: m_Name
@@ -33215,6 +33250,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 596562874}
     m_Modifications:
+    - target: {fileID: 6825163318899845801, guid: 256a51c96375e16438ed5c888ff95079,
+        type: 3}
+      propertyPath: platGanchoIzq
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8640107194889816683, guid: 256a51c96375e16438ed5c888ff95079,
         type: 3}
       propertyPath: m_Name
@@ -33759,7 +33799,7 @@ PrefabInstance:
     - target: {fileID: 8640107194889816683, guid: 256a51c96375e16438ed5c888ff95079,
         type: 3}
       propertyPath: m_Name
-      value: PlataformaGancho (5)
+      value: Enganche
       objectReference: {fileID: 0}
     - target: {fileID: 8640107194889816687, guid: 256a51c96375e16438ed5c888ff95079,
         type: 3}
@@ -36277,6 +36317,11 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 2052505324464315954, guid: f326a2e336d01374f9b1a86c45f1190e,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2052505325248589389, guid: f326a2e336d01374f9b1a86c45f1190e,
         type: 3}
       propertyPath: m_textInfo.characterCount
@@ -36400,11 +36445,6 @@ PrefabInstance:
     - target: {fileID: 2052505325073643257, guid: f326a2e336d01374f9b1a86c45f1190e,
         type: 3}
       propertyPath: m_textInfo.pageCount
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2052505324464315954, guid: f326a2e336d01374f9b1a86c45f1190e,
-        type: 3}
-      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -37313,7 +37353,7 @@ PrefabInstance:
     - target: {fileID: 8640107194889816683, guid: 256a51c96375e16438ed5c888ff95079,
         type: 3}
       propertyPath: m_Name
-      value: PlataformaGancho (25)
+      value: Enganche
       objectReference: {fileID: 0}
     - target: {fileID: 8640107194889816687, guid: 256a51c96375e16438ed5c888ff95079,
         type: 3}
@@ -39927,6 +39967,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1746070915}
     m_Modifications:
+    - target: {fileID: 6825163318899845801, guid: 256a51c96375e16438ed5c888ff95079,
+        type: 3}
+      propertyPath: platGanchoIzq
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8640107194889816683, guid: 256a51c96375e16438ed5c888ff95079,
         type: 3}
       propertyPath: m_Name
@@ -41720,6 +41765,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1093420941}
     m_Modifications:
+    - target: {fileID: 6825163318899845801, guid: 256a51c96375e16438ed5c888ff95079,
+        type: 3}
+      propertyPath: platGanchoIzq
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8640107194889816683, guid: 256a51c96375e16438ed5c888ff95079,
         type: 3}
       propertyPath: m_Name
