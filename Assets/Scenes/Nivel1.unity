@@ -654,6 +654,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlataformaGancho16
       objectReference: {fileID: 0}
+    - target: {fileID: 6825163318899845801, guid: 256a51c96375e16438ed5c888ff95079,
+        type: 3}
+      propertyPath: platGanchoIzq
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8640107194889816687, guid: 256a51c96375e16438ed5c888ff95079,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -723,11 +728,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_IsTrigger
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6825163318899845801, guid: 256a51c96375e16438ed5c888ff95079,
-        type: 3}
-      propertyPath: platGanchoIzq
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 256a51c96375e16438ed5c888ff95079, type: 3}
@@ -906,12 +906,21 @@ PrefabInstance:
       objectReference: {fileID: 898946469}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2d109fa60d25f1145814442782e250d9, type: 3}
---- !u!4 &82039774 stripped
+--- !u!4 &82039774
 Transform:
+  m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 511063307627476887, guid: 2d109fa60d25f1145814442782e250d9,
     type: 3}
   m_PrefabInstance: {fileID: 82039773}
   m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1219743710}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 802678804}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &97901450
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -923,6 +932,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: PlataformaGancho2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6825163318899845801, guid: 256a51c96375e16438ed5c888ff95079,
+        type: 3}
+      propertyPath: platGanchoIzq
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8640107194889816687, guid: 256a51c96375e16438ed5c888ff95079,
         type: 3}
@@ -994,11 +1008,6 @@ PrefabInstance:
       propertyPath: m_IsTrigger
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6825163318899845801, guid: 256a51c96375e16438ed5c888ff95079,
-        type: 3}
-      propertyPath: platGanchoIzq
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 256a51c96375e16438ed5c888ff95079, type: 3}
 --- !u!4 &97901451 stripped
@@ -1007,6 +1016,22 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 97901450}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &106992477
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 357753018}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 357753019}
+  m_Layer: 0
+  m_Name: Missing Prefab (Dummy)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1001 &110247850
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1284,6 +1309,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlataformaGancho4
       objectReference: {fileID: 0}
+    - target: {fileID: 6825163318899845801, guid: 256a51c96375e16438ed5c888ff95079,
+        type: 3}
+      propertyPath: platGanchoIzq
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8640107194889816687, guid: 256a51c96375e16438ed5c888ff95079,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1352,11 +1382,6 @@ PrefabInstance:
     - target: {fileID: 8640107194889816684, guid: 256a51c96375e16438ed5c888ff95079,
         type: 3}
       propertyPath: m_IsTrigger
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6825163318899845801, guid: 256a51c96375e16438ed5c888ff95079,
-        type: 3}
-      propertyPath: platGanchoIzq
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -1638,6 +1663,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlataformaGancho15
       objectReference: {fileID: 0}
+    - target: {fileID: 6825163318899845801, guid: 256a51c96375e16438ed5c888ff95079,
+        type: 3}
+      propertyPath: platGanchoIzq
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8640107194889816687, guid: 256a51c96375e16438ed5c888ff95079,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1707,11 +1737,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_IsTrigger
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6825163318899845801, guid: 256a51c96375e16438ed5c888ff95079,
-        type: 3}
-      propertyPath: platGanchoIzq
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 256a51c96375e16438ed5c888ff95079, type: 3}
@@ -2624,12 +2649,21 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2d109fa60d25f1145814442782e250d9, type: 3}
---- !u!4 &259901275 stripped
+--- !u!4 &259901275
 Transform:
+  m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 511063307627476887, guid: 2d109fa60d25f1145814442782e250d9,
     type: 3}
   m_PrefabInstance: {fileID: 259901274}
   m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1862883057}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1013906204}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &275172707
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2879,6 +2913,37 @@ PrefabInstance:
       objectReference: {fileID: 898946470}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0e70023e37f01ca4894b99fe4d3bb0ff, type: 3}
+--- !u!1 &293115448
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 1727884925}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 293115449}
+  m_Layer: 0
+  m_Name: ObstaculoElectrico1 (Missing Prefab)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &293115449
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 1727884925}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 293115448}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1727884926}
+  m_Father: {fileID: 433381141}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &297304719 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8640107194889816687, guid: 256a51c96375e16438ed5c888ff95079,
@@ -3003,43 +3068,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 305309524}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &310609451
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 310609452}
-  m_Layer: 5
-  m_Name: Teclas
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &310609452
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 310609451}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 326494405}
-  - {fileID: 465266318}
-  m_Father: {fileID: 576098218}
-  m_RootOrder: 7
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 349.99997, y: 0}
-  m_SizeDelta: {x: 100, y: 100}
-  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1001 &312688000
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3125,81 +3153,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 312688000}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &326494404
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 326494405}
-  - component: {fileID: 326494407}
-  - component: {fileID: 326494406}
-  m_Layer: 5
-  m_Name: W
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &326494405
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 326494404}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 310609452}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 20, y: -127}
-  m_SizeDelta: {x: 40, y: 40}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &326494406
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 326494404}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 7647ed977dd89ad4cba2d74fe9d09256, type: 3}
-  m_Type: 0
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
---- !u!222 &326494407
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 326494404}
-  m_CullTransparentMesh: 0
 --- !u!4 &330563812 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7664563314598844579, guid: 7ca507687175c2940b80b25d7ba9e9a2,
@@ -3418,6 +3371,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlataformaGancho7
       objectReference: {fileID: 0}
+    - target: {fileID: 6825163318899845801, guid: 256a51c96375e16438ed5c888ff95079,
+        type: 3}
+      propertyPath: platGanchoIzq
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8640107194889816687, guid: 256a51c96375e16438ed5c888ff95079,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -3488,11 +3446,6 @@ PrefabInstance:
       propertyPath: m_IsTrigger
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6825163318899845801, guid: 256a51c96375e16438ed5c888ff95079,
-        type: 3}
-      propertyPath: platGanchoIzq
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 256a51c96375e16438ed5c888ff95079, type: 3}
 --- !u!4 &353776095 stripped
@@ -3501,6 +3454,37 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 353776094}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &354033875
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 1580232571}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 354033876}
+  m_Layer: 0
+  m_Name: ObstaculoElectrico2 (Missing Prefab)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &354033876
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 1580232571}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 354033875}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1580232572}
+  m_Father: {fileID: 433381141}
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &357753018
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3580,12 +3564,21 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2d109fa60d25f1145814442782e250d9, type: 3}
---- !u!4 &357753019 stripped
+--- !u!4 &357753019
 Transform:
+  m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 511063307627476887, guid: 2d109fa60d25f1145814442782e250d9,
     type: 3}
   m_PrefabInstance: {fileID: 357753018}
   m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 106992477}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 934746969}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &362149049
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3597,6 +3590,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: PlataformaGancho2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6825163318899845801, guid: 256a51c96375e16438ed5c888ff95079,
+        type: 3}
+      propertyPath: platGanchoIzq
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8640107194889816687, guid: 256a51c96375e16438ed5c888ff95079,
         type: 3}
@@ -3667,11 +3665,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_IsTrigger
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6825163318899845801, guid: 256a51c96375e16438ed5c888ff95079,
-        type: 3}
-      propertyPath: platGanchoIzq
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 256a51c96375e16438ed5c888ff95079, type: 3}
@@ -3869,13 +3862,20 @@ PrefabInstance:
       propertyPath: _estadisticas
       value: 
       objectReference: {fileID: 1776957449}
-    - target: {fileID: 898946494, guid: 8733d96370d667b438b0a1d50270b180, type: 3}
-      propertyPath: m_audioClip
-      value: 
-      objectReference: {fileID: 8300000, guid: b7fe2a6f02f28e14b950c969a6fd71c5, type: 3}
-    - target: {fileID: 898946494, guid: 8733d96370d667b438b0a1d50270b180, type: 3}
-      propertyPath: m_PlayOnAwake
-      value: 0
+    - target: {fileID: 2925466069578243463, guid: 8733d96370d667b438b0a1d50270b180,
+        type: 3}
+      propertyPath: velocidad_movimiento
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 2925466069578243461, guid: 8733d96370d667b438b0a1d50270b180,
+        type: 3}
+      propertyPath: fuerza_impulso
+      value: -4
+      objectReference: {fileID: 0}
+    - target: {fileID: 2925466069578243460, guid: 8733d96370d667b438b0a1d50270b180,
+        type: 3}
+      propertyPath: fuerza_salto
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 2925466069578243457, guid: 8733d96370d667b438b0a1d50270b180,
         type: 3}
@@ -3897,20 +3897,13 @@ PrefabInstance:
       propertyPath: m_Offset.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2925466069578243463, guid: 8733d96370d667b438b0a1d50270b180,
-        type: 3}
-      propertyPath: velocidad_movimiento
-      value: 15
-      objectReference: {fileID: 0}
-    - target: {fileID: 2925466069578243461, guid: 8733d96370d667b438b0a1d50270b180,
-        type: 3}
-      propertyPath: fuerza_impulso
-      value: -4
-      objectReference: {fileID: 0}
-    - target: {fileID: 2925466069578243460, guid: 8733d96370d667b438b0a1d50270b180,
-        type: 3}
-      propertyPath: fuerza_salto
-      value: 10
+    - target: {fileID: 898946494, guid: 8733d96370d667b438b0a1d50270b180, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: b7fe2a6f02f28e14b950c969a6fd71c5, type: 3}
+    - target: {fileID: 898946494, guid: 8733d96370d667b438b0a1d50270b180, type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8733d96370d667b438b0a1d50270b180, type: 3}
@@ -4509,12 +4502,12 @@ Transform:
   - {fileID: 720672793}
   - {fileID: 736089325}
   - {fileID: 552349400}
-  - {fileID: 357753019}
-  - {fileID: 1723657321}
-  - {fileID: 1727884926}
-  - {fileID: 1580232572}
+  - {fileID: 934746969}
+  - {fileID: 1419057709}
+  - {fileID: 293115449}
+  - {fileID: 354033876}
   - {fileID: 387997646}
-  - {fileID: 259901275}
+  - {fileID: 1013906204}
   m_Father: {fileID: 213231421}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -4923,81 +4916,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 460068714}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &465266317
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 465266318}
-  - component: {fileID: 465266320}
-  - component: {fileID: 465266319}
-  m_Layer: 5
-  m_Name: Q
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &465266318
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 465266317}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 310609452}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 22.5, y: -64}
-  m_SizeDelta: {x: 45, y: 45}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &465266319
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 465266317}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: bf4bb8d36596a9d40a1ab423780ac718, type: 3}
-  m_Type: 0
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
---- !u!222 &465266320
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 465266317}
-  m_CullTransparentMesh: 0
 --- !u!1001 &466142992
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5009,6 +4927,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: PlataformaGancho9
+      objectReference: {fileID: 0}
+    - target: {fileID: 6825163318899845801, guid: 256a51c96375e16438ed5c888ff95079,
+        type: 3}
+      propertyPath: platGanchoIzq
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8640107194889816687, guid: 256a51c96375e16438ed5c888ff95079,
         type: 3}
@@ -5079,11 +5002,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_IsTrigger
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6825163318899845801, guid: 256a51c96375e16438ed5c888ff95079,
-        type: 3}
-      propertyPath: platGanchoIzq
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 256a51c96375e16438ed5c888ff95079, type: 3}
@@ -5190,6 +5108,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlataformaGancho
       objectReference: {fileID: 0}
+    - target: {fileID: 6825163318899845801, guid: 256a51c96375e16438ed5c888ff95079,
+        type: 3}
+      propertyPath: platGanchoIzq
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8640107194889816687, guid: 256a51c96375e16438ed5c888ff95079,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -5259,11 +5182,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_IsTrigger
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6825163318899845801, guid: 256a51c96375e16438ed5c888ff95079,
-        type: 3}
-      propertyPath: platGanchoIzq
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 256a51c96375e16438ed5c888ff95079, type: 3}
@@ -5538,6 +5456,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlataformaGancho3
       objectReference: {fileID: 0}
+    - target: {fileID: 6825163318899845801, guid: 256a51c96375e16438ed5c888ff95079,
+        type: 3}
+      propertyPath: platGanchoIzq
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8640107194889816687, guid: 256a51c96375e16438ed5c888ff95079,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -5607,11 +5530,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_IsTrigger
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6825163318899845801, guid: 256a51c96375e16438ed5c888ff95079,
-        type: 3}
-      propertyPath: platGanchoIzq
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5966247681614847930, guid: 256a51c96375e16438ed5c888ff95079,
         type: 3}
@@ -5809,6 +5727,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlataformaGancho11
       objectReference: {fileID: 0}
+    - target: {fileID: 6825163318899845801, guid: 256a51c96375e16438ed5c888ff95079,
+        type: 3}
+      propertyPath: platGanchoIzq
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8640107194889816687, guid: 256a51c96375e16438ed5c888ff95079,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -5879,11 +5802,6 @@ PrefabInstance:
       propertyPath: m_IsTrigger
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6825163318899845801, guid: 256a51c96375e16438ed5c888ff95079,
-        type: 3}
-      propertyPath: platGanchoIzq
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 256a51c96375e16438ed5c888ff95079, type: 3}
 --- !u!4 &547472388 stripped
@@ -5903,6 +5821,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: PlataformaGancho12
+      objectReference: {fileID: 0}
+    - target: {fileID: 6825163318899845801, guid: 256a51c96375e16438ed5c888ff95079,
+        type: 3}
+      propertyPath: platGanchoIzq
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8640107194889816687, guid: 256a51c96375e16438ed5c888ff95079,
         type: 3}
@@ -5973,11 +5896,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_IsTrigger
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6825163318899845801, guid: 256a51c96375e16438ed5c888ff95079,
-        type: 3}
-      propertyPath: platGanchoIzq
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 256a51c96375e16438ed5c888ff95079, type: 3}
@@ -6331,12 +6249,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1735417918687692608, guid: 3958d1455ed2ad84aa3eb0e4325508a3,
     type: 3}
   m_PrefabInstance: {fileID: 570647720}
-  m_PrefabAsset: {fileID: 0}
---- !u!224 &576098218 stripped
-RectTransform:
-  m_CorrespondingSourceObject: {fileID: 3538773066243538527, guid: c7e6f3b6d543adb40b30cad79a41a90a,
-    type: 3}
-  m_PrefabInstance: {fileID: 987164681}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &592402752
 PrefabInstance:
@@ -7292,6 +7204,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlataformaGancho12
       objectReference: {fileID: 0}
+    - target: {fileID: 6825163318899845801, guid: 256a51c96375e16438ed5c888ff95079,
+        type: 3}
+      propertyPath: platGanchoIzq
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8640107194889816687, guid: 256a51c96375e16438ed5c888ff95079,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -7361,11 +7278,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_IsTrigger
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6825163318899845801, guid: 256a51c96375e16438ed5c888ff95079,
-        type: 3}
-      propertyPath: platGanchoIzq
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 256a51c96375e16438ed5c888ff95079, type: 3}
@@ -7516,7 +7428,7 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 82039774}
+  - {fileID: 802678804}
   - {fileID: 475278804}
   - {fileID: 1647729748}
   - {fileID: 553932923}
@@ -8343,6 +8255,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlataformaGancho5
       objectReference: {fileID: 0}
+    - target: {fileID: 6825163318899845801, guid: 256a51c96375e16438ed5c888ff95079,
+        type: 3}
+      propertyPath: platGanchoIzq
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8640107194889816687, guid: 256a51c96375e16438ed5c888ff95079,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -8413,13 +8330,39 @@ PrefabInstance:
       propertyPath: m_IsTrigger
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6825163318899845801, guid: 256a51c96375e16438ed5c888ff95079,
-        type: 3}
-      propertyPath: platGanchoIzq
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 256a51c96375e16438ed5c888ff95079, type: 3}
+--- !u!1 &802678803
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 82039773}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 802678804}
+  m_Layer: 0
+  m_Name: ObstaculoElectrico (Missing Prefab)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &802678804
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 82039773}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 802678803}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 82039774}
+  m_Father: {fileID: 714981087}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &803450215
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8522,6 +8465,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlataformaGancho3
       objectReference: {fileID: 0}
+    - target: {fileID: 6825163318899845801, guid: 256a51c96375e16438ed5c888ff95079,
+        type: 3}
+      propertyPath: platGanchoIzq
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8640107194889816687, guid: 256a51c96375e16438ed5c888ff95079,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -8591,11 +8539,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_IsTrigger
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6825163318899845801, guid: 256a51c96375e16438ed5c888ff95079,
-        type: 3}
-      propertyPath: platGanchoIzq
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 256a51c96375e16438ed5c888ff95079, type: 3}
@@ -8843,6 +8786,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlataformaGancho
       objectReference: {fileID: 0}
+    - target: {fileID: 6825163318899845801, guid: 256a51c96375e16438ed5c888ff95079,
+        type: 3}
+      propertyPath: platGanchoIzq
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8640107194889816687, guid: 256a51c96375e16438ed5c888ff95079,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -8913,13 +8861,24 @@ PrefabInstance:
       propertyPath: m_IsTrigger
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6825163318899845801, guid: 256a51c96375e16438ed5c888ff95079,
-        type: 3}
-      propertyPath: platGanchoIzq
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 256a51c96375e16438ed5c888ff95079, type: 3}
+--- !u!1 &843646669
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 1727884925}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1727884926}
+  m_Layer: 0
+  m_Name: Missing Prefab (Dummy)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1001 &876191279
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8931,6 +8890,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: PlataformaGancho5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6825163318899845801, guid: 256a51c96375e16438ed5c888ff95079,
+        type: 3}
+      propertyPath: platGanchoIzq
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8640107194889816687, guid: 256a51c96375e16438ed5c888ff95079,
         type: 3}
@@ -9001,11 +8965,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_IsTrigger
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6825163318899845801, guid: 256a51c96375e16438ed5c888ff95079,
-        type: 3}
-      propertyPath: platGanchoIzq
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 256a51c96375e16438ed5c888ff95079, type: 3}
@@ -9337,6 +9296,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlataformaGancho9
       objectReference: {fileID: 0}
+    - target: {fileID: 6825163318899845801, guid: 256a51c96375e16438ed5c888ff95079,
+        type: 3}
+      propertyPath: platGanchoIzq
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8640107194889816687, guid: 256a51c96375e16438ed5c888ff95079,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -9407,11 +9371,6 @@ PrefabInstance:
       propertyPath: m_IsTrigger
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6825163318899845801, guid: 256a51c96375e16438ed5c888ff95079,
-        type: 3}
-      propertyPath: platGanchoIzq
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 256a51c96375e16438ed5c888ff95079, type: 3}
 --- !u!1001 &929370199
@@ -9425,6 +9384,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: PlataformaGancho3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6825163318899845801, guid: 256a51c96375e16438ed5c888ff95079,
+        type: 3}
+      propertyPath: platGanchoIzq
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8640107194889816687, guid: 256a51c96375e16438ed5c888ff95079,
         type: 3}
@@ -9496,11 +9460,6 @@ PrefabInstance:
       propertyPath: m_IsTrigger
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6825163318899845801, guid: 256a51c96375e16438ed5c888ff95079,
-        type: 3}
-      propertyPath: platGanchoIzq
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 256a51c96375e16438ed5c888ff95079, type: 3}
 --- !u!4 &929370200 stripped
@@ -9509,6 +9468,37 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 929370199}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &934746968
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 357753018}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 934746969}
+  m_Layer: 0
+  m_Name: ObstaculoElectrico (Missing Prefab)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &934746969
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 357753018}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 934746968}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 357753019}
+  m_Father: {fileID: 433381141}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &936632241
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9763,11 +9753,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Canvas
       objectReference: {fileID: 0}
-    - target: {fileID: 3538773066243538522, guid: c7e6f3b6d543adb40b30cad79a41a90a,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 3538773066243538523, guid: c7e6f3b6d543adb40b30cad79a41a90a,
         type: 3}
       propertyPath: panel
@@ -9893,6 +9878,32 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3538773065260569623, guid: c7e6f3b6d543adb40b30cad79a41a90a,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 371
+      objectReference: {fileID: 0}
+    - target: {fileID: 3538773065260569623, guid: c7e6f3b6d543adb40b30cad79a41a90a,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -200
+      objectReference: {fileID: 0}
+    - target: {fileID: 7525486054304848631, guid: c7e6f3b6d543adb40b30cad79a41a90a,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 373
+      objectReference: {fileID: 0}
+    - target: {fileID: 3538773065260569620, guid: c7e6f3b6d543adb40b30cad79a41a90a,
+        type: 3}
+      propertyPath: m_FontData.m_Font
+      value: 
+      objectReference: {fileID: 12800000, guid: 5dd49b3eacc540408c98eee0de38e0f1,
+        type: 3}
+    - target: {fileID: 3538773065260569620, guid: c7e6f3b6d543adb40b30cad79a41a90a,
+        type: 3}
+      propertyPath: m_FontData.m_FontSize
+      value: 35
+      objectReference: {fileID: 0}
     - target: {fileID: 3538773066374701400, guid: c7e6f3b6d543adb40b30cad79a41a90a,
         type: 3}
       propertyPath: m_Enabled
@@ -9901,84 +9912,6 @@ PrefabInstance:
     - target: {fileID: 3538773066859835797, guid: c7e6f3b6d543adb40b30cad79a41a90a,
         type: 3}
       propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3538773067138860104, guid: c7e6f3b6d543adb40b30cad79a41a90a,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3538773065975403401, guid: c7e6f3b6d543adb40b30cad79a41a90a,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3538773067138860106, guid: c7e6f3b6d543adb40b30cad79a41a90a,
-        type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 135
-      objectReference: {fileID: 0}
-    - target: {fileID: 3538773065975403407, guid: c7e6f3b6d543adb40b30cad79a41a90a,
-        type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 135
-      objectReference: {fileID: 0}
-    - target: {fileID: 1590347204, guid: c7e6f3b6d543adb40b30cad79a41a90a, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_IntArgument
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 794725483, guid: c7e6f3b6d543adb40b30cad79a41a90a, type: 3}
-      propertyPath: m_Text
-      value: NIVEL 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 3538773067078942271, guid: c7e6f3b6d543adb40b30cad79a41a90a,
-        type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: -376.23
-      objectReference: {fileID: 0}
-    - target: {fileID: 3538773067078942271, guid: c7e6f3b6d543adb40b30cad79a41a90a,
-        type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 73.6
-      objectReference: {fileID: 0}
-    - target: {fileID: 3538773066293166782, guid: c7e6f3b6d543adb40b30cad79a41a90a,
-        type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 372.93
-      objectReference: {fileID: 0}
-    - target: {fileID: 3538773066293166782, guid: c7e6f3b6d543adb40b30cad79a41a90a,
-        type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 67.07
-      objectReference: {fileID: 0}
-    - target: {fileID: 3538773066293166783, guid: c7e6f3b6d543adb40b30cad79a41a90a,
-        type: 3}
-      propertyPath: m_Color.r
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3538773066293166783, guid: c7e6f3b6d543adb40b30cad79a41a90a,
-        type: 3}
-      propertyPath: m_Color.g
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3538773066293166783, guid: c7e6f3b6d543adb40b30cad79a41a90a,
-        type: 3}
-      propertyPath: m_Color.b
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3538773067078942268, guid: c7e6f3b6d543adb40b30cad79a41a90a,
-        type: 3}
-      propertyPath: m_Color.r
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3538773067078942268, guid: c7e6f3b6d543adb40b30cad79a41a90a,
-        type: 3}
-      propertyPath: m_Color.g
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3538773067078942268, guid: c7e6f3b6d543adb40b30cad79a41a90a,
-        type: 3}
-      propertyPath: m_Color.b
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -10571,6 +10504,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlataformaGancho4
       objectReference: {fileID: 0}
+    - target: {fileID: 6825163318899845801, guid: 256a51c96375e16438ed5c888ff95079,
+        type: 3}
+      propertyPath: platGanchoIzq
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8640107194889816687, guid: 256a51c96375e16438ed5c888ff95079,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -10641,11 +10579,6 @@ PrefabInstance:
       propertyPath: m_IsTrigger
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6825163318899845801, guid: 256a51c96375e16438ed5c888ff95079,
-        type: 3}
-      propertyPath: platGanchoIzq
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 256a51c96375e16438ed5c888ff95079, type: 3}
 --- !u!4 &1010406678 stripped
@@ -10654,6 +10587,37 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1010406677}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1013906203
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 259901274}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1013906204}
+  m_Layer: 0
+  m_Name: ObstaculoElectrico2 (Missing Prefab)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1013906204
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 259901274}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1013906203}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 259901275}
+  m_Father: {fileID: 433381141}
+  m_RootOrder: 10
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1021544774
 GameObject:
   m_ObjectHideFlags: 0
@@ -10790,6 +10754,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlataformaGancho
       objectReference: {fileID: 0}
+    - target: {fileID: 6825163318899845801, guid: 256a51c96375e16438ed5c888ff95079,
+        type: 3}
+      propertyPath: platGanchoIzq
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8640107194889816687, guid: 256a51c96375e16438ed5c888ff95079,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -10859,11 +10828,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_IsTrigger
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6825163318899845801, guid: 256a51c96375e16438ed5c888ff95079,
-        type: 3}
-      propertyPath: platGanchoIzq
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 256a51c96375e16438ed5c888ff95079, type: 3}
@@ -37353,6 +37317,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlataformaGancho8
       objectReference: {fileID: 0}
+    - target: {fileID: 6825163318899845801, guid: 256a51c96375e16438ed5c888ff95079,
+        type: 3}
+      propertyPath: platGanchoIzq
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8640107194889816687, guid: 256a51c96375e16438ed5c888ff95079,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -37422,11 +37391,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_IsTrigger
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6825163318899845801, guid: 256a51c96375e16438ed5c888ff95079,
-        type: 3}
-      propertyPath: platGanchoIzq
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 256a51c96375e16438ed5c888ff95079, type: 3}
@@ -37539,6 +37503,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlataformaGancho13
       objectReference: {fileID: 0}
+    - target: {fileID: 6825163318899845801, guid: 256a51c96375e16438ed5c888ff95079,
+        type: 3}
+      propertyPath: platGanchoIzq
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8640107194889816687, guid: 256a51c96375e16438ed5c888ff95079,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -37608,11 +37577,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_IsTrigger
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6825163318899845801, guid: 256a51c96375e16438ed5c888ff95079,
-        type: 3}
-      propertyPath: platGanchoIzq
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 256a51c96375e16438ed5c888ff95079, type: 3}
@@ -38473,6 +38437,22 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1216077419}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1219743710
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 82039773}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 82039774}
+  m_Layer: 0
+  m_Name: Missing Prefab (Dummy)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1001 &1245305243
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -39338,6 +39318,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlataformaGancho7
       objectReference: {fileID: 0}
+    - target: {fileID: 6825163318899845801, guid: 256a51c96375e16438ed5c888ff95079,
+        type: 3}
+      propertyPath: platGanchoIzq
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8640107194889816687, guid: 256a51c96375e16438ed5c888ff95079,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -39407,11 +39392,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_IsTrigger
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6825163318899845801, guid: 256a51c96375e16438ed5c888ff95079,
-        type: 3}
-      propertyPath: platGanchoIzq
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 256a51c96375e16438ed5c888ff95079, type: 3}
@@ -39819,6 +39799,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlataformaGancho4
       objectReference: {fileID: 0}
+    - target: {fileID: 6825163318899845801, guid: 256a51c96375e16438ed5c888ff95079,
+        type: 3}
+      propertyPath: platGanchoIzq
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8640107194889816687, guid: 256a51c96375e16438ed5c888ff95079,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -39888,11 +39873,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_IsTrigger
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6825163318899845801, guid: 256a51c96375e16438ed5c888ff95079,
-        type: 3}
-      propertyPath: platGanchoIzq
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 256a51c96375e16438ed5c888ff95079, type: 3}
@@ -40150,6 +40130,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlataformaGancho
       objectReference: {fileID: 0}
+    - target: {fileID: 6825163318899845801, guid: 256a51c96375e16438ed5c888ff95079,
+        type: 3}
+      propertyPath: platGanchoIzq
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8640107194889816687, guid: 256a51c96375e16438ed5c888ff95079,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -40219,11 +40204,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_IsTrigger
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6825163318899845801, guid: 256a51c96375e16438ed5c888ff95079,
-        type: 3}
-      propertyPath: platGanchoIzq
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 256a51c96375e16438ed5c888ff95079, type: 3}
@@ -40737,6 +40717,37 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1415555580}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1419057708
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 1723657320}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1419057709}
+  m_Layer: 0
+  m_Name: ObstaculoElectrico3 (Missing Prefab)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1419057709
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 1723657320}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1419057708}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1723657321}
+  m_Father: {fileID: 433381141}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1419250630
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -40822,6 +40833,22 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1419250630}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1429923875
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 1723657320}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1723657321}
+  m_Layer: 0
+  m_Name: Missing Prefab (Dummy)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1001 &1430434688
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -41324,11 +41351,6 @@ PrefabInstance:
       propertyPath: m_LocalScale.y
       value: 0.75
       objectReference: {fileID: 0}
-    - target: {fileID: 5966477415857553896, guid: 77627ef7422cd9643b73c77d165e921b,
-        type: 3}
-      propertyPath: puedoReaparecer
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 3887932413997493802, guid: 77627ef7422cd9643b73c77d165e921b,
         type: 3}
       propertyPath: m_SortingLayerID
@@ -41338,6 +41360,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_SortingLayer
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5966477415857553896, guid: 77627ef7422cd9643b73c77d165e921b,
+        type: 3}
+      propertyPath: puedoReaparecer
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 77627ef7422cd9643b73c77d165e921b, type: 3}
@@ -42021,12 +42048,21 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2d109fa60d25f1145814442782e250d9, type: 3}
---- !u!4 &1580232572 stripped
+--- !u!4 &1580232572
 Transform:
+  m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 511063307627476887, guid: 2d109fa60d25f1145814442782e250d9,
     type: 3}
   m_PrefabInstance: {fileID: 1580232571}
   m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1802171687}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 354033876}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1581914959
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -43739,12 +43775,21 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2d109fa60d25f1145814442782e250d9, type: 3}
---- !u!4 &1723657321 stripped
+--- !u!4 &1723657321
 Transform:
+  m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 511063307627476887, guid: 2d109fa60d25f1145814442782e250d9,
     type: 3}
   m_PrefabInstance: {fileID: 1723657320}
   m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1429923875}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1419057709}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1727884925
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -43824,12 +43869,21 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2d109fa60d25f1145814442782e250d9, type: 3}
---- !u!4 &1727884926 stripped
+--- !u!4 &1727884926
 Transform:
+  m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 511063307627476887, guid: 2d109fa60d25f1145814442782e250d9,
     type: 3}
   m_PrefabInstance: {fileID: 1727884925}
   m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 843646669}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 293115449}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1733195753 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7421828776865592249, guid: fb5d61f47bbfc504693935b7f3c1eb62,
@@ -44693,6 +44747,22 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1784234479}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1802171687
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 1580232571}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1580232572}
+  m_Layer: 0
+  m_Name: Missing Prefab (Dummy)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &1819179788
 GameObject:
   m_ObjectHideFlags: 0
@@ -44826,6 +44896,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlataformaGancho1
       objectReference: {fileID: 0}
+    - target: {fileID: 6825163318899845801, guid: 256a51c96375e16438ed5c888ff95079,
+        type: 3}
+      propertyPath: platGanchoIzq
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8640107194889816687, guid: 256a51c96375e16438ed5c888ff95079,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -44895,11 +44970,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_IsTrigger
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6825163318899845801, guid: 256a51c96375e16438ed5c888ff95079,
-        type: 3}
-      propertyPath: platGanchoIzq
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 256a51c96375e16438ed5c888ff95079, type: 3}
@@ -45101,6 +45171,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlataformaGancho7
       objectReference: {fileID: 0}
+    - target: {fileID: 6825163318899845801, guid: 256a51c96375e16438ed5c888ff95079,
+        type: 3}
+      propertyPath: platGanchoIzq
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8640107194889816687, guid: 256a51c96375e16438ed5c888ff95079,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -45170,11 +45245,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_IsTrigger
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6825163318899845801, guid: 256a51c96375e16438ed5c888ff95079,
-        type: 3}
-      propertyPath: platGanchoIzq
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 256a51c96375e16438ed5c888ff95079, type: 3}
@@ -45348,6 +45418,22 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1859768065}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1862883057
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 259901274}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 259901275}
+  m_Layer: 0
+  m_Name: Missing Prefab (Dummy)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1001 &1862948051
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -45830,11 +45916,6 @@ PrefabInstance:
       propertyPath: m_LocalScale.y
       value: 0.6
       objectReference: {fileID: 0}
-    - target: {fileID: 5966477415857553896, guid: 77627ef7422cd9643b73c77d165e921b,
-        type: 3}
-      propertyPath: puedoReaparecer
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 3887932413997493802, guid: 77627ef7422cd9643b73c77d165e921b,
         type: 3}
       propertyPath: m_SortingLayerID
@@ -45844,6 +45925,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_SortingLayer
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5966477415857553896, guid: 77627ef7422cd9643b73c77d165e921b,
+        type: 3}
+      propertyPath: puedoReaparecer
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 845495048614475770, guid: 77627ef7422cd9643b73c77d165e921b,
         type: 3}
@@ -46400,6 +46486,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlataformaGancho5
       objectReference: {fileID: 0}
+    - target: {fileID: 6825163318899845801, guid: 256a51c96375e16438ed5c888ff95079,
+        type: 3}
+      propertyPath: platGanchoIzq
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8640107194889816687, guid: 256a51c96375e16438ed5c888ff95079,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -46469,11 +46560,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_IsTrigger
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6825163318899845801, guid: 256a51c96375e16438ed5c888ff95079,
-        type: 3}
-      propertyPath: platGanchoIzq
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 256a51c96375e16438ed5c888ff95079, type: 3}
@@ -46835,6 +46921,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlataformaGancho2
       objectReference: {fileID: 0}
+    - target: {fileID: 6825163318899845801, guid: 256a51c96375e16438ed5c888ff95079,
+        type: 3}
+      propertyPath: platGanchoIzq
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8640107194889816687, guid: 256a51c96375e16438ed5c888ff95079,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -46904,11 +46995,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_IsTrigger
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6825163318899845801, guid: 256a51c96375e16438ed5c888ff95079,
-        type: 3}
-      propertyPath: platGanchoIzq
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 256a51c96375e16438ed5c888ff95079, type: 3}
@@ -47400,6 +47486,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlataformaGancho3
       objectReference: {fileID: 0}
+    - target: {fileID: 6825163318899845801, guid: 256a51c96375e16438ed5c888ff95079,
+        type: 3}
+      propertyPath: platGanchoIzq
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8640107194889816687, guid: 256a51c96375e16438ed5c888ff95079,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -47469,11 +47560,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_IsTrigger
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6825163318899845801, guid: 256a51c96375e16438ed5c888ff95079,
-        type: 3}
-      propertyPath: platGanchoIzq
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 256a51c96375e16438ed5c888ff95079, type: 3}
@@ -47729,6 +47815,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlataformaGancho
       objectReference: {fileID: 0}
+    - target: {fileID: 6825163318899845801, guid: 256a51c96375e16438ed5c888ff95079,
+        type: 3}
+      propertyPath: platGanchoIzq
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8640107194889816687, guid: 256a51c96375e16438ed5c888ff95079,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -47799,11 +47890,6 @@ PrefabInstance:
       propertyPath: m_IsTrigger
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6825163318899845801, guid: 256a51c96375e16438ed5c888ff95079,
-        type: 3}
-      propertyPath: platGanchoIzq
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 256a51c96375e16438ed5c888ff95079, type: 3}
 --- !u!4 &2095154322 stripped
@@ -47864,6 +47950,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: PlataformaGancho
+      objectReference: {fileID: 0}
+    - target: {fileID: 6825163318899845801, guid: 256a51c96375e16438ed5c888ff95079,
+        type: 3}
+      propertyPath: platGanchoIzq
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8640107194889816687, guid: 256a51c96375e16438ed5c888ff95079,
         type: 3}
@@ -47934,11 +48025,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_IsTrigger
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6825163318899845801, guid: 256a51c96375e16438ed5c888ff95079,
-        type: 3}
-      propertyPath: platGanchoIzq
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 256a51c96375e16438ed5c888ff95079, type: 3}
