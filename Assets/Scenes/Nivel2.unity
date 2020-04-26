@@ -1716,16 +1716,16 @@ PrefabInstance:
       propertyPath: m_IsTrigger
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: -7449209414131586718, guid: c7d41d4c59139a24086b99aed4fea744,
-        type: 3}
-      propertyPath: jugador
-      value: 
-      objectReference: {fileID: 898946469}
     - target: {fileID: -4660648570692002652, guid: c7d41d4c59139a24086b99aed4fea744,
         type: 3}
       propertyPath: m_Controller
       value: 
       objectReference: {fileID: 9100000, guid: ee6dc28f6f796d848805ea71041ad81b, type: 2}
+    - target: {fileID: -7449209414131586718, guid: c7d41d4c59139a24086b99aed4fea744,
+        type: 3}
+      propertyPath: jugador
+      value: 
+      objectReference: {fileID: 898946469}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c7d41d4c59139a24086b99aed4fea744, type: 3}
 --- !u!1001 &147738512
@@ -2460,16 +2460,16 @@ PrefabInstance:
       propertyPath: m_IsTrigger
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: -7449209414131586718, guid: c7d41d4c59139a24086b99aed4fea744,
-        type: 3}
-      propertyPath: jugador
-      value: 
-      objectReference: {fileID: 898946469}
     - target: {fileID: -4660648570692002652, guid: c7d41d4c59139a24086b99aed4fea744,
         type: 3}
       propertyPath: m_Controller
       value: 
       objectReference: {fileID: 9100000, guid: ee6dc28f6f796d848805ea71041ad81b, type: 2}
+    - target: {fileID: -7449209414131586718, guid: c7d41d4c59139a24086b99aed4fea744,
+        type: 3}
+      propertyPath: jugador
+      value: 
+      objectReference: {fileID: 898946469}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c7d41d4c59139a24086b99aed4fea744, type: 3}
 --- !u!4 &204730227 stripped
@@ -3313,16 +3313,16 @@ PrefabInstance:
       propertyPath: m_IsTrigger
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: -7449209414131586718, guid: c7d41d4c59139a24086b99aed4fea744,
-        type: 3}
-      propertyPath: jugador
-      value: 
-      objectReference: {fileID: 898946469}
     - target: {fileID: -4660648570692002652, guid: c7d41d4c59139a24086b99aed4fea744,
         type: 3}
       propertyPath: m_Controller
       value: 
       objectReference: {fileID: 9100000, guid: ee6dc28f6f796d848805ea71041ad81b, type: 2}
+    - target: {fileID: -7449209414131586718, guid: c7d41d4c59139a24086b99aed4fea744,
+        type: 3}
+      propertyPath: jugador
+      value: 
+      objectReference: {fileID: 898946469}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c7d41d4c59139a24086b99aed4fea744, type: 3}
 --- !u!4 &244548448 stripped
@@ -5126,16 +5126,16 @@ PrefabInstance:
       propertyPath: m_IsTrigger
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: -7449209414131586718, guid: c7d41d4c59139a24086b99aed4fea744,
-        type: 3}
-      propertyPath: jugador
-      value: 
-      objectReference: {fileID: 898946469}
     - target: {fileID: -4660648570692002652, guid: c7d41d4c59139a24086b99aed4fea744,
         type: 3}
       propertyPath: m_Controller
       value: 
       objectReference: {fileID: 9100000, guid: ee6dc28f6f796d848805ea71041ad81b, type: 2}
+    - target: {fileID: -7449209414131586718, guid: c7d41d4c59139a24086b99aed4fea744,
+        type: 3}
+      propertyPath: jugador
+      value: 
+      objectReference: {fileID: 898946469}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c7d41d4c59139a24086b99aed4fea744, type: 3}
 --- !u!4 &391838605 stripped
@@ -76511,16 +76511,16 @@ PrefabInstance:
       propertyPath: m_IsTrigger
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: -7449209414131586718, guid: c7d41d4c59139a24086b99aed4fea744,
-        type: 3}
-      propertyPath: jugador
-      value: 
-      objectReference: {fileID: 898946469}
     - target: {fileID: -4660648570692002652, guid: c7d41d4c59139a24086b99aed4fea744,
         type: 3}
       propertyPath: m_Controller
       value: 
       objectReference: {fileID: 9100000, guid: ee6dc28f6f796d848805ea71041ad81b, type: 2}
+    - target: {fileID: -7449209414131586718, guid: c7d41d4c59139a24086b99aed4fea744,
+        type: 3}
+      propertyPath: jugador
+      value: 
+      objectReference: {fileID: 898946469}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c7d41d4c59139a24086b99aed4fea744, type: 3}
 --- !u!4 &720396132 stripped
@@ -79677,7 +79677,7 @@ PrefabInstance:
     - target: {fileID: 3538773066243538522, guid: c7e6f3b6d543adb40b30cad79a41a90a,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3538773066243538523, guid: c7e6f3b6d543adb40b30cad79a41a90a,
         type: 3}
@@ -79797,12 +79797,12 @@ PrefabInstance:
     - target: {fileID: 3538773066121618678, guid: c7e6f3b6d543adb40b30cad79a41a90a,
         type: 3}
       propertyPath: m_AnchorMax.x
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3538773066121618678, guid: c7e6f3b6d543adb40b30cad79a41a90a,
         type: 3}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3538773066243538526, guid: c7e6f3b6d543adb40b30cad79a41a90a,
         type: 3}
@@ -79887,15 +79887,15 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 2600931320193750099, guid: 1484b714045adf84fba8f95ff25981ec,
-        type: 3}
-      propertyPath: "tama\xF1oColeccionables"
-      value: 5
-      objectReference: {fileID: 0}
     - target: {fileID: 2600931320193750098, guid: 1484b714045adf84fba8f95ff25981ec,
         type: 3}
       propertyPath: m_Name
       value: GameManager
+      objectReference: {fileID: 0}
+    - target: {fileID: 2600931320193750099, guid: 1484b714045adf84fba8f95ff25981ec,
+        type: 3}
+      propertyPath: "tama\xF1oColeccionables"
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 2600931320193750100, guid: 1484b714045adf84fba8f95ff25981ec,
         type: 3}
@@ -80061,16 +80061,16 @@ PrefabInstance:
       propertyPath: m_IsTrigger
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: -7449209414131586718, guid: c7d41d4c59139a24086b99aed4fea744,
-        type: 3}
-      propertyPath: jugador
-      value: 
-      objectReference: {fileID: 898946469}
     - target: {fileID: -4660648570692002652, guid: c7d41d4c59139a24086b99aed4fea744,
         type: 3}
       propertyPath: m_Controller
       value: 
       objectReference: {fileID: 9100000, guid: ee6dc28f6f796d848805ea71041ad81b, type: 2}
+    - target: {fileID: -7449209414131586718, guid: c7d41d4c59139a24086b99aed4fea744,
+        type: 3}
+      propertyPath: jugador
+      value: 
+      objectReference: {fileID: 898946469}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c7d41d4c59139a24086b99aed4fea744, type: 3}
 --- !u!1001 &1013984309
@@ -81511,16 +81511,16 @@ PrefabInstance:
       propertyPath: m_IsTrigger
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: -7449209414131586718, guid: c7d41d4c59139a24086b99aed4fea744,
-        type: 3}
-      propertyPath: jugador
-      value: 
-      objectReference: {fileID: 898946469}
     - target: {fileID: -4660648570692002652, guid: c7d41d4c59139a24086b99aed4fea744,
         type: 3}
       propertyPath: m_Controller
       value: 
       objectReference: {fileID: 9100000, guid: ee6dc28f6f796d848805ea71041ad81b, type: 2}
+    - target: {fileID: -7449209414131586718, guid: c7d41d4c59139a24086b99aed4fea744,
+        type: 3}
+      propertyPath: jugador
+      value: 
+      objectReference: {fileID: 898946469}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c7d41d4c59139a24086b99aed4fea744, type: 3}
 --- !u!4 &1145549938 stripped
@@ -81727,16 +81727,16 @@ PrefabInstance:
       propertyPath: m_IsTrigger
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: -7449209414131586718, guid: c7d41d4c59139a24086b99aed4fea744,
-        type: 3}
-      propertyPath: jugador
-      value: 
-      objectReference: {fileID: 898946469}
     - target: {fileID: -4660648570692002652, guid: c7d41d4c59139a24086b99aed4fea744,
         type: 3}
       propertyPath: m_Controller
       value: 
       objectReference: {fileID: 9100000, guid: ee6dc28f6f796d848805ea71041ad81b, type: 2}
+    - target: {fileID: -7449209414131586718, guid: c7d41d4c59139a24086b99aed4fea744,
+        type: 3}
+      propertyPath: jugador
+      value: 
+      objectReference: {fileID: 898946469}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c7d41d4c59139a24086b99aed4fea744, type: 3}
 --- !u!1001 &1156133918
@@ -82801,16 +82801,16 @@ PrefabInstance:
       propertyPath: m_IsTrigger
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: -7449209414131586718, guid: c7d41d4c59139a24086b99aed4fea744,
-        type: 3}
-      propertyPath: jugador
-      value: 
-      objectReference: {fileID: 898946469}
     - target: {fileID: -4660648570692002652, guid: c7d41d4c59139a24086b99aed4fea744,
         type: 3}
       propertyPath: m_Controller
       value: 
       objectReference: {fileID: 9100000, guid: ee6dc28f6f796d848805ea71041ad81b, type: 2}
+    - target: {fileID: -7449209414131586718, guid: c7d41d4c59139a24086b99aed4fea744,
+        type: 3}
+      propertyPath: jugador
+      value: 
+      objectReference: {fileID: 898946469}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c7d41d4c59139a24086b99aed4fea744, type: 3}
 --- !u!4 &1260723921 stripped
@@ -103090,16 +103090,16 @@ PrefabInstance:
       propertyPath: m_IsTrigger
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: -7449209414131586718, guid: c7d41d4c59139a24086b99aed4fea744,
-        type: 3}
-      propertyPath: jugador
-      value: 
-      objectReference: {fileID: 898946469}
     - target: {fileID: -4660648570692002652, guid: c7d41d4c59139a24086b99aed4fea744,
         type: 3}
       propertyPath: m_Controller
       value: 
       objectReference: {fileID: 9100000, guid: ee6dc28f6f796d848805ea71041ad81b, type: 2}
+    - target: {fileID: -7449209414131586718, guid: c7d41d4c59139a24086b99aed4fea744,
+        type: 3}
+      propertyPath: jugador
+      value: 
+      objectReference: {fileID: 898946469}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c7d41d4c59139a24086b99aed4fea744, type: 3}
 --- !u!4 &1563946906 stripped
@@ -104820,6 +104820,11 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 2052505324464315954, guid: f326a2e336d01374f9b1a86c45f1190e,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2052505325248589389, guid: f326a2e336d01374f9b1a86c45f1190e,
         type: 3}
       propertyPath: m_textInfo.characterCount
@@ -104943,11 +104948,6 @@ PrefabInstance:
     - target: {fileID: 2052505325073643257, guid: f326a2e336d01374f9b1a86c45f1190e,
         type: 3}
       propertyPath: m_textInfo.pageCount
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2052505324464315954, guid: f326a2e336d01374f9b1a86c45f1190e,
-        type: 3}
-      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -105368,16 +105368,16 @@ PrefabInstance:
       propertyPath: m_IsTrigger
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: -7449209414131586718, guid: c7d41d4c59139a24086b99aed4fea744,
-        type: 3}
-      propertyPath: jugador
-      value: 
-      objectReference: {fileID: 898946469}
     - target: {fileID: -4660648570692002652, guid: c7d41d4c59139a24086b99aed4fea744,
         type: 3}
       propertyPath: m_Controller
       value: 
       objectReference: {fileID: 9100000, guid: ee6dc28f6f796d848805ea71041ad81b, type: 2}
+    - target: {fileID: -7449209414131586718, guid: c7d41d4c59139a24086b99aed4fea744,
+        type: 3}
+      propertyPath: jugador
+      value: 
+      objectReference: {fileID: 898946469}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c7d41d4c59139a24086b99aed4fea744, type: 3}
 --- !u!1001 &1680593399
@@ -105672,16 +105672,16 @@ PrefabInstance:
       propertyPath: m_IsTrigger
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: -7449209414131586718, guid: c7d41d4c59139a24086b99aed4fea744,
-        type: 3}
-      propertyPath: jugador
-      value: 
-      objectReference: {fileID: 898946469}
     - target: {fileID: -4660648570692002652, guid: c7d41d4c59139a24086b99aed4fea744,
         type: 3}
       propertyPath: m_Controller
       value: 
       objectReference: {fileID: 9100000, guid: ee6dc28f6f796d848805ea71041ad81b, type: 2}
+    - target: {fileID: -7449209414131586718, guid: c7d41d4c59139a24086b99aed4fea744,
+        type: 3}
+      propertyPath: jugador
+      value: 
+      objectReference: {fileID: 898946469}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c7d41d4c59139a24086b99aed4fea744, type: 3}
 --- !u!4 &1697771069 stripped
@@ -107503,16 +107503,16 @@ PrefabInstance:
       propertyPath: m_IsTrigger
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: -7449209414131586718, guid: c7d41d4c59139a24086b99aed4fea744,
-        type: 3}
-      propertyPath: jugador
-      value: 
-      objectReference: {fileID: 898946469}
     - target: {fileID: -4660648570692002652, guid: c7d41d4c59139a24086b99aed4fea744,
         type: 3}
       propertyPath: m_Controller
       value: 
       objectReference: {fileID: 9100000, guid: ee6dc28f6f796d848805ea71041ad81b, type: 2}
+    - target: {fileID: -7449209414131586718, guid: c7d41d4c59139a24086b99aed4fea744,
+        type: 3}
+      propertyPath: jugador
+      value: 
+      objectReference: {fileID: 898946469}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c7d41d4c59139a24086b99aed4fea744, type: 3}
 --- !u!4 &1829978649 stripped
@@ -107628,16 +107628,16 @@ PrefabInstance:
       propertyPath: m_IsTrigger
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: -7449209414131586718, guid: c7d41d4c59139a24086b99aed4fea744,
-        type: 3}
-      propertyPath: jugador
-      value: 
-      objectReference: {fileID: 898946469}
     - target: {fileID: -4660648570692002652, guid: c7d41d4c59139a24086b99aed4fea744,
         type: 3}
       propertyPath: m_Controller
       value: 
       objectReference: {fileID: 9100000, guid: ee6dc28f6f796d848805ea71041ad81b, type: 2}
+    - target: {fileID: -7449209414131586718, guid: c7d41d4c59139a24086b99aed4fea744,
+        type: 3}
+      propertyPath: jugador
+      value: 
+      objectReference: {fileID: 898946469}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c7d41d4c59139a24086b99aed4fea744, type: 3}
 --- !u!4 &1831848092 stripped
@@ -107986,16 +107986,16 @@ PrefabInstance:
       propertyPath: m_IsTrigger
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: -7449209414131586718, guid: c7d41d4c59139a24086b99aed4fea744,
-        type: 3}
-      propertyPath: jugador
-      value: 
-      objectReference: {fileID: 898946469}
     - target: {fileID: -4660648570692002652, guid: c7d41d4c59139a24086b99aed4fea744,
         type: 3}
       propertyPath: m_Controller
       value: 
       objectReference: {fileID: 9100000, guid: ee6dc28f6f796d848805ea71041ad81b, type: 2}
+    - target: {fileID: -7449209414131586718, guid: c7d41d4c59139a24086b99aed4fea744,
+        type: 3}
+      propertyPath: jugador
+      value: 
+      objectReference: {fileID: 898946469}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c7d41d4c59139a24086b99aed4fea744, type: 3}
 --- !u!1 &1848211895
@@ -108573,16 +108573,16 @@ PrefabInstance:
       propertyPath: m_IsTrigger
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: -7449209414131586718, guid: c7d41d4c59139a24086b99aed4fea744,
-        type: 3}
-      propertyPath: jugador
-      value: 
-      objectReference: {fileID: 898946469}
     - target: {fileID: -4660648570692002652, guid: c7d41d4c59139a24086b99aed4fea744,
         type: 3}
       propertyPath: m_Controller
       value: 
       objectReference: {fileID: 9100000, guid: ee6dc28f6f796d848805ea71041ad81b, type: 2}
+    - target: {fileID: -7449209414131586718, guid: c7d41d4c59139a24086b99aed4fea744,
+        type: 3}
+      propertyPath: jugador
+      value: 
+      objectReference: {fileID: 898946469}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c7d41d4c59139a24086b99aed4fea744, type: 3}
 --- !u!4 &1872266364 stripped
@@ -111604,16 +111604,16 @@ PrefabInstance:
       propertyPath: m_IsTrigger
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: -7449209414131586718, guid: c7d41d4c59139a24086b99aed4fea744,
-        type: 3}
-      propertyPath: jugador
-      value: 
-      objectReference: {fileID: 898946469}
     - target: {fileID: -4660648570692002652, guid: c7d41d4c59139a24086b99aed4fea744,
         type: 3}
       propertyPath: m_Controller
       value: 
       objectReference: {fileID: 9100000, guid: ee6dc28f6f796d848805ea71041ad81b, type: 2}
+    - target: {fileID: -7449209414131586718, guid: c7d41d4c59139a24086b99aed4fea744,
+        type: 3}
+      propertyPath: jugador
+      value: 
+      objectReference: {fileID: 898946469}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c7d41d4c59139a24086b99aed4fea744, type: 3}
 --- !u!1 &2075561103 stripped
@@ -111820,16 +111820,16 @@ PrefabInstance:
       propertyPath: m_IsTrigger
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: -7449209414131586718, guid: c7d41d4c59139a24086b99aed4fea744,
-        type: 3}
-      propertyPath: jugador
-      value: 
-      objectReference: {fileID: 898946469}
     - target: {fileID: -4660648570692002652, guid: c7d41d4c59139a24086b99aed4fea744,
         type: 3}
       propertyPath: m_Controller
       value: 
       objectReference: {fileID: 9100000, guid: ee6dc28f6f796d848805ea71041ad81b, type: 2}
+    - target: {fileID: -7449209414131586718, guid: c7d41d4c59139a24086b99aed4fea744,
+        type: 3}
+      propertyPath: jugador
+      value: 
+      objectReference: {fileID: 898946469}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c7d41d4c59139a24086b99aed4fea744, type: 3}
 --- !u!1001 &2091616344
@@ -112024,16 +112024,16 @@ PrefabInstance:
       propertyPath: m_IsTrigger
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: -7449209414131586718, guid: c7d41d4c59139a24086b99aed4fea744,
-        type: 3}
-      propertyPath: jugador
-      value: 
-      objectReference: {fileID: 898946469}
     - target: {fileID: -4660648570692002652, guid: c7d41d4c59139a24086b99aed4fea744,
         type: 3}
       propertyPath: m_Controller
       value: 
       objectReference: {fileID: 9100000, guid: ee6dc28f6f796d848805ea71041ad81b, type: 2}
+    - target: {fileID: -7449209414131586718, guid: c7d41d4c59139a24086b99aed4fea744,
+        type: 3}
+      propertyPath: jugador
+      value: 
+      objectReference: {fileID: 898946469}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c7d41d4c59139a24086b99aed4fea744, type: 3}
 --- !u!4 &2094036660 stripped
@@ -112668,16 +112668,16 @@ PrefabInstance:
       propertyPath: m_IsTrigger
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: -7449209414131586718, guid: c7d41d4c59139a24086b99aed4fea744,
-        type: 3}
-      propertyPath: jugador
-      value: 
-      objectReference: {fileID: 898946469}
     - target: {fileID: -4660648570692002652, guid: c7d41d4c59139a24086b99aed4fea744,
         type: 3}
       propertyPath: m_Controller
       value: 
       objectReference: {fileID: 9100000, guid: ee6dc28f6f796d848805ea71041ad81b, type: 2}
+    - target: {fileID: -7449209414131586718, guid: c7d41d4c59139a24086b99aed4fea744,
+        type: 3}
+      propertyPath: jugador
+      value: 
+      objectReference: {fileID: 898946469}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c7d41d4c59139a24086b99aed4fea744, type: 3}
 --- !u!4 &2140355008 stripped

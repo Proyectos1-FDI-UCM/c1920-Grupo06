@@ -30,7 +30,7 @@ public class Lerp : MonoBehaviour
         tiempoInicio = Time.time;
 
         //Se busca la dirección hacia donde hacer el movimiento y se asignan los valroes
-        if(direccion == "derecha")
+        if (direccion == "derecha")
         {
             //Calculo el punto inicial
             puntoInicio = origen;
@@ -38,11 +38,17 @@ public class Lerp : MonoBehaviour
             //Calculo el punto final
             puntoFinal = new Vector2(-0.4f * (origen.x), origen.y);
         }
-        else if(direccion == "arriba")
+        else if (direccion == "arriba")
         {
             puntoInicio = origen;
 
             puntoFinal = new Vector2(origen.x, 0.325f * origen.y);
+        }
+        else if (direccion == "izquierda")
+        {
+            puntoInicio = origen;
+
+            puntoFinal = new Vector2(2 * origen.x, origen.y);
         }
 
         distanciaViaje = Vector2.Distance(puntoInicio, puntoFinal);
@@ -73,6 +79,12 @@ public class Lerp : MonoBehaviour
             puntoInicio = new Vector2(origen.x, origen.y);
 
             puntoFinal = new Vector2(origen.x, 0.4f * origen.y);
+        }
+        else if (direccion == "izquierda")
+        {
+            puntoInicio = origen;
+
+            puntoFinal = new Vector2(2 * origen.x, origen.y);
         }
         distanciaViaje = Vector2.Distance(puntoInicio, puntoFinal);
 
