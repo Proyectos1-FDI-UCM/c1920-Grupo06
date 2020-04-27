@@ -120,7 +120,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d609e38c0f12f5f4689b01258fe8f2a7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enganche: {fileID: 21300000, guid: a0efaa957d0fc8b41ae185b304e43f21, type: 3}
+  enganche: {fileID: 21300000, guid: 795f12c8719f69e4ba7f0b9a43a107e6, type: 3}
   plataformaGanchoIzq: {fileID: 21300000, guid: 443f54b1495c47a489835af4715aa577,
     type: 3}
   plataformaGanchoDer: {fileID: 21300000, guid: ae46642ae34adb84f94a1ef580ff1b60,
