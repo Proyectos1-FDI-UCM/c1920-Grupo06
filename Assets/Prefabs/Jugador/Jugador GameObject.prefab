@@ -560,7 +560,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f89e66e9e57cda4db154d6f0f1a2f8c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  velocidad_movimiento: 19.06
+  velocidad_movimiento: 15
   velocidad_caida_maxima: -20
 --- !u!114 &2925466069578243482
 MonoBehaviour:
@@ -587,7 +587,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8bd02b0ec4c89e84d8d2cce521debd76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fuerza_impulso: 0.36
+  fuerza_impulso: -4
 --- !u!114 &2925466069578243460
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -600,7 +600,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f06290e62f3bd81498f7409a9afbc3e4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fuerza_salto: 8.17
+  fuerza_salto: 10
 --- !u!114 &2925466069578243475
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -760,8 +760,9 @@ AudioSource:
   m_GameObject: {fileID: 2925466069578243472}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: d76624a56df22794f9e86766419797ae, type: 3}
+  OutputAudioMixerGroup: {fileID: 2092111068090835232, guid: 7abfb39722a098843baf8bcf94756b8d,
+    type: 2}
+  m_audioClip: {fileID: 8300000, guid: b7fe2a6f02f28e14b950c969a6fd71c5, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
