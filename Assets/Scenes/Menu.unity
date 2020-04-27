@@ -210,7 +210,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 802123905}
-        m_MethodName: SetVolumen
+        m_MethodName: SetVolumenEfectos
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -410,9 +410,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   vidas: 3
   "tama\xF1oColeccionables": 3
-  puntuacionPorMuerte: 0
-  puntuacionPorEnemigo: 0
-  puntuacionPorColeccionable: 0
+  puntuacionPorMuerte: 5
+  puntuacionPorEnemigo: 2
+  puntuacionPorColeccionable: 10
   sumarTiempoCheckPoint: 0
   timer: {fileID: 0}
 --- !u!4 &96844771
@@ -2473,6 +2473,12 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 733572788}
   m_CullTransparentMesh: 0
+--- !u!82 &746073821 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 607795091398813115, guid: bc3e13d79e4e195499451fa3de519085,
+    type: 3}
+  m_PrefabInstance: {fileID: 8979246379159281787}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &754077274
 GameObject:
   m_ObjectHideFlags: 0
@@ -3469,7 +3475,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 802123905}
-        m_MethodName: SetVolumen
+        m_MethodName: SetVolumenGeneral
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -6686,3 +6692,77 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2085014484}
   m_CullTransparentMesh: 0
+--- !u!1001 &8979246379159281787
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 8979246378428944032, guid: bc3e13d79e4e195499451fa3de519085,
+        type: 3}
+      propertyPath: m_Name
+      value: AudioManager
+      objectReference: {fileID: 0}
+    - target: {fileID: 8979246378428944039, guid: bc3e13d79e4e195499451fa3de519085,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8979246378428944039, guid: bc3e13d79e4e195499451fa3de519085,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8979246378428944039, guid: bc3e13d79e4e195499451fa3de519085,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8979246378428944039, guid: bc3e13d79e4e195499451fa3de519085,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8979246378428944039, guid: bc3e13d79e4e195499451fa3de519085,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8979246378428944039, guid: bc3e13d79e4e195499451fa3de519085,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8979246378428944039, guid: bc3e13d79e4e195499451fa3de519085,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8979246378428944039, guid: bc3e13d79e4e195499451fa3de519085,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 8979246378428944039, guid: bc3e13d79e4e195499451fa3de519085,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8979246378428944039, guid: bc3e13d79e4e195499451fa3de519085,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8979246378428944039, guid: bc3e13d79e4e195499451fa3de519085,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 962759424677633812, guid: bc3e13d79e4e195499451fa3de519085,
+        type: 3}
+      propertyPath: music
+      value: 
+      objectReference: {fileID: 746073821}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: bc3e13d79e4e195499451fa3de519085, type: 3}
