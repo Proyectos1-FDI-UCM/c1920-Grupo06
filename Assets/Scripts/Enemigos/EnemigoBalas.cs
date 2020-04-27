@@ -15,8 +15,12 @@ public class EnemigoBalas : MonoBehaviour
     Sprite ori;
     [SerializeField] Sprite disparo;
 
+    AudioSource aud;
+
     void Start()
     {
+        aud = GetComponent<AudioSource>();
+
         //guardamos la posición del enemigo
         posEnemigo = transform.position;
         sr = GetComponent<SpriteRenderer>();
@@ -43,6 +47,7 @@ public class EnemigoBalas : MonoBehaviour
         {
             if (!control) //si se puede disparar
             {
+                aud.Play();
                 sr.sprite = disparo;
                 Invoke("FinAnimacion", 0.5f);
                 tiempo = Time.time; //actualizamos el tiempo

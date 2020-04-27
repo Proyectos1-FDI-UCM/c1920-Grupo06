@@ -829,11 +829,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 714981087}
     m_Modifications:
-    - target: {fileID: 511063307627476889, guid: 2d109fa60d25f1145814442782e250d9,
-        type: 3}
-      propertyPath: m_Name
-      value: ObstaculoElectrico
-      objectReference: {fileID: 0}
     - target: {fileID: 511063307627476887, guid: 2d109fa60d25f1145814442782e250d9,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -898,6 +893,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.y
       value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 511063307627476889, guid: 2d109fa60d25f1145814442782e250d9,
+        type: 3}
+      propertyPath: m_Name
+      value: ObstaculoElectrico
       objectReference: {fileID: 0}
     - target: {fileID: 7873564919343303086, guid: 2d109fa60d25f1145814442782e250d9,
         type: 3}
@@ -3895,6 +3895,10 @@ PrefabInstance:
       propertyPath: _estadisticas
       value: 
       objectReference: {fileID: 1776957449}
+    - target: {fileID: 898946494, guid: 8733d96370d667b438b0a1d50270b180, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: d76624a56df22794f9e86766419797ae, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8733d96370d667b438b0a1d50270b180, type: 3}
 --- !u!1001 &387997645
@@ -10497,11 +10501,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 2600931320193750098, guid: 1484b714045adf84fba8f95ff25981ec,
-        type: 3}
-      propertyPath: m_Name
-      value: GameManager
-      objectReference: {fileID: 0}
     - target: {fileID: 2600931320193750099, guid: 1484b714045adf84fba8f95ff25981ec,
         type: 3}
       propertyPath: "tama\xF1oColeccionables"
@@ -10521,6 +10520,11 @@ PrefabInstance:
         type: 3}
       propertyPath: puntuacionPorColeccionable
       value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 2600931320193750098, guid: 1484b714045adf84fba8f95ff25981ec,
+        type: 3}
+      propertyPath: m_Name
+      value: GameManager
       objectReference: {fileID: 0}
     - target: {fileID: 2600931320193750100, guid: 1484b714045adf84fba8f95ff25981ec,
         type: 3}

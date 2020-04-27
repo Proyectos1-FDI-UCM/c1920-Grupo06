@@ -55,7 +55,7 @@ public class Dash : MonoBehaviour
     void Update()
     {
         if ((transform.position - posicion_inicial).magnitude > longitudDash) //si se ha alcanzado la distancia 
-            enabled = false; //Desactivamos el Dash
+            Invoke("ParaDash", 0.1f); //Desactivamos el Dash
     }
 
     void OnCollisionEnter2D(Collision2D collision) //en caso de colisionar con alguna entidad (plataformas)
@@ -63,7 +63,7 @@ public class Dash : MonoBehaviour
         jumpthrough = collision.gameObject.GetComponent<PlatformEffector2D>();
         if (jumpthrough == null)
         {
-            enabled = false; //lo desactivamos
+            Invoke("ParaDash", 0.1f);  //lo desactivamos
         }
     }
 
@@ -98,5 +98,10 @@ public class Dash : MonoBehaviour
     void CambiaEstadoRetardado()
     {
         estadoJugador.CambioEstado(estado.Defecto); //establecemos el estado a defecto ; 
+    }
+
+    void ParaDash()
+    {
+        enabled = false;
     }
 }
