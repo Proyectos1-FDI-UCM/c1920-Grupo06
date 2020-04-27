@@ -626,7 +626,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d19e3018a459946469c3058f78fdfa6c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  longitudDash: 7.6
+  longitudDash: 3.6
   velocidadDash: 50
 --- !u!114 &2925466069578243487
 MonoBehaviour:
@@ -762,7 +762,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 2092111068090835232, guid: 7abfb39722a098843baf8bcf94756b8d,
     type: 2}
-  m_audioClip: {fileID: 8300000, guid: b7fe2a6f02f28e14b950c969a6fd71c5, type: 3}
+  m_audioClip: {fileID: 8300000, guid: d76624a56df22794f9e86766419797ae, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
