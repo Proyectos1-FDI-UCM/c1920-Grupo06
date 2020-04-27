@@ -10437,6 +10437,15 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3538773065972377774, guid: c7e6f3b6d543adb40b30cad79a41a90a,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1590347204, guid: c7e6f3b6d543adb40b30cad79a41a90a, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_IntArgument
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c7e6f3b6d543adb40b30cad79a41a90a, type: 3}
 --- !u!1001 &988222893
@@ -10540,6 +10549,21 @@ PrefabInstance:
         type: 3}
       propertyPath: "tama\xF1oColeccionables"
       value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2600931320193750099, guid: 1484b714045adf84fba8f95ff25981ec,
+        type: 3}
+      propertyPath: puntuacionPorMuerte
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2600931320193750099, guid: 1484b714045adf84fba8f95ff25981ec,
+        type: 3}
+      propertyPath: puntuacionPorEnemigo
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2600931320193750099, guid: 1484b714045adf84fba8f95ff25981ec,
+        type: 3}
+      propertyPath: puntuacionPorColeccionable
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 2600931320193750100, guid: 1484b714045adf84fba8f95ff25981ec,
         type: 3}
@@ -69976,6 +70000,15 @@ Tilemap:
       m_ObjectToInstantiate: {fileID: 0}
       m_TileFlags: 1
       m_ColliderType: 1
+  - first: {x: 1, y: 168, z: 0}
+    second:
+      m_TileIndex: 0
+      m_TileSpriteIndex: 0
+      m_TileMatrixIndex: 0
+      m_TileColorIndex: 0
+      m_ObjectToInstantiate: {fileID: 0}
+      m_TileFlags: 1
+      m_ColliderType: 1
   - first: {x: 6, y: 168, z: 0}
     second:
       m_TileIndex: 0
@@ -82389,14 +82422,14 @@ Tilemap:
       m_ColliderType: 1
   m_AnimatedTiles: {}
   m_TileAssetArray:
-  - m_RefCount: 4634
+  - m_RefCount: 4635
     m_Data: {fileID: 11400000, guid: 7c788b39f208f2f429ec7dc38f84e42f, type: 2}
   - m_RefCount: 0
     m_Data: {fileID: 0}
   - m_RefCount: 148
     m_Data: {fileID: 11400000, guid: 88827ac49daaea04baa4c7c3f8f5ee7c, type: 2}
   m_TileSpriteArray:
-  - m_RefCount: 4634
+  - m_RefCount: 4635
     m_Data: {fileID: 4900222127897527362, guid: ec18c0d0a6094cf4b8ba6e6f7182fe78,
       type: 3}
   - m_RefCount: 0
@@ -82404,7 +82437,7 @@ Tilemap:
   - m_RefCount: 148
     m_Data: {fileID: 21300000, guid: 987d750a86754994789a330dd0612397, type: 3}
   m_TileMatrixArray:
-  - m_RefCount: 4782
+  - m_RefCount: 4783
     m_Data:
       e00: 1
       e01: 0
@@ -82423,7 +82456,7 @@ Tilemap:
       e32: 0
       e33: 1
   m_TileColorArray:
-  - m_RefCount: 4782
+  - m_RefCount: 4783
     m_Data: {r: 1, g: 1, b: 1, a: 1}
   m_AnimationFrameRate: 1
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -85504,16 +85537,6 @@ PrefabInstance:
       propertyPath: m_LocalScale.x
       value: 2
       objectReference: {fileID: 0}
-    - target: {fileID: 3887932413997493802, guid: 77627ef7422cd9643b73c77d165e921b,
-        type: 3}
-      propertyPath: m_SortingLayerID
-      value: -528019459
-      objectReference: {fileID: 0}
-    - target: {fileID: 3887932413997493802, guid: 77627ef7422cd9643b73c77d165e921b,
-        type: 3}
-      propertyPath: m_SortingLayer
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 845495048614475771, guid: 77627ef7422cd9643b73c77d165e921b,
         type: 3}
       propertyPath: m_LocalScale.y
@@ -85523,6 +85546,16 @@ PrefabInstance:
         type: 3}
       propertyPath: puedoReaparecer
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3887932413997493802, guid: 77627ef7422cd9643b73c77d165e921b,
+        type: 3}
+      propertyPath: m_SortingLayerID
+      value: -528019459
+      objectReference: {fileID: 0}
+    - target: {fileID: 3887932413997493802, guid: 77627ef7422cd9643b73c77d165e921b,
+        type: 3}
+      propertyPath: m_SortingLayer
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 77627ef7422cd9643b73c77d165e921b, type: 3}
@@ -89753,16 +89786,6 @@ PrefabInstance:
       propertyPath: m_LocalScale.x
       value: 2
       objectReference: {fileID: 0}
-    - target: {fileID: 3887932413997493802, guid: 77627ef7422cd9643b73c77d165e921b,
-        type: 3}
-      propertyPath: m_SortingLayerID
-      value: -528019459
-      objectReference: {fileID: 0}
-    - target: {fileID: 3887932413997493802, guid: 77627ef7422cd9643b73c77d165e921b,
-        type: 3}
-      propertyPath: m_SortingLayer
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 845495048614475771, guid: 77627ef7422cd9643b73c77d165e921b,
         type: 3}
       propertyPath: m_LocalScale.y
@@ -89772,6 +89795,16 @@ PrefabInstance:
         type: 3}
       propertyPath: puedoReaparecer
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3887932413997493802, guid: 77627ef7422cd9643b73c77d165e921b,
+        type: 3}
+      propertyPath: m_SortingLayerID
+      value: -528019459
+      objectReference: {fileID: 0}
+    - target: {fileID: 3887932413997493802, guid: 77627ef7422cd9643b73c77d165e921b,
+        type: 3}
+      propertyPath: m_SortingLayer
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 845495048614475770, guid: 77627ef7422cd9643b73c77d165e921b,
         type: 3}
@@ -91696,7 +91729,7 @@ PrefabInstance:
     - target: {fileID: 2409470738211645787, guid: 1c0d7633609ac0b4293a5ff649624015,
         type: 3}
       propertyPath: tiempoMaximoInicial
-      value: 200
+      value: 225
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1c0d7633609ac0b4293a5ff649624015, type: 3}
