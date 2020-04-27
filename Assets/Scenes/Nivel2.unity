@@ -4724,10 +4724,25 @@ PrefabInstance:
       propertyPath: _estadisticas
       value: 
       objectReference: {fileID: 1776957449}
+    - target: {fileID: 2925466069578243462, guid: 8733d96370d667b438b0a1d50270b180,
+        type: 3}
+      propertyPath: m_CollisionDetection
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2925466069578243481, guid: 8733d96370d667b438b0a1d50270b180,
+        type: 3}
+      propertyPath: longitudLinea
+      value: -50
+      objectReference: {fileID: 0}
     - target: {fileID: 2925466069578243463, guid: 8733d96370d667b438b0a1d50270b180,
         type: 3}
       propertyPath: velocidad_movimiento
       value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 2925466069578243482, guid: 8733d96370d667b438b0a1d50270b180,
+        type: 3}
+      propertyPath: velocidad_movimientoGancho
+      value: 59
       objectReference: {fileID: 0}
     - target: {fileID: 2925466069578243461, guid: 8733d96370d667b438b0a1d50270b180,
         type: 3}
@@ -4739,21 +4754,6 @@ PrefabInstance:
       propertyPath: fuerza_salto
       value: 10
       objectReference: {fileID: 0}
-    - target: {fileID: 2925466069578243462, guid: 8733d96370d667b438b0a1d50270b180,
-        type: 3}
-      propertyPath: m_CollisionDetection
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2925466069578243481, guid: 8733d96370d667b438b0a1d50270b180,
-        type: 3}
-      propertyPath: longitudLinea
-      value: -50
-      objectReference: {fileID: 0}
-    - target: {fileID: 2925466069578243482, guid: 8733d96370d667b438b0a1d50270b180,
-        type: 3}
-      propertyPath: velocidad_movimientoGancho
-      value: 59
-      objectReference: {fileID: 0}
     - target: {fileID: 2925466069578243474, guid: 8733d96370d667b438b0a1d50270b180,
         type: 3}
       propertyPath: velocidadDash
@@ -4762,7 +4762,7 @@ PrefabInstance:
     - target: {fileID: 2925466069578243474, guid: 8733d96370d667b438b0a1d50270b180,
         type: 3}
       propertyPath: longitudDash
-      value: 7.6
+      value: 3.6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8733d96370d667b438b0a1d50270b180, type: 3}
@@ -79767,24 +79767,24 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3538773066243538526, guid: c7e6f3b6d543adb40b30cad79a41a90a,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 3538773065972377774, guid: c7e6f3b6d543adb40b30cad79a41a90a,
         type: 3}
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1590347204, guid: c7e6f3b6d543adb40b30cad79a41a90a, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_IntArgument
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3538773066243538526, guid: c7e6f3b6d543adb40b30cad79a41a90a,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3538773065649681348, guid: c7e6f3b6d543adb40b30cad79a41a90a,
         type: 3}
       propertyPath: m_AnchoredPosition.x
       value: -374
-      objectReference: {fileID: 0}
-    - target: {fileID: 1590347204, guid: c7e6f3b6d543adb40b30cad79a41a90a, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_IntArgument
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3538773067078942271, guid: c7e6f3b6d543adb40b30cad79a41a90a,
         type: 3}
@@ -79852,11 +79852,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 2600931320193750098, guid: 1484b714045adf84fba8f95ff25981ec,
-        type: 3}
-      propertyPath: m_Name
-      value: GameManager
-      objectReference: {fileID: 0}
     - target: {fileID: 2600931320193750099, guid: 1484b714045adf84fba8f95ff25981ec,
         type: 3}
       propertyPath: "tama\xF1oColeccionables"
@@ -79876,6 +79871,11 @@ PrefabInstance:
         type: 3}
       propertyPath: puntuacionPorColeccionable
       value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 2600931320193750098, guid: 1484b714045adf84fba8f95ff25981ec,
+        type: 3}
+      propertyPath: m_Name
+      value: GameManager
       objectReference: {fileID: 0}
     - target: {fileID: 2600931320193750100, guid: 1484b714045adf84fba8f95ff25981ec,
         type: 3}
