@@ -3895,49 +3895,6 @@ PrefabInstance:
       propertyPath: _estadisticas
       value: 
       objectReference: {fileID: 1776957449}
-    - target: {fileID: 2925466069578243463, guid: 8733d96370d667b438b0a1d50270b180,
-        type: 3}
-      propertyPath: velocidad_movimiento
-      value: 15
-      objectReference: {fileID: 0}
-    - target: {fileID: 2925466069578243461, guid: 8733d96370d667b438b0a1d50270b180,
-        type: 3}
-      propertyPath: fuerza_impulso
-      value: -4
-      objectReference: {fileID: 0}
-    - target: {fileID: 2925466069578243460, guid: 8733d96370d667b438b0a1d50270b180,
-        type: 3}
-      propertyPath: fuerza_salto
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 2925466069578243457, guid: 8733d96370d667b438b0a1d50270b180,
-        type: 3}
-      propertyPath: m_Offset.y
-      value: -0.05
-      objectReference: {fileID: 0}
-    - target: {fileID: 2925466069578243457, guid: 8733d96370d667b438b0a1d50270b180,
-        type: 3}
-      propertyPath: m_Size.y
-      value: 3.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 2925466069578243457, guid: 8733d96370d667b438b0a1d50270b180,
-        type: 3}
-      propertyPath: m_Size.x
-      value: 2.45
-      objectReference: {fileID: 0}
-    - target: {fileID: 2925466069578243457, guid: 8733d96370d667b438b0a1d50270b180,
-        type: 3}
-      propertyPath: m_Offset.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 898946494, guid: 8733d96370d667b438b0a1d50270b180, type: 3}
-      propertyPath: m_audioClip
-      value: 
-      objectReference: {fileID: 8300000, guid: b7fe2a6f02f28e14b950c969a6fd71c5, type: 3}
-    - target: {fileID: 898946494, guid: 8733d96370d667b438b0a1d50270b180, type: 3}
-      propertyPath: m_PlayOnAwake
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8733d96370d667b438b0a1d50270b180, type: 3}
 --- !u!1001 &387997645
