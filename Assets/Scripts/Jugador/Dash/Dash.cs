@@ -15,6 +15,7 @@ public class Dash : MonoBehaviour
     Suelo suelo;
     PlatformEffector2D jumpthrough;
     AudioSource aud;
+    int cont = 0;
 
     void Awake()
     {
@@ -50,12 +51,14 @@ public class Dash : MonoBehaviour
             enabled = false; //Desactivamos el Dash
             Invoke("CambiaEstadoRetardado", 0.1f);
         }
+        Invoke("ParaDash", 4f);
     }
 
-    void Update()
+    private void FixedUpdate()
     {
         if ((transform.position - posicion_inicial).magnitude > longitudDash) //si se ha alcanzado la distancia 
-            Invoke("ParaDash", 0.1f); //Desactivamos el Dash
+            enabled = false;
+        if (rb.velocity == Vector2.zero) ParaDash();
     }
 
     void OnCollisionEnter2D(Collision2D collision) //en caso de colisionar con alguna entidad (plataformas)
@@ -63,7 +66,8 @@ public class Dash : MonoBehaviour
         jumpthrough = collision.gameObject.GetComponent<PlatformEffector2D>();
         if (jumpthrough == null)
         {
-            Invoke("ParaDash", 0.1f);  //lo desactivamos
+            //Invoke("ParaDash", 0.3f);  //lo desactivamos
+            ParaDash();
         }
     }
 
@@ -71,7 +75,8 @@ public class Dash : MonoBehaviour
     {
         if (!suelo.EnSuelo() && jumpthrough == null)
         {
-            enabled = false; //lo desactivamos
+            //Invoke("ParaDash", 0.3f);  //lo desactivamos
+            ParaDash();
         }
     }
 
@@ -83,6 +88,7 @@ public class Dash : MonoBehaviour
         {
             estadoJugador.CambioEstado(estado.Defecto); //cambiamos a estado por defecto
         }
+        cont = 0;
     }
 
     //métodos utilizados para el PowerUp "SaltoPotenciado"
@@ -100,8 +106,13 @@ public class Dash : MonoBehaviour
         estadoJugador.CambioEstado(estado.Defecto); //establecemos el estado a defecto ; 
     }
 
-    void ParaDash()
+    void ParaDash() //método utilizado para ignorar las primeras colisiones del Dash
     {
-        enabled = false;
+        if (cont > 5)
+        {
+            enabled = false;
+            cont = 0;
+        }
+        else cont++;
     }
 }
