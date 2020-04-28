@@ -16,7 +16,6 @@ public class Ajustes : MonoBehaviour
     {
         //guardamos todas las resoluciones
         resoluciones = Screen.resolutions;
-        resoluciones = new Resolution¨{ 5, 9, 3}
         //vaciamos las opciones del dropdown
         resolutionDropDown.ClearOptions();
         ////creamos la lista de resoluciones
