@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Audio;
+using UnityEngine.SceneManagement;
 
 //Control del comportamiento del menú de ajustes
 
@@ -18,17 +19,17 @@ public class Ajustes : MonoBehaviour
         resoluciones = new Resolution¨{ 5, 9, 3}
         //vaciamos las opciones del dropdown
         resolutionDropDown.ClearOptions();
-        //creamos la lista de resoluciones
+        ////creamos la lista de resoluciones
         List<string> opciones = new List<string>();
 
-        for (int i = resoluciones.Length - 1; i >= 0; i--) //guardamos las disponibles en el ordenador
-        {
-            string opcion = resoluciones[i].width + "x" + resoluciones[i].height;
-            opciones.Add(opcion);
-        }
+        
+        opciones.Add("1920x1080");
+        //opciones.Add("1280x720");
 
         //las establecemos como opciones del dropdown
         resolutionDropDown.AddOptions(opciones);
+
+
     }
 
     public void SetVolumenGeneral(float volumen) //metodo para establecer el volumen del audio desde el menú de pausa
@@ -46,9 +47,17 @@ public class Ajustes : MonoBehaviour
         Screen.fullScreen = isFullscreen;
     }
 
-    public void SetResolucion(int indice) //metodo para cambiar la resoluciondesde el mení
+    public void SetResolucion(int indice) //metodo para cambiar la resoluciondesde el menú
     {
-        Resolution resolucion = resoluciones[indice]; //obtenemos el índice de la resolucion
-        Screen.SetResolution(resolucion.width, resolucion.height, Screen.fullScreen); //la establecemos
+        //Resolution resolucion = resoluciones[indice]; //obtenemos el índice de la resolucion
+        //Screen.SetResolution(resolucion.width, resolucion.height, Screen.fullScreen); //la establecemos
+        for (int i = 0; i < resoluciones.Length; i++) //guardamos las disponibles en el ordenador
+        {
+            string opcion = resoluciones[i].width + "x" + resoluciones[i].height;
+            if (opcion == resolutionDropDown.options[indice].text)
+            {
+                Screen.SetResolution(resoluciones[i].width, resoluciones[i].height, Screen.fullScreen); //la establecemos
+            }
+        }
     }
 }
