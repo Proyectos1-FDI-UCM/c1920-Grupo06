@@ -15,6 +15,7 @@ public class Ajustes : MonoBehaviour
     {
         //guardamos todas las resoluciones
         resoluciones = Screen.resolutions;
+        resoluciones = new Resolution¨{ 5, 9, 3}
         //vaciamos las opciones del dropdown
         resolutionDropDown.ClearOptions();
         //creamos la lista de resoluciones
@@ -50,5 +51,4 @@ public class Ajustes : MonoBehaviour
         Resolution resolucion = resoluciones[indice]; //obtenemos el índice de la resolucion
         Screen.SetResolution(resolucion.width, resolucion.height, Screen.fullScreen); //la establecemos
     }
-
 }
