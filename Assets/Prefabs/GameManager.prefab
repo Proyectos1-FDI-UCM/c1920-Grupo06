@@ -44,5 +44,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   vidas: 3
-  timer: 100
+  "tama\xF1oColeccionables": 5
+  puntuacionPorMuerte: 5
+  puntuacionPorEnemigo: 2
+  puntuacionPorColeccionable: 10
   sumarTiempoCheckPoint: 0
+  timer: {fileID: 0}
