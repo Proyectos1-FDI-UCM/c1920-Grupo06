@@ -626,7 +626,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d19e3018a459946469c3058f78fdfa6c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  longitudDash: 3.6
+  longitudDash: 6
   velocidadDash: 50
 --- !u!114 &2925466069578243487
 MonoBehaviour:
