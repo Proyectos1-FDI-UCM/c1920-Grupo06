@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 9058557570483623031}
   - component: {fileID: 4897962252944360499}
   - component: {fileID: 2349796296898226802}
+  - component: {fileID: 5039276873579121983}
   m_Layer: 8
   m_Name: PlataformaMovil
   m_TagString: Untagged
@@ -28,8 +29,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9058557570483623030}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 38.02, y: -12.27, z: 36.090466}
-  m_LocalScale: {x: 5.1, y: 1, z: 1}
+  m_LocalPosition: {x: 38.02, y: -12.27, z: 0}
+  m_LocalScale: {x: 8, y: 8, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -72,8 +73,9 @@ SpriteRenderer:
   m_SortingLayerID: -347659349
   m_SortingLayer: 2
   m_SortingOrder: 2
-  m_Sprite: {fileID: 21300000, guid: a0efaa957d0fc8b41ae185b304e43f21, type: 3}
-  m_Color: {r: 0.58431375, g: 0.04313724, b: 0.35425583, a: 1}
+  m_Sprite: {fileID: -5168244252968093518, guid: 60b78a2b5df5d8548af13966ba5a744b,
+    type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -100,7 +102,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
+    oldSize: {x: 0.5, y: 0.140625}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -146,3 +148,22 @@ MonoBehaviour:
   puntoA: {fileID: 0}
   puntoB: {fileID: 0}
   diagonal: 0
+--- !u!95 &5039276873579121983
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9058557570483623030}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: ebe22f4023de3e34a95ff92e3f7a5451, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
