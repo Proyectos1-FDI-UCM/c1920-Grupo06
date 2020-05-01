@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: -4085556292283049309}
   - component: {fileID: -2943117597278203324}
   - component: {fileID: 601068365}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: EnemigoVolador
   m_TagString: Untagged
   m_Icon: {fileID: 0}
