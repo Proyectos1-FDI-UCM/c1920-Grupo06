@@ -14,9 +14,9 @@ public class MenuController : MonoBehaviour
     void Awake() //obtenemos referencia a las imagenes
     {
         jugarImagen = jugar.gameObject.GetComponent<Image>();
-        estadisticasImagen = jugar.gameObject.GetComponent<Image>();
-        opcionesImagen = jugar.gameObject.GetComponent<Image>();
-        salirImagen = jugar.gameObject.GetComponent<Image>();
+        estadisticasImagen = estadisticas.gameObject.GetComponent<Image>();
+        opcionesImagen = opciones.gameObject.GetComponent<Image>();
+        salirImagen = salir.gameObject.GetComponent<Image>();
     }
 
     //metodo para activar los botones
@@ -42,6 +42,6 @@ public class MenuController : MonoBehaviour
         opciones.enabled = false;
         opcionesImagen.enabled = false;
         salir.enabled = false;
-        salirImagen.enabled = true;
+        salirImagen.enabled = false;
     }
 }
