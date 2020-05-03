@@ -4,8 +4,8 @@
 public class Lerp : MonoBehaviour
 {
     //Referencias para saber como hacer el movimiento
-    [SerializeField] RectTransform rectTransform;
-    [SerializeField] string direccion;
+    [SerializeField] RectTransform rectTransform = null;
+    [SerializeField] string direccion = "";
     //Velocidad de movimiento en unidades por segundo
     [SerializeField] float velocidad = 200.0F;
     //Transforms de puntos hacia los que se hacen los Lerp
