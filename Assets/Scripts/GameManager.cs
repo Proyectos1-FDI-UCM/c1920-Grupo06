@@ -23,7 +23,7 @@ public class GameManager : MonoBehaviour
 
     //variables de tiempo
     [SerializeField] bool sumarTiempoCheckPoint = false; //booleano para si añadimos el añadir tiempo al llegar al checkpoint
-    [SerializeField] Timer timer;
+    [SerializeField] Timer timer = null;
     private void Awake() //singleton
     {
         if (instance == null) //si no hay instancia

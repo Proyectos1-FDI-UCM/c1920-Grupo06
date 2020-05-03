@@ -15,7 +15,7 @@ public class UIManager : MonoBehaviour
         coleccionablesRecog = null, puntos = null;
     //slider del progreso en el nivel
     [SerializeField] Slider progress = null;
-    [SerializeField] Transform finalNivel;
+    [SerializeField] Transform finalNivel = null;
 
     void Awake()
     {

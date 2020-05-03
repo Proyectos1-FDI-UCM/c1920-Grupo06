@@ -3,10 +3,10 @@
 public class MenuManager : MonoBehaviour
 {
     //Referencias a los script Lerp que producen el movimiento
-    [SerializeField] Lerp lerpDerecha;
-    [SerializeField] Lerp lerpOrigen;
-    [SerializeField] Lerp lerpArriba;
-    [SerializeField] Lerp lerpIzquierda;
+    [SerializeField] Lerp lerpDerecha = null;
+    [SerializeField] Lerp lerpOrigen = null;
+    [SerializeField] Lerp lerpArriba = null;
+    [SerializeField] Lerp lerpIzquierda = null;
 
     public void LerpDerecha()
     {

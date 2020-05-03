@@ -13,7 +13,7 @@ public class EnemigoBalas : MonoBehaviour
     float tiempo;
     SpriteRenderer sr;
     Sprite ori;
-    [SerializeField] Sprite disparo;
+    [SerializeField] Sprite disparo = null;
 
     AudioSource aud;
 

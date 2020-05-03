@@ -8,8 +8,8 @@ using UnityEngine.SceneManagement;
 public class Ajustes : MonoBehaviour
 {
     //mix del audio y dropdown de resoluciones
-    [SerializeField] AudioMixer audioMixer;
-    [SerializeField] TMPro.TMP_Dropdown resolutionDropDown;
+    [SerializeField] AudioMixer audioMixer = null;
+    [SerializeField] TMPro.TMP_Dropdown resolutionDropDown = null;
     Resolution[] resoluciones;
 
     void Start()

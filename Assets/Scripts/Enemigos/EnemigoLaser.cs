@@ -8,7 +8,7 @@ public class EnemigoLaser : MonoBehaviour
     [SerializeField] float cadencia = 5f, tiempoApunt = 2f, tiempoDisparo = 1f;
     [SerializeField] Transform player = null; //referencia al jugador
     [SerializeField] float anchura_inicial = 0, anchura_final = 0; //anchos del laser
-    [SerializeField] Sprite s1, s2, s3, s4;
+    [SerializeField] Sprite s1 = null, s2 = null, s3 = null, s4 = null;
     SpriteRenderer sr;
     LineRenderer laser;
     LayerMask mask, mask1;
