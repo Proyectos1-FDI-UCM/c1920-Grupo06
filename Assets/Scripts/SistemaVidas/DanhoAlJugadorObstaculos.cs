@@ -10,7 +10,7 @@ public class DanhoAlJugadorObstaculos : MonoBehaviour
 
         if (vida != null) //si detecta al jugador
         {
-            vida.EliminaVidaJugador(); //llamamos al metodo de quitar vida del jugador    
+            vida.EliminaVidaObstaculos(); //llamamos al metodo de quitar vida del jugador    
         }
     }
 }

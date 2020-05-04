@@ -12,7 +12,24 @@ public class VidaJugador : MonoBehaviour
         Estados estados = GetComponent<Estados>();
 
         //si el jugador no es invulnerable, y no está moviendose con el dash/gancho
-        if (estados != null && !invulnerable && estados.Estado() != estado.MovimientoGancho && estados.Estado() != estado.Dash)
+        if (estados != null && !invulnerable && estados.Estado() != estado.Dash)
+        {
+            if (GameManager.instance != null) //si hay GM
+            {
+                GameManager.instance.EliminaVidaJugador(); //quita una vida
+
+                if (transform.position != GameManager.instance.CheckPoint()) //si no ha muerto
+                {
+                    invulnerable = true; //lo hacemos invulnerable
+                    Invoke("HacerVulnerable", tiempoInvulnerable); //en 'x' tiempo, volverá a ser vulnerable
+                }
+            }
+        }
+    }
+
+    public void EliminaVidaObstaculos()
+    {
+        if (!invulnerable)
         {
             if (GameManager.instance != null) //si hay GM
             {
