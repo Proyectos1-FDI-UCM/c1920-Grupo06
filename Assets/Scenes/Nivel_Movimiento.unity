@@ -189,12 +189,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 256a51c96375e16438ed5c888ff95079, type: 3}
---- !u!4 &25816212 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 4489940025756265457, guid: fd46d3b264479d54991389d858ce8332,
-    type: 3}
-  m_PrefabInstance: {fileID: 2044798917}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &38462029
 GameObject:
   m_ObjectHideFlags: 0
@@ -332,11 +326,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 261543204}
     m_Modifications:
-    - target: {fileID: 4489940025756265462, guid: fd46d3b264479d54991389d858ce8332,
-        type: 3}
-      propertyPath: m_Name
-      value: PlataformaTiempo (11)
-      objectReference: {fileID: 0}
     - target: {fileID: 4489940025756265457, guid: fd46d3b264479d54991389d858ce8332,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -392,17 +381,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4489940025756265462, guid: fd46d3b264479d54991389d858ce8332,
+        type: 3}
+      propertyPath: m_Name
+      value: PlataformaTiempo (11)
+      objectReference: {fileID: 0}
     - target: {fileID: 2015113069, guid: fd46d3b264479d54991389d858ce8332, type: 3}
       propertyPath: TiempoDesaparicion
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fd46d3b264479d54991389d858ce8332, type: 3}
---- !u!4 &105834002 stripped
+--- !u!4 &103603728 stripped
 Transform:
-  m_CorrespondingSourceObject: {fileID: 4489940025756265457, guid: fd46d3b264479d54991389d858ce8332,
-    type: 3}
-  m_PrefabInstance: {fileID: 1379424745}
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 103603727}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &147279719
 PrefabInstance:
@@ -411,11 +404,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1936228083}
     m_Modifications:
-    - target: {fileID: 4489940025756265462, guid: fd46d3b264479d54991389d858ce8332,
-        type: 3}
-      propertyPath: m_Name
-      value: PlataformaTiempo (12)
-      objectReference: {fileID: 0}
     - target: {fileID: 4489940025756265457, guid: fd46d3b264479d54991389d858ce8332,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -471,12 +459,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4489940025756265462, guid: fd46d3b264479d54991389d858ce8332,
+        type: 3}
+      propertyPath: m_Name
+      value: PlataformaTiempo (12)
+      objectReference: {fileID: 0}
     - target: {fileID: 2015113069, guid: fd46d3b264479d54991389d858ce8332, type: 3}
       propertyPath: TiempoDesaparicion
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fd46d3b264479d54991389d858ce8332, type: 3}
+--- !u!4 &147279720 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 147279719}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &150255999
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -484,11 +482,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1936228083}
     m_Modifications:
-    - target: {fileID: 4489940025756265462, guid: fd46d3b264479d54991389d858ce8332,
-        type: 3}
-      propertyPath: m_Name
-      value: PlataformaTiempo (6)
-      objectReference: {fileID: 0}
     - target: {fileID: 4489940025756265457, guid: fd46d3b264479d54991389d858ce8332,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -544,12 +537,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4489940025756265462, guid: fd46d3b264479d54991389d858ce8332,
+        type: 3}
+      propertyPath: m_Name
+      value: PlataformaTiempo (6)
+      objectReference: {fileID: 0}
     - target: {fileID: 2015113069, guid: fd46d3b264479d54991389d858ce8332, type: 3}
       propertyPath: TiempoDesaparicion
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fd46d3b264479d54991389d858ce8332, type: 3}
+--- !u!4 &150256000 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 150255999}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &156739146
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -557,11 +560,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1936228083}
     m_Modifications:
-    - target: {fileID: 4489940025756265462, guid: fd46d3b264479d54991389d858ce8332,
-        type: 3}
-      propertyPath: m_Name
-      value: PlataformaTiempo (3)
-      objectReference: {fileID: 0}
     - target: {fileID: 4489940025756265457, guid: fd46d3b264479d54991389d858ce8332,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -617,12 +615,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4489940025756265462, guid: fd46d3b264479d54991389d858ce8332,
+        type: 3}
+      propertyPath: m_Name
+      value: PlataformaTiempo (3)
+      objectReference: {fileID: 0}
     - target: {fileID: 2015113069, guid: fd46d3b264479d54991389d858ce8332, type: 3}
       propertyPath: TiempoDesaparicion
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fd46d3b264479d54991389d858ce8332, type: 3}
+--- !u!4 &156739147 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 156739146}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &179426888
 GameObject:
   m_ObjectHideFlags: 0
@@ -895,6 +903,85 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 211889791}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &221358825
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 8123230228992143189, guid: 957d1bc05faa5ce43a85f4198d9581e3,
+        type: 3}
+      propertyPath: m_Name
+      value: ObstaculoPinchos
+      objectReference: {fileID: 0}
+    - target: {fileID: 8123230228992143195, guid: 957d1bc05faa5ce43a85f4198d9581e3,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 8.102633
+      objectReference: {fileID: 0}
+    - target: {fileID: 8123230228992143195, guid: 957d1bc05faa5ce43a85f4198d9581e3,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -7.1317077
+      objectReference: {fileID: 0}
+    - target: {fileID: 8123230228992143195, guid: 957d1bc05faa5ce43a85f4198d9581e3,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 11.594541
+      objectReference: {fileID: 0}
+    - target: {fileID: 8123230228992143195, guid: 957d1bc05faa5ce43a85f4198d9581e3,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8123230228992143195, guid: 957d1bc05faa5ce43a85f4198d9581e3,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8123230228992143195, guid: 957d1bc05faa5ce43a85f4198d9581e3,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8123230228992143195, guid: 957d1bc05faa5ce43a85f4198d9581e3,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8123230228992143195, guid: 957d1bc05faa5ce43a85f4198d9581e3,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8123230228992143195, guid: 957d1bc05faa5ce43a85f4198d9581e3,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8123230228992143195, guid: 957d1bc05faa5ce43a85f4198d9581e3,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8123230228992143195, guid: 957d1bc05faa5ce43a85f4198d9581e3,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8123230228992143195, guid: 957d1bc05faa5ce43a85f4198d9581e3,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8123230228992143195, guid: 957d1bc05faa5ce43a85f4198d9581e3,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 3
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 957d1bc05faa5ce43a85f4198d9581e3, type: 3}
 --- !u!114 &223983884 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 4767548257722236570, guid: e79883e46c370fe438841fdef05b43a9,
@@ -1284,20 +1371,20 @@ Transform:
   m_LocalPosition: {x: -5.6274, y: 13.494751, z: -110.41797}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 1685634407}
-  - {fileID: 918804558}
-  - {fileID: 1351435986}
-  - {fileID: 713316111}
-  - {fileID: 1437867194}
-  - {fileID: 1654896119}
-  - {fileID: 1872486629}
-  - {fileID: 618757608}
-  - {fileID: 105834002}
-  - {fileID: 1424511275}
-  - {fileID: 378608828}
-  - {fileID: 928558101}
-  - {fileID: 25816212}
-  - {fileID: 1296292867}
+  - {fileID: 639738885}
+  - {fileID: 1597111740}
+  - {fileID: 1513444914}
+  - {fileID: 1134439182}
+  - {fileID: 1681326578}
+  - {fileID: 1844339326}
+  - {fileID: 1727242952}
+  - {fileID: 1697337342}
+  - {fileID: 1379424746}
+  - {fileID: 1550386465}
+  - {fileID: 103603728}
+  - {fileID: 1892327323}
+  - {fileID: 2044798918}
+  - {fileID: 805578512}
   - {fileID: 1317624355}
   - {fileID: 1971567509}
   m_Father: {fileID: 762774521}
@@ -1652,11 +1739,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1936228083}
     m_Modifications:
-    - target: {fileID: 4489940025756265462, guid: fd46d3b264479d54991389d858ce8332,
-        type: 3}
-      propertyPath: m_Name
-      value: PlataformaTiempo (2)
-      objectReference: {fileID: 0}
     - target: {fileID: 4489940025756265457, guid: fd46d3b264479d54991389d858ce8332,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1712,12 +1794,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4489940025756265462, guid: fd46d3b264479d54991389d858ce8332,
+        type: 3}
+      propertyPath: m_Name
+      value: PlataformaTiempo (2)
+      objectReference: {fileID: 0}
     - target: {fileID: 2015113069, guid: fd46d3b264479d54991389d858ce8332, type: 3}
       propertyPath: TiempoDesaparicion
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fd46d3b264479d54991389d858ce8332, type: 3}
+--- !u!4 &323201885 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 323201884}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &345150575
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2045,18 +2137,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 256a51c96375e16438ed5c888ff95079, type: 3}
---- !u!4 &378608828 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 4489940025756265457, guid: fd46d3b264479d54991389d858ce8332,
-    type: 3}
-  m_PrefabInstance: {fileID: 103603727}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &382041281 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 4489940025756265457, guid: fd46d3b264479d54991389d858ce8332,
-    type: 3}
-  m_PrefabInstance: {fileID: 147279719}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &391515710
 GameObject:
   m_ObjectHideFlags: 0
@@ -2811,11 +2891,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1936228083}
     m_Modifications:
-    - target: {fileID: 4489940025756265462, guid: fd46d3b264479d54991389d858ce8332,
-        type: 3}
-      propertyPath: m_Name
-      value: PlataformaTiempo (4)
-      objectReference: {fileID: 0}
     - target: {fileID: 4489940025756265457, guid: fd46d3b264479d54991389d858ce8332,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2871,12 +2946,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4489940025756265462, guid: fd46d3b264479d54991389d858ce8332,
+        type: 3}
+      propertyPath: m_Name
+      value: PlataformaTiempo (4)
+      objectReference: {fileID: 0}
     - target: {fileID: 2015113069, guid: fd46d3b264479d54991389d858ce8332, type: 3}
       propertyPath: TiempoDesaparicion
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fd46d3b264479d54991389d858ce8332, type: 3}
+--- !u!4 &556428860 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 556428859}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &567983142
 GameObject:
   m_ObjectHideFlags: 0
@@ -3340,12 +3425,6 @@ Transform:
   m_Father: {fileID: 2002343650}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!4 &618757608 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 4489940025756265457, guid: fd46d3b264479d54991389d858ce8332,
-    type: 3}
-  m_PrefabInstance: {fileID: 1697337341}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &639738884
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3353,11 +3432,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 261543204}
     m_Modifications:
-    - target: {fileID: 4489940025756265462, guid: fd46d3b264479d54991389d858ce8332,
-        type: 3}
-      propertyPath: m_Name
-      value: PlataformaTiempo (1)
-      objectReference: {fileID: 0}
     - target: {fileID: 4489940025756265457, guid: fd46d3b264479d54991389d858ce8332,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -3413,12 +3487,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4489940025756265462, guid: fd46d3b264479d54991389d858ce8332,
+        type: 3}
+      propertyPath: m_Name
+      value: PlataformaTiempo (1)
+      objectReference: {fileID: 0}
     - target: {fileID: 2015113069, guid: fd46d3b264479d54991389d858ce8332, type: 3}
       propertyPath: TiempoDesaparicion
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fd46d3b264479d54991389d858ce8332, type: 3}
+--- !u!4 &639738885 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 639738884}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &650622765
 GameObject:
   m_ObjectHideFlags: 0
@@ -3882,12 +3966,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 256a51c96375e16438ed5c888ff95079, type: 3}
---- !u!4 &713316111 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 4489940025756265457, guid: fd46d3b264479d54991389d858ce8332,
-    type: 3}
-  m_PrefabInstance: {fileID: 1134439181}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &737217184 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1172478678848107692, guid: 0e70023e37f01ca4894b99fe4d3bb0ff,
@@ -4065,7 +4143,7 @@ Transform:
   - {fileID: 38462030}
   - {fileID: 1625951462}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &768423456
 GameObject:
@@ -4359,11 +4437,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 261543204}
     m_Modifications:
-    - target: {fileID: 4489940025756265462, guid: fd46d3b264479d54991389d858ce8332,
-        type: 3}
-      propertyPath: m_Name
-      value: PlataformaTiempo
-      objectReference: {fileID: 0}
     - target: {fileID: 4489940025756265457, guid: fd46d3b264479d54991389d858ce8332,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -4419,12 +4492,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4489940025756265462, guid: fd46d3b264479d54991389d858ce8332,
+        type: 3}
+      propertyPath: m_Name
+      value: PlataformaTiempo
+      objectReference: {fileID: 0}
     - target: {fileID: 2015113069, guid: fd46d3b264479d54991389d858ce8332, type: 3}
       propertyPath: TiempoDesaparicion
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fd46d3b264479d54991389d858ce8332, type: 3}
+--- !u!4 &805578512 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 805578511}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &814217056 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1735417918687692608, guid: 3958d1455ed2ad84aa3eb0e4325508a3,
@@ -4884,11 +4967,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1936228083}
     m_Modifications:
-    - target: {fileID: 4489940025756265462, guid: fd46d3b264479d54991389d858ce8332,
-        type: 3}
-      propertyPath: m_Name
-      value: PlataformaTiempo (8)
-      objectReference: {fileID: 0}
     - target: {fileID: 4489940025756265457, guid: fd46d3b264479d54991389d858ce8332,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -4944,12 +5022,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4489940025756265462, guid: fd46d3b264479d54991389d858ce8332,
+        type: 3}
+      propertyPath: m_Name
+      value: PlataformaTiempo (8)
+      objectReference: {fileID: 0}
     - target: {fileID: 2015113069, guid: fd46d3b264479d54991389d858ce8332, type: 3}
       propertyPath: TiempoDesaparicion
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fd46d3b264479d54991389d858ce8332, type: 3}
+--- !u!4 &904694063 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 904694062}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &905163174 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8640107194889816687, guid: 256a51c96375e16438ed5c888ff95079,
@@ -5030,24 +5118,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3884677566483886054, guid: c33b0923cc4789a4e9f5fff1abaa9332,
     type: 3}
   m_PrefabInstance: {fileID: 1982277334}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &918804558 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 4489940025756265457, guid: fd46d3b264479d54991389d858ce8332,
-    type: 3}
-  m_PrefabInstance: {fileID: 1597111739}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &924487533 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 4489940025756265457, guid: fd46d3b264479d54991389d858ce8332,
-    type: 3}
-  m_PrefabInstance: {fileID: 904694062}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &928558101 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 4489940025756265457, guid: fd46d3b264479d54991389d858ce8332,
-    type: 3}
-  m_PrefabInstance: {fileID: 1892327322}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &941610967
 GameObject:
@@ -5167,12 +5237,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 77627ef7422cd9643b73c77d165e921b, type: 3}
---- !u!4 &953639004 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 511063307627476887, guid: 2d109fa60d25f1145814442782e250d9,
-    type: 3}
-  m_PrefabInstance: {fileID: 1039590241}
-  m_PrefabAsset: {fileID: 0}
 --- !u!114 &957513561 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 3538773066243538523, guid: c7e6f3b6d543adb40b30cad79a41a90a,
@@ -5342,11 +5406,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1936228083}
     m_Modifications:
-    - target: {fileID: 4489940025756265462, guid: fd46d3b264479d54991389d858ce8332,
-        type: 3}
-      propertyPath: m_Name
-      value: PlataformaTiempo (11)
-      objectReference: {fileID: 0}
     - target: {fileID: 4489940025756265457, guid: fd46d3b264479d54991389d858ce8332,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -5402,12 +5461,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4489940025756265462, guid: fd46d3b264479d54991389d858ce8332,
+        type: 3}
+      propertyPath: m_Name
+      value: PlataformaTiempo (11)
+      objectReference: {fileID: 0}
     - target: {fileID: 2015113069, guid: fd46d3b264479d54991389d858ce8332, type: 3}
       propertyPath: TiempoDesaparicion
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fd46d3b264479d54991389d858ce8332, type: 3}
+--- !u!4 &979775185 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 979775184}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &987228285 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3884677566483886054, guid: c33b0923cc4789a4e9f5fff1abaa9332,
@@ -5662,12 +5731,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 957d1bc05faa5ce43a85f4198d9581e3, type: 3}
---- !u!4 &1033423405 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 4489940025756265457, guid: fd46d3b264479d54991389d858ce8332,
-    type: 3}
-  m_PrefabInstance: {fileID: 323201884}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1039590241
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5675,11 +5738,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1691025902}
     m_Modifications:
-    - target: {fileID: 511063307627476889, guid: 2d109fa60d25f1145814442782e250d9,
-        type: 3}
-      propertyPath: m_Name
-      value: ObstaculoElectrico
-      objectReference: {fileID: 0}
     - target: {fileID: 511063307627476887, guid: 2d109fa60d25f1145814442782e250d9,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -5740,6 +5798,11 @@ PrefabInstance:
       propertyPath: m_LocalScale.y
       value: 7.138174
       objectReference: {fileID: 0}
+    - target: {fileID: 511063307627476889, guid: 2d109fa60d25f1145814442782e250d9,
+        type: 3}
+      propertyPath: m_Name
+      value: ObstaculoElectrico
+      objectReference: {fileID: 0}
     - target: {fileID: 7873564919343303086, guid: 2d109fa60d25f1145814442782e250d9,
         type: 3}
       propertyPath: jugador
@@ -5752,6 +5815,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2d109fa60d25f1145814442782e250d9, type: 3}
+--- !u!4 &1039590242 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 1039590241}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1050889417
 GameObject:
   m_ObjectHideFlags: 0
@@ -5785,7 +5853,7 @@ Transform:
   - {fileID: 1525342435}
   - {fileID: 516309927}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1072906114
 PrefabInstance:
@@ -5874,12 +5942,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 2090683200}
   m_PrefabAsset: {fileID: 0}
---- !u!4 &1134186418 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 4489940025756265457, guid: fd46d3b264479d54991389d858ce8332,
-    type: 3}
-  m_PrefabInstance: {fileID: 1417455579}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1134439181
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5887,11 +5949,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 261543204}
     m_Modifications:
-    - target: {fileID: 4489940025756265462, guid: fd46d3b264479d54991389d858ce8332,
-        type: 3}
-      propertyPath: m_Name
-      value: PlataformaTiempo (4)
-      objectReference: {fileID: 0}
     - target: {fileID: 4489940025756265457, guid: fd46d3b264479d54991389d858ce8332,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -5947,12 +6004,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4489940025756265462, guid: fd46d3b264479d54991389d858ce8332,
+        type: 3}
+      propertyPath: m_Name
+      value: PlataformaTiempo (4)
+      objectReference: {fileID: 0}
     - target: {fileID: 2015113069, guid: fd46d3b264479d54991389d858ce8332, type: 3}
       propertyPath: TiempoDesaparicion
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fd46d3b264479d54991389d858ce8332, type: 3}
+--- !u!4 &1134439182 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 1134439181}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1140066211 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8640107194889816687, guid: 256a51c96375e16438ed5c888ff95079,
@@ -6042,7 +6109,7 @@ Transform:
   - {fileID: 1418913533}
   - {fileID: 322397117}
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1175636468
 GameObject:
@@ -6680,12 +6747,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 442631327}
   m_PrefabAsset: {fileID: 0}
---- !u!4 &1296292867 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 4489940025756265457, guid: fd46d3b264479d54991389d858ce8332,
-    type: 3}
-  m_PrefabInstance: {fileID: 805578511}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1312712584
 GameObject:
   m_ObjectHideFlags: 0
@@ -6724,11 +6785,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 261543204}
     m_Modifications:
-    - target: {fileID: 4489940025756265462, guid: fd46d3b264479d54991389d858ce8332,
-        type: 3}
-      propertyPath: m_Name
-      value: PlataformaTiempo (14)
-      objectReference: {fileID: 0}
     - target: {fileID: 4489940025756265457, guid: fd46d3b264479d54991389d858ce8332,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -6784,6 +6840,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4489940025756265462, guid: fd46d3b264479d54991389d858ce8332,
+        type: 3}
+      propertyPath: m_Name
+      value: PlataformaTiempo (14)
+      objectReference: {fileID: 0}
     - target: {fileID: 2015113069, guid: fd46d3b264479d54991389d858ce8332, type: 3}
       propertyPath: TiempoDesaparicion
       value: 1
@@ -6792,8 +6853,7 @@ PrefabInstance:
   m_SourcePrefab: {fileID: 100100000, guid: fd46d3b264479d54991389d858ce8332, type: 3}
 --- !u!4 &1317624355 stripped
 Transform:
-  m_CorrespondingSourceObject: {fileID: 4489940025756265457, guid: fd46d3b264479d54991389d858ce8332,
-    type: 3}
+  m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 1317624354}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1325105065
@@ -7087,12 +7147,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1250949202}
   m_PrefabAsset: {fileID: 0}
---- !u!4 &1351435986 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 4489940025756265457, guid: fd46d3b264479d54991389d858ce8332,
-    type: 3}
-  m_PrefabInstance: {fileID: 1513444913}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1355359484
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7276,11 +7330,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 261543204}
     m_Modifications:
-    - target: {fileID: 4489940025756265462, guid: fd46d3b264479d54991389d858ce8332,
-        type: 3}
-      propertyPath: m_Name
-      value: PlataformaTiempo (9)
-      objectReference: {fileID: 0}
     - target: {fileID: 4489940025756265457, guid: fd46d3b264479d54991389d858ce8332,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -7336,17 +7385,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4489940025756265462, guid: fd46d3b264479d54991389d858ce8332,
+        type: 3}
+      propertyPath: m_Name
+      value: PlataformaTiempo (9)
+      objectReference: {fileID: 0}
     - target: {fileID: 2015113069, guid: fd46d3b264479d54991389d858ce8332, type: 3}
       propertyPath: TiempoDesaparicion
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fd46d3b264479d54991389d858ce8332, type: 3}
---- !u!4 &1381230717 stripped
+--- !u!4 &1379424746 stripped
 Transform:
-  m_CorrespondingSourceObject: {fileID: 4489940025756265457, guid: fd46d3b264479d54991389d858ce8332,
-    type: 3}
-  m_PrefabInstance: {fileID: 1395625127}
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 1379424745}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1386531943 stripped
 GameObject:
@@ -7436,11 +7489,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2002343650}
     m_Modifications:
-    - target: {fileID: 4489940025756265462, guid: fd46d3b264479d54991389d858ce8332,
-        type: 3}
-      propertyPath: m_Name
-      value: PlataformaTiempo
-      objectReference: {fileID: 0}
     - target: {fileID: 4489940025756265457, guid: fd46d3b264479d54991389d858ce8332,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -7496,12 +7544,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4489940025756265462, guid: fd46d3b264479d54991389d858ce8332,
+        type: 3}
+      propertyPath: m_Name
+      value: PlataformaTiempo
+      objectReference: {fileID: 0}
     - target: {fileID: 2015113069, guid: fd46d3b264479d54991389d858ce8332, type: 3}
       propertyPath: TiempoDesaparicion
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fd46d3b264479d54991389d858ce8332, type: 3}
+--- !u!4 &1395625128 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 1395625127}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1395902449
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7632,11 +7690,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1936228083}
     m_Modifications:
-    - target: {fileID: 4489940025756265462, guid: fd46d3b264479d54991389d858ce8332,
-        type: 3}
-      propertyPath: m_Name
-      value: PlataformaTiempo (5)
-      objectReference: {fileID: 0}
     - target: {fileID: 4489940025756265457, guid: fd46d3b264479d54991389d858ce8332,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -7692,23 +7745,27 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4489940025756265462, guid: fd46d3b264479d54991389d858ce8332,
+        type: 3}
+      propertyPath: m_Name
+      value: PlataformaTiempo (5)
+      objectReference: {fileID: 0}
     - target: {fileID: 2015113069, guid: fd46d3b264479d54991389d858ce8332, type: 3}
       propertyPath: TiempoDesaparicion
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fd46d3b264479d54991389d858ce8332, type: 3}
+--- !u!4 &1417455580 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 1417455579}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1418913533 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8640107194889816687, guid: 256a51c96375e16438ed5c888ff95079,
     type: 3}
   m_PrefabInstance: {fileID: 857598}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &1424511275 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 4489940025756265457, guid: fd46d3b264479d54991389d858ce8332,
-    type: 3}
-  m_PrefabInstance: {fileID: 1550386464}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1429231444
 PrefabInstance:
@@ -7779,12 +7836,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 957d1bc05faa5ce43a85f4198d9581e3, type: 3}
---- !u!4 &1433685381 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 4489940025756265457, guid: fd46d3b264479d54991389d858ce8332,
-    type: 3}
-  m_PrefabInstance: {fileID: 1672017917}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1435583927
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7854,12 +7905,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 957d1bc05faa5ce43a85f4198d9581e3, type: 3}
---- !u!4 &1437867194 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 4489940025756265457, guid: fd46d3b264479d54991389d858ce8332,
-    type: 3}
-  m_PrefabInstance: {fileID: 1681326577}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1439732686 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8640107194889816687, guid: 256a51c96375e16438ed5c888ff95079,
@@ -7873,11 +7918,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1936228083}
     m_Modifications:
-    - target: {fileID: 4489940025756265462, guid: fd46d3b264479d54991389d858ce8332,
-        type: 3}
-      propertyPath: m_Name
-      value: PlataformaTiempo (1)
-      objectReference: {fileID: 0}
     - target: {fileID: 4489940025756265457, guid: fd46d3b264479d54991389d858ce8332,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -7933,12 +7973,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4489940025756265462, guid: fd46d3b264479d54991389d858ce8332,
+        type: 3}
+      propertyPath: m_Name
+      value: PlataformaTiempo (1)
+      objectReference: {fileID: 0}
     - target: {fileID: 2015113069, guid: fd46d3b264479d54991389d858ce8332, type: 3}
       propertyPath: TiempoDesaparicion
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fd46d3b264479d54991389d858ce8332, type: 3}
+--- !u!4 &1445000006 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 1445000005}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1448218635
 GameObject:
   m_ObjectHideFlags: 0
@@ -8119,18 +8169,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1435583927}
   m_PrefabAsset: {fileID: 0}
---- !u!4 &1502046994 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 4489940025756265457, guid: fd46d3b264479d54991389d858ce8332,
-    type: 3}
-  m_PrefabInstance: {fileID: 1965424419}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &1504759314 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 4489940025756265457, guid: fd46d3b264479d54991389d858ce8332,
-    type: 3}
-  m_PrefabInstance: {fileID: 150255999}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1513444913
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8138,11 +8176,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 261543204}
     m_Modifications:
-    - target: {fileID: 4489940025756265462, guid: fd46d3b264479d54991389d858ce8332,
-        type: 3}
-      propertyPath: m_Name
-      value: PlataformaTiempo (3)
-      objectReference: {fileID: 0}
     - target: {fileID: 4489940025756265457, guid: fd46d3b264479d54991389d858ce8332,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -8198,12 +8231,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4489940025756265462, guid: fd46d3b264479d54991389d858ce8332,
+        type: 3}
+      propertyPath: m_Name
+      value: PlataformaTiempo (3)
+      objectReference: {fileID: 0}
     - target: {fileID: 2015113069, guid: fd46d3b264479d54991389d858ce8332, type: 3}
       propertyPath: TiempoDesaparicion
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fd46d3b264479d54991389d858ce8332, type: 3}
+--- !u!4 &1513444914 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 1513444913}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1514129051
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8480,11 +8523,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 261543204}
     m_Modifications:
-    - target: {fileID: 4489940025756265462, guid: fd46d3b264479d54991389d858ce8332,
-        type: 3}
-      propertyPath: m_Name
-      value: PlataformaTiempo (10)
-      objectReference: {fileID: 0}
     - target: {fileID: 4489940025756265457, guid: fd46d3b264479d54991389d858ce8332,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -8540,12 +8578,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4489940025756265462, guid: fd46d3b264479d54991389d858ce8332,
+        type: 3}
+      propertyPath: m_Name
+      value: PlataformaTiempo (10)
+      objectReference: {fileID: 0}
     - target: {fileID: 2015113069, guid: fd46d3b264479d54991389d858ce8332, type: 3}
       propertyPath: TiempoDesaparicion
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fd46d3b264479d54991389d858ce8332, type: 3}
+--- !u!4 &1550386465 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 1550386464}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1556550359
 GameObject:
   m_ObjectHideFlags: 0
@@ -8732,12 +8780,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1204806279}
   m_PrefabAsset: {fileID: 0}
---- !u!4 &1596954382 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 4489940025756265457, guid: fd46d3b264479d54991389d858ce8332,
-    type: 3}
-  m_PrefabInstance: {fileID: 1445000005}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1597111739
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8745,11 +8787,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 261543204}
     m_Modifications:
-    - target: {fileID: 4489940025756265462, guid: fd46d3b264479d54991389d858ce8332,
-        type: 3}
-      propertyPath: m_Name
-      value: PlataformaTiempo (2)
-      objectReference: {fileID: 0}
     - target: {fileID: 4489940025756265457, guid: fd46d3b264479d54991389d858ce8332,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -8805,12 +8842,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4489940025756265462, guid: fd46d3b264479d54991389d858ce8332,
+        type: 3}
+      propertyPath: m_Name
+      value: PlataformaTiempo (2)
+      objectReference: {fileID: 0}
     - target: {fileID: 2015113069, guid: fd46d3b264479d54991389d858ce8332, type: 3}
       propertyPath: TiempoDesaparicion
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fd46d3b264479d54991389d858ce8332, type: 3}
+--- !u!4 &1597111740 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 1597111739}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1614890366
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8927,12 +8974,6 @@ Transform:
   m_Father: {fileID: 1842741287}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!4 &1654896119 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 4489940025756265457, guid: fd46d3b264479d54991389d858ce8332,
-    type: 3}
-  m_PrefabInstance: {fileID: 1844339325}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1667033330
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9009,11 +9050,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1936228083}
     m_Modifications:
-    - target: {fileID: 4489940025756265462, guid: fd46d3b264479d54991389d858ce8332,
-        type: 3}
-      propertyPath: m_Name
-      value: PlataformaTiempo (7)
-      objectReference: {fileID: 0}
     - target: {fileID: 4489940025756265457, guid: fd46d3b264479d54991389d858ce8332,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -9069,12 +9105,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4489940025756265462, guid: fd46d3b264479d54991389d858ce8332,
+        type: 3}
+      propertyPath: m_Name
+      value: PlataformaTiempo (7)
+      objectReference: {fileID: 0}
     - target: {fileID: 2015113069, guid: fd46d3b264479d54991389d858ce8332, type: 3}
       propertyPath: TiempoDesaparicion
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fd46d3b264479d54991389d858ce8332, type: 3}
+--- !u!4 &1672017918 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 1672017917}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1678204394
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9156,11 +9202,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 261543204}
     m_Modifications:
-    - target: {fileID: 4489940025756265462, guid: fd46d3b264479d54991389d858ce8332,
-        type: 3}
-      propertyPath: m_Name
-      value: PlataformaTiempo (5)
-      objectReference: {fileID: 0}
     - target: {fileID: 4489940025756265457, guid: fd46d3b264479d54991389d858ce8332,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -9216,17 +9257,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4489940025756265462, guid: fd46d3b264479d54991389d858ce8332,
+        type: 3}
+      propertyPath: m_Name
+      value: PlataformaTiempo (5)
+      objectReference: {fileID: 0}
     - target: {fileID: 2015113069, guid: fd46d3b264479d54991389d858ce8332, type: 3}
       propertyPath: TiempoDesaparicion
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fd46d3b264479d54991389d858ce8332, type: 3}
---- !u!4 &1685634407 stripped
+--- !u!4 &1681326578 stripped
 Transform:
-  m_CorrespondingSourceObject: {fileID: 4489940025756265457, guid: fd46d3b264479d54991389d858ce8332,
-    type: 3}
-  m_PrefabInstance: {fileID: 639738884}
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 1681326577}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1691025901
 GameObject:
@@ -9257,17 +9302,17 @@ Transform:
   m_Children:
   - {fileID: 2136898366}
   - {fileID: 918649623}
-  - {fileID: 953639004}
+  - {fileID: 1039590242}
   - {fileID: 1207828110}
   - {fileID: 1706704251}
   - {fileID: 510033719}
   - {fileID: 1312712585}
   - {fileID: 824125066}
-  - {fileID: 2131113991}
+  - {fileID: 2114003554}
   - {fileID: 1784272896}
   - {fileID: 1175636469}
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1697337341
 PrefabInstance:
@@ -9276,11 +9321,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 261543204}
     m_Modifications:
-    - target: {fileID: 4489940025756265462, guid: fd46d3b264479d54991389d858ce8332,
-        type: 3}
-      propertyPath: m_Name
-      value: PlataformaTiempo (8)
-      objectReference: {fileID: 0}
     - target: {fileID: 4489940025756265457, guid: fd46d3b264479d54991389d858ce8332,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -9336,12 +9376,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4489940025756265462, guid: fd46d3b264479d54991389d858ce8332,
+        type: 3}
+      propertyPath: m_Name
+      value: PlataformaTiempo (8)
+      objectReference: {fileID: 0}
     - target: {fileID: 2015113069, guid: fd46d3b264479d54991389d858ce8332, type: 3}
       propertyPath: TiempoDesaparicion
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fd46d3b264479d54991389d858ce8332, type: 3}
+--- !u!4 &1697337342 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 1697337341}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1706704250
 GameObject:
   m_ObjectHideFlags: 0
@@ -9373,12 +9423,6 @@ Transform:
   m_Father: {fileID: 1691025902}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!4 &1711100916 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 4489940025756265457, guid: fd46d3b264479d54991389d858ce8332,
-    type: 3}
-  m_PrefabInstance: {fileID: 979775184}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1727242951
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9386,11 +9430,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 261543204}
     m_Modifications:
-    - target: {fileID: 4489940025756265462, guid: fd46d3b264479d54991389d858ce8332,
-        type: 3}
-      propertyPath: m_Name
-      value: PlataformaTiempo (7)
-      objectReference: {fileID: 0}
     - target: {fileID: 4489940025756265457, guid: fd46d3b264479d54991389d858ce8332,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -9446,17 +9485,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4489940025756265462, guid: fd46d3b264479d54991389d858ce8332,
+        type: 3}
+      propertyPath: m_Name
+      value: PlataformaTiempo (7)
+      objectReference: {fileID: 0}
     - target: {fileID: 2015113069, guid: fd46d3b264479d54991389d858ce8332, type: 3}
       propertyPath: TiempoDesaparicion
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fd46d3b264479d54991389d858ce8332, type: 3}
---- !u!4 &1729243633 stripped
+--- !u!4 &1727242952 stripped
 Transform:
-  m_CorrespondingSourceObject: {fileID: 4489940025756265457, guid: fd46d3b264479d54991389d858ce8332,
-    type: 3}
-  m_PrefabInstance: {fileID: 1907978490}
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 1727242951}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1730605371 stripped
 GameObject:
@@ -9753,16 +9796,6 @@ PrefabInstance:
       propertyPath: m_PlayOnAwake
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2925466069578243457, guid: 8733d96370d667b438b0a1d50270b180,
-        type: 3}
-      propertyPath: m_Material
-      value: 
-      objectReference: {fileID: 6200000, guid: f7a05f0b54b157d4e81d0078a157bc50, type: 2}
-    - target: {fileID: 2925466069578243457, guid: 8733d96370d667b438b0a1d50270b180,
-        type: 3}
-      propertyPath: m_UsedByEffector
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 2925466069578243484, guid: 8733d96370d667b438b0a1d50270b180,
         type: 3}
       propertyPath: m_LocalPosition.y
@@ -9773,10 +9806,15 @@ PrefabInstance:
       propertyPath: m_LocalPosition.x
       value: -10.67
       objectReference: {fileID: 0}
-    - target: {fileID: 2925466069334632121, guid: 8733d96370d667b438b0a1d50270b180,
+    - target: {fileID: 2925466069578243457, guid: 8733d96370d667b438b0a1d50270b180,
         type: 3}
-      propertyPath: m_Layer
-      value: 9
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 6200000, guid: f7a05f0b54b157d4e81d0078a157bc50, type: 2}
+    - target: {fileID: 2925466069578243457, guid: 8733d96370d667b438b0a1d50270b180,
+        type: 3}
+      propertyPath: m_UsedByEffector
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2925466069578243482, guid: 8733d96370d667b438b0a1d50270b180,
         type: 3}
@@ -9832,6 +9870,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Enabled
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2925466069334632121, guid: 8733d96370d667b438b0a1d50270b180,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 2925466069334632123, guid: 8733d96370d667b438b0a1d50270b180,
         type: 3}
@@ -9911,7 +9954,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 17
+  m_RootOrder: 18
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1784272892
 GameObject:
@@ -10643,7 +10686,7 @@ Transform:
   - {fileID: 307065172}
   - {fileID: 1202610973}
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1844339325
 PrefabInstance:
@@ -10652,11 +10695,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 261543204}
     m_Modifications:
-    - target: {fileID: 4489940025756265462, guid: fd46d3b264479d54991389d858ce8332,
-        type: 3}
-      propertyPath: m_Name
-      value: PlataformaTiempo (6)
-      objectReference: {fileID: 0}
     - target: {fileID: 4489940025756265457, guid: fd46d3b264479d54991389d858ce8332,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -10712,12 +10750,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4489940025756265462, guid: fd46d3b264479d54991389d858ce8332,
+        type: 3}
+      propertyPath: m_Name
+      value: PlataformaTiempo (6)
+      objectReference: {fileID: 0}
     - target: {fileID: 2015113069, guid: fd46d3b264479d54991389d858ce8332, type: 3}
       propertyPath: TiempoDesaparicion
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fd46d3b264479d54991389d858ce8332, type: 3}
+--- !u!4 &1844339326 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 1844339325}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1845391188 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8640107194889816687, guid: 256a51c96375e16438ed5c888ff95079,
@@ -10756,12 +10804,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!4 &1872486629 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 4489940025756265457, guid: fd46d3b264479d54991389d858ce8332,
-    type: 3}
-  m_PrefabInstance: {fileID: 1727242951}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1890552357
 GameObject:
   m_ObjectHideFlags: 0
@@ -10874,11 +10916,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 261543204}
     m_Modifications:
-    - target: {fileID: 4489940025756265462, guid: fd46d3b264479d54991389d858ce8332,
-        type: 3}
-      propertyPath: m_Name
-      value: PlataformaTiempo (12)
-      objectReference: {fileID: 0}
     - target: {fileID: 4489940025756265457, guid: fd46d3b264479d54991389d858ce8332,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -10934,12 +10971,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4489940025756265462, guid: fd46d3b264479d54991389d858ce8332,
+        type: 3}
+      propertyPath: m_Name
+      value: PlataformaTiempo (12)
+      objectReference: {fileID: 0}
     - target: {fileID: 2015113069, guid: fd46d3b264479d54991389d858ce8332, type: 3}
       propertyPath: TiempoDesaparicion
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fd46d3b264479d54991389d858ce8332, type: 3}
+--- !u!4 &1892327323 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 1892327322}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1901306563
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11027,11 +11074,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1936228083}
     m_Modifications:
-    - target: {fileID: 4489940025756265462, guid: fd46d3b264479d54991389d858ce8332,
-        type: 3}
-      propertyPath: m_Name
-      value: PlataformaTiempo (9)
-      objectReference: {fileID: 0}
     - target: {fileID: 4489940025756265457, guid: fd46d3b264479d54991389d858ce8332,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -11087,12 +11129,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4489940025756265462, guid: fd46d3b264479d54991389d858ce8332,
+        type: 3}
+      propertyPath: m_Name
+      value: PlataformaTiempo (9)
+      objectReference: {fileID: 0}
     - target: {fileID: 2015113069, guid: fd46d3b264479d54991389d858ce8332, type: 3}
       propertyPath: TiempoDesaparicion
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fd46d3b264479d54991389d858ce8332, type: 3}
+--- !u!4 &1907978491 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 1907978490}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1914630469 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6242128900395211008, guid: 37198adcd2333434e99ea3353389c8c8,
@@ -11206,18 +11258,18 @@ Transform:
   m_LocalPosition: {x: 0.4120939, y: -190.85568, z: 283.41528}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 1504759314}
-  - {fileID: 1433685381}
-  - {fileID: 924487533}
-  - {fileID: 1729243633}
-  - {fileID: 1502046994}
-  - {fileID: 1711100916}
-  - {fileID: 382041281}
-  - {fileID: 1134186418}
-  - {fileID: 1596954382}
-  - {fileID: 1033423405}
-  - {fileID: 1969640082}
-  - {fileID: 2104830180}
+  - {fileID: 150256000}
+  - {fileID: 1672017918}
+  - {fileID: 904694063}
+  - {fileID: 1907978491}
+  - {fileID: 1965424420}
+  - {fileID: 979775185}
+  - {fileID: 147279720}
+  - {fileID: 1417455580}
+  - {fileID: 1445000006}
+  - {fileID: 323201885}
+  - {fileID: 156739147}
+  - {fileID: 556428860}
   m_Father: {fileID: 2002343650}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -11228,11 +11280,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1936228083}
     m_Modifications:
-    - target: {fileID: 4489940025756265462, guid: fd46d3b264479d54991389d858ce8332,
-        type: 3}
-      propertyPath: m_Name
-      value: PlataformaTiempo (10)
-      objectReference: {fileID: 0}
     - target: {fileID: 4489940025756265457, guid: fd46d3b264479d54991389d858ce8332,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -11288,12 +11335,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4489940025756265462, guid: fd46d3b264479d54991389d858ce8332,
+        type: 3}
+      propertyPath: m_Name
+      value: PlataformaTiempo (10)
+      objectReference: {fileID: 0}
     - target: {fileID: 2015113069, guid: fd46d3b264479d54991389d858ce8332, type: 3}
       propertyPath: TiempoDesaparicion
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fd46d3b264479d54991389d858ce8332, type: 3}
+--- !u!4 &1965424420 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 1965424419}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1969426228
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11369,12 +11426,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1969426228}
   m_PrefabAsset: {fileID: 0}
---- !u!4 &1969640082 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 4489940025756265457, guid: fd46d3b264479d54991389d858ce8332,
-    type: 3}
-  m_PrefabInstance: {fileID: 156739146}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1971567508
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11382,11 +11433,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 261543204}
     m_Modifications:
-    - target: {fileID: 4489940025756265462, guid: fd46d3b264479d54991389d858ce8332,
-        type: 3}
-      propertyPath: m_Name
-      value: PlataformaTiempo (15)
-      objectReference: {fileID: 0}
     - target: {fileID: 4489940025756265457, guid: fd46d3b264479d54991389d858ce8332,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -11442,6 +11488,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4489940025756265462, guid: fd46d3b264479d54991389d858ce8332,
+        type: 3}
+      propertyPath: m_Name
+      value: PlataformaTiempo (15)
+      objectReference: {fileID: 0}
     - target: {fileID: 2015113069, guid: fd46d3b264479d54991389d858ce8332, type: 3}
       propertyPath: TiempoDesaparicion
       value: 1
@@ -11450,8 +11501,7 @@ PrefabInstance:
   m_SourcePrefab: {fileID: 100100000, guid: fd46d3b264479d54991389d858ce8332, type: 3}
 --- !u!4 &1971567509 stripped
 Transform:
-  m_CorrespondingSourceObject: {fileID: 4489940025756265457, guid: fd46d3b264479d54991389d858ce8332,
-    type: 3}
+  m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 1971567508}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1982277334
@@ -11563,14 +11613,14 @@ Transform:
   m_Children:
   - {fileID: 1936228083}
   - {fileID: 615636778}
-  - {fileID: 1381230717}
+  - {fileID: 1395625128}
   - {fileID: 1527883274}
   - {fileID: 179426889}
   - {fileID: 652122195}
   - {fileID: 941610968}
   - {fileID: 1398849614}
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2037847664
 GameObject:
@@ -11702,11 +11752,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 261543204}
     m_Modifications:
-    - target: {fileID: 4489940025756265462, guid: fd46d3b264479d54991389d858ce8332,
-        type: 3}
-      propertyPath: m_Name
-      value: PlataformaTiempo (13)
-      objectReference: {fileID: 0}
     - target: {fileID: 4489940025756265457, guid: fd46d3b264479d54991389d858ce8332,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -11762,12 +11807,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4489940025756265462, guid: fd46d3b264479d54991389d858ce8332,
+        type: 3}
+      propertyPath: m_Name
+      value: PlataformaTiempo (13)
+      objectReference: {fileID: 0}
     - target: {fileID: 2015113069, guid: fd46d3b264479d54991389d858ce8332, type: 3}
       propertyPath: TiempoDesaparicion
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fd46d3b264479d54991389d858ce8332, type: 3}
+--- !u!4 &2044798918 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 2044798917}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2059342241
 GameObject:
   m_ObjectHideFlags: 0
@@ -12171,12 +12226,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 2091937031}
   m_PrefabAsset: {fileID: 0}
---- !u!4 &2104830180 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 4489940025756265457, guid: fd46d3b264479d54991389d858ce8332,
-    type: 3}
-  m_PrefabInstance: {fileID: 556428859}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2114003553
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12184,11 +12233,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1691025902}
     m_Modifications:
-    - target: {fileID: 511063307627476889, guid: 2d109fa60d25f1145814442782e250d9,
-        type: 3}
-      propertyPath: m_Name
-      value: ObstaculoElectrico (1)
-      objectReference: {fileID: 0}
     - target: {fileID: 511063307627476887, guid: 2d109fa60d25f1145814442782e250d9,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -12249,6 +12293,11 @@ PrefabInstance:
       propertyPath: m_LocalScale.y
       value: 10.261622
       objectReference: {fileID: 0}
+    - target: {fileID: 511063307627476889, guid: 2d109fa60d25f1145814442782e250d9,
+        type: 3}
+      propertyPath: m_Name
+      value: ObstaculoElectrico (1)
+      objectReference: {fileID: 0}
     - target: {fileID: 7873564919343303086, guid: 2d109fa60d25f1145814442782e250d9,
         type: 3}
       propertyPath: jugador
@@ -12261,10 +12310,9 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2d109fa60d25f1145814442782e250d9, type: 3}
---- !u!4 &2131113991 stripped
+--- !u!4 &2114003554 stripped
 Transform:
-  m_CorrespondingSourceObject: {fileID: 511063307627476887, guid: 2d109fa60d25f1145814442782e250d9,
-    type: 3}
+  m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 2114003553}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2132188816
