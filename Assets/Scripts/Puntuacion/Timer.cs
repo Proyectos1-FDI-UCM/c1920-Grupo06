@@ -14,6 +14,7 @@ public class Timer : MonoBehaviour
 
     [SerializeField] UIManager theUIManager = null; //Referencia del UI manager
     [SerializeField] float tiempoMaximoInicial = 100; //Valor inicial del tiempo al empezar el nivel
+    [SerializeField] AudioSource tics = null;
     float timer; //Variable que refleja el tiempo que lleva el jugador
     float tiempoInicio; //Cuenta desde cuando empezó a contar el tiempo
     float tiempoMaximo; //Tiempo maximo que se puede alcanzar si se activa la opción de sumar tiempo al pasar por CheckPoint
@@ -31,9 +32,10 @@ public class Timer : MonoBehaviour
     {
         timer = Time.time - tiempoInicio; //Tiempo actual - tiempo en el que empezó
 
+        if ((int)timer != tiempoRedondeado) tics.Play(); //si se cambia de segundo, activamos el tic del reloj
+
         tiempoRedondeado = (int)timer; //guardamos el tiempo redondeado
         theUIManager.Tiempo((int)tiempoMaximo - tiempoRedondeado); //lo enviamos a la interfaz
-
 
         if (tiempoRedondeado > tiempoMaximo - 1) //Si el tiempo que llevamos supera al máximo entonces se resetea el nivel
         {
