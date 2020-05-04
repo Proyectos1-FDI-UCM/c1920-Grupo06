@@ -91158,7 +91158,7 @@ PrefabInstance:
     - target: {fileID: 2409470738211645787, guid: 1c0d7633609ac0b4293a5ff649624015,
         type: 3}
       propertyPath: tiempoMaximoInicial
-      value: 225
+      value: 60
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1c0d7633609ac0b4293a5ff649624015, type: 3}

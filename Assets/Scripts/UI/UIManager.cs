@@ -99,15 +99,27 @@ public class UIManager : MonoBehaviour
     //APARTADO DEL TIEMPO
     public void Tiempo(int contador) //método para establecer el tiempo en pantalla
     {
-        //cambiamos el color del texto con respecto al tiempo que quede
-        if (contador < 10)
+        //cambiamos el color del texto con respecto al tiempo que quede, y aceleramos la musica acorde a esto
+        if (contador < 50)
         {
-            if (contador <= 7)
+            if (contador <= 20)
             {
-                if (contador <= 3) tiempo.color = new Color32(255, 0, 0, 255);
-                else tiempo.color = new Color32(255, 100, 100, 255);
+                if (contador <= 5)
+                {
+                    tiempo.color = new Color32(255, 0, 0, 255);
+                    AudioManager.instance.Acelerar(contador);
+                }
+                else
+                {
+                    tiempo.color = new Color32(255, 100, 100, 255);
+                    AudioManager.instance.Acelerar(contador);
+                }
             }
-            else tiempo.color = Color.yellow;
+            else
+            {
+                tiempo.color = Color.yellow;
+                AudioManager.instance.Acelerar(contador);
+            }
         }
         else tiempo.color = Color.white;
 
