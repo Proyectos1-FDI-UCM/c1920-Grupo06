@@ -104824,14 +104824,11 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0
       objectReference: {fileID: 0}
-<<<<<<< HEAD
     - target: {fileID: 2052505324464315954, guid: f326a2e336d01374f9b1a86c45f1190e,
         type: 3}
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
-=======
->>>>>>> refs/remotes/origin/master
     - target: {fileID: 2052505324184709098, guid: f326a2e336d01374f9b1a86c45f1190e,
         type: 3}
       propertyPath: m_AnchorMin.y
@@ -105067,7 +105064,6 @@ PrefabInstance:
       propertyPath: m_SizeDelta.y
       value: 29.78
       objectReference: {fileID: 0}
-<<<<<<< HEAD
     - target: {fileID: 2052505324790593172, guid: f326a2e336d01374f9b1a86c45f1190e,
         type: 3}
       propertyPath: m_textInfo.characterCount
@@ -105148,8 +105144,6 @@ PrefabInstance:
       propertyPath: m_SizeDelta.y
       value: 25
       objectReference: {fileID: 0}
-=======
->>>>>>> refs/remotes/origin/master
     - target: {fileID: 2052505325171447327, guid: f326a2e336d01374f9b1a86c45f1190e,
         type: 3}
       propertyPath: m_AnchorMin.y
@@ -105310,9 +105304,6 @@ PrefabInstance:
       propertyPath: m_AnchorMin.x
       value: 1
       objectReference: {fileID: 0}
-<<<<<<< HEAD
-    - target: {fileID: 2052505323864342778, guid: f326a2e336d01374f9b1a86c45f1190e,
-=======
     - target: {fileID: 2052505323865349818, guid: f326a2e336d01374f9b1a86c45f1190e,
         type: 3}
       propertyPath: m_AnchorMin.x
@@ -105364,39 +105355,26 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2052505325248589389, guid: f326a2e336d01374f9b1a86c45f1190e,
->>>>>>> refs/remotes/origin/master
         type: 3}
       propertyPath: m_AnchorMax.x
       value: 1
       objectReference: {fileID: 0}
-<<<<<<< HEAD
-    - target: {fileID: 2052505323864342778, guid: f326a2e336d01374f9b1a86c45f1190e,
-=======
     - target: {fileID: 2052505325248589389, guid: f326a2e336d01374f9b1a86c45f1190e,
         type: 3}
       propertyPath: m_textInfo.spaceCount
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2052505325248589389, guid: f326a2e336d01374f9b1a86c45f1190e,
->>>>>>> refs/remotes/origin/master
         type: 3}
       propertyPath: m_AnchorMax.y
       value: 1
       objectReference: {fileID: 0}
-<<<<<<< HEAD
-    - target: {fileID: 2052505323662615625, guid: f326a2e336d01374f9b1a86c45f1190e,
-=======
     - target: {fileID: 2052505325248589389, guid: f326a2e336d01374f9b1a86c45f1190e,
->>>>>>> refs/remotes/origin/master
         type: 3}
       propertyPath: m_AnchorMax.x
       value: 1
       objectReference: {fileID: 0}
-<<<<<<< HEAD
-    - target: {fileID: 2052505323662615625, guid: f326a2e336d01374f9b1a86c45f1190e,
-=======
     - target: {fileID: 2052505325248589389, guid: f326a2e336d01374f9b1a86c45f1190e,
->>>>>>> refs/remotes/origin/master
         type: 3}
       propertyPath: m_AnchorMax.y
       value: 1
@@ -105421,7 +105399,6 @@ PrefabInstance:
       propertyPath: m_textInfo.pageCount
       value: 0
       objectReference: {fileID: 0}
-<<<<<<< HEAD
     - target: {fileID: 2052505323796068301, guid: f326a2e336d01374f9b1a86c45f1190e,
         type: 3}
       propertyPath: m_AnchorMax.x
@@ -105433,9 +105410,6 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2052505323878172764, guid: f326a2e336d01374f9b1a86c45f1190e,
-=======
-    - target: {fileID: 2052505323940512406, guid: f326a2e336d01374f9b1a86c45f1190e,
->>>>>>> refs/remotes/origin/master
         type: 3}
       propertyPath: m_textInfo.characterCount
       value: 0
@@ -105455,8 +105429,6 @@ PrefabInstance:
       propertyPath: m_textInfo.pageCount
       value: 0
       objectReference: {fileID: 0}
-<<<<<<< HEAD
-=======
     - target: {fileID: 2052505325171447326, guid: f326a2e336d01374f9b1a86c45f1190e,
         type: 3}
       propertyPath: m_textInfo.characterCount
@@ -105497,7 +105469,6 @@ PrefabInstance:
       propertyPath: m_textInfo.pageCount
       value: 0
       objectReference: {fileID: 0}
->>>>>>> refs/remotes/origin/master
     - target: {fileID: 2052505325073643257, guid: f326a2e336d01374f9b1a86c45f1190e,
         type: 3}
       propertyPath: m_textInfo.characterCount
@@ -105518,14 +105489,11 @@ PrefabInstance:
       propertyPath: m_textInfo.pageCount
       value: 0
       objectReference: {fileID: 0}
-<<<<<<< HEAD
-=======
     - target: {fileID: 2052505324464315954, guid: f326a2e336d01374f9b1a86c45f1190e,
         type: 3}
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
->>>>>>> refs/remotes/origin/master
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f326a2e336d01374f9b1a86c45f1190e, type: 3}
 --- !u!1 &1652322872 stripped
