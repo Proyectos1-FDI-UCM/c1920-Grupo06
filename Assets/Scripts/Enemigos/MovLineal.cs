@@ -33,13 +33,13 @@ public class MovLineal : MonoBehaviour
             if (transform.position.x >= puntoB.transform.position.x)
             {
                 rb.velocity = -initialSpeed;
-                transform.Rotate(Vector3.up * 180);
+                Rotacion();
             }
             //si se ha salido de los límites inferiores (izquierda)
             else if (transform.position.x < puntoA.transform.position.x)
             {
                 rb.velocity = initialSpeed;
-                transform.Rotate(Vector3.up * 180);
+                Rotacion();
             }
         }
         else
@@ -55,5 +55,11 @@ public class MovLineal : MonoBehaviour
                 rb.velocity = initialSpeed;
             }
         }
+    }
+
+    void Rotacion() //metodo para elegir la rotacion acorde al movimiento
+    {
+        if (rb.velocity.x < 0) transform.eulerAngles = new Vector2(transform.rotation.x, 180f);
+        else transform.eulerAngles = new Vector2(transform.rotation.x, 0f);
     }
 }
