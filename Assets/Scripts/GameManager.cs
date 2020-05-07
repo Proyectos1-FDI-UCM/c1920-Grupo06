@@ -24,6 +24,9 @@ public class GameManager : MonoBehaviour
     //variables de tiempo
     [SerializeField] bool sumarTiempoCheckPoint = false; //booleano para si añadimos el añadir tiempo al llegar al checkpoint
     [SerializeField] Timer timer = null;
+
+    //efectos visuales
+    SpriteRenderer spriteRenderer;
     private void Awake() //singleton
     {
         if (instance == null) //si no hay instancia
@@ -73,10 +76,10 @@ public class GameManager : MonoBehaviour
             vidas--;
         }
 
-        if (vidas <= 0) //si está muerto, volvemos al checkpoint
+        if (vidas <= 0) //si está muerto, desactivamos al jugador
         {
-            Muerte();
-            theUIMan.ResetSpritesVida();
+            estados.CambioEstado(estado.Muerte);
+            spriteRenderer.enabled = false;  //también lo hacemos invisible
         }
     }
 
@@ -92,6 +95,12 @@ public class GameManager : MonoBehaviour
         Time.timeScale = 1; //activamos el tiempo a 1 (en caso de reiniciar desde menu)
         numMuertes++; //aumentamos el número de muertes
         jugador.transform.position = checkpoint; //hacemos que el jugador se transporte al checkpoint
+        theUIMan.ResetSpritesVida();
+    }
+
+    public int getVidas()
+    {
+        return vidas;
     }
 
     //POWERUPS (INTERFAZ)
@@ -188,6 +197,8 @@ public class GameManager : MonoBehaviour
     {
         jugador = player;
         estadisticas = jugador.GetComponent<Jugador>().estadisticas;
+        spriteRenderer = jugador.GetComponent<SpriteRenderer>();
+        estados = jugador.GetComponent<Estados>();
     }
 
     public void SetRetrocederAlCheckPoint(RetrocederAlCheckPoint RaC) //estblece el componente retroceder de la cámara

@@ -10,6 +10,7 @@ public class RetrocederAlCheckPoint : MonoBehaviour
     Estados estadosjugador = null;
     Jugador jugador = null;
     Vector3 checkPoint = Vector3.zero; //posición del checkpoint a retroceder
+    SpriteRenderer spriteRenderer;
 
     void Awake()
     {
@@ -17,6 +18,7 @@ public class RetrocederAlCheckPoint : MonoBehaviour
         //inicializamos las variables
         estadosjugador = jugadorGameObject.GetComponent<Estados>();
         jugador = jugadorGameObject.GetComponent<Jugador>();
+        spriteRenderer = jugadorGameObject.GetComponent<SpriteRenderer>();
 
     }
 
@@ -35,6 +37,7 @@ public class RetrocederAlCheckPoint : MonoBehaviour
             Destroy(rb); //destruimos su RB
             estadosjugador.CambioEstado(estado.Defecto); //actualizamos el estado del jugador
             jugador.RecargaSuelo(); //recargamos los usos de salto, dash y gancho
+            spriteRenderer.enabled = true;  //reactivamos el sprite que fue desactivado en el gameManager al morir
             enabled = false; //desactivamos este script
         }
     }
