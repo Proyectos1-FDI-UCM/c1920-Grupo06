@@ -5,7 +5,14 @@
 public class VidaJugador : MonoBehaviour
 {
     [SerializeField] float tiempoInvulnerable = 3f; //tiempo de invulnerabilidad
+    JugadorDañado jugadorDañado;
     bool invulnerable = false; //booleano de invulnerabilidad 
+
+    private void Start()
+    {
+        jugadorDañado = GetComponent<JugadorDañado>();
+        //jugadorDañado.SetTiempoInvulnerable(tiempoInvulnerable);
+    }
 
     public void EliminaVidaJugador() //método para la eliminación de vidas
     {
@@ -21,7 +28,8 @@ public class VidaJugador : MonoBehaviour
                 if (transform.position != GameManager.instance.CheckPoint()) //si no ha muerto
                 {
                     invulnerable = true; //lo hacemos invulnerable
-                    Invoke("HacerVulnerable", tiempoInvulnerable); //en 'x' tiempo, volverá a ser vulnerable
+                    jugadorDañado.enabled = true;
+                    Invoke("HacerVulnerable2", tiempoInvulnerable); //en 'x' tiempo, volverá a ser vulnerable
                 }
             }
         }
@@ -38,7 +46,7 @@ public class VidaJugador : MonoBehaviour
                 if (transform.position != GameManager.instance.CheckPoint()) //si no ha muerto
                 {
                     invulnerable = true; //lo hacemos invulnerable
-                    Invoke("HacerVulnerable", tiempoInvulnerable); //en 'x' tiempo, volverá a ser vulnerable
+                    Invoke("HacerVulnerable2", tiempoInvulnerable); //en 'x' tiempo, volverá a ser vulnerable
                 }
             }
         }
@@ -47,6 +55,12 @@ public class VidaJugador : MonoBehaviour
     public void HacerVulnerable() //método que permite hacer que el jugador vuelva a ser vulnerable
     {
         invulnerable = false; //pasa a ser vulnerable
+    }
+
+    public void HacerVulnerable2() //método que permite hacer que el jugador vuelva a ser vulnerable
+    {
+        invulnerable = false; //pasa a ser vulnerable
+        jugadorDañado.enabled = false;
     }
 
     public void HacerInvulnerable() //método que permite hacer que el jugador vuelva a ser invulnerable
