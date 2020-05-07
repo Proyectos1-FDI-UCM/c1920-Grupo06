@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class EfectoJugadorDañado : MonoBehaviour
 {
-    public Color ColorA = Color.red;
-    public Color ColorB = Color.green;
-    public Color ColorIni;
-    public float speed = 1.0f;
+    [SerializeField] Color ColorA = Color.red;
+    [SerializeField] Color ColorB = Color.green;
+    [SerializeField] Color ColorIni;
+    [SerializeField] float speed = 1.0f;
     float tiempoInvulnerable = 3f;
 
     SpriteRenderer spriteRenderer;
