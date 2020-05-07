@@ -263,6 +263,7 @@ GameObject:
   - component: {fileID: 8070331601717115495}
   - component: {fileID: 2344167096655965351}
   - component: {fileID: 898946494}
+  - component: {fileID: 8307827199381493207}
   m_Layer: 9
   m_Name: Jugador
   m_TagString: Untagged
@@ -641,6 +642,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tiempoInvulnerable: 4
+  cameraShake: {fileID: 5702803199079217572, guid: e89c4386e65b25747bca4084e0584190,
+    type: 3}
 --- !u!114 &2925466069578243486
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -848,6 +851,23 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &8307827199381493207
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2925466069578243472}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bc00fc89cc3b0724fbea7e4603a786ef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ColorA: {r: 1, g: 0, b: 0, a: 1}
+  ColorB: {r: 0, g: 1, b: 0, a: 1}
+  speed: 1
+  PrefabParticulasMuerteJugador: {fileID: 4250379251207673267, guid: dc2cd25af0793944681e7beffe628540,
+    type: 3}
 --- !u!1 &7292258580623807576
 GameObject:
   m_ObjectHideFlags: 0
