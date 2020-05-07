@@ -8,7 +8,6 @@ public class AgitarCamara : MonoBehaviour
 	Vector3 PosIni;
 	[SerializeField] float distancia = 0.05f, tiempoHastaDetenerse = 0.5f;
 	Camera Camara;
-	EfectoJugadorDañado efectoJugadorDañado;
 
 	private void Awake()
 	{
@@ -40,6 +39,6 @@ public class AgitarCamara : MonoBehaviour
 	private void OnDisable()
 	{
 		if(Camara != null) Camara.transform.position = PosIni;
-		if (GameManager.instance.getVidas() <= 0) GameManager.instance.Muerte();
+		if (GameManager.instance != null && GameManager.instance.getVidas() <= 0) GameManager.instance.Muerte();
 	}
 }

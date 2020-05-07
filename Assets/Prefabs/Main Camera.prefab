@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 36747683771323691}
   - component: {fileID: 36747683771323860}
   - component: {fileID: 36747683771323688}
+  - component: {fileID: 5702803199079217572}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -175,6 +176,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   jugadorGameObject: {fileID: 0}
   fuerza_impulso_arriba: 3.6
+--- !u!114 &5702803199079217572
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 36747683771323862}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8fc0e3e3a26eebb4d98f63251f5b19d0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  distancia: 0.05
+  tiempoHastaDetenerse: 0.5
 --- !u!1 &36747683787640187
 GameObject:
   m_ObjectHideFlags: 0
