@@ -750,7 +750,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f143cf74633118f45a2e5226100ba758, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  delta: 0.05
+  delta: 0.1
 --- !u!82 &898946494
 AudioSource:
   m_ObjectHideFlags: 0
