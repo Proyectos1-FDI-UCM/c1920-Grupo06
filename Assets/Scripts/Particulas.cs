@@ -4,15 +4,11 @@ using UnityEngine;
 
 public class Particulas : MonoBehaviour
 {
-    // Start is called before the first frame update
+    ParticleSystemRenderer particulas;
     void Start()
     {
-        
-    }
+        particulas = GetComponent<ParticleSystemRenderer>();
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+        particulas.sortingLayerName = "Gancho";
     }
 }
