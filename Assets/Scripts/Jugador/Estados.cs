@@ -6,7 +6,7 @@
  */
 
 //enum que marca los estados posibles del jugador
-public enum estado { Defecto, SlowMotion, LanzamientoGancho, MovimientoGancho, Dash, Muerte, Inactivo }
+public enum estado { Defecto, SlowMotion, LanzamientoGancho, MovimientoGancho, Dash, Muerte, Inactivo, Knockback }
 public class Estados : MonoBehaviour
 {
     //referencias de los componentes que van a ser modificados según el estado
@@ -123,6 +123,13 @@ public class Estados : MonoBehaviour
                 movimientoGancho.enabled = false;
                 salto.enabled = false;
                 crearDash.enabled = false;
+                break;
+
+            case estado.Knockback:
+                deathzone.enabled = true;
+                movimiento.enabled = false;
+                salto.enabled = false;
+                crearDash.enabled = true;
                 break;
         }
     }
