@@ -2,11 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class JugadorDañado : MonoBehaviour
+public class EfectoJugadorDañado : MonoBehaviour
 {
-    public Color A = Color.red;
-    public Color B = Color.green;
-    public Color C;
+    public Color ColorA = Color.red;
+    public Color ColorB = Color.green;
+    public Color ColorIni;
     public float speed = 1.0f;
     float tiempoInvulnerable = 3f;
 
@@ -15,17 +15,13 @@ public class JugadorDañado : MonoBehaviour
     private void Awake()
     {
         enabled = false;
-    }
-
-    void Start()
-    {
         spriteRenderer = GetComponent<SpriteRenderer>();
-        C = spriteRenderer.color;
+        ColorIni = spriteRenderer.color;
     }
 
     void Update()
     {
-        spriteRenderer.color = Color.Lerp(A, B, Mathf.PingPong(Time.time * speed, 1.0f));
+        spriteRenderer.color = Color.Lerp(ColorA, ColorB, Mathf.PingPong(Time.time * speed, 1.0f));
     }
 
     public void SetTiempoInvulnerable(float tiempo)
@@ -33,8 +29,8 @@ public class JugadorDañado : MonoBehaviour
         tiempoInvulnerable = tiempo;
     }
 
-    //private void OnDisable()
-    //{
-    //    spriteRenderer.color = C;
-    //}
+    private void OnDisable()
+    {
+        if (spriteRenderer != null) spriteRenderer.color = ColorIni;
+    }
 }

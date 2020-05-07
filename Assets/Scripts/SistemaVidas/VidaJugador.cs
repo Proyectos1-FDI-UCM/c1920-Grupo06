@@ -5,12 +5,12 @@
 public class VidaJugador : MonoBehaviour
 {
     [SerializeField] float tiempoInvulnerable = 3f; //tiempo de invulnerabilidad
-    JugadorDañado jugadorDañado;
+    EfectoJugadorDañado EfectojugadorDañado;
     bool invulnerable = false; //booleano de invulnerabilidad 
 
     private void Start()
     {
-        jugadorDañado = GetComponent<JugadorDañado>();
+        EfectojugadorDañado = GetComponent<EfectoJugadorDañado>();
         //jugadorDañado.SetTiempoInvulnerable(tiempoInvulnerable);
     }
 
@@ -28,7 +28,7 @@ public class VidaJugador : MonoBehaviour
                 if (transform.position != GameManager.instance.CheckPoint()) //si no ha muerto
                 {
                     invulnerable = true; //lo hacemos invulnerable
-                    jugadorDañado.enabled = true;
+                    EfectojugadorDañado.enabled = true;
                     Invoke("HacerVulnerable2", tiempoInvulnerable); //en 'x' tiempo, volverá a ser vulnerable
                 }
             }
@@ -60,7 +60,7 @@ public class VidaJugador : MonoBehaviour
     public void HacerVulnerable2() //método que permite hacer que el jugador vuelva a ser vulnerable
     {
         invulnerable = false; //pasa a ser vulnerable
-        jugadorDañado.enabled = false;
+        EfectojugadorDañado.enabled = false;
     }
 
     public void HacerInvulnerable() //método que permite hacer que el jugador vuelva a ser invulnerable
