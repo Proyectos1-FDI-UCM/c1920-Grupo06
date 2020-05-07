@@ -6,8 +6,9 @@ public class AgitarCamara : MonoBehaviour
 {
 
 	Vector3 PosIni;
-	public float distancia = 0.05f, tiempoHastaDetenerse = 0.5f;
+	[SerializeField] float distancia = 0.05f, tiempoHastaDetenerse = 0.5f;
 	Camera Camara;
+	EfectoJugadorDañado efectoJugadorDañado;
 
 	private void Awake()
 	{
