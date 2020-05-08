@@ -3061,17 +3061,6 @@ MonoBehaviour:
           m_StringArgument: Menu
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1820720558}
-        m_MethodName: ActivarBotones
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &793701937
@@ -4008,17 +3997,6 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1820720553}
         m_MethodName: LerpOrigen
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1820720558}
-        m_MethodName: ActivarBotones
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -5486,17 +5464,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1820720558}
-        m_MethodName: ActivarBotones
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &1688955538
@@ -5918,6 +5885,7 @@ MonoBehaviour:
   rectTransform: {fileID: 1820720552}
   direccion: origen
   velocidad: 450
+  menuController: {fileID: 1820720558}
 --- !u!114 &1820720555
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5933,6 +5901,7 @@ MonoBehaviour:
   rectTransform: {fileID: 1820720552}
   direccion: derecha
   velocidad: 450
+  menuController: {fileID: 0}
 --- !u!114 &1820720556
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5948,6 +5917,7 @@ MonoBehaviour:
   rectTransform: {fileID: 1820720552}
   direccion: arriba
   velocidad: 450
+  menuController: {fileID: 0}
 --- !u!114 &1820720557
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5963,6 +5933,7 @@ MonoBehaviour:
   rectTransform: {fileID: 1820720552}
   direccion: izquierda
   velocidad: 450
+  menuController: {fileID: 0}
 --- !u!114 &1820720558
 MonoBehaviour:
   m_ObjectHideFlags: 0
