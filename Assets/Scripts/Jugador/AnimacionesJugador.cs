@@ -6,6 +6,8 @@ public class AnimacionesJugador : MonoBehaviour
 {
     [SerializeField] float delta = 0.05f;
     [SerializeField] ParticleSystem particulas = null;
+    [SerializeField] ParticleSystem particulasIzq = null;
+    [SerializeField] ParticleSystem particulasDer = null;
     Animator animador;
     Rigidbody2D rb;
     Suelo suelo;
