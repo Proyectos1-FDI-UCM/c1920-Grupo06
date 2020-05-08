@@ -5,7 +5,7 @@
 public class VidaJugador : MonoBehaviour
 {
     [SerializeField] float tiempoInvulnerable = 3f; //tiempo de invulnerabilidad
-    [SerializeField] AgitarCamara cameraShake;
+    [SerializeField] AgitarCamara cameraShake = null;
     EfectoJugadorDañado efectoJugadorDañado;
     bool invulnerable = false; //booleano de invulnerabilidad 
 

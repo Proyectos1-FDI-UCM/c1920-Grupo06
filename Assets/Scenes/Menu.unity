@@ -5884,8 +5884,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rectTransform: {fileID: 1820720552}
   direccion: origen
-  velocidad: 450
-  menuController: {fileID: 1820720558}
+  velocidad: 700
 --- !u!114 &1820720555
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5900,8 +5899,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rectTransform: {fileID: 1820720552}
   direccion: derecha
-  velocidad: 450
-  menuController: {fileID: 0}
+  velocidad: 700
 --- !u!114 &1820720556
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5916,8 +5914,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rectTransform: {fileID: 1820720552}
   direccion: arriba
-  velocidad: 450
-  menuController: {fileID: 0}
+  velocidad: 700
 --- !u!114 &1820720557
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5932,8 +5929,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rectTransform: {fileID: 1820720552}
   direccion: izquierda
-  velocidad: 450
-  menuController: {fileID: 0}
+  velocidad: 700
 --- !u!114 &1820720558
 MonoBehaviour:
   m_ObjectHideFlags: 0
