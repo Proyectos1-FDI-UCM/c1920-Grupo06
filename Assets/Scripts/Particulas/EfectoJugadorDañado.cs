@@ -6,7 +6,7 @@ public class EfectoJugadorDañado : MonoBehaviour
     [SerializeField] Color ColorA = Color.red;
     [SerializeField] Color ColorB = Color.green;
     [SerializeField] float speed = 1.0f;
-    [SerializeField] GameObject PrefabParticulasMuerteJugador;
+    [SerializeField] GameObject PrefabParticulasMuerteJugador = null;
 
     Color ColorIni;
     float tiempoInvulnerable = 3f;
