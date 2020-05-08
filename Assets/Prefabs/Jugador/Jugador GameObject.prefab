@@ -642,8 +642,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tiempoInvulnerable: 4
-  cameraShake: {fileID: 5702803199079217572, guid: e89c4386e65b25747bca4084e0584190,
-    type: 3}
+  cameraShake: {fileID: 0}
 --- !u!114 &2925466069578243486
 MonoBehaviour:
   m_ObjectHideFlags: 0
