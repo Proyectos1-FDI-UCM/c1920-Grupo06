@@ -8,6 +8,8 @@ public class Lerp : MonoBehaviour
     [SerializeField] string direccion = "";
     //Velocidad de movimiento en unidades por segundo
     [SerializeField] float velocidad = 200.0F;
+    //Controlador de los botones del menú
+    MenuController menuController = null;
     //Transforms de puntos hacia los que se hacen los Lerp
     Vector2 puntoInicio;
     Vector2 puntoFinal;
@@ -23,6 +25,8 @@ public class Lerp : MonoBehaviour
         this.enabled = false;
         //Posición original del movimiento
         origen = rectTransform.transform.position;
+        //obtenemos el controller
+        if(direccion == "origen") menuController = gameObject.GetComponent<MenuController>();
     }
 
     void Start()
@@ -108,6 +112,10 @@ public class Lerp : MonoBehaviour
         transform.position = Vector2.Lerp(puntoInicio, puntoFinal, fraccionDeViaje);
 
         //Si ya se ha superado la distancia de movimiento, se desactiva este script
-        if (distanciaRecorrida > distanciaViaje) enabled = false;
+        if (distanciaRecorrida > distanciaViaje)
+        {
+            enabled = false;
+            if (menuController != null) menuController.ActivarBotones(); //activamos botones si se ha llegado a origen
+        }
     }
 }
