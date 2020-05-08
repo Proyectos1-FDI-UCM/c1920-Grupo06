@@ -22,6 +22,7 @@ public class MenuController : MonoBehaviour
     //metodo para activar los botones
     public void ActivarBotones() //metodo para activar los botones
     {
+        //Invoke("Activacion", segActivacion);
         jugar.enabled = true;
         jugarImagen.enabled = true;
         estadisticas.enabled = true;
