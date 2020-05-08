@@ -5,6 +5,7 @@
 public class AnimacionesJugador : MonoBehaviour
 {
     [SerializeField] float delta = 0.05f;
+    [SerializeField] ParticleSystem particulas = null;
     Animator animador;
     Rigidbody2D rb;
     Suelo suelo;
@@ -60,18 +61,33 @@ public class AnimacionesJugador : MonoBehaviour
 
                 //establecemos la animación con respecto a la velocidad
                 if (!enSuelo)
+                {
                     animador.Play("Caida");
+                    particulas.Stop();
+                }
                 else if (velocidad < -delta)
+                {
                     animador.Play("MovimientoInvertido");
+                    particulas.Play();
+                }
                 else if (velocidad > delta)
+                {
                     animador.Play("Movimiento");
-                else animador.Play("Iddle");
+                    particulas.Play();
+                }
+                else
+                {
+                    animador.Play("Iddle");
+                    particulas.Stop();
+                }
                 break;
             case estado.Dash:
                 animador.Play("Dash");
+                particulas.Stop();
                 break;
             default: //en caso contrario, ponemos la animación "Caída" por defecto
                 animador.Play("Caida");
+                particulas.Stop();
                 break;
         }
     }

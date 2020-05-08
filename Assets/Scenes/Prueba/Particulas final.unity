@@ -52451,14 +52451,14 @@ ParticleSystem:
   ShapeModule:
     serializedVersion: 6
     enabled: 1
-    type: 2
+    type: 18
     angle: 25
     length: 5
     boxThickness: {x: 0, y: 0, z: 0}
     radiusThickness: 1
     donutRadius: 0.2
     m_Position: {x: 0, y: 0, z: 0}
-    m_Rotation: {x: 0, y: 0, z: 0}
+    m_Rotation: {x: -0, y: 180, z: 0}
     m_Scale: {x: 1, y: 1, z: 1}
     placementMode: 0
     m_MeshMaterialIndex: 0
@@ -52538,7 +52538,7 @@ ParticleSystem:
     sphericalDirectionAmount: 0
     randomPositionAmount: 0
     radius:
-      value: 1
+      value: 0.9550564
       mode: 0
       spread: 0
       speed:
@@ -61589,6 +61589,11 @@ PrefabInstance:
       propertyPath: m_SortingLayer
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 2344167096655965351, guid: 8733d96370d667b438b0a1d50270b180,
+        type: 3}
+      propertyPath: particulas
+      value: 
+      objectReference: {fileID: 746870816}
     - target: {fileID: 898946494, guid: 8733d96370d667b438b0a1d50270b180, type: 3}
       propertyPath: m_audioClip
       value: 
