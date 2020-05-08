@@ -54,6 +54,11 @@ public class Salto : MonoBehaviour
         salto_disponible = false; //se cambia la disponibilidad del salto a false
     }
 
+    public void CambiaFuerzaSalto(float fuerza)
+    {
+        fuerza_salto = fuerza;
+    }
+
     public void Knockback(Vector3 posObstaculo)
     {
         estadoOri = estados.Estado();

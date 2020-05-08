@@ -12,6 +12,8 @@ public class PlataformaMovible : MonoBehaviour
     bool horizontal = false, diagonalInversa = false;
     Transform nextPos;
 
+    float fuerzaSaltoOri = 0f;
+
     //variables de mantener al jugador en la plataforma
     GameObject jugador;
     Transform padre;
@@ -109,6 +111,8 @@ public class PlataformaMovible : MonoBehaviour
 
         if (pies != null)
         {
+            Salto salto = collision.transform.parent.GetComponent<Salto>();
+            fuerzaSaltoOri = salto.GetFuerzaSalto();
             sobrePlataforma = true;
             jugador = collision.gameObject.transform.parent.gameObject;
             estados = jugador.GetComponent<Estados>();
@@ -122,6 +126,10 @@ public class PlataformaMovible : MonoBehaviour
     {
         if (sobrePlataforma)
         {
+            Salto salto = collision.transform.parent.GetComponent<Salto>();
+            if (nextPos == puntoB) // solo cambia la fuerza del salto mientras sube
+                salto.CambiaFuerzaSalto(fuerzaSaltoOri * 1.5f);
+
             //Mientras el jugador no esté en medio de otra acción
             if (!Input.anyKey && estados.Estado() == estado.Defecto)
             {
@@ -144,6 +152,8 @@ public class PlataformaMovible : MonoBehaviour
 
         if (pies != null)
         {
+            Salto salto = collision.transform.parent.GetComponent<Salto>();
+            salto.CambiaFuerzaSalto(fuerzaSaltoOri);
             rbJugador.isKinematic = false;
             jugador.transform.parent = padre;
             rbJugador = null;
