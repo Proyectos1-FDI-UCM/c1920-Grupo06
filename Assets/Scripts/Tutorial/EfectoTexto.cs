@@ -6,7 +6,6 @@ public class EfectoTexto : MonoBehaviour
 {
     [SerializeField] float tiempoEntreLetras = 0.2f;
     string instruccion = null;
-    char letraMensaje;
     Text mensaje;
 
     public void EfectoLetrasTexto(Text texto)
@@ -15,11 +14,6 @@ public class EfectoTexto : MonoBehaviour
         instruccion = mensaje.text;
         mensaje.text = "";
         StartCoroutine(SumarLetras());
-        //foreach (char letra in instruccion)
-        //{
-        //    letraMensaje = letra;
-        //    Invoke("SumarLetras", tiempoEntreLetras);
-        //}
     }
 
     private IEnumerator SumarLetras()
@@ -29,11 +23,5 @@ public class EfectoTexto : MonoBehaviour
             mensaje.text += letra;
             yield return new WaitForSeconds(tiempoEntreLetras);
         }
-
-        //yield return new WaitForSeconds(1.5f);
-
-        //dialogueBubble.SetActive(false);
-
-        //isTalking = false;
     }
 }
