@@ -237,6 +237,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 786d328d48532f1429709b1e0f7374c6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rango_gancho: 11
+  rango_gancho: 12
   velocidad_gancho: 50
   tiempo_desaparicion: 0.53
