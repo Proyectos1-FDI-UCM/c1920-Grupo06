@@ -4,11 +4,19 @@ using UnityEngine.SceneManagement;
 public class TransicionesTutorial : MonoBehaviour
 {
     [SerializeField] Transform jugador = null, seccion2 = null, seccion3 = null, seccion4 = null;
-    [SerializeField] ActivacionTextosTutorial actTexts = null;
+    ActivacionTextosTutorial actTexts = null;
+    [SerializeField] Estados estados = null;
     bool seccion2Esta = false, seccion3Esta = false, seccion4Esta = false;
+
+    void Awake()
+    {
+        actTexts = gameObject.GetComponent<ActivacionTextosTutorial>();
+    }
 
     public void Continuar()
     {
+        estados.CambioEstado(estado.Defecto);
+
         if (seccion4Esta) SceneManager.LoadScene(1);
         else
         {

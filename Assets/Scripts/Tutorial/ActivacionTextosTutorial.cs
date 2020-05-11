@@ -4,6 +4,12 @@ using UnityEngine.UI;
 public class ActivacionTextosTutorial : MonoBehaviour
 {
     [SerializeField] Text seccion1 = null, seccion2 = null, seccion3 = null, seccion4 = null;
+    EfectoTexto efectoTexto = null;
+
+    void Awake()
+    {
+        efectoTexto = gameObject.GetComponent<EfectoTexto>();
+    }
 
     void Start()
     {
@@ -11,6 +17,7 @@ public class ActivacionTextosTutorial : MonoBehaviour
         seccion2.enabled = false;
         seccion3.enabled = false;
         seccion4.enabled = false;
+        efectoTexto.EfectoLetrasTexto(seccion1);
     }
 
     public void ActivarTextoSeccion2()
