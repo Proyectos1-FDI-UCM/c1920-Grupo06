@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-//Control de las animaciones y particulas del jugador
+//Control de las animaciones y particulas ombatedel jugador
 
 public class AnimacionesJugador : MonoBehaviour
 {
