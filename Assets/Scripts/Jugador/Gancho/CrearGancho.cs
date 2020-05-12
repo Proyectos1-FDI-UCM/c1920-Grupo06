@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+﻿﻿using UnityEngine;
 
 /* Este script es el responsable de crear los ganchos que puede lanzar el jugador
  * Tiene un método público, el cual recarga el gancho cuando "SUelo" ha encontrado una superficie
@@ -19,6 +19,8 @@ public class CrearGancho : MonoBehaviour
     int cargasMaxima = 2; //cargas máximas que se pueden tener en cada momento
     float angulo = 0;
     Suelo suelo;
+    AudioSource aud;
+    AudioSource[] audAux;
 
     void Start()
     {
@@ -30,6 +32,8 @@ public class CrearGancho : MonoBehaviour
         cargasGancho = cargasMaxima; //establecemos las cargas actuales
 		estadisticas = GetComponent<Jugador>().estadisticas;
 		suelo = transform.GetChild(0).GetComponent<Suelo>(); //Los pies deben ser el primer hijo del jugador
+        audAux = GetComponents<AudioSource>();
+        aud = audAux[EncuentraAudioSource(audAux,"Gancho")];
     }
 
     void Update()
@@ -78,6 +82,7 @@ public class CrearGancho : MonoBehaviour
                     gancho_nuevo.GetComponent<Gancho>().CreacionGancho(gameObject); //damos una referencia del jugador al gancho
                     estadoJugador.CambioEstado(estado.LanzamientoGancho); //pasamos al estado "LanzamientoGancho"
                     cargasGancho--; //restamos un gancho a los disponibles
+                    aud.Play();
                 }
             }
         }
@@ -95,5 +100,16 @@ public class CrearGancho : MonoBehaviour
     public void RecargaGancho() //metodo para recargar los usos del gancho
     {
         cargasGancho = cargasMaxima;
+    }
+    private int EncuentraAudioSource(AudioSource[] audAux, string name)
+    {
+        int i = 0;
+        bool enc = false;
+        while (i < audAux.Length && !enc)
+        {
+            if (audAux[i].clip.name == name) enc = true;
+            else i++;
+        }
+        return i;
     }
 }
