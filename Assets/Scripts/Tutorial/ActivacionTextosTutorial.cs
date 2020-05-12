@@ -24,18 +24,21 @@ public class ActivacionTextosTutorial : MonoBehaviour
     {
         seccion1.enabled = false;
         seccion2.enabled = true;
+        efectoTexto.EfectoLetrasTexto(seccion2);
     }
     
     public void ActivarTextoSeccion3()
     {
         seccion2.enabled = false;
         seccion3.enabled = true;
+        efectoTexto.EfectoLetrasTexto(seccion3);
     }
     
     public void ActivarTextoSeccion4()
     {
         seccion3.enabled = false;
         seccion4.enabled = true;
+        efectoTexto.EfectoLetrasTexto(seccion4);
     }
     
     public void Final()

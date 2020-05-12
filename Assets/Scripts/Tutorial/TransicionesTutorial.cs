@@ -4,25 +4,27 @@ using UnityEngine.SceneManagement;
 public class TransicionesTutorial : MonoBehaviour
 {
     [SerializeField] Transform jugador = null, seccion2 = null, seccion3 = null, seccion4 = null;
-    ActivacionTextosTutorial actTexts = null;
+    [SerializeField] ActivacionTextosTutorial actTexts = null;
     [SerializeField] Estados estados = null;
+    [SerializeField] GameObject continuar = null;
     bool seccion2Esta = false, seccion3Esta = false, seccion4Esta = false;
-
-    void Awake()
-    {
-        actTexts = gameObject.GetComponent<ActivacionTextosTutorial>();
-    }
 
     public void Continuar()
     {
         estados.CambioEstado(estado.Defecto);
 
-        if (seccion4Esta) SceneManager.LoadScene(1);
+        if (seccion4Esta)
+        {
+            Time.timeScale = 1f;
+            SceneManager.LoadScene(1);
+        }
         else
         {
             AsignacionTransform();
             Camera.main.transform.position = new Vector3(jugador.position.x, jugador.position.y + 4, Camera.main.transform.position.z);
         }
+
+        continuar.SetActive(false);
     }
 
     private void AsignacionTransform()
