@@ -11,6 +11,8 @@ public class Salto : MonoBehaviour
     Estados estados;
     estado estadoOri;
     bool salto_disponible = true; //booleano que controla si se puede saltar o no
+    AudioSource aud;
+    AudioSource[] audAux;
 
     void Start()
     {
@@ -19,6 +21,9 @@ public class Salto : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         estadisticas = GetComponent<Jugador>().estadisticas;
         estados = GetComponent<Estados>();
+
+        audAux = GetComponents<AudioSource>();
+        aud = audAux[EncuentraAudioSource(audAux, "Salto")];
     }
 
     void Update()
@@ -52,6 +57,7 @@ public class Salto : MonoBehaviour
         rb.gravityScale = 1.5f; //reestablecemos la gravedad
         rb.AddForce(Vector2.up * fuerza_salto, ForceMode2D.Impulse); //se aplica la fuerza del salto
         salto_disponible = false; //se cambia la disponibilidad del salto a false
+        aud.Play();
     }
 
     public void CambiaFuerzaSalto(float fuerza)
@@ -73,5 +79,16 @@ public class Salto : MonoBehaviour
     void ReiniciaEstado()
     {
         estados.CambioEstado(estadoOri);
+    }
+    private int EncuentraAudioSource(AudioSource[] audAux, string name)
+    {
+        int i = 0;
+        bool enc = false;
+        while (i < audAux.Length && !enc)
+        {
+            if (audAux[i].clip.name == name) enc = true;
+            else i++;
+        }
+        return i;
     }
 }
