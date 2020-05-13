@@ -1,10 +1,10 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.UI;
+
 public class PantallaEstadisticas : MonoBehaviour
 {
     Text texto = null;
+
     void Start()
     {
         texto = GetComponent<Text>();
@@ -14,11 +14,11 @@ public class PantallaEstadisticas : MonoBehaviour
             numGanchos = 0, 
             numEnemigosDerrotados = 0,
             numMuertes = 0;
-        PlayerPrefs.GetInt("saltos", numSaltos);
-        PlayerPrefs.GetInt("dash", numDash);
-        PlayerPrefs.GetInt("ganchos", numGanchos);
-        PlayerPrefs.GetInt("enemigos", numEnemigosDerrotados);
-        PlayerPrefs.GetInt("muertes", numMuertes);
+        numSaltos = PlayerPrefs.GetInt("saltos");
+        numDash = PlayerPrefs.GetInt("dash");
+        numGanchos = PlayerPrefs.GetInt("ganchos");
+        numEnemigosDerrotados = PlayerPrefs.GetInt("enemigos");
+        numMuertes = PlayerPrefs.GetInt("muertes");
 
 
         texto.text = "Número de saltos: " + numSaltos + "\n" +

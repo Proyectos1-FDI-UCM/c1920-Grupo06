@@ -9,59 +9,76 @@ public class Estadisticas : MonoBehaviour
     private int numGanchos = 0;
     private int numEnemigosDerrotados = 0;
     private int numMuertes = 0;
-    public float tiempoJugado = 0;
+    [SerializeField] float tiempoJugado = 0;
+    static Estadisticas instance = null;
 
     private void Awake()
     {
+        //SINGLETON
+        if (instance == null) //si no hay instancia
+        {
+            instance = this; //la creamos
+            DontDestroyOnLoad(gameObject); //evitamos que se destruya entre escenas
+        }
+        else //en caso contrario
+        {
+            Destroy(gameObject); //destruimos la instancia
+        }
+
         if (!PlayerPrefs.HasKey("saltos")) PlayerPrefs.SetInt("saltos", 0);
-        else PlayerPrefs.GetInt("saltos", numSaltos);
+        else numSaltos = PlayerPrefs.GetInt("saltos");
 
         if (!PlayerPrefs.HasKey("dash")) PlayerPrefs.SetInt("dash", 0);
-        else PlayerPrefs.GetInt("dash", numDash);
+        else numDash = PlayerPrefs.GetInt("dash");
 
         if (!PlayerPrefs.HasKey("ganchos")) PlayerPrefs.SetInt("ganchos", 0);
-        else PlayerPrefs.GetInt("ganchos", numGanchos);
+        else numGanchos = PlayerPrefs.GetInt("ganchos");
 
         if (!PlayerPrefs.HasKey("enemigos")) PlayerPrefs.SetInt("enemigos", 0);
-        else PlayerPrefs.GetInt("enemigos", numEnemigosDerrotados);
+        else numEnemigosDerrotados = PlayerPrefs.GetInt("enemigos");
 
         if (!PlayerPrefs.HasKey("muertes")) PlayerPrefs.SetInt("muertes", 0);
-        else PlayerPrefs.GetInt("muertes", numMuertes);
+        else numMuertes = PlayerPrefs.GetInt("muertes");
 
         if (!PlayerPrefs.HasKey("tiempo")) PlayerPrefs.SetFloat("tiempo", 0);
-        else PlayerPrefs.GetFloat("tiempo", tiempoJugado);
+        else tiempoJugado = PlayerPrefs.GetFloat("tiempo");
     }
 
     public void Salto()
     {
         numSaltos++;
+        PlayerPrefs.SetInt("saltos", numSaltos);
     }
 
     public void Dash()
     {
         numDash++;
+        PlayerPrefs.SetInt("dash", numDash);
     }
 
     public void Gancho()
     {
         numGanchos++;
+        PlayerPrefs.SetInt("ganchos", numGanchos);
     }
 
     public void Muerte()
     {
         numMuertes++;
+        PlayerPrefs.SetInt("muertes", numMuertes);
     }
 
     public void Enemigo()
     {
         numEnemigosDerrotados++;
+        PlayerPrefs.SetInt("muertes", numMuertes);
     }
 
-    public Text saltos;
-    private void Update()
-    {
-        //saltos.text = ""+ numSaltos;
-    }
+    //public Text saltos;
+    //private void Update()
+    //{
+    //    //saltos.text = ""+ numSaltos;
+    //}
 
     public void Guardar()
     {
