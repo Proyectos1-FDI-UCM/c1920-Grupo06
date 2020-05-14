@@ -88993,16 +88993,6 @@ PrefabInstance:
       propertyPath: m_LocalScale.x
       value: 2
       objectReference: {fileID: 0}
-    - target: {fileID: 3887932413997493802, guid: 77627ef7422cd9643b73c77d165e921b,
-        type: 3}
-      propertyPath: m_SortingLayerID
-      value: -528019459
-      objectReference: {fileID: 0}
-    - target: {fileID: 3887932413997493802, guid: 77627ef7422cd9643b73c77d165e921b,
-        type: 3}
-      propertyPath: m_SortingLayer
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 845495048614475771, guid: 77627ef7422cd9643b73c77d165e921b,
         type: 3}
       propertyPath: m_LocalScale.y
@@ -89012,6 +89002,16 @@ PrefabInstance:
         type: 3}
       propertyPath: puedoReaparecer
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3887932413997493802, guid: 77627ef7422cd9643b73c77d165e921b,
+        type: 3}
+      propertyPath: m_SortingLayerID
+      value: -528019459
+      objectReference: {fileID: 0}
+    - target: {fileID: 3887932413997493802, guid: 77627ef7422cd9643b73c77d165e921b,
+        type: 3}
+      propertyPath: m_SortingLayer
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 77627ef7422cd9643b73c77d165e921b, type: 3}
@@ -90449,11 +90449,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Canvas Pausa
-      objectReference: {fileID: 0}
-    - target: {fileID: 2052505324987290726, guid: f326a2e336d01374f9b1a86c45f1190e,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2052505324987290749, guid: f326a2e336d01374f9b1a86c45f1190e,
         type: 3}
@@ -93500,16 +93495,6 @@ PrefabInstance:
       propertyPath: m_LocalScale.x
       value: 2
       objectReference: {fileID: 0}
-    - target: {fileID: 3887932413997493802, guid: 77627ef7422cd9643b73c77d165e921b,
-        type: 3}
-      propertyPath: m_SortingLayerID
-      value: -528019459
-      objectReference: {fileID: 0}
-    - target: {fileID: 3887932413997493802, guid: 77627ef7422cd9643b73c77d165e921b,
-        type: 3}
-      propertyPath: m_SortingLayer
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 845495048614475771, guid: 77627ef7422cd9643b73c77d165e921b,
         type: 3}
       propertyPath: m_LocalScale.y
@@ -93519,6 +93504,16 @@ PrefabInstance:
         type: 3}
       propertyPath: puedoReaparecer
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3887932413997493802, guid: 77627ef7422cd9643b73c77d165e921b,
+        type: 3}
+      propertyPath: m_SortingLayerID
+      value: -528019459
+      objectReference: {fileID: 0}
+    - target: {fileID: 3887932413997493802, guid: 77627ef7422cd9643b73c77d165e921b,
+        type: 3}
+      propertyPath: m_SortingLayer
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 845495048614475770, guid: 77627ef7422cd9643b73c77d165e921b,
         type: 3}
