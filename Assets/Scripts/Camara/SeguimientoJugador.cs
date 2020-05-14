@@ -34,7 +34,7 @@ public class SeguimientoJugador : MonoBehaviour
             if (jugador.position.x > transform.position.x + 20)
             {
                 Vector3 pos = transform.position;
-                pos.x += 40;
+                pos.x += 42;
                 pos.y = jugador.position.y;
                 transform.position = pos;
 
@@ -43,7 +43,7 @@ public class SeguimientoJugador : MonoBehaviour
             else if(dentroDeSeccion && jugador.position.x <= transform.position.x -20)
             {
                 Vector3 pos = transform.position;
-                pos.x -= 40;
+                pos.x -= 42;
                 pos.y = jugador.position.y;
                 transform.position = pos;
 
