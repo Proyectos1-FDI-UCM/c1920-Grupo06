@@ -32,7 +32,7 @@ public class VidaJugador : MonoBehaviour
                 {
                     invulnerable = true; //lo hacemos invulnerable
                     efectoJugadorDañado.enabled = true;  //mostramos la invulnerabilidad en pantalla
-                    Invoke("HacerVulnerable2", tiempoInvulnerable); //en 'x' tiempo, volverá a ser vulnerable
+                    Invoke("HacerVulnerable", tiempoInvulnerable); //en 'x' tiempo, volverá a ser vulnerable
                 }
             }
         }
@@ -52,7 +52,7 @@ public class VidaJugador : MonoBehaviour
                 {
                     invulnerable = true; //lo hacemos invulnerable
                     efectoJugadorDañado.enabled = true;
-                    Invoke("HacerVulnerable2", tiempoInvulnerable); //en 'x' tiempo, volverá a ser vulnerable
+                    Invoke("HacerVulnerable", tiempoInvulnerable); //en 'x' tiempo, volverá a ser vulnerable
                 }
             }
         }
