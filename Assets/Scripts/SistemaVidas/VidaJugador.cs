@@ -46,9 +46,12 @@ public class VidaJugador : MonoBehaviour
             {
                 GameManager.instance.EliminaVidaJugador(); //quita una vida
 
+                cameraShake.enabled = true;
+
                 if (transform.position != GameManager.instance.CheckPoint()) //si no ha muerto
                 {
                     invulnerable = true; //lo hacemos invulnerable
+                    efectoJugadorDañado.enabled = true;
                     Invoke("HacerVulnerable2", tiempoInvulnerable); //en 'x' tiempo, volverá a ser vulnerable
                 }
             }
@@ -58,13 +61,15 @@ public class VidaJugador : MonoBehaviour
     public void HacerVulnerable() //método que permite hacer que el jugador vuelva a ser vulnerable
     {
         invulnerable = false; //pasa a ser vulnerable
+        efectoJugadorDañado.enabled = false;
     }
 
-    public void HacerVulnerable2() //método que permite hacer que el jugador vuelva a ser vulnerable
-    {
-        invulnerable = false; //pasa a ser vulnerable
-        efectoJugadorDañado.enabled  = false;
-    }
+    //NO SE PARA QUE ES ESTO LOL
+    //public void HacerVulnerable2() //método que permite hacer que el jugador vuelva a ser vulnerable
+    //{
+    //    invulnerable = false; //pasa a ser vulnerable
+    //    efectoJugadorDañado.enabled  = false;
+    //}
 
     public void HacerInvulnerable() //método que permite hacer que el jugador vuelva a ser invulnerable
     {
