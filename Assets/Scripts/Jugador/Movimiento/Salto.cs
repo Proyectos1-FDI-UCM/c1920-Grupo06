@@ -8,6 +8,7 @@ public class Salto : MonoBehaviour
     Estadisticas estadisticas = null; //Referencia de las estadísticas
     Rigidbody2D rb;
     Suelo suelo;
+    CrearDash dash;
     Estados estados;
     estado estadoOri;
     bool salto_disponible = true; //booleano que controla si se puede saltar o no
@@ -80,6 +81,7 @@ public class Salto : MonoBehaviour
     {
         estados.CambioEstado(estadoOri);
     }
+
     private int EncuentraAudioSource(AudioSource[] audAux, string name)
     {
         int i = 0;
