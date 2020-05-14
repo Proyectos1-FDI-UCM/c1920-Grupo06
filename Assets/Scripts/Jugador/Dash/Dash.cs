@@ -66,8 +66,9 @@ public class Dash : MonoBehaviour
     void OnCollisionEnter2D(Collision2D collision) //en caso de colisionar con alguna entidad (plataformas)
     {
         jumpthrough = collision.gameObject.GetComponent<PlatformEffector2D>();
-        if (jumpthrough == null)
+        if (jumpthrough == null && enabled)
         {
+            rb.velocity = Vector2.zero;
             //Invoke("ParaDash", 0.3f);  //lo desactivamos
             ParaDash();
         }
