@@ -15,4 +15,11 @@ public class PlataformaAgrietada : MonoBehaviour
             transform.parent.gameObject.SetActive(false);
         }
     }
+
+    void OnTriggerStay2D(Collider2D collision)
+    {
+        Estados estadoJugador = collision.GetComponent<Estados>();
+
+        if (estadoJugador.Estado() == estado.Dash) transform.parent.gameObject.SetActive(false);
+    }
 }
