@@ -29,6 +29,6 @@ public class PlataformaNube : MonoBehaviour
 
     void OnDisable() //al desactivarse el PowerUp
     {
-        GameManager.instance.DesactivaSprite(0); //desactivamos su referencia en la interfaz
+        if(GameManager.instance != null) GameManager.instance.DesactivaSprite(0); //desactivamos su referencia en la interfaz
     }
 }
