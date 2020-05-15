@@ -40,6 +40,11 @@ public class Salto : MonoBehaviour
         salto_disponible = true;
     }
 
+    public void DesactivaSalto()
+    {
+        salto_disponible = false;
+    }
+
     //métodos utilizados para el PowerUp "SaltoPotenciado"
     public float GetFuerzaSalto() //método que devuelve la fuerza del salto
     {
@@ -64,22 +69,6 @@ public class Salto : MonoBehaviour
     public void CambiaFuerzaSalto(float fuerza)
     {
         fuerza_salto = fuerza;
-    }
-
-    public void Knockback(Vector3 posObstaculo)
-    {
-        estadoOri = estados.Estado();
-        estados.CambioEstado(estado.Knockback);
-        float dirx = Metodos.Vector3toVector2(posObstaculo - transform.position).normalized.x;
-        Vector2 dir = new Vector2(-dirx * 2, Vector2.up.y / 1.25f);
-        rb.AddForce(dir * fuerza_salto, ForceMode2D.Impulse); //se aplica la fuerza del salto
-        salto_disponible = false; //se cambia la disponibilidad del salto a false
-        Invoke("ReiniciaEstado", 0.3f);
-    }
-
-    void ReiniciaEstado()
-    {
-        estados.CambioEstado(estadoOri);
     }
 
     private int EncuentraAudioSource(AudioSource[] audAux, string name)
