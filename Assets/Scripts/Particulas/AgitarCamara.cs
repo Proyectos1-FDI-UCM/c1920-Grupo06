@@ -5,14 +5,11 @@
 public class AgitarCamara : MonoBehaviour
 {
 	[SerializeField] float distancia = 0.05f, tiempoHastaDetenerse = 0.5f;
-	[SerializeField] BoxCollider2D jugadorCollider;
 	Vector3 PosIni;  //posición inicial de la cámara
 	Camera Camara;
-	BoxCollider2D DeathZone;
 	bool jugadorMuerto;
 
 	[SerializeField] AudioSource audDanyado, audMuerto;
-	[SerializeField] Estados estados;
 
 	//empieza desactivado
 	private void Awake()
@@ -23,7 +20,6 @@ public class AgitarCamara : MonoBehaviour
 	//al activarse, la cámara se agitará durante "tiempoHastaDetenerse" segundos
 	private void OnEnable()
 	{
-		DeathZone = GetComponentInChildren<BoxCollider2D>();
 		Camara = Camera.main;
 		PosIni = Camara.transform.position;
 		jugadorMuerto = GameManager.instance != null && GameManager.instance.getVidas() <= 0;

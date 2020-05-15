@@ -3913,10 +3913,14 @@ PrefabInstance:
       propertyPath: m_SortingLayer
       value: 2
       objectReference: {fileID: 0}
-    - target: {fileID: 898946494, guid: 8733d96370d667b438b0a1d50270b180, type: 3}
+    - target: {fileID: 0}
       propertyPath: m_audioClip
       value: 
       objectReference: {fileID: 8300000, guid: d76624a56df22794f9e86766419797ae, type: 3}
+    - target: {fileID: 0}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2344167096655965351, guid: 8733d96370d667b438b0a1d50270b180,
         type: 3}
       propertyPath: particulas
@@ -3939,6 +3943,18 @@ PrefabInstance:
         type: 3}
       propertyPath: fuerza_impulso
       value: -4
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: BypassReverbZones
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8733d96370d667b438b0a1d50270b180, type: 3}
@@ -6595,7 +6611,7 @@ Tilemap:
       - {fileID: 21300000, guid: 57e646e429e8cfb4996fc223c5b815c4, type: 3}
       - {fileID: 21300000, guid: d037b24e2a6aa6748aa994353ddbdf7e, type: 3}
       - {fileID: 21300000, guid: 2bfd6bce390b3884f885a6bf07b73de5, type: 3}
-      m_AnimationSpeed: 1.5797362
+      m_AnimationSpeed: 2.8965747
       m_AnimationTimeOffset: 0
       m_IsLooping: 1
   - first: {x: 8, y: 2, z: 0}
@@ -6604,7 +6620,7 @@ Tilemap:
       - {fileID: 21300000, guid: 57e646e429e8cfb4996fc223c5b815c4, type: 3}
       - {fileID: 21300000, guid: d037b24e2a6aa6748aa994353ddbdf7e, type: 3}
       - {fileID: 21300000, guid: 2bfd6bce390b3884f885a6bf07b73de5, type: 3}
-      m_AnimationSpeed: 1.8136215
+      m_AnimationSpeed: 4.4975214
       m_AnimationTimeOffset: 0
       m_IsLooping: 1
   m_TileAssetArray:
@@ -9972,6 +9988,18 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 929370199}
   m_PrefabAsset: {fileID: 0}
+--- !u!82 &929390675 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 110464915970379348, guid: 8733d96370d667b438b0a1d50270b180,
+    type: 3}
+  m_PrefabInstance: {fileID: 378106777}
+  m_PrefabAsset: {fileID: 0}
+--- !u!82 &929390676 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 7483065770622691907, guid: 8733d96370d667b438b0a1d50270b180,
+    type: 3}
+  m_PrefabInstance: {fileID: 378106777}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &945466444
 GameObject:
   m_ObjectHideFlags: 0
@@ -10285,6 +10313,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2600931320193750098, guid: 1484b714045adf84fba8f95ff25981ec,
+        type: 3}
+      propertyPath: m_Name
+      value: GameManager
+      objectReference: {fileID: 0}
     - target: {fileID: 2600931320193750099, guid: 1484b714045adf84fba8f95ff25981ec,
         type: 3}
       propertyPath: "tama\xF1oColeccionables"
@@ -10304,11 +10337,6 @@ PrefabInstance:
         type: 3}
       propertyPath: puntuacionPorColeccionable
       value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 2600931320193750098, guid: 1484b714045adf84fba8f95ff25981ec,
-        type: 3}
-      propertyPath: m_Name
-      value: GameManager
       objectReference: {fileID: 0}
     - target: {fileID: 2600931320193750100, guid: 1484b714045adf84fba8f95ff25981ec,
         type: 3}
@@ -85813,6 +85841,16 @@ PrefabInstance:
       propertyPath: jugadorCollider
       value: 
       objectReference: {fileID: 898946494}
+    - target: {fileID: 5702803199079217572, guid: e89c4386e65b25747bca4084e0584190,
+        type: 3}
+      propertyPath: audDanyado
+      value: 
+      objectReference: {fileID: 929390675}
+    - target: {fileID: 5702803199079217572, guid: e89c4386e65b25747bca4084e0584190,
+        type: 3}
+      propertyPath: audMuerto
+      value: 
+      objectReference: {fileID: 929390676}
     - target: {fileID: 36747683771323688, guid: e89c4386e65b25747bca4084e0584190,
         type: 3}
       propertyPath: jugadorGameObject
@@ -85908,6 +85946,11 @@ PrefabInstance:
       propertyPath: "efectoJugadorDa\xF1ado"
       value: 
       objectReference: {fileID: 898946472}
+    - target: {fileID: 36747683787640185, guid: e89c4386e65b25747bca4084e0584190,
+        type: 3}
+      propertyPath: aud
+      value: 
+      objectReference: {fileID: 929390676}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e89c4386e65b25747bca4084e0584190, type: 3}
 --- !u!1001 &1528545248
