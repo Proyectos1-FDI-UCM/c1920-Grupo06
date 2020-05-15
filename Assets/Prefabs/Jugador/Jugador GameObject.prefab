@@ -14549,6 +14549,7 @@ GameObject:
   - component: {fileID: 8070331601717115495}
   - component: {fileID: 2344167096655965351}
   - component: {fileID: 8307827199381493207}
+  - component: {fileID: 8624381034092970339}
   m_Layer: 9
   m_Name: Jugador
   m_TagString: Untagged
@@ -15062,6 +15063,20 @@ MonoBehaviour:
   speed: 1
   PrefabParticulasMuerteJugador: {fileID: 4250379251207673267, guid: dc2cd25af0793944681e7beffe628540,
     type: 3}
+--- !u!114 &8624381034092970339
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2925466069578243472}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4cd7e55f2d3dd3d458faab1df9d7bbd6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fuerzaHorizontal: 2
+  fuerzaVertical: 1
 --- !u!1 &3890075423041497900
 GameObject:
   m_ObjectHideFlags: 0
