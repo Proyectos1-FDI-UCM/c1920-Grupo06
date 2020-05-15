@@ -28,8 +28,8 @@ public class Dash : MonoBehaviour
         enabled = false;
 
         suelo = transform.GetChild(0).GetComponent<Suelo>();
-        audAux = GetComponents<AudioSource>();
-        aud = audAux[EncuentraAudioSource(audAux, "Dash")];
+        audAux = GetComponentsInChildren<AudioSource>();
+        aud = audAux[Metodos.EncuentraAudioSource(audAux, "Dash")];
     }
 
     void OnEnable() //cuando se active el Dash
@@ -116,16 +116,5 @@ public class Dash : MonoBehaviour
             cont = 0;
         }
         else cont++;
-    }
-    private int EncuentraAudioSource(AudioSource[] audAux, string name)
-    {
-        int i = 0;
-        bool enc = false;
-        while (i < audAux.Length && !enc)
-        {
-            if (audAux[i].clip.name == name) enc = true;
-            else i++;
-        }
-        return i;
     }
 }

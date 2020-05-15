@@ -22,8 +22,8 @@ public class Salto : MonoBehaviour
         estadisticas = GetComponent<Jugador>().estadisticas;
         estados = GetComponent<Estados>();
 
-        audAux = GetComponents<AudioSource>();
-        aud = audAux[EncuentraAudioSource(audAux, "Salto")];
+        audAux = GetComponentsInChildren<AudioSource>();
+        aud = audAux[Metodos.EncuentraAudioSource(audAux, "Salto")];
     }
 
     void Update()
@@ -79,16 +79,5 @@ public class Salto : MonoBehaviour
     void ReiniciaEstado()
     {
         estados.CambioEstado(estadoOri);
-    }
-    private int EncuentraAudioSource(AudioSource[] audAux, string name)
-    {
-        int i = 0;
-        bool enc = false;
-        while (i < audAux.Length && !enc)
-        {
-            if (audAux[i].clip.name == name) enc = true;
-            else i++;
-        }
-        return i;
     }
 }

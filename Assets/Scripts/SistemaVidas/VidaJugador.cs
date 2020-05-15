@@ -6,12 +6,12 @@ public class VidaJugador : MonoBehaviour
 {
     [SerializeField] float tiempoInvulnerable = 3f; //tiempo de invulnerabilidad
     [SerializeField] AgitarCamara agitarCamara = null;
-    EfectoJugadorDañado efectoJugadorDañado;
+    EfectoJugadorDanyado efectoJugadorDañado;
     bool invulnerable = false; //booleano de invulnerabilidad 
 
     private void Start()
     {
-        efectoJugadorDañado = GetComponent<EfectoJugadorDañado>();
+        efectoJugadorDañado = GetComponent<EfectoJugadorDanyado>();
         //efectoJugadorDañado.SetTiempoInvulnerable(tiempoInvulnerable); //se indica el tiempo de invulnerabilidad al script que lo indica en pantalla
     }
 
