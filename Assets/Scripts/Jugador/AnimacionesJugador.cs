@@ -107,25 +107,35 @@ public class AnimacionesJugador : MonoBehaviour
                 {
                     animador.Play("MovimientoInvertido");
                     particulas.Play();
+                    particulasIzq.Stop();
+                    particulasDer.Stop();
                 }
                 else if (velocidad > delta)
                 {
                     animador.Play("Movimiento");
                     particulas.Play();
+                    particulasIzq.Stop();
+                    particulasDer.Stop();
                 }
                 else
                 {
                     animador.Play("Iddle");
                     particulas.Stop();
+                    particulasIzq.Stop();
+                    particulasDer.Stop();
                 }
                 break;
             case estado.Dash:
                 animador.Play("Dash");
                 particulas.Stop();
+                particulasIzq.Stop();
+                particulasDer.Stop();
                 break;
             default: //en caso contrario, ponemos la animación "Caída" por defecto
                 animador.Play("Caida");
                 particulas.Stop();
+                particulasIzq.Stop();
+                particulasDer.Stop();
                 break;
         }
     }
