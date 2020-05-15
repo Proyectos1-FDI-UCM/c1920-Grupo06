@@ -100,8 +100,6 @@ public class AnimacionesJugador : MonoBehaviour
                             animador.Play("Caida");
                         }
                     }
-                    particulasIzq.Stop();
-                    particulasDer.Stop();
                     particulas.Stop();
                 }
                 else if (velocidad < -delta)
