@@ -9,7 +9,7 @@ public class DanhoAlJugadorObstaculos : MonoBehaviour
         VidaJugador vida = other.gameObject.GetComponent<VidaJugador>(); //comprobamos si detecta a una entidad con vida (jugador)
         KnockBack kb = other.gameObject.GetComponent<KnockBack>(); //comprobamos si detecta a una entidad con vida (jugador)
 
-        if (vida != null) //si detecta al jugador
+        if (vida != null && kb != null) //si detecta al jugador
         {
             vida.EliminaVidaObstaculos(); //llamamos al metodo de quitar vida del jugador    
             kb.Knockback(transform.position);
