@@ -20,6 +20,6 @@ public class PlataformaAgrietada : MonoBehaviour
     {
         Estados estadoJugador = collision.GetComponent<Estados>();
 
-        if (estadoJugador.Estado() == estado.Dash) transform.parent.gameObject.SetActive(false);
+        if (estadoJugador != null && estadoJugador.Estado() == estado.Dash) transform.parent.gameObject.SetActive(false);
     }
 }
