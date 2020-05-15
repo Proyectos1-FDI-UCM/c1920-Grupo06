@@ -1,23 +1,28 @@
 ﻿using UnityEngine;
 
 //Comportamiento del deslizamiento del jugador en las paredes
+public enum posicionColliders
+{ derecha, izquierda, ninguna };
 
 public class DeslizamientoPared : MonoBehaviour
 {
     [SerializeField] float velocidad_Deslizamiento = -2.5f;
     //Posiciones posbiles de un trigger que esta chocando con algo: ninguna si no choca con nada
-    enum posicionColliders { derecha, izquierda, ninguna };
     //Se inicializa a ninguna, no se esta chocando con nada al comienzo del juego
     posicionColliders posicionCollider = posicionColliders.ninguna;
-    
+
     //Array que contiene los dos colliders derecho e izquierdo (en el mismo orden que están colocados en el editor)
-    BoxCollider2D [] colliders;
+    BoxCollider2D[] colliders;
     Rigidbody2D rb;
     Estados estadoJugador;
     BoxCollider2D boxCollider2D;
     PlataformaJumpthrough jumpthrough;
     CompositeCollider2D compositeCollider2D;
 
+    public posicionColliders GetCollider
+    {
+        get { return posicionCollider; }
+    }
     void Start()
     {
         rb = transform.parent.GetComponent<Rigidbody2D>();
@@ -35,7 +40,7 @@ public class DeslizamientoPared : MonoBehaviour
 
     void OnTriggerStay2D(Collider2D other)
     {
- 
+
         //Si el gameObject con el que se choca tiene el componente PlataformaJumpthrough, no se produce deslizamiento para evitar errores
         if (jumpthrough == null || (boxCollider2D != null && boxCollider2D.isTrigger) || compositeCollider2D != null)
         {
