@@ -15,7 +15,6 @@ public class AnimacionesJugador : MonoBehaviour
     DeslizamientoPared deslizamiento;
     bool enSuelo = false, enSueloAux = false;
     int velx = 0, velxaux = 0;
-    bool vely = false, velyaux = false;
 
     void Start()
     {
@@ -25,6 +24,8 @@ public class AnimacionesJugador : MonoBehaviour
         suelo = GetComponentInChildren<Suelo>();
         estadoJugador = GetComponent<Estados>();
         deslizamiento = GetComponentInChildren<DeslizamientoPared>();
+        particulasIzq.Stop();
+        particulasDer.Stop();
     }
 
     void Update()
