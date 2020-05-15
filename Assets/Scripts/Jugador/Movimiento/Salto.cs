@@ -8,6 +8,7 @@ public class Salto : MonoBehaviour
     Estadisticas estadisticas = null; //Referencia de las estadísticas
     Rigidbody2D rb;
     Suelo suelo;
+    CrearDash dash;
     Estados estados;
     estado estadoOri;
     bool salto_disponible = true; //booleano que controla si se puede saltar o no
@@ -37,6 +38,11 @@ public class Salto : MonoBehaviour
     public void RecargaSalto() //método para recargar los saltos al llegar a una superficie
     {
         salto_disponible = true;
+    }
+
+    public void DesactivaSalto()
+    {
+        salto_disponible = false;
     }
 
     //métodos utilizados para el PowerUp "SaltoPotenciado"
