@@ -6595,7 +6595,7 @@ Tilemap:
       - {fileID: 21300000, guid: 57e646e429e8cfb4996fc223c5b815c4, type: 3}
       - {fileID: 21300000, guid: d037b24e2a6aa6748aa994353ddbdf7e, type: 3}
       - {fileID: 21300000, guid: 2bfd6bce390b3884f885a6bf07b73de5, type: 3}
-      m_AnimationSpeed: 3.3975985
+      m_AnimationSpeed: 1.5797362
       m_AnimationTimeOffset: 0
       m_IsLooping: 1
   - first: {x: 8, y: 2, z: 0}
@@ -6604,7 +6604,7 @@ Tilemap:
       - {fileID: 21300000, guid: 57e646e429e8cfb4996fc223c5b815c4, type: 3}
       - {fileID: 21300000, guid: d037b24e2a6aa6748aa994353ddbdf7e, type: 3}
       - {fileID: 21300000, guid: 2bfd6bce390b3884f885a6bf07b73de5, type: 3}
-      m_AnimationSpeed: 4.923507
+      m_AnimationSpeed: 1.8136215
       m_AnimationTimeOffset: 0
       m_IsLooping: 1
   m_TileAssetArray:
@@ -9484,6 +9484,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bc00fc89cc3b0724fbea7e4603a786ef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!61 &898946494 stripped
+BoxCollider2D:
+  m_CorrespondingSourceObject: {fileID: 2925466069578243457, guid: 8733d96370d667b438b0a1d50270b180,
+    type: 3}
+  m_PrefabInstance: {fileID: 378106777}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &901454484
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -85797,6 +85803,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: Main Camera
       objectReference: {fileID: 0}
+    - target: {fileID: 5702803199079217572, guid: e89c4386e65b25747bca4084e0584190,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5702803199079217572, guid: e89c4386e65b25747bca4084e0584190,
+        type: 3}
+      propertyPath: jugadorCollider
+      value: 
+      objectReference: {fileID: 898946494}
     - target: {fileID: 36747683771323688, guid: e89c4386e65b25747bca4084e0584190,
         type: 3}
       propertyPath: jugadorGameObject
