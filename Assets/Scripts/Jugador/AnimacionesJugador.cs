@@ -12,6 +12,7 @@ public class AnimacionesJugador : MonoBehaviour
     Rigidbody2D rb;
     Suelo suelo;
     Estados estadoJugador;
+    DeslizamientoPared deslizamiento;
     bool enSuelo = false, enSueloAux = false;
     int velx = 0, velxaux = 0;
     bool vely = false, velyaux = false;
@@ -23,6 +24,7 @@ public class AnimacionesJugador : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         suelo = GetComponentInChildren<Suelo>();
         estadoJugador = GetComponent<Estados>();
+        deslizamiento = GetComponentInChildren<DeslizamientoPared>();
     }
 
     void Update()
@@ -70,13 +72,33 @@ public class AnimacionesJugador : MonoBehaviour
                 //establecemos la animación con respecto a la velocidad
                 if (!enSuelo)
                 {
-                    if (velocidad_y > delta)
+                    if (deslizamiento.GetCollider != posicionColliders.ninguna)
                     {
-                        animador.Play("Salto");
+                        if (deslizamiento.GetCollider == posicionColliders.izquierda) //Delizamiento izquierda
+                        {
+                            print("izq");
+                            animador.Play("DeslizamientoIzquierda");
+                            particulasIzq.Play();
+                            particulasDer.Stop();
+                        }
+                        else //Deslizamiento derecha
+                        {
+                            print("der");
+                            animador.Play("DeslizamientoDerecha");
+                            particulasIzq.Stop();
+                            particulasDer.Play();
+                        }
                     }
                     else
                     {
-                        animador.Play("Caida");
+                        if (velocidad_y > delta) //Velocidad de subida
+                        {
+                            animador.Play("Salto");
+                        }
+                        else //Velocidad de Bajada
+                        {
+                            animador.Play("Caida");
+                        }
                     }
                     particulas.Stop();
                 }
