@@ -77,14 +77,12 @@ public class AnimacionesJugador : MonoBehaviour
                     {
                         if (deslizamiento.GetCollider == posicionColliders.izquierda) //Delizamiento izquierda
                         {
-                            print("izq");
                             animador.Play("DeslizamientoIzquierda");
                             particulasIzq.Play();
                             particulasDer.Stop();
                         }
                         else //Deslizamiento derecha
                         {
-                            print("der");
                             animador.Play("DeslizamientoDerecha");
                             particulasIzq.Stop();
                             particulasDer.Play();
