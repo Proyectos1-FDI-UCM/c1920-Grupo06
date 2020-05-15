@@ -14,6 +14,7 @@ public class AnimacionesJugador : MonoBehaviour
     Estados estadoJugador;
     bool enSuelo = false, enSueloAux = false;
     int velx = 0, velxaux = 0;
+    bool vely = false, velyaux = false;
 
     void Start()
     {
@@ -52,6 +53,10 @@ public class AnimacionesJugador : MonoBehaviour
                 velxaux = velx; //actualizamos la dirección
             }
         }
+        else
+        {
+            CambioAnimacion(estadoJugador.Estado());
+        }
     }
 
     public void CambioAnimacion(estado estadoActual) //método para cambiar la animación
@@ -60,11 +65,19 @@ public class AnimacionesJugador : MonoBehaviour
         {
             case estado.Defecto: //de estar sobre una plataforma
                 float velocidad = rb.velocity.x;
+                float velocidad_y = rb.velocity.y;
 
                 //establecemos la animación con respecto a la velocidad
                 if (!enSuelo)
                 {
-                    animador.Play("Caida");
+                    if (velocidad_y > delta)
+                    {
+                        animador.Play("Salto");
+                    }
+                    else
+                    {
+                        animador.Play("Caida");
+                    }
                     particulas.Stop();
                 }
                 else if (velocidad < -delta)
