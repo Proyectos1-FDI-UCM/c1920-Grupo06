@@ -81,4 +81,16 @@ public static class Metodos
         float horizontal = Input.GetAxis("Horizontal");
         return new Vector3(horizontal, vertical);
     }
+
+    public static int EncuentraAudioSource(AudioSource[] audAux, string name)
+    {
+        int i = 0;
+        bool enc = false;
+        while (i < audAux.Length && !enc)
+        {
+            if (audAux[i].clip.name == name) enc = true;
+            else i++;
+        }
+        return i;
+    }
 }

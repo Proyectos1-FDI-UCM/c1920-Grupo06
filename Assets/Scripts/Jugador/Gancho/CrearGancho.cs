@@ -32,8 +32,8 @@ public class CrearGancho : MonoBehaviour
         cargasGancho = cargasMaxima; //establecemos las cargas actuales
 		estadisticas = GetComponent<Jugador>().estadisticas;
 		suelo = transform.GetChild(0).GetComponent<Suelo>(); //Los pies deben ser el primer hijo del jugador
-        audAux = GetComponents<AudioSource>();
-        aud = audAux[EncuentraAudioSource(audAux,"Gancho")];
+        audAux = GetComponentsInChildren<AudioSource>();
+        aud = audAux[Metodos.EncuentraAudioSource(audAux,"Gancho")];
     }
 
     void Update()
@@ -100,16 +100,5 @@ public class CrearGancho : MonoBehaviour
     public void RecargaGancho() //metodo para recargar los usos del gancho
     {
         cargasGancho = cargasMaxima;
-    }
-    private int EncuentraAudioSource(AudioSource[] audAux, string name)
-    {
-        int i = 0;
-        bool enc = false;
-        while (i < audAux.Length && !enc)
-        {
-            if (audAux[i].clip.name == name) enc = true;
-            else i++;
-        }
-        return i;
     }
 }

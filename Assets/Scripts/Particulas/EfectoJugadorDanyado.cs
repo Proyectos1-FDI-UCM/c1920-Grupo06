@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 
 //Script que cambia el color del jugador cuando recibe daño e instancia unas partículas cuando se muere el jugador
-public class EfectoJugadorDañado : MonoBehaviour
+public class EfectoJugadorDanyado : MonoBehaviour
 {
     [SerializeField] Color ColorA = Color.red;
     [SerializeField] Color ColorB = Color.green;
@@ -10,7 +10,9 @@ public class EfectoJugadorDañado : MonoBehaviour
 
     Color ColorIni;
     float tiempoInvulnerable = 3f;
+    GameObject particulas;
     SpriteRenderer spriteRenderer;
+
 
     //comienza desactivado
     private void Awake()
@@ -31,7 +33,7 @@ public class EfectoJugadorDañado : MonoBehaviour
     {
         if (GameManager.instance.getVidas() <= 0)
         {
-            GameObject particulas = Instantiate(PrefabParticulasMuerteJugador, transform.position, Quaternion.Euler(0f, 0f, 0f));
+            particulas = Instantiate(PrefabParticulasMuerteJugador, transform.position, Quaternion.Euler(0f, 0f, 0f));
             ParticleSystem particleSystem = particulas.GetComponent<ParticleSystem>();
             particleSystem.Play();
             enabled = false; //y se desactiva el script
@@ -48,5 +50,6 @@ public class EfectoJugadorDañado : MonoBehaviour
     private void OnDisable()
     {
         if (spriteRenderer != null) spriteRenderer.color = ColorIni;
+        if(particulas != null) Destroy(particulas.gameObject);
     }
 }

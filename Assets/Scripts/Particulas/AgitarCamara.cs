@@ -9,6 +9,10 @@ public class AgitarCamara : MonoBehaviour
 	Vector3 PosIni;  //posición inicial de la cámara
 	Camera Camara;
 	BoxCollider2D DeathZone;
+	bool jugadorMuerto;
+
+	[SerializeField] AudioSource audDanyado, audMuerto;
+	[SerializeField] Estados estados;
 
 	//empieza desactivado
 	private void Awake()
@@ -22,6 +26,10 @@ public class AgitarCamara : MonoBehaviour
 		DeathZone = GetComponentInChildren<BoxCollider2D>();
 		Camara = Camera.main;
 		PosIni = Camara.transform.position;
+		jugadorMuerto = GameManager.instance != null && GameManager.instance.getVidas() <= 0;
+		if (jugadorMuerto) audMuerto.Play();
+		else audDanyado.Play();
+
 		InvokeRepeating("ComienzaAgitarCamara", 0f, 0.005f);
 		Invoke("PararAgitarCamara", tiempoHastaDetenerse);
 	}
@@ -43,9 +51,9 @@ public class AgitarCamara : MonoBehaviour
 	//al desactivarse
 	private void OnDisable()
 	{
-		if(Camara != null) Camara.transform.position = new Vector3(PosIni.x, Camara.transform.position.y, Camara.transform.position.z); //se devuelve la cámara a su posición inicial
-															   //una vez terminado el efecto visual de daño, si el jugador tiene sus vidas a 0, se muere
-		if ((GameManager.instance != null && GameManager.instance.getVidas() <= 0))
+		//se devuelve la cámara a su posición inicial
+		if (Camara != null) Camara.transform.position = new Vector3(PosIni.x, Camara.transform.position.y, Camara.transform.position.z);											  
+		if (jugadorMuerto) //una vez terminado el efecto visual de daño, si el jugador tiene sus vidas a 0, se muere
 		{
 			GameManager.instance.Muerte();
 		}
