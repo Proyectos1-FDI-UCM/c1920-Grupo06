@@ -25,6 +25,7 @@ public class KnockBack : MonoBehaviour
         estados.CambioEstado(estado.Knockback);
         float dirx = Metodos.Vector3toVector2(posObstaculo - transform.position).normalized.x;
         Vector2 dir = new Vector2(-dirx * 2, Vector2.up.y * fuerzaVertical);
+        rb.velocity = Vector2.zero;
         rb.AddForce(dir * 10, ForceMode2D.Impulse); //se aplica la fuerza del salto
         Invoke("ReiniciaEstado", 0.3f);
     }

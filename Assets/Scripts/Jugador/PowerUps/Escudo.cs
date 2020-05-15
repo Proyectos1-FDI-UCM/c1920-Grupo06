@@ -64,9 +64,12 @@ public class Escudo : MonoBehaviour
 
     void OnDisable() //al desactivarse el PowerUp
     {
-        activable = true;
-        escudo.SetActive(false); //desactivamos el escudo
-        GameManager.instance.DesactivaSprite(1); //desactivamos su referencia en la interfaz
-        vidaJugador.HacerVulnerable(); //volvemos a hacerlo vulnerable
+        if (GameManager.instance != null)
+        {
+            activable = true;
+            escudo.SetActive(false); //desactivamos el escudo
+            GameManager.instance.DesactivaSprite(1); //desactivamos su referencia en la interfaz
+            vidaJugador.HacerVulnerable(); //volvemos a hacerlo vulnerable
+        }
     }
 }
