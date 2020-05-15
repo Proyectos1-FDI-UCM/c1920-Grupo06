@@ -19,6 +19,10 @@ public class DeslizamientoPared : MonoBehaviour
     PlataformaJumpthrough jumpthrough;
     CompositeCollider2D compositeCollider2D;
 
+    public posicionColliders GetCollider
+    {
+        get { return posicionCollider; }
+    }
     void Start()
     {
         rb = transform.parent.GetComponent<Rigidbody2D>();
