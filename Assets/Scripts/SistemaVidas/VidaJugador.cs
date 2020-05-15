@@ -5,7 +5,7 @@
 public class VidaJugador : MonoBehaviour
 {
     [SerializeField] float tiempoInvulnerable = 3f; //tiempo de invulnerabilidad
-    [SerializeField] AgitarCamara cameraShake = null;
+    [SerializeField] AgitarCamara agitarCamara = null;
     EfectoJugadorDañado efectoJugadorDañado;
     bool invulnerable = false; //booleano de invulnerabilidad 
 
@@ -26,7 +26,7 @@ public class VidaJugador : MonoBehaviour
             {
                 GameManager.instance.EliminaVidaJugador(); //quita una vida
 
-                cameraShake.enabled = true;
+                agitarCamara.enabled = true;
 
                 if (transform.position != GameManager.instance.CheckPoint()) //si no ha muerto
                 {
@@ -46,9 +46,12 @@ public class VidaJugador : MonoBehaviour
             {
                 GameManager.instance.EliminaVidaJugador(); //quita una vida
 
+                agitarCamara.enabled = true;
+
                 if (transform.position != GameManager.instance.CheckPoint()) //si no ha muerto
                 {
                     invulnerable = true; //lo hacemos invulnerable
+                    efectoJugadorDañado.enabled = true;  //mostramos la invulnerabilidad en pantalla
                     Invoke("HacerVulnerable2", tiempoInvulnerable); //en 'x' tiempo, volverá a ser vulnerable
                 }
             }
