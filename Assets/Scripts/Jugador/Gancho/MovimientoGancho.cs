@@ -64,7 +64,7 @@ public class MovimientoGancho : MonoBehaviour
     {
         if (enabled) //si está activo
         {
-            if (collision.gameObject == gancho) //si entra en la posición del gancho
+            if (collision.gameObject.layer == 14) //si el jugador entra en un trigger que es a la vez un enganche
             {
                 Destroy(gancho); //destruimos el gancho
                 jugador.DireccionImpulso(Vector3.up); //hacemos un impulso vertical
