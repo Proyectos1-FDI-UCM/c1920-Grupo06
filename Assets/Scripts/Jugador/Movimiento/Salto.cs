@@ -5,6 +5,7 @@
 public class Salto : MonoBehaviour
 {
     [SerializeField] [Range(5, 10)] float fuerza_salto = 2; //Fuerza del salto
+    [SerializeField] ParticleSystem particulas = null;
     Estadisticas estadisticas = null; //Referencia de las estadísticas
     Rigidbody2D rb;
     Suelo suelo;
@@ -60,6 +61,7 @@ public class Salto : MonoBehaviour
     {
         estadisticas.Salto(); //Sumamos un salto a las estadísticas
 
+        particulas.Play();
         rb.gravityScale = 1.5f; //reestablecemos la gravedad
         rb.AddForce(Vector2.up * fuerza_salto, ForceMode2D.Impulse); //se aplica la fuerza del salto
         salto_disponible = false; //se cambia la disponibilidad del salto a false
