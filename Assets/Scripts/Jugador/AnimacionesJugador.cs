@@ -24,8 +24,8 @@ public class AnimacionesJugador : MonoBehaviour
         suelo = GetComponentInChildren<Suelo>();
         estadoJugador = GetComponent<Estados>();
         deslizamiento = GetComponentInChildren<DeslizamientoPared>();
-        particulasIzq.Stop();
-        particulasDer.Stop();
+
+        Particulas(0);
     }
 
     void Update()
@@ -77,17 +77,13 @@ public class AnimacionesJugador : MonoBehaviour
                     {
                         if (deslizamiento.GetCollider == posicionColliders.izquierda) //Delizamiento izquierda
                         {
-                            print("izq");
                             animador.Play("DeslizamientoIzquierda");
-                            particulasIzq.Play();
-                            particulasDer.Stop();
+                            Particulas(3);
                         }
                         else //Deslizamiento derecha
                         {
-                            print("der");
                             animador.Play("DeslizamientoDerecha");
-                            particulasIzq.Stop();
-                            particulasDer.Play();
+                            Particulas(2);
                         }
                     }
                     else
@@ -100,42 +96,65 @@ public class AnimacionesJugador : MonoBehaviour
                         {
                             animador.Play("Caida");
                         }
+                        Particulas(0);
                     }
-                    particulas.Stop();
                 }
                 else if (velocidad < -delta)
                 {
                     animador.Play("MovimientoInvertido");
-                    particulas.Play();
-                    particulasIzq.Stop();
-                    particulasDer.Stop();
+                    Particulas(1);
                 }
                 else if (velocidad > delta)
                 {
                     animador.Play("Movimiento");
-                    particulas.Play();
-                    particulasIzq.Stop();
-                    particulasDer.Stop();
+                    Particulas(1);
                 }
                 else
                 {
                     animador.Play("Iddle");
-                    particulas.Stop();
-                    particulasIzq.Stop();
-                    particulasDer.Stop();
+                    Particulas(0);
                 }
                 break;
             case estado.Dash:
                 animador.Play("Dash");
-                particulas.Stop();
-                particulasIzq.Stop();
-                particulasDer.Stop();
+                Particulas(4);
                 break;
             default: //en caso contrario, ponemos la animación "Caída" por defecto
                 animador.Play("Caida");
+                Particulas(0);
+                break;
+        }
+    }
+    void Particulas(int n) //Metedo que activa y desactiva las partículas
+    { //n = 0: ninguna, n = 1: movimiento, n = 2: deslizamiento derecha, n = 3: deslizamiento izquierda, n = 4: dash
+        switch (n)
+        {
+            case 0:
                 particulas.Stop();
-                particulasIzq.Stop();
                 particulasDer.Stop();
+                particulasIzq.Stop();
+                break;
+            case 1:
+                particulas.Play();
+                particulasDer.Stop();
+                particulasIzq.Stop();
+                break;
+            case 2:
+                particulas.Stop();
+                if (!particulasDer.isEmitting)
+                    particulasDer.Play();
+                particulasIzq.Stop();
+                break;
+            case 3:
+                particulas.Stop();
+                particulasDer.Stop();
+                if (!particulasIzq.isEmitting)
+                    particulasIzq.Play();
+                break;
+            case 4:
+                particulas.Stop();
+                particulasDer.Stop();
+                particulasIzq.Stop();
                 break;
         }
     }
