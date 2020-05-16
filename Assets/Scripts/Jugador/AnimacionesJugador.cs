@@ -141,13 +141,15 @@ public class AnimacionesJugador : MonoBehaviour
                 break;
             case 2:
                 particulas.Stop();
-                particulasDer.Play();
+                if (!particulasDer.isEmitting)
+                    particulasDer.Play();
                 particulasIzq.Stop();
                 break;
             case 3:
                 particulas.Stop();
                 particulasDer.Stop();
-                particulasIzq.Play();
+                if (!particulasIzq.isEmitting)
+                    particulasIzq.Play();
                 break;
             case 4:
                 particulas.Stop();
@@ -155,6 +157,5 @@ public class AnimacionesJugador : MonoBehaviour
                 particulasIzq.Stop();
                 break;
         }
-        if (particulasDer.isEmitting) print("hola");
     }
 }
