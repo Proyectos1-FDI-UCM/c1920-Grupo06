@@ -190,8 +190,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   distancia: 0.05
   tiempoHastaDetenerse: 0.5
-  audDanyado: {fileID: 0}
-  audMuerto: {fileID: 0}
 --- !u!1 &36747683787640187
 GameObject:
   m_ObjectHideFlags: 0
@@ -262,6 +260,3 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c52593bb3e101dc408dedef80afc86ea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  agitarCamara: {fileID: 0}
-  "efectoJugadorDa\xF1ado": {fileID: 0}
-  aud: {fileID: 0}
