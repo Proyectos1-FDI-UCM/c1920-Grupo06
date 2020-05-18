@@ -12,8 +12,8 @@ public class ActivatePowerUp : MonoBehaviour
     private void Start()
     {
         aud = GetComponent<AudioSource>();
-        bc = GetComponent<BoxCollider2D>();
-        sr = GetComponent<SpriteRenderer>();
+        //bc = GetComponent<BoxCollider2D>();
+        //sr = GetComponent<SpriteRenderer>();
     }
 
     void OnTriggerEnter2D(Collider2D collision)
@@ -23,10 +23,10 @@ public class ActivatePowerUp : MonoBehaviour
         if (powerUpMan != null)
         {
             aud.Play();
-            bc.enabled = false;
-            sr.enabled = false;
+            //bc.enabled = false;
+            //sr.enabled = false;
             powerUpMan.Manager(powerUp);
-            Invoke("Destroy", 0.5f);
+            Invoke("Destroy", 0f);
         }
     }
 
