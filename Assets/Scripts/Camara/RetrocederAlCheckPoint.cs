@@ -32,7 +32,7 @@ public class RetrocederAlCheckPoint : MonoBehaviour
 
     void Update()
     {
-        if (transform.position.y < checkPoint.y) //en cuanto llegue a la posición del checkpoint
+        if (transform.position.y < checkPoint.y + 4.5) //en cuanto llegue a la posición del checkpoint
         {
             Destroy(rb); //destruimos su RB
             estadosjugador.CambioEstado(estado.Defecto); //actualizamos el estado del jugador
