@@ -18,6 +18,7 @@ public class MovLineal : MonoBehaviour
     void OnEnable() //cuando se active (reaparición)
     {
         rb.velocity = initialSpeed; //establecemos su velocidad y dirección
+        Rotacion();
     }
 
     void Update()
@@ -59,7 +60,7 @@ public class MovLineal : MonoBehaviour
 
     void Rotacion() //metodo para elegir la rotacion acorde al movimiento
     {
-        if (rb.velocity.x < 0) transform.eulerAngles = new Vector2(transform.rotation.x, 180f);
+        if (rb.velocity.x > 0) transform.eulerAngles = new Vector2(transform.rotation.x, 180f);
         else transform.eulerAngles = new Vector2(transform.rotation.x, 0f);
     }
 }
