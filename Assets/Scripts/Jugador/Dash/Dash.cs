@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.Tilemaps;
 
 //Comportamiento del Dash
 
@@ -17,6 +18,9 @@ public class Dash : MonoBehaviour
     AudioSource aud;
     AudioSource[] audAux;
     int cont = 0;
+
+    bool ignore = false;
+    PlataformaMovible movible = null;
 
     void Awake()
     {
@@ -66,7 +70,10 @@ public class Dash : MonoBehaviour
     void OnCollisionEnter2D(Collision2D collision) //en caso de colisionar con alguna entidad (plataformas)
     {
         jumpthrough = collision.gameObject.GetComponent<PlatformEffector2D>();
-        if (jumpthrough == null && enabled)
+        movible = collision.gameObject.GetComponent<PlataformaMovible>();
+        if (movible != null && direccion.y >= 0) ignore = true;
+
+        if (jumpthrough == null && enabled && !ignore)
         {
             rb.velocity = Vector2.zero;
             //Invoke("ParaDash", 0.3f);  //lo desactivamos
@@ -76,11 +83,18 @@ public class Dash : MonoBehaviour
 
     void OnCollisionStay2D(Collision2D collision) //en caso de colisionar con alguna entidad (plataformas)
     {
-        if (!suelo.EnSuelo() && jumpthrough == null)
+
+        if (!suelo.EnSuelo() && jumpthrough == null && !ignore)
         {
             //Invoke("ParaDash", 0.3f);  //lo desactivamos
             ParaDash();
         }
+    }
+
+    private void OnCollisionExit2D(Collision2D collision)
+    {
+        movible = collision.gameObject.GetComponent<PlataformaMovible>();
+        if (movible != null) { ignore = false; movible = null; }
     }
 
     void OnDisable() //cuando se desactive el Dash

@@ -127,8 +127,10 @@ public class PlataformaMovible : MonoBehaviour
         if (sobrePlataforma)
         {
             Salto salto = collision.transform.parent.GetComponent<Salto>();
-            if (nextPos == puntoB) // solo cambia la fuerza del salto mientras sube
-                salto.CambiaFuerzaSalto(fuerzaSaltoOri * 1.5f);
+            if (salto != null && nextPos == puntoB && !horizontal) // solo cambia la fuerza del salto mientras sube
+                if (!diagonal)
+                    salto.CambiaFuerzaSalto(fuerzaSaltoOri * 1.5f);
+                else salto.CambiaFuerzaSalto(fuerzaSaltoOri * 1.15f);
 
             //Mientras el jugador no esté en medio de otra acción
             if (!Input.anyKey && estados.Estado() == estado.Defecto)
