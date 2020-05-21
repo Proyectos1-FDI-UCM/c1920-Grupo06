@@ -82,7 +82,6 @@ public class Dash : MonoBehaviour
         jumpthrough = collision.gameObject.GetComponent<PlatformEffector2D>();
         movible = collision.gameObject.GetComponent<PlataformaMovible>();
 
-
         if (movible != null && direccion.y >= 0 && transform.position.y > movible.transform.position.y) ignore = true;
 
         if (jumpthrough == null && enabled && !ignore)
@@ -91,12 +90,12 @@ public class Dash : MonoBehaviour
             //Invoke("ParaDash", 0.3f);  //lo desactivamos
             ParaDash();
         }
-        /*else if (jumpthrough != null && transform.position.y > jumpthrough.gameObject.transform.position.y && enabled && !ignore)
+        else if (jumpthrough != null && direccion.y < 0 && enabled && !ignore)
         {
             rb.velocity = Vector2.zero;
             //Invoke("ParaDash", 0.3f);  //lo desactivamos
             ParaDash();
-        }*/
+        }
     }
 
     void OnCollisionStay2D(Collision2D collision) //en caso de colisionar con alguna entidad (plataformas)
