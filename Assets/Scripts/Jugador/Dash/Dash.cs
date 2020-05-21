@@ -21,6 +21,7 @@ public class Dash : MonoBehaviour
 
     bool ignore = false;
     PlataformaMovible movible = null;
+    BoxCollider2D rompible = null;
 
     void Awake()
     {
@@ -43,6 +44,7 @@ public class Dash : MonoBehaviour
         posicion_inicial = transform.position;
         rb.velocity = Vector2.zero;
         Vector3 direccionAux = jugador.DireccionDash();
+        if (rompible != null) rompible.enabled = false;
         //actualizamos la direccion del Dash
         if (direccionAux != Vector3.zero)
             direccion = direccionAux;
@@ -71,6 +73,8 @@ public class Dash : MonoBehaviour
     {
         jumpthrough = collision.gameObject.GetComponent<PlatformEffector2D>();
         movible = collision.gameObject.GetComponent<PlataformaMovible>();
+        rompible = collision.gameObject.GetComponent<BoxCollider2D>();
+
         if (movible != null && direccion.y >= 0) ignore = true;
 
         if (jumpthrough == null && enabled && !ignore)
@@ -83,7 +87,6 @@ public class Dash : MonoBehaviour
 
     void OnCollisionStay2D(Collision2D collision) //en caso de colisionar con alguna entidad (plataformas)
     {
-
         if (!suelo.EnSuelo() && jumpthrough == null && !ignore)
         {
             //Invoke("ParaDash", 0.3f);  //lo desactivamos
