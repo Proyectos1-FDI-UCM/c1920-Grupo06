@@ -19,9 +19,11 @@ public class Dash : MonoBehaviour
     AudioSource[] audAux;
     int cont = 0;
 
+    PlataformaAgrietada rompible = null;
+
     bool ignore = false;
     PlataformaMovible movible = null;
-    BoxCollider2D rompible = null;
+
 
     void Awake()
     {
@@ -44,7 +46,7 @@ public class Dash : MonoBehaviour
         posicion_inicial = transform.position;
         rb.velocity = Vector2.zero;
         Vector3 direccionAux = jugador.DireccionDash();
-        if (rompible != null) rompible.enabled = false;
+
         //actualizamos la direccion del Dash
         if (direccionAux != Vector3.zero)
             direccion = direccionAux;
@@ -66,16 +68,22 @@ public class Dash : MonoBehaviour
     {
         if ((transform.position - posicion_inicial).magnitude > longitudDash) //si se ha alcanzado la distancia 
             enabled = false;
-        if (rb.velocity == Vector2.zero) ParaDash();
+        if (rb.velocity == Vector2.zero && rompible == null) ParaDash();
+        else
+        {
+            rb.velocity = direccion.normalized * velocidadDash;
+            rompible = null;
+        }
     }
 
     void OnCollisionEnter2D(Collision2D collision) //en caso de colisionar con alguna entidad (plataformas)
     {
+        rompible = collision.gameObject.GetComponentInChildren<PlataformaAgrietada>();
         jumpthrough = collision.gameObject.GetComponent<PlatformEffector2D>();
         movible = collision.gameObject.GetComponent<PlataformaMovible>();
-        rompible = collision.gameObject.GetComponent<BoxCollider2D>();
 
-        if (movible != null && direccion.y >= 0) ignore = true;
+
+        if (movible != null && direccion.y >= 0 && transform.position.y > movible.transform.position.y) ignore = true;
 
         if (jumpthrough == null && enabled && !ignore)
         {
@@ -83,6 +91,12 @@ public class Dash : MonoBehaviour
             //Invoke("ParaDash", 0.3f);  //lo desactivamos
             ParaDash();
         }
+        /*else if (jumpthrough != null && transform.position.y > jumpthrough.gameObject.transform.position.y && enabled && !ignore)
+        {
+            rb.velocity = Vector2.zero;
+            //Invoke("ParaDash", 0.3f);  //lo desactivamos
+            ParaDash();
+        }*/
     }
 
     void OnCollisionStay2D(Collision2D collision) //en caso de colisionar con alguna entidad (plataformas)
@@ -99,6 +113,7 @@ public class Dash : MonoBehaviour
         movible = collision.gameObject.GetComponent<PlataformaMovible>();
         if (movible != null) { ignore = false; movible = null; }
     }
+
 
     void OnDisable() //cuando se desactive el Dash
     {
@@ -134,5 +149,10 @@ public class Dash : MonoBehaviour
             cont = 0;
         }
         else cont++;
+    }
+
+    public void ReDashea()
+    {
+        rb.AddForce(direccion.normalized * velocidadDash, ForceMode2D.Impulse); //establecemos una fuerza en esa dirección
     }
 }
