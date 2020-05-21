@@ -1,6 +1,8 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
 
+//Script 
+
 public class EstadosTutorial : MonoBehaviour
 {
     public enum estadoTutorial { primeraSecc, segundaSecc, terceraSecc, cuartaSecc };
@@ -96,6 +98,7 @@ public class EstadosTutorial : MonoBehaviour
             case estadoTutorial.terceraSecc:
                 estadoTuto = estadoTutorial.cuartaSecc;
                 button.SetActive(false);
+                escudo.enabled = false;
                 break;
         }
     }
@@ -104,11 +107,11 @@ public class EstadosTutorial : MonoBehaviour
     {
         button.SetActive(true);
         rb.velocity = Vector2.zero;
+        estados.CambioEstado(estado.Inactivo);
         if (estadoTuto == estadoTutorial.cuartaSecc)
         {
             button.GetComponentInChildren<Text>().text = "NIVEL 1 >>";
-            Time.timeScale = 0f;
+            enemigo.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
         }
-        estados.CambioEstado(estado.Inactivo);
     }
 }
