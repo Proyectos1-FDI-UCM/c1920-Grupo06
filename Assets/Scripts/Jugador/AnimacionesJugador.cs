@@ -4,7 +4,7 @@
 
 public class AnimacionesJugador : MonoBehaviour
 {
-    [SerializeField] float delta = 0.05f;
+    [SerializeField] float delta = 0.3f;
     [SerializeField] ParticleSystem particulas = null;
     [SerializeField] ParticleSystem particulasIzq = null;
     [SerializeField] ParticleSystem particulasDer = null;
