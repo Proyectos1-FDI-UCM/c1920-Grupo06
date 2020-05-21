@@ -23,49 +23,49 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Tutorial.unity
     guid: 49491b61a25e5dc4491bf17691fc5fc5
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/PlanPruebas/Escenas/MenuPruebas.unity
     guid: 9066b88f58958f84c949184897096cad
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/PlanPruebas/Escenas/PruebaGancho/PruebaGancho4.unity
     guid: 24506a354b8998a4a82ec5a2343a1947
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/PlanPruebas/Escenas/PruebaGancho/PruebaGancho3.unity
     guid: 54f049b62dd22d94b95938af24fa136e
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/PlanPruebas/Escenas/PruebaGancho/PruebaGancho2.unity
     guid: eb9a66137dd619a48ae2c2deb8e2fdeb
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/PlanPruebas/Escenas/PruebaDashYSalto/PruebaDash2.unity
     guid: 8b6ad1ef754fbe448b01c46cd7413dc9
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/PlanPruebas/Escenas/PruebaDashYSalto/PruebaDash3.unity
     guid: d43b72f2cd56fb2438c55d4fe894ee58
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/PlanPruebas/Escenas/PruebaDashYSalto/PruebaDash4.unity
     guid: 479b35b0a2b675043b3ed6369a03c8ef
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/PlanPruebas/Escenas/PruebaDashYSalto/PruebaDash5.unity
     guid: 2003419779356f5428ffd2b224b6ade0
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/PlanPruebas/Escenas/PruebaDashYSalto/PruebaDash6.unity
     guid: b558c0e2a702ac3429ccaae60b013dea
   - enabled: 0
-    path: Assets/__DELETED_GUID_Trash/5d95b77c433e78e4eab1cacd5fbc2d7f
-    guid: 5d95b77c433e78e4eab1cacd5fbc2d7f
-  - enabled: 1
+    path: 
+    guid: 00000000000000000000000000000000
+  - enabled: 0
     path: Assets/Scenes/PlanPruebas/Escenas/PruebaPowerUps/PruebaPowerUps2.unity
     guid: 7d1a5aff24f153e438ac622d01c933cb
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/PlanPruebas/Escenas/PruebaPowerUps/PruebaPowerUps3.unity
     guid: d24653a5d43a2694197bbcb8492797e2
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/PlanPruebas/Escenas/PruebaPowerUps/PruebaPowerUps4.unity
     guid: 0fb07d3f40d329842a378380acfd5cd7
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/PlanPruebas/Escenas/PruebaPowerUps/PruebaPowerUps5.unity
     guid: 37bb5070f38693b4bbe954feb8952884
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/PlanPruebas/Escenas/PruebaPowerUps/PruebaPowerUps6.unity
     guid: 23b9e511717c29b4bab4995ba6f634af
   m_configObjects: {}
