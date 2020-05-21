@@ -1,6 +1,8 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
 
+//Script que se encarga de reflejar las estadísticas del jugador
+
 public class PantallaEstadisticas : MonoBehaviour
 {
     Text texto = null;
@@ -9,22 +11,20 @@ public class PantallaEstadisticas : MonoBehaviour
     {
         texto = GetComponent<Text>();
 
-        int numSaltos = 0, 
-            numDash = 0, 
-            numGanchos = 0, 
-            numEnemigosDerrotados = 0,
-            numMuertes = 0;
-        numSaltos = PlayerPrefs.GetInt("saltos");
-        numDash = PlayerPrefs.GetInt("dash");
-        numGanchos = PlayerPrefs.GetInt("ganchos");
-        numEnemigosDerrotados = PlayerPrefs.GetInt("enemigos");
-        numMuertes = PlayerPrefs.GetInt("muertes");
+        texto.text = "Número de saltos: " + PlayerPrefs.GetInt("saltos") + "\n" +
+                     "Número de dashes: " + PlayerPrefs.GetInt("dash") + "\n" +
+                     "Número de ganchos: " + PlayerPrefs.GetInt("ganchos") + "\n" +
+                     "Número de enemigos derrotados: " + PlayerPrefs.GetInt("enemigos") + "\n" +
+                     "Número de muertes: " + PlayerPrefs.GetInt("muertes") + "\n";
+    }
 
-
-        texto.text = "Número de saltos: " + numSaltos + "\n" +
-                     "Número de dashes: " + numDash + "\n" +
-                     "Número de ganchos: " + numGanchos + "\n" +
-                     "Número de enemigos derrotados: " + numEnemigosDerrotados + "\n" +
-                     "Número de muertes: " + numMuertes + "\n";
+    //metodo para poder actualizar al resetear
+    public void UpdateText()
+    {
+        texto.text = "Número de saltos: " + PlayerPrefs.GetInt("saltos") + "\n" +
+                     "Número de dashes: " + PlayerPrefs.GetInt("dash") + "\n" +
+                     "Número de ganchos: " + PlayerPrefs.GetInt("ganchos") + "\n" +
+                     "Número de enemigos derrotados: " + PlayerPrefs.GetInt("enemigos") + "\n" +
+                     "Número de muertes: " + PlayerPrefs.GetInt("muertes") + "\n";
     }
 }

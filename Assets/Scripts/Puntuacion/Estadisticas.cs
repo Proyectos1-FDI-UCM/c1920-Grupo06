@@ -1,6 +1,4 @@
 ﻿using UnityEngine;
-using UnityEngine.UI;
-
 
 public class Estadisticas : MonoBehaviour
 {
@@ -73,12 +71,6 @@ public class Estadisticas : MonoBehaviour
         numEnemigosDerrotados++;
         PlayerPrefs.SetInt("muertes", numMuertes);
     }
-
-    //public Text saltos;
-    //private void Update()
-    //{
-    //    //saltos.text = ""+ numSaltos;
-    //}
 
     public void Guardar()
     {
