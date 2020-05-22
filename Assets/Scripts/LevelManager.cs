@@ -15,6 +15,7 @@ public class LevelManager : MonoBehaviour
         }
         else Destroy(gameObject);
     }
+
     public void ActivarNivel2()
     {
         nivel2 = true;
