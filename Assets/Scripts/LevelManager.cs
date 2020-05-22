@@ -17,11 +17,6 @@ public class LevelManager : MonoBehaviour
         else Destroy(gameObject);
     }
 
-    void Update()
-    {
-        Debug.Log(nivel2);
-    }
-
     public void ActivarNivel2()
     {
         nivel2 = true;
