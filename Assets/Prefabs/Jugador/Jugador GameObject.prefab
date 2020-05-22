@@ -19864,7 +19864,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f143cf74633118f45a2e5226100ba758, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  delta: 0.3
+  delta: 0.32
   particulas: {fileID: 746870816}
   particulasIzq: {fileID: 719060812}
   particulasDer: {fileID: 163344374}
