@@ -16,7 +16,7 @@ public class TransicionesTutorial : MonoBehaviour
         if (seccion4Esta)
         {
             Time.timeScale = 1f;
-            SceneManager.LoadScene(1);
+            GameManager.instance.ChangeScene(1);
         }
         else
         {
