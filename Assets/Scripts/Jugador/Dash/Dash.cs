@@ -1,5 +1,4 @@
 ﻿using UnityEngine;
-using UnityEngine.Tilemaps;
 
 //Comportamiento del Dash
 
@@ -54,6 +53,20 @@ public class Dash : MonoBehaviour
         {
             aud.Play();
             rb.AddForce(direccion.normalized * velocidadDash, ForceMode2D.Impulse); //establecemos una fuerza en esa dirección
+        }
+        else if(direccion.y < 0 && suelo.EnSuelo()) //si esta en el suelo y se pulsa por debajo del eje x (y negativo)
+        {
+            aud.Play();
+            if (direccion.x > 0)
+            {
+                direccion = Vector3.right;
+                rb.AddForce(direccion * velocidadDash, ForceMode2D.Impulse); //establecemos una fuerza hacia la derecha
+            }
+            else
+            {
+                direccion = Vector3.left;
+                rb.AddForce(direccion * velocidadDash, ForceMode2D.Impulse); //establecemos una fuerza hacia la izquierda
+            }
         }
         else
         {
