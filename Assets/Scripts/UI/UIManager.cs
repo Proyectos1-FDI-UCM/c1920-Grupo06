@@ -7,7 +7,7 @@ public class UIManager : MonoBehaviour
 {
     //GO de menú, puntuación y barra de progres
     [SerializeField] GameObject panel = null, puntuacion = null, barraProgreso = null, avance = null;
-    //ia¡magenes de la vida y los PowerUps
+    //las imagenes de la vida y los PowerUps
     [SerializeField] Image[] vida = null, powerups = null;
     //texto de tiempo en pantalla, muertes del jugador, eliminaciones, coleccionables y puntos
     [SerializeField]
