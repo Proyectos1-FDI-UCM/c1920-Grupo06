@@ -8,6 +8,7 @@ public class AnimacionesJugador : MonoBehaviour
     [SerializeField] ParticleSystem particulas = null;
     [SerializeField] ParticleSystem particulasIzq = null;
     [SerializeField] ParticleSystem particulasDer = null;
+    [SerializeField] ParticleSystem particulasDash = null;
     Animator animador;
     Rigidbody2D rb;
     Suelo suelo;
@@ -133,28 +134,35 @@ public class AnimacionesJugador : MonoBehaviour
                 particulas.Stop();
                 particulasDer.Stop();
                 particulasIzq.Stop();
+                particulasDash.Stop();
                 break;
             case 1:
-                particulas.Play();
+                if (!particulas.isEmitting)
+                    particulas.Play();
                 particulasDer.Stop();
                 particulasIzq.Stop();
+                particulasDash.Stop();
                 break;
             case 2:
                 particulas.Stop();
                 if (!particulasDer.isEmitting)
                     particulasDer.Play();
                 particulasIzq.Stop();
+                particulasDash.Stop();
                 break;
             case 3:
                 particulas.Stop();
                 particulasDer.Stop();
                 if (!particulasIzq.isEmitting)
                     particulasIzq.Play();
+                particulasDash.Stop();
                 break;
             case 4:
                 particulas.Stop();
                 particulasDer.Stop();
                 particulasIzq.Stop();
+                if (!particulasDash.isEmitting)
+                    particulasDash.Play();
                 break;
         }
     }
