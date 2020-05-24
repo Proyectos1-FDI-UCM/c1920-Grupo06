@@ -5,6 +5,7 @@
 public class MovimientoGancho : MonoBehaviour
 {
     [SerializeField] [Range(1, 100)] float velocidad_movimientoGancho = 10; //velocidad del movimiento
+    [SerializeField] ParticleSystem particulas_salto = null; //Particulas para cuando el jugador use el gancho en el suelo
     //referencias a componentes del jugador
     Estados estadoJugador = null;
     Rigidbody2D rb = null;
@@ -22,28 +23,18 @@ public class MovimientoGancho : MonoBehaviour
         estadoJugador = GetComponent<Estados>();
         impulso = GetComponent<Impulso>();
         enabled = false; //lo desactivamos si estuviese activo
-        suelo = transform.GetChild(0).GetComponent<Suelo>(); //Los pies deben ser el primer hijo del jugador
+        suelo = GetComponentInChildren<Suelo>(); //Los pies deben ser el primer hijo del jugador
     }
 
     void OnEnable() //al activarse
     {
-        //calculamos la direccion del movimiento 
+        //calculamos la direccion del movimiento
+        if (suelo.EnSuelo()) particulas_salto.Play();
         gancho = jugador.Gancho();
         direccion = gancho.transform.position - transform.position;
         jugador.DireccionImpulso(direccion); //se guarda la dirección para ser usada por el impulso
         rb.velocity = direccion.normalized * velocidad_movimientoGancho; //asignamos la velocidad
-        //Physics2D.IgnoreLayerCollision(9, 8, true);
     }
-
-    //private void OnDisable()
-    //{
-    //    Physics2D.IgnoreLayerCollision(9, 8, false);
-    //}
-
-    //private void FixedUpdate()
-    //{
-    //    if (!suelo.EnSuelo()) Physics2D.IgnoreLayerCollision(9, 8, true);
-    //}
 
     void Update()
     {
