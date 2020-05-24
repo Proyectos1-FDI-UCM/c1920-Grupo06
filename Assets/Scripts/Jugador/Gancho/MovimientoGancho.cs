@@ -6,6 +6,7 @@ public class MovimientoGancho : MonoBehaviour
 {
     [SerializeField] [Range(1, 100)] float velocidad_movimientoGancho = 10; //velocidad del movimiento
     [SerializeField] ParticleSystem particulas_salto = null; //Particulas para cuando el jugador use el gancho en el suelo
+    [SerializeField] ParticleSystem particulas_gancho = null; //Particulas para cuando el jugador use el gancho en el aire
     //referencias a componentes del jugador
     Estados estadoJugador = null;
     Rigidbody2D rb = null;
@@ -30,6 +31,7 @@ public class MovimientoGancho : MonoBehaviour
     {
         //calculamos la direccion del movimiento
         if (suelo.EnSuelo()) particulas_salto.Play();
+        else particulas_gancho.Play();
         gancho = jugador.Gancho();
         direccion = gancho.transform.position - transform.position;
         jugador.DireccionImpulso(direccion); //se guarda la dirección para ser usada por el impulso
