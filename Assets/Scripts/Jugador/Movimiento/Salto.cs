@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 
 //Control del salto que hace el jugador
 
@@ -15,6 +15,7 @@ public class Salto : MonoBehaviour
     bool salto_disponible = true; //booleano que controla si se puede saltar o no
     AudioSource aud;
     AudioSource[] audAux;
+    Jugador jug = null;
 
     void Start()
     {
@@ -23,6 +24,7 @@ public class Salto : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         estadisticas = GetComponent<Jugador>().estadisticas;
         estados = GetComponent<Estados>();
+        jug = GetComponent<Jugador>();
 
         audAux = GetComponentsInChildren<AudioSource>();
         aud = audAux[Metodos.EncuentraAudioSource(audAux, "Salto")];
@@ -71,21 +73,5 @@ public class Salto : MonoBehaviour
     public void CambiaFuerzaSalto(float fuerza)
     {
         fuerza_salto = fuerza;
-    }
-
-    public void Knockback(Vector3 posObstaculo)
-    {
-        estadoOri = estados.Estado();
-        estados.CambioEstado(estado.Knockback);
-        float dirx = Metodos.Vector3toVector2(posObstaculo - transform.position).normalized.x;
-        Vector2 dir = new Vector2(-dirx * 2, Vector2.up.y / 1.25f);
-        rb.AddForce(dir * fuerza_salto, ForceMode2D.Impulse); //se aplica la fuerza del salto
-        salto_disponible = false; //se cambia la disponibilidad del salto a false
-        Invoke("ReiniciaEstado", 0.3f);
-    }
-
-    void ReiniciaEstado()
-    {
-        estados.CambioEstado(estadoOri);
     }
 }
