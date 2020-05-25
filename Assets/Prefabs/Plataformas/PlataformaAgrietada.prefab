@@ -81,7 +81,6 @@ GameObject:
   - component: {fileID: 3887932413997493803}
   - component: {fileID: 3887932413997493802}
   - component: {fileID: 3887932413997493805}
-  - component: {fileID: 5966477415857553896}
   m_Layer: 8
   m_Name: PlataformaAgrietada
   m_TagString: Untagged
@@ -179,17 +178,3 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &5966477415857553896
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3887932413997493804}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a31ef4f493d04cb44bf2e04ad7e41dbb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  puedoReaparecer: 1
-  tiempoReactivacion: 3
