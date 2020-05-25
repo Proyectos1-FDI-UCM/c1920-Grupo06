@@ -8,13 +8,15 @@ public class PlataformaInestable : MonoBehaviour
     [SerializeField] float velBajada = 5f; //velocidad de bajada, distancia de bajada
     Vector2 origen, bordes; //posición origen de la plataforma, bordes de la plataforma
     bool contacto = false;
-    Transform jugador = null;
+    Animator animation = null;
 
     void Start()
     {
         //guardamos su origen, y los bordes
         origen = transform.position;
         bordes = GetComponent<Collider2D>().bounds.extents;
+        animation = GetComponent<Animator>();
+        animation.enabled = false;
     }
 
     void Update()
@@ -47,6 +49,7 @@ public class PlataformaInestable : MonoBehaviour
             {
                 //lo hacemos hijo
                 collision.transform.parent = transform;
+                animation.enabled = true;
                 contacto = true;
             }
         }
