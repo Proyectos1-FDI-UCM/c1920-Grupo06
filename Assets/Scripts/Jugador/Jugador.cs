@@ -66,7 +66,7 @@ public class Jugador : MonoBehaviour
 
     public void RecargaSuelo() //método para recargar el salto, el dash, y los ganchos disponibles
     {
-        if (estadoJugador.Estado() == estado.Defecto) //solo si estoy en posicion por defecto (sobre una plataforma) recargará
+        if (estadoJugador.Estado() == estado.Defecto || estadoJugador.Estado() == estado.Knockback) //solo si estoy en posicion por defecto (sobre una plataforma) recargará
         {
             crearGancho.RecargaGancho(); //recargamos los ganchos
             salto.RecargaSalto(); //recargamos el salto
