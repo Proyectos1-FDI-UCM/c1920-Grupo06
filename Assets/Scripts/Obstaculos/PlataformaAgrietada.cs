@@ -5,12 +5,13 @@
 public class PlataformaAgrietada : MonoBehaviour
 {
 
-    bool ignora = false;
+   // bool ignora = false;
+
     void OnTriggerEnter2D(Collider2D collision) //al entrar en el "trigger" secundario (mayor que la plataforma)
     {
-        ignora = false;
+        //ignora = false;
         Estados estadoAct = collision.gameObject.GetComponent<Estados>();
-        Dash dash = collision.gameObject.GetComponent<Dash>();
+        //Dash dash = collision.gameObject.GetComponent<Dash>();
 
         if (estadoAct != null && (estadoAct.Estado() == estado.MovimientoGancho || estadoAct.Estado() == estado.Dash))
             transform.parent.gameObject.SetActive(false);
