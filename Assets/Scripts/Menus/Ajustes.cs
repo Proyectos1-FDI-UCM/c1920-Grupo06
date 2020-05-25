@@ -31,6 +31,11 @@ public class Ajustes : MonoBehaviour
 
     }
 
+    public void SetVolumenMaster(float volumen) //metodo para establecer el volumen del audio desde el menú de pausa
+    {
+        audioMixer.SetFloat("volumenMaster_", volumen);
+    }
+
     public void SetVolumenGeneral(float volumen) //metodo para establecer el volumen del audio desde el menú de pausa
     {
         audioMixer.SetFloat("volumenMusica_", volumen);

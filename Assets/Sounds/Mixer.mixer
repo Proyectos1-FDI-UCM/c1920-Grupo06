@@ -40,6 +40,8 @@ AudioMixerController:
   m_ExposedParameters:
   - guid: 2706072118d549e43b3372e50888e1ae
     name: volumenEfectos_
+  - guid: eeea42f6d2d30b84784a5bbc9984c314
+    name: volumenMaster_
   - guid: b7580a33323233a43bf89a58989732d1
     name: volumenMusica_
   - guid: 2bb625f203f9fea469e052e10a096d48
