@@ -47,7 +47,7 @@ public class PlataformaInestable : MonoBehaviour
             {
                 //lo hacemos hijo
                 collision.transform.parent = transform;
-                velY = -velBajada; //establecemos velY como -velBajada
+                velY = velBajada; //establecemos velY como -velBajada
             }
         }
     }
@@ -56,6 +56,6 @@ public class PlataformaInestable : MonoBehaviour
     {
         //cuando el jugador salga, dejamos que deje de ser padre, y hacemos que vaya subiendo poco a poco
         collision.transform.parent = null;
-        velY = velBajada/2;
+        velY = -velBajada/2;
     }
 }
