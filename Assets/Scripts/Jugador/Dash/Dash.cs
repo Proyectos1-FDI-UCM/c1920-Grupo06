@@ -54,7 +54,7 @@ public class Dash : MonoBehaviour
             aud.Play();
             rb.AddForce(direccion.normalized * velocidadDash, ForceMode2D.Impulse); //establecemos una fuerza en esa dirección
         }
-        else if(direccion.y < 0 && suelo.EnSuelo()) //si esta en el suelo y se pulsa por debajo del eje x (y negativo)
+        else if (direccion.y < 0 && suelo.EnSuelo()) //si esta en el suelo y se pulsa por debajo del eje x (y negativo)
         {
             aud.Play();
             if (direccion.x > 0)
@@ -81,6 +81,7 @@ public class Dash : MonoBehaviour
     {
         if ((transform.position - posicion_inicial).magnitude > longitudDash) //si se ha alcanzado la distancia 
             enabled = false;
+        // rb.velocity.magnitude < 0.2f && rb.velocity.magnitude > -0.2f
         if (rb.velocity == Vector2.zero && rompible == null) ParaDash();
         else
         {
