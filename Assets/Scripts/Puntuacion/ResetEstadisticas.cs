@@ -21,7 +21,6 @@ public class ResetEstadisticas : MonoBehaviour
         PlayerPrefs.SetFloat("tiempo", 0);
 
         pantallaEstadisticas.UpdateText();
-
-        PlayerPrefs.Save();
+        Estadisticas.instance.ResetEstadisticas();
     }
 }
