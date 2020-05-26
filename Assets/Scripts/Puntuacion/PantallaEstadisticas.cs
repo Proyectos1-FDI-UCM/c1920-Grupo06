@@ -11,20 +11,20 @@ public class PantallaEstadisticas : MonoBehaviour
     {
         texto = GetComponent<Text>();
 
-        texto.text = "Número de saltos: " + PlayerPrefs.GetInt("saltos") + "\n" +
-                     "Número de dashes: " + PlayerPrefs.GetInt("dash") + "\n" +
-                     "Número de ganchos: " + PlayerPrefs.GetInt("ganchos") + "\n" +
-                     "Número de enemigos derrotados: " + PlayerPrefs.GetInt("enemigos") + "\n" +
-                     "Número de muertes: " + PlayerPrefs.GetInt("muertes") + "\n";
+        texto.text = "Número de saltos: " + PlayerPrefs.GetInt("saltos") + "\n\n" +
+                     "Número de dashes: " + PlayerPrefs.GetInt("dash") + "\n\n" +
+                     "Número de ganchos: " + PlayerPrefs.GetInt("ganchos") + "\n\n" +
+                     "Número de enemigos\nderrotados: " + PlayerPrefs.GetInt("enemigos") + "\n\n" +
+                     "Número de muertes: " + PlayerPrefs.GetInt("muertes");
     }
 
     //metodo para poder actualizar al resetear
     public void UpdateText()
     {
-        texto.text = "Número de saltos: " + PlayerPrefs.GetInt("saltos") + "\n" +
-                     "Número de dashes: " + PlayerPrefs.GetInt("dash") + "\n" +
-                     "Número de ganchos: " + PlayerPrefs.GetInt("ganchos") + "\n" +
-                     "Número de enemigos derrotados: " + PlayerPrefs.GetInt("enemigos") + "\n" +
-                     "Número de muertes: " + PlayerPrefs.GetInt("muertes") + "\n";
+        texto.text = "Número de saltos: " + PlayerPrefs.GetInt("saltos") + "\n\n" +
+                     "Número de dashes: " + PlayerPrefs.GetInt("dash") + "\n\n" +
+                     "Número de ganchos: " + PlayerPrefs.GetInt("ganchos") + "\n\n" +
+                     "Número de enemigos\nderrotados: " + PlayerPrefs.GetInt("enemigos") + "\n\n" +
+                     "Número de muertes: " + PlayerPrefs.GetInt("muertes");
     }
 }

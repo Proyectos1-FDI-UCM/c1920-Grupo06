@@ -2,13 +2,13 @@
 
 public class Estadisticas : MonoBehaviour
 {
+    static public Estadisticas instance = null;
     private int numSaltos = 0;
     private int numDash = 0;
     private int numGanchos = 0;
     private int numEnemigosDerrotados = 0;
     private int numMuertes = 0;
     [SerializeField] float tiempoJugado = 0;
-    static Estadisticas instance = null;
 
     private void Awake()
     {
@@ -70,6 +70,15 @@ public class Estadisticas : MonoBehaviour
     {
         numEnemigosDerrotados++;
         PlayerPrefs.SetInt("muertes", numMuertes);
+    }
+
+    public void ResetEstadisticas()
+    {
+        numSaltos = 0;
+        numDash = 0;
+        numGanchos = 0;
+        numEnemigosDerrotados = 0;
+        numMuertes = 0;
     }
 
     public void Guardar()
