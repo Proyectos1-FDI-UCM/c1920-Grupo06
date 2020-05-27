@@ -19,6 +19,7 @@ public class Timer : MonoBehaviour
     float tiempoInicio; //Cuenta desde cuando empezó a contar el tiempo
     float tiempoMaximo; //Tiempo maximo que se puede alcanzar si se activa la opción de sumar tiempo al pasar por CheckPoint
     int tiempoRedondeado; //Redondeamos el tiempo para mandarselo al UIManager
+    bool activado = true;
 
     void Start()
     {
@@ -30,16 +31,19 @@ public class Timer : MonoBehaviour
 
     void Update()
     {
-        timer = Time.time - tiempoInicio; //Tiempo actual - tiempo en el que empezó
-
-        if ((int)timer != tiempoRedondeado) tics.Play(); //si se cambia de segundo, activamos el tic del reloj
-
-        tiempoRedondeado = (int)timer; //guardamos el tiempo redondeado
-        theUIManager.Tiempo((int)tiempoMaximo - tiempoRedondeado); //lo enviamos a la interfaz
-
-        if (tiempoRedondeado > tiempoMaximo - 1) //Si el tiempo que llevamos supera al máximo entonces se resetea el nivel
+        if (activado)
         {
-            ResetNivel(); //Reseteamos el nivel (volvemos al primer checkpoint)
+            timer = Time.time - tiempoInicio; //Tiempo actual - tiempo en el que empezó
+
+            if ((int)timer != tiempoRedondeado) tics.Play(); //si se cambia de segundo, activamos el tic del reloj
+
+            tiempoRedondeado = (int)timer; //guardamos el tiempo redondeado
+            theUIManager.Tiempo((int)tiempoMaximo - tiempoRedondeado); //lo enviamos a la interfaz
+
+            if (tiempoRedondeado > tiempoMaximo - 1) //Si el tiempo que llevamos supera al máximo entonces se resetea el nivel
+            {
+                ResetNivel(); //Reseteamos el nivel (volvemos al primer checkpoint)
+            }
         }
     }
 
@@ -53,5 +57,10 @@ public class Timer : MonoBehaviour
     public void SumarTiempo(float tiempoAdicional) //Si atraviesa un checkpoint y la opción de añadir el tiempo está activado
     {                                              //se suma el tiempo
         tiempoMaximo += tiempoAdicional;
+    }
+
+    public void PararTiempo()
+    {
+        activado = false;
     }
 }
