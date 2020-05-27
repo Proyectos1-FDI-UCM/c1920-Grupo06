@@ -6,6 +6,6 @@ public class Creditos : MonoBehaviour
 {
     void Update()
     {
-        if (Input.anyKey) GameManager.instance.ChangeScene(0);
+        if (Input.anyKeyDown) Transiciones.instance.MakeTransition(0);
     }
 }
