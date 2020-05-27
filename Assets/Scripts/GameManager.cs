@@ -157,6 +157,8 @@ public class GameManager : MonoBehaviour
         //cambiamos el estado a inactivo
         estados = jugador.GetComponent<Estados>();
         estados.CambioEstado(estado.Inactivo);
+        //actualizamos las vidas a 3
+        vidas = 3;
         //hacemos que la cámara suba
         SeguimientoJugador cam = Camera.main.GetComponent<SeguimientoJugador>();
         cam.Sube();
