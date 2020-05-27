@@ -23,7 +23,6 @@ public class KnockBack : MonoBehaviour
 
     public void Knockback(Vector3 posObstaculo)
     {
-        estadoOri = estados.Estado();
         estados.CambioEstado(estado.Knockback);
         float dirx = Metodos.Vector3toVector2(posObstaculo - transform.position).normalized.x;
         Vector2 dir = new Vector2(-dirx * 2, Vector2.up.y * fuerzaVertical);
@@ -35,7 +34,7 @@ public class KnockBack : MonoBehaviour
 
     void ReiniciaEstado()
     {
-        if (estados.Estado() == estado.Knockback)
-            estados.CambioEstado(estadoOri);
+        rb.velocity = Vector2.zero;
+        estados.CambioEstado(estado.Defecto);
     }
 }
