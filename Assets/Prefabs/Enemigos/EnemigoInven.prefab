@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 8539664586351947553}
   - component: {fileID: 688127404}
   - component: {fileID: 688127405}
+  - component: {fileID: -6889841317301061001}
   m_Layer: 11
   m_Name: EnemigoInven
   m_TagString: Untagged
@@ -194,3 +195,18 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &-6889841317301061001
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6242128900395211013}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2e0664ec7c621674ca620c544362b541, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  particulasGO: {fileID: 4227221055002086505, guid: 9b8c3ff5988e99d4ab03d1ac4413f0b0,
+    type: 3}
+  color: {r: 0.16509432, g: 1, b: 0.42935446, a: 1}
