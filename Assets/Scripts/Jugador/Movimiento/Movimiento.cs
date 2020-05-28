@@ -10,6 +10,7 @@ public class Movimiento : MonoBehaviour
     DeslizamientoPared deslizamiento;
     AudioSource aud;
     AudioSource[] audAux;
+    Suelo suelo;
 
     private void Awake()
     {
@@ -22,6 +23,7 @@ public class Movimiento : MonoBehaviour
         //inicializamos las referencias
         rb = GetComponent<Rigidbody2D>();
         deslizamiento = GetComponent<DeslizamientoPared>();
+        suelo = transform.parent.GetComponentInChildren<Suelo>();
     }
 
     void Update() 
@@ -33,7 +35,7 @@ public class Movimiento : MonoBehaviour
         rb.velocity = new Vector2(input * velocidad_movimiento, rb.velocity.y);
 
         //reproducimos el sonido de pasos si se está moviendo
-        if (rb.velocity.x != 0) aud.UnPause();
+        if (rb.velocity.x != 0 && suelo.EnSuelo()) aud.UnPause();
         else aud.Pause();
 
         //si la velocidad de caida es maypr de la establecida, la reestablecemos a esta
