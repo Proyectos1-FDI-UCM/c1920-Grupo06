@@ -47,6 +47,7 @@ GameObject:
   - component: {fileID: 1172478678848107693}
   - component: {fileID: -6550742277935198208}
   - component: {fileID: -1900985064895284251}
+  - component: {fileID: 5038128588065013249}
   m_Layer: 11
   m_Name: EnemigoBalas
   m_TagString: Untagged
@@ -320,3 +321,18 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &5038128588065013249
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1172478678848107703}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2e0664ec7c621674ca620c544362b541, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  particulasGO: {fileID: 4227221055002086505, guid: 9b8c3ff5988e99d4ab03d1ac4413f0b0,
+    type: 3}
+  color: {r: 0.8356458, g: 0.2783019, b: 1, a: 1}

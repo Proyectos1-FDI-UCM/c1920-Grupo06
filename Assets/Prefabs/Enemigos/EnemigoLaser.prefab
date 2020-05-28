@@ -17,6 +17,7 @@ GameObject:
   - component: {fileID: 3884677566483886060}
   - component: {fileID: 3884677566483886063}
   - component: {fileID: 1838720681}
+  - component: {fileID: 4199751307622332259}
   m_Layer: 11
   m_Name: EnemigoLaser
   m_TagString: Untagged
@@ -233,7 +234,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cadencia: 2
   tiempoApunt: 0.5
-  tiempoescape: 1
+  tiempoDisparo: 1
   player: {fileID: 0}
   anchura_inicial: 0.2
   anchura_final: 1
@@ -291,3 +292,18 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &4199751307622332259
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3884677566483886062}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2e0664ec7c621674ca620c544362b541, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  particulasGO: {fileID: 4227221055002086505, guid: 9b8c3ff5988e99d4ab03d1ac4413f0b0,
+    type: 3}
+  color: {r: 0.96838063, g: 0.9716981, b: 0.62793696, a: 1}
