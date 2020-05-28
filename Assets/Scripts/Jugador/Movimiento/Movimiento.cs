@@ -8,6 +8,14 @@ public class Movimiento : MonoBehaviour
     [SerializeField] [Range(-30, 0)] float velocidad_caida_maxima = -20; //velocidad de caída
     Rigidbody2D rb;
     DeslizamientoPared deslizamiento;
+    AudioSource aud;
+    AudioSource[] audAux;
+
+    private void Awake()
+    {
+        audAux = GetComponentsInChildren<AudioSource>();
+        aud = audAux[Metodos.EncuentraAudioSource(audAux, "Pasos")];
+    }
 
     void Start()
     {
@@ -21,15 +29,12 @@ public class Movimiento : MonoBehaviour
         //guardamos el valor del input
         float input = Input.GetAxis("Horizontal");
 
-        //miramos en caso de que el jugador se esté desplazando hacia la posición de una pared, para que no se atasque
-        //(solucinado con un material físico)
-        //if (deslizamiento.Deslizando() == "derecha" && input > 0)
-        //    input = 0;
-        //else if (deslizamiento.Deslizando() == "izquierda" && input < 0)
-        //    input = 0;
-
-        //Establecemos la velocidad
+        //establecemos la velocidad
         rb.velocity = new Vector2(input * velocidad_movimiento, rb.velocity.y);
+
+        //reproducimos el sonido de pasos si se está moviendo
+        if (rb.velocity.x != 0) aud.UnPause();
+        else aud.Pause();
 
         //si la velocidad de caida es maypr de la establecida, la reestablecemos a esta
         if(rb.velocity.y < velocidad_caida_maxima)
