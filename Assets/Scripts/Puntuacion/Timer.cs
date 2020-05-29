@@ -54,7 +54,7 @@ public class Timer : MonoBehaviour
         GameManager.instance.CheckPoint(Vector2.zero, 0);
         GameManager.instance.RecargaVidas();
         Scene escena = SceneManager.GetActiveScene();
-        Transiciones.instance.MakeTransition(escena.buildIndex);
+        SceneManager.LoadScene(escena.buildIndex);
     }
 
     public void SumarTiempo(float tiempoAdicional) //Si atraviesa un checkpoint y la opción de añadir el tiempo está activado
