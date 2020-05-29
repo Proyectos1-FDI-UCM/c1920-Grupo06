@@ -20,6 +20,7 @@ public class Timer : MonoBehaviour
     float tiempoMaximo; //Tiempo maximo que se puede alcanzar si se activa la opción de sumar tiempo al pasar por CheckPoint
     int tiempoRedondeado; //Redondeamos el tiempo para mandarselo al UIManager
     bool activado = true;
+    bool makeTrans = true;
 
     void Start()
     {
@@ -40,9 +41,10 @@ public class Timer : MonoBehaviour
             tiempoRedondeado = (int)timer; //guardamos el tiempo redondeado
             theUIManager.Tiempo((int)tiempoMaximo - tiempoRedondeado); //lo enviamos a la interfaz
 
-            if (tiempoRedondeado > tiempoMaximo - 1) //Si el tiempo que llevamos supera al máximo entonces se resetea el nivel
+            if (tiempoRedondeado > tiempoMaximo - 1 && makeTrans) //Si el tiempo que llevamos supera al máximo entonces se resetea el nivel
             {
                 ResetNivel(); //Reseteamos el nivel (volvemos al primer checkpoint)
+                makeTrans = false;
             }
         }
     }
