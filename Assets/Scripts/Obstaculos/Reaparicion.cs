@@ -24,7 +24,7 @@ public class Reaparicion : MonoBehaviour
     void OnDisable() //al desactivarse
     {
         //Activo las partículas, que solo aparecerán si es un enemigo
-        if (particulas != null && activarParticulas) particulas.Activar();
+        if (particulas != null && activarParticulas && !GameManager.instance.GetBoolSceneChanged()) particulas.Activar();
         //si puedo reaparecer
         if (puedoReaparecer)
         {
