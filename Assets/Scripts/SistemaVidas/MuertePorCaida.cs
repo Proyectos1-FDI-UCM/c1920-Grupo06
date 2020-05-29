@@ -6,15 +6,18 @@ public class MuertePorCaida : MonoBehaviour
 {
     [SerializeField] AudioSource aud;
 
-    void OnTriggerEnter2D(Collider2D collision) //cuando alguna entidad entre al "trigger" //comprobar posicion del jugador con respecto a la deadzone
+    void OnTriggerEnter2D(Collider2D collision) //cuando alguna entidad entre al "trigger" 
     {
-        Estados jugador = collision.gameObject.GetComponent<Estados>(); //comprobamos si es el jugador
-
-        if (jugador != null && jugador.Estado() != estado.Muerte) //en caso de que lo fuera
+        if (collision.gameObject.GetComponent<Transform>().position.y > transform.position.y)
         {
-            jugador.CambioEstado(estado.Muerte); //cambiamos su estado a Muerte
-            aud.Play();
-            GameManager.instance.Muerte();
+            Estados jugador = collision.gameObject.GetComponent<Estados>(); //comprobamos si es el jugador
+
+            if (jugador != null && jugador.Estado() != estado.Muerte) //en caso de que lo fuera
+            {
+                jugador.CambioEstado(estado.Muerte); //cambiamos su estado a Muerte
+                aud.Play();
+                GameManager.instance.Muerte();
+            }
         }
     }
 }
