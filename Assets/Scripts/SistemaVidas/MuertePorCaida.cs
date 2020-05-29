@@ -6,7 +6,7 @@ public class MuertePorCaida : MonoBehaviour
 {
     [SerializeField] AudioSource aud;
 
-    void OnTriggerEnter2D(Collider2D collision) //cuando alguna entidad entre al "trigger"
+    void OnTriggerEnter2D(Collider2D collision) //cuando alguna entidad entre al "trigger" //comprobar posicion del jugador con respecto a la deadzone
     {
         Estados jugador = collision.gameObject.GetComponent<Estados>(); //comprobamos si es el jugador
 

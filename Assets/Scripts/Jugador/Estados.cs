@@ -106,7 +106,7 @@ public class Estados : MonoBehaviour
                 break;
 
             case estado.Muerte: //Estado de muerte
-                deathzone.enabled = true;
+                deathzone.enabled = false;
                 rb.velocity = Vector2.zero;
                 rb.gravityScale = 0;
                 creaGancho.enabled = false;
