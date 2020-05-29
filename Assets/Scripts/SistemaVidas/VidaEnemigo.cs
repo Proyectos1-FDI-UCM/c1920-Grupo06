@@ -4,12 +4,6 @@
 
 public class VidaEnemigo : MonoBehaviour
 {
-    ParticulasMuerteEnemigos particulas = null;
-
-    private void Start()
-    {
-        particulas = GetComponent<ParticulasMuerteEnemigos>();
-    }
     public void EliminarEnemigo(GameObject other)
     {
         //si el jugador esta haciendo dash/gancho sobre el enemigo, destruimos al enemigo
@@ -19,7 +13,7 @@ public class VidaEnemigo : MonoBehaviour
             other.GetComponent<Jugador>().estadisticas.Enemigo(); //Sumamos uno a enemigos derrotados
             gameObject.SetActive(false);
             GameManager.instance.ContadorEnemigosElim();
-            if (particulas != null) particulas.Activar();
+
         }
     }
 }

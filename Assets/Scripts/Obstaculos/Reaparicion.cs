@@ -8,6 +8,13 @@ public class Reaparicion : MonoBehaviour
     [SerializeField] float tiempoReactivacion = 3f; //tiempo que tarda en reaparecer
     Vector2 posicion; //posicion de la entidad
 
+    ParticulasMuerteEnemigos particulas = null;
+
+    private void Start()
+    {
+        particulas = GetComponent<ParticulasMuerteEnemigos>();
+    }
+
     void Awake()
     {
         //guardamos la posición de la entidad
@@ -16,6 +23,8 @@ public class Reaparicion : MonoBehaviour
 
     void OnDisable() //al desactivarse
     {
+        //Activo las partículas, que solo aparecerán si es un enemigo
+        if (particulas != null) particulas.Activar();
         //si puedo reaparecer
         if (puedoReaparecer)
         {
