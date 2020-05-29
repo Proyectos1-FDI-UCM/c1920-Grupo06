@@ -4,8 +4,13 @@
 
 public class Creditos : MonoBehaviour
 {
+    bool pulsado = false;
     void Update()
     {
-        if (Input.anyKeyDown) Transiciones.instance.MakeTransition(0);
+        if (Input.anyKeyDown && !pulsado)
+        {
+            Transiciones.instance.MakeTransition(0);
+            pulsado = true;
+        }
     }
 }
