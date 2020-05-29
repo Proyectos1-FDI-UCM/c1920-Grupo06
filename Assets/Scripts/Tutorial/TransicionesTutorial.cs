@@ -15,7 +15,6 @@ public class TransicionesTutorial : MonoBehaviour
 
         if (seccion4Esta)
         {
-            Time.timeScale = 1f;
             GameManager.instance.ChangeScene(1);
         }
         else
@@ -24,6 +23,7 @@ public class TransicionesTutorial : MonoBehaviour
             Camera.main.transform.position = new Vector3(jugador.position.x, jugador.position.y + 4, Camera.main.transform.position.z);
         }
 
+        Time.timeScale = 1f;
         continuar.SetActive(false);
     }
 
