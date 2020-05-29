@@ -133,7 +133,7 @@ public class PlataformaMovible : MonoBehaviour
                 else salto.CambiaFuerzaSalto(fuerzaSaltoOri * 1.15f);
 
             //Mientras el jugador no esté en medio de otra acción
-            if (!Input.anyKey && estados.Estado() == estado.Defecto)
+            if (!(Input.GetButtonDown("Jump") || Input.GetAxis("Horizontal") != 0) && estados.Estado() == estado.Defecto)
             {
                 //Se hace hijo de la plataforma
                 rbJugador.isKinematic = true;
