@@ -140,7 +140,6 @@ public class GameManager : MonoBehaviour
     public void ChangeScene(int indice) //método de cambio de escena
     {
         Transiciones.instance.MakeTransition(indice);
-        print("Escena cambiada a:"+ indice);
         Time.timeScale = 1;
     }
 
