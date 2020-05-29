@@ -149,11 +149,6 @@ public class GameManager : MonoBehaviour
     {
         Application.Quit();
     }
-
-    public bool GetBoolSceneChanged()
-    {
-        return sceneChanged;
-    }
     
     //PUNTUACION
     public void Puntuacion() //metodo que proporciona la informacion de las vidas, enemigos eliminados y los coleccionables obtenidos
