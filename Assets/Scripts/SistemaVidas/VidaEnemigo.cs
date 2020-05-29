@@ -13,7 +13,6 @@ public class VidaEnemigo : MonoBehaviour
             other.GetComponent<Jugador>().estadisticas.Enemigo(); //Sumamos uno a enemigos derrotados
             gameObject.SetActive(false);
             GameManager.instance.ContadorEnemigosElim();
-
         }
     }
 }
