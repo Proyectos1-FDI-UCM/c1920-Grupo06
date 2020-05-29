@@ -27,6 +27,7 @@ public class GameManager : MonoBehaviour
 
     //efectos visuales
     SpriteRenderer spriteRenderer;
+
     private void Awake() //singleton
     {
         if (instance == null) //si no hay instancia
@@ -101,6 +102,12 @@ public class GameManager : MonoBehaviour
     public int getVidas()
     {
         return vidas;
+    }
+
+    //metodo para recargar las vidas tras acabar el tiempo
+    public void RecargaVidas()
+    {
+        vidas = 3;
     }
 
     //POWERUPS (INTERFAZ)
@@ -186,7 +193,6 @@ public class GameManager : MonoBehaviour
     public void Coleccionable(int numero) //método de activación del coleccionable obtenido
     {
         coleccionables[numero] = true;
-        Debug.Log("Obtenido el coleccionable número " + numero);
     }
 
     //SETTERS

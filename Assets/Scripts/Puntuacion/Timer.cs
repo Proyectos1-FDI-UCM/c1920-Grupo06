@@ -50,7 +50,7 @@ public class Timer : MonoBehaviour
     void ResetNivel() //Reiniciamos el nivel
     {
         GameManager.instance.CheckPoint(Vector2.zero, 0);
-        GameManager.instance.Muerte();
+        GameManager.instance.RecargaVidas();
         Scene escena = SceneManager.GetActiveScene();
         Transiciones.instance.MakeTransition(escena.buildIndex);
     }
