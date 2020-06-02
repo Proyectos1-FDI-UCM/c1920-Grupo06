@@ -3,13 +3,12 @@
 /* Padding below the footer and lighter body text */
 
 html,body {
-  font-size: 18px;
+  font-size: 16px;
 }
 body {
   padding-bottom: 1rem;
-  color: #5a5a5a;
+  color: #FFFFFF;
 }
-
 
 
 
@@ -18,6 +17,7 @@ body {
 
 img.img-header {
   max-height: 500px;
+  
 }
 
 
