@@ -16,7 +16,7 @@ public class DeslizamientoPared : MonoBehaviour
     Rigidbody2D rb;
     Estados estadoJugador;
     BoxCollider2D boxCollider2D;
-    PlataformaJumpthrough jumpthrough;
+    PlatformEffector2D jumpthrough;
     CompositeCollider2D compositeCollider2D;
 
     public posicionColliders GetCollider
@@ -34,7 +34,7 @@ public class DeslizamientoPared : MonoBehaviour
     {
         GameObject objeto = other.gameObject;
         boxCollider2D = objeto.GetComponent<BoxCollider2D>();
-        jumpthrough = objeto.GetComponent<PlataformaJumpthrough>();
+        jumpthrough = objeto.GetComponent<PlatformEffector2D>();
         compositeCollider2D = objeto.GetComponent<CompositeCollider2D>();
 
         //Si el gameObject con el que se choca tiene el componente PlataformaJumpthrough, no se produce deslizamiento para evitar errores

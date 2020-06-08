@@ -14,7 +14,7 @@ public class AnimacionesJugador : MonoBehaviour
     Suelo suelo;
     Estados estadoJugador;
     DeslizamientoPared deslizamiento;
-    bool enSuelo = false, enSueloAux = false, anulaAnim = false; //anulaAnim para cuando atraviesa triggers como antigancho o jumpthrough
+    bool enSuelo = false, enSueloAux = false;
     int velx = 0, velxaux = 0;
 
     void Start()
@@ -72,9 +72,9 @@ public class AnimacionesJugador : MonoBehaviour
                 float velocidad_y = rb.velocity.y;
 
                 //establecemos la animación con respecto a la velocidad
-                if (!enSuelo || anulaAnim)
+                if (!enSuelo)
                 {
-                    if (!anulaAnim && deslizamiento.GetCollider != posicionColliders.ninguna)
+                    if (deslizamiento.GetCollider != posicionColliders.ninguna)
                     {
                         if (deslizamiento.GetCollider == posicionColliders.izquierda) //Delizamiento izquierda
                         {
@@ -125,17 +125,6 @@ public class AnimacionesJugador : MonoBehaviour
                 Particulas(0);
                 break;
         }
-    }
-
-    //metodos para el anulaAnimaciones
-    public void AnulaAnim()
-    {
-        anulaAnim = true;
-    }
-
-    public void StopAnulaAnim()
-    {
-        anulaAnim = false;
     }
 
     void Particulas(int n) //Metedo que activa y desactiva las partículas
