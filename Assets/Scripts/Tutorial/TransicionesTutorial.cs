@@ -1,5 +1,5 @@
 ﻿using UnityEngine;
-using UnityEngine.SceneManagement;
+using UnityEngine.Audio;
 
 public class TransicionesTutorial : MonoBehaviour
 {
@@ -9,22 +9,22 @@ public class TransicionesTutorial : MonoBehaviour
     [SerializeField] GameObject continuar = null;
     bool seccion2Esta = false, seccion3Esta = false, seccion4Esta = false;
 
-    public void Continuar()
+    public void Continuar() //metodo para continuar a la siguiente seccion
     {
+        continuar.SetActive(false);
         estados.CambioEstado(estado.Defecto);
 
-        if (seccion4Esta)
+        if (seccion4Esta) //Si es la ultima lo llevamos al nivel 1
         {
             GameManager.instance.ChangeScene(1);
         }
-        else
+        else //en caso contrario, cambiamos a la siguiente seccion
         {
             AsignacionTransform();
             Camera.main.transform.position = new Vector3(jugador.position.x, jugador.position.y + 4, Camera.main.transform.position.z);
         }
 
         Time.timeScale = 1f;
-        continuar.SetActive(false);
     }
 
     private void AsignacionTransform()
