@@ -9,7 +9,7 @@ public class AgitarCamara : MonoBehaviour
 	Camera Camara;
 	bool jugadorMuerto;
 
-	[SerializeField] AudioSource audDanyado, audMuerto;
+	[SerializeField] AudioSource audDanyado = null, audMuerto = null;
 
 	//empieza desactivado
 	private void Awake()

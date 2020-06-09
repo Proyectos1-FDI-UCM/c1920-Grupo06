@@ -4,7 +4,7 @@
 
 public class MuertePorCaida : MonoBehaviour
 {
-    [SerializeField] AudioSource aud;
+    [SerializeField] AudioSource aud = null;
 
     void OnTriggerEnter2D(Collider2D collision) //cuando alguna entidad entre al "trigger" 
     {
