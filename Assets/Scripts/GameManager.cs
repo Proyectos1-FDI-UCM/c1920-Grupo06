@@ -15,7 +15,6 @@ public class GameManager : MonoBehaviour
     Vector3 checkpoint = Vector3.zero; //posicion de la camara
     int enemigosElim = 0, numMuertes = 0, puntuacion = 0; //contador de veces que el jugador muere y enemigos que elimina y puntuacion
     bool[] coleccionables; //arrays de "coleccionables"
-    bool sceneChanged = false;
 
     //variables de puntuacion
     [SerializeField] int puntuacionPorMuerte = 0, puntuacionPorEnemigo = 0, puntuacionPorColeccionable = 0;
@@ -140,7 +139,6 @@ public class GameManager : MonoBehaviour
 
     public void ChangeScene(int indice) //método de cambio de escena
     {
-        sceneChanged = true;
         Transiciones.instance.MakeTransition(indice);
         Time.timeScale = 1;
     }

@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
 
-//Script 
+//Script que se encarga de cambiar los estados dentro del propio tutorial
 
 public class EstadosTutorial : MonoBehaviour
 {
@@ -18,11 +18,13 @@ public class EstadosTutorial : MonoBehaviour
     PlataformaNube nube = null;
     SaltoPotenciado botasSalto = null;
 
+    //estados del tutorial, booleanos de control de transiciones
     estadoTutorial estadoTuto;
     bool space, aButton, dButton, rightClick, leftClick, wButton, eButton, ganchoAct, botasAct;
 
     void Start()
     {
+        //obtenemos las referencias
         jugador = estados.gameObject;
         pies = jugador.GetComponentInChildren<Suelo>();
         rb = jugador.GetComponent<Rigidbody2D>();
@@ -31,6 +33,7 @@ public class EstadosTutorial : MonoBehaviour
         nube = jugador.GetComponent<PlataformaNube>();
         botasSalto = jugador.GetComponent<SaltoPotenciado>();
 
+        //iniciamos los estados y desactivamos el boton de continuar
         estadoTuto = estadoTutorial.primeraSecc;
         button.SetActive(false);
     }
@@ -85,22 +88,24 @@ public class EstadosTutorial : MonoBehaviour
 
     public void CambioEstado()
     {
-        switch (estadoTuto)
+        switch (estadoTuto) //cambio de estado
         {
             case estadoTutorial.primeraSecc:
                 estadoTuto = estadoTutorial.segundaSecc;
-                button.SetActive(false);
                 break;
             case estadoTutorial.segundaSecc:
                 estadoTuto = estadoTutorial.terceraSecc;
-                button.SetActive(false);
                 break;
             case estadoTutorial.terceraSecc:
                 estadoTuto = estadoTutorial.cuartaSecc;
-                button.SetActive(false);
-                escudo.enabled = false;
+                escudo.enabled = false; //desactivamos en caso de estar activado
                 break;
         }
+
+        //desactivamos boton
+        button.SetActive(false);
+        //reactivamos efectos de sonido
+
     }
 
     void ActivarBoton()

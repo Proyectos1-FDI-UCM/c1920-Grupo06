@@ -7,7 +7,7 @@ public class FinalDelNivel : MonoBehaviour
 
     //tiempo que subirá la cámara hasta que aparezca la pantalla de puntuación
     [SerializeField] [Range(0, 5)] float tiempo = 0f;
-    [SerializeField] Timer timer;
+    [SerializeField] Timer timer = null;
 
     void OnTriggerEnter2D(Collider2D collision) //trigger al final del nivel para la información de puntuación
     {

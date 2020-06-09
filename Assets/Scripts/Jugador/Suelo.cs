@@ -17,7 +17,7 @@ public class Suelo : MonoBehaviour
     {
         BoxCollider2D box = collision.GetComponent<BoxCollider2D>();
         CompositeCollider2D comp = collision.GetComponent<CompositeCollider2D>();
-        Debug.Log(collision.gameObject);
+
         if (comp != null || (box != null && !box.isTrigger)) //si esa entidad es una plataforma (Layer 8 => plataformas7escenario)
         {
             enSuelo = true; //actualizamos el booleano, pues está sobre alguna entidad
