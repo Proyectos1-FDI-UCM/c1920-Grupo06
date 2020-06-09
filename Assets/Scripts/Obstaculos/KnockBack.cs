@@ -5,19 +5,16 @@ using UnityEngine;
 public class KnockBack : MonoBehaviour
 {
     [SerializeField]
-    float fuerzaHorizontal = 2, fuerzaVertical = 1;
+    float fuerzaVertical = 1;
 
-    estado estadoOri;
     Estados estados;
     Rigidbody2D rb;
-    Salto salto;
     Jugador jug;
 
     private void Start()
     {
         estados = GetComponent<Estados>();
         rb = GetComponent<Rigidbody2D>();
-        salto = GetComponent<Salto>();
         jug = GetComponent<Jugador>();
     }
 

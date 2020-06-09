@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+
 //Script que se encarga de activar el nivel 2 en Menu (booleano)
 
 public class LevelManager : MonoBehaviour
@@ -25,5 +26,4 @@ public class LevelManager : MonoBehaviour
     {
         return nivel2;
     }
-    
 }
