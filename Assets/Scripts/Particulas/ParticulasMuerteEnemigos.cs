@@ -5,7 +5,6 @@ public class ParticulasMuerteEnemigos : MonoBehaviour
     [SerializeField] GameObject particulasGO = null;
     [SerializeField] Color color = Color.white;
 
-
     public void Activar()
     {
         if (particulasGO != null)
