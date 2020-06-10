@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-//Script de activar Nivel 2
+//Script para activar Nivel 2 (booleano)
 
 public class Nivel2 : MonoBehaviour
 {
