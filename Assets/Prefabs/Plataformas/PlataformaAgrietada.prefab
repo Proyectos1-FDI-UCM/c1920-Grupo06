@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 845495048614475771}
   - component: {fileID: 845495048614475770}
   - component: {fileID: 8398669079861972}
-  m_Layer: 14
+  m_Layer: 13
   m_Name: Trigger
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -81,7 +81,7 @@ GameObject:
   - component: {fileID: 3887932413997493803}
   - component: {fileID: 3887932413997493802}
   - component: {fileID: 3887932413997493805}
-  m_Layer: 8
+  m_Layer: 13
   m_Name: PlataformaAgrietada
   m_TagString: Untagged
   m_Icon: {fileID: 0}

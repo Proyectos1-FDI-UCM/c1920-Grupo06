@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 3446761052406756596}
   - component: {fileID: 7663548471909729260}
   - component: {fileID: 820934539766946327}
-  m_Layer: 8
+  m_Layer: 13
   m_Name: PlataformaInestable
   m_TagString: Untagged
   m_Icon: {fileID: 0}
