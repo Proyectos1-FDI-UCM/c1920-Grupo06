@@ -23,7 +23,7 @@ public class PlataformaAgrietada : MonoBehaviour
         Estados estadoAct = collision.gameObject.GetComponent<Estados>();
         Dash dash = collision.gameObject.GetComponent<Dash>();
 
-        if (estadoAct != null && (estadoAct.Estado() == estado.MovimientoGancho || estadoAct.Estado() == estado.Dash))
+        if (estadoAct != null && estadoAct.Estado() == estado.Dash)
         {
             transform.parent.gameObject.SetActive(false);
             dash.ReDashea();
