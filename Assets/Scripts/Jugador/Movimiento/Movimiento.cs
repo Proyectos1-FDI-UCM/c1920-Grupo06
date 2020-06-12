@@ -9,6 +9,7 @@ public class Movimiento : MonoBehaviour
     Rigidbody2D rb;
     DeslizamientoPared deslizamiento;
     AudioSource aud;
+    AnimacionesJugador anim;
     AudioSource[] audAux;
     Suelo suelo;
 
@@ -24,12 +25,19 @@ public class Movimiento : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         deslizamiento = GetComponent<DeslizamientoPared>();
         suelo = transform.parent.GetComponentInChildren<Suelo>();
+        anim = GetComponent<AnimacionesJugador>();
     }
 
-    void Update() 
+    void Update()
     {
         //guardamos el valor del input
         float input = Input.GetAxis("Horizontal");
+
+        if (input > 0.2f)
+            anim.VelocidadInput(1);
+        else if (input < -0.2f)
+            anim.VelocidadInput(-1);
+        else anim.VelocidadInput(0);
 
         //establecemos la velocidad
         rb.velocity = new Vector2(input * velocidad_movimiento, rb.velocity.y);
@@ -39,10 +47,12 @@ public class Movimiento : MonoBehaviour
         else aud.Pause();
 
         //si la velocidad de caida es maypr de la establecida, la reestablecemos a esta
-        if(rb.velocity.y < velocidad_caida_maxima)
+        if (rb.velocity.y < velocidad_caida_maxima)
         {
             Vector2 velocidad = rb.velocity; velocidad.y = velocidad_caida_maxima;
             rb.velocity = velocidad;
         }
     }
+
+
 }
