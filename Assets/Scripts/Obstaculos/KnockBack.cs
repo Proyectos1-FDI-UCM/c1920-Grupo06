@@ -1,6 +1,6 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
+
+//script que se encarga de aplicar knockback
 
 public class KnockBack : MonoBehaviour
 {

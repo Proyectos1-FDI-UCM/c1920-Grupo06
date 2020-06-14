@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-//Moviemiento del jugador al usar el ganchi
+//Moviemiento del jugador al usar el gancho
 
 public class MovimientoGancho : MonoBehaviour
 {

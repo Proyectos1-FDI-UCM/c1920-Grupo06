@@ -1,5 +1,7 @@
 ﻿using UnityEngine;
 
+//Script para la transicion lateral de la camara
+
 public class MovimientoLateral : MonoBehaviour
 {
     [SerializeField] GameObject puntoLateral = null;
@@ -7,11 +9,13 @@ public class MovimientoLateral : MonoBehaviour
     float posXOri = 0;
     Transform jug = null;
     Transform cam = null;
+
     private void Start()
     {
         cam = Camera.main.transform;
         posXOri = cam.position.x;
     }
+
     private void OnTriggerExit2D(Collider2D collision)
     {
         if (collision.GetComponent<Jugador>() != null)
@@ -34,6 +38,7 @@ public class MovimientoLateral : MonoBehaviour
             }
         }
     }
+
     private void Update() //en caso de que el jugador muera, al no pasar por ningun trigger, se mueve la camara a su posicion original
     {
         if(jug != null)

@@ -10,8 +10,7 @@ public class EnemigoInven : MonoBehaviour
     Vector3 posJugador = Vector3.zero; //posición del jugador
     Rigidbody2D rb = null;
     string estado; //estado del enemigo invencible
-    bool visible = true; //creo que hay otra forma mejor de hacerlo que dijisteis pero lo he apañado rapido para que no me moleste 
-    //probando la puntuacion
+    bool visible = true;
 
     void Awake()
     {

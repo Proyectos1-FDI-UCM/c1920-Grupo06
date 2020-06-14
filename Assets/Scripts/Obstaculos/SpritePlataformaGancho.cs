@@ -1,5 +1,7 @@
 ﻿using UnityEngine;
 
+//Script que se encarga de gestionar que sprite asignar a la plataforma ganche
+
 public class SpritePlataformaGancho : MonoBehaviour
 {
     [SerializeField] Sprite enganche = null, plataformaGanchoIzq = null, plataformaGanchoDer= null;
