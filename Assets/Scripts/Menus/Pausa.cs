@@ -22,7 +22,7 @@ public class Pausa : MonoBehaviour
             GameManager.instance.Pausa();
             estado.CambioEstado(global::estado.Inactivo); //pasamos al estado inactivo
         }
-        else if(Time.timeScale == 0 && Input.GetButtonDown("Cancel")) //si está en pausa
+        else if (Time.timeScale == 0 && Input.GetButtonDown("Cancel")) //si está en pausa
         {
             estado.CambioEstado(global::estado.Defecto); //volvemos al estado por defecto
             Input.ResetInputAxes(); //reseteamos los valores de input

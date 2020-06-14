@@ -53,6 +53,4 @@ public class Movimiento : MonoBehaviour
             rb.velocity = velocidad;
         }
     }
-
-
 }

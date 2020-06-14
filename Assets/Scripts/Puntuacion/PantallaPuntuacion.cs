@@ -3,7 +3,7 @@ using UnityEngine.UI;
 
 public class PantallaPuntuacion : MonoBehaviour
 {
-    [SerializeField] Text /*muertes = null, enemigos = null,*/ puntuacionNivel1 = null, puntuacionNivel2 = null;
+    [SerializeField] Text puntuacionNivel1 = null, puntuacionNivel2 = null;
     bool reset = false;
 
     void Start()

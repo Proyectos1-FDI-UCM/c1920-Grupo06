@@ -67,7 +67,6 @@ public class Dash : MonoBehaviour
     {
         if ((transform.position - posicion_inicial).magnitude > longitudDash) //si se ha alcanzado la distancia 
             enabled = false;
-        // rb.velocity.magnitude < 0.2f && rb.velocity.magnitude > -0.2f
         if (rb.velocity == Vector2.zero && rompible == null) ParaDash();
         else
         {
@@ -87,13 +86,11 @@ public class Dash : MonoBehaviour
         if (jumpthrough == null && enabled && !ignore)
         {
             rb.velocity = Vector2.zero;
-            //Invoke("ParaDash", 0.3f);  //lo desactivamos
             ParaDash();
         }
         else if (jumpthrough != null && direccion.y < 0 && enabled && !ignore)
         {
             rb.velocity = Vector2.zero;
-            //Invoke("ParaDash", 0.3f);  //lo desactivamos
             ParaDash();
         }
     }
@@ -102,7 +99,6 @@ public class Dash : MonoBehaviour
     {
         if (!suelo.EnSuelo() && jumpthrough == null && !ignore)
         {
-            //Invoke("ParaDash", 0.3f);  //lo desactivamos
             ParaDash();
         }
     }

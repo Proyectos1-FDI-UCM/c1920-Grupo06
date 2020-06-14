@@ -45,10 +45,6 @@ public class AnimacionesJugador : MonoBehaviour
             //guardamos su velocidad en el eje 'x'
             float velocidad = rb.velocity.x;
 
-            // if (velocidad < -delta) velx = 0; //si la velocidad negativa, la animación es "MovimientoInvertido"
-            // else if (velocidad > delta) velx = 2; //si es positiva, la animación es "Movimiento"
-            // else velx = 1; //en caso contrario, es "Iddle"
-
             //si la dirección es distinta de en la que ya se encontraba
             if (velx != velxaux)
             {

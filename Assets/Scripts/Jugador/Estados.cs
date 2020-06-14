@@ -125,7 +125,7 @@ public class Estados : MonoBehaviour
                 crearDash.enabled = false;
                 break;
 
-            case estado.Knockback:
+            case estado.Knockback: //Estado Knockback
                 deathzone.enabled = true;
                 movimiento.enabled = false;
                 salto.enabled = false;

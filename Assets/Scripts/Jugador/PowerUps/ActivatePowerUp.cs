@@ -6,14 +6,10 @@ public class ActivatePowerUp : MonoBehaviour
 {
     [SerializeField] powerUp powerUp = powerUp.Ninguno; //powerUp asignado
     AudioSource aud;
-    SpriteRenderer sr;
-    BoxCollider2D bc;
 
     private void Start()
     {
         aud = GetComponent<AudioSource>();
-        //bc = GetComponent<BoxCollider2D>();
-        //sr = GetComponent<SpriteRenderer>();
     }
 
     void OnTriggerEnter2D(Collider2D collision)
@@ -23,8 +19,6 @@ public class ActivatePowerUp : MonoBehaviour
         if (powerUpMan != null)
         {
             aud.Play();
-            //bc.enabled = false;
-            //sr.enabled = false;
             powerUpMan.Manager(powerUp);
             Invoke("Destroy", 0f);
         }
